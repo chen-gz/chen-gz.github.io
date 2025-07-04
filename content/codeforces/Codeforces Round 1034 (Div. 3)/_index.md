@@ -10,5 +10,5 @@ sidebar:
 This section provide solutions for [Codeforces Round 1034 (Div. 3)](https://codeforces.com/contest/2123).
 
 {{< cards >}}
-  {{< card link="codeforces/codeforces-round-1034-div.-3/g.-modular-sorting" title="G. Modular Sorting" icon="file-text" >}}
+  {{< card link="codeforces/codeforces-round-1034-div.-3/g.-modular-sorting" title="G. Modular Sorting" icon="document-text" >}}
 {{< /cards >}}

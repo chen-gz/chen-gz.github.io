@@ -7,3 +7,4 @@ sidebar:
   open: true
 ---
 
+This is the landing page for Codeforces Round 1034 (Div. 3).

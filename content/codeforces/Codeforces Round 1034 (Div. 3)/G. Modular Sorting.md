@@ -1,6 +1,7 @@
 ---
 title: Modular Sorting
 type: docs
+math: true
 ---
 
 [Codeforces Round 1034 (Div. 3) G](https://codeforces.com/contest/2123/problem/G)

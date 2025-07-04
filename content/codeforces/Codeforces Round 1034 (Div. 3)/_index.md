@@ -10,5 +10,7 @@ sidebar:
 This section provide solutions for [Codeforces Round 1034 (Div. 3)](https://codeforces.com/contest/2123).
 
 {{< cards >}}
+  {{< card link="f.-minimize-fixed-points" title="F. Minimize Fixed Points" icon="document-text" >}}
   {{< card link="g.-modular-sorting" title="G. Modular Sorting" icon="document-text" >}}
+  
 {{< /cards >}}

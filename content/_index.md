@@ -3,6 +3,14 @@ title: Guangzong Chen
 toc: false
 ---
 
+<div style="display: flex; align-items: flex-start; gap: 20px;">
+  <div style="flex: 1;">
+    <p>Hello! I'm Guangzong Chen, currently pursuing a Ph.D. in Electrical and Computer Engineering at the University of Pittsburgh. I hold a B.S. in Automation from the Beijing Institute of Technology.</p>
+  </div>
+  <div style="flex: 0 0 120px;">
+    <img src="https://avatars.githubusercontent.com/u/18215354?v=4" alt="Guangzong Chen" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  </div>
+</div> 
 <!-- {{< hextra/hero-badge >}}
   <div class="hx:w-2 hx:h-2 hx:rounded-full hx:bg-primary-400"></div>
   <span>Free, open source</span>

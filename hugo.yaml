@@ -18,8 +18,8 @@ markup:
 
 menu:
   main:
-    - name: Docs
-      pageRef: /docs
+    - name: Codeforces
+      pageRef: /codeforces
       weight: 1
     - name: About
       pageRef: /about

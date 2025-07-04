@@ -14,16 +14,12 @@ Call a permutation $p$ of length $n$ *good* if $\gcd(p_i, i) > 1$ for all $2 \le
 - $\gcd(x, y)$ denotes the [greatest common divisor (GCD)](https://en.wikipedia.org/wiki/Greatest_common_divisor) of $x$ and $y$.
 - A **fixed point** of a permutation $p$ is an index $j$ ($1 \le j \le n$) such that $p_j = j$.
 
----
-
 ### **Input**
 The first line contains an integer $t$ ($1 \le t \le 10^4$) — the number of test cases.
 
 The only line of each test case contains an integer $n$ ($2 \le n \le 10^5$) — the length of the permutation.
 
 It is guaranteed that the sum of $n$ over all test cases does not exceed $10^5$.
-
----
 
 ### **Output**
 For each test case, output on a single line an example of a good permutation of length $n$ with the minimum number of fixed points.

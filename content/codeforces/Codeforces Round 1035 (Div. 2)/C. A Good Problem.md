@@ -9,7 +9,7 @@ math: true
 You are given four positive integers $n, l, r, k$. You need to find the lexicographically smallest* array $a$ of length $n$, consisting of integers, such that:
 
 1. For every $1 \leq i \leq n$, $l \leq a_i \leq r$.
-2. $a_1 \& a_2 \& \ldots \& a_n = a_1 \oplus a_2 \oplus \ldots \oplus a_n$, where $\&$ denotes the bitwise AND operation and $\oplus$ denotes the bitwise XOR operation.
+2. $a_1 \And a_2 \And \ldots \And a_n = a_1 \oplus a_2 \oplus \ldots \oplus a_n$, where $\And$ denotes the bitwise AND operation and $\oplus$ denotes the bitwise XOR operation.
 
 If no such array exists, output $-1$. Otherwise, since the entire array might be too large to output, output $a_k$ only.
 
@@ -33,7 +33,7 @@ If $n$ is odd, we can construct the array with all elements equal to $l$.
 
 Then we can think what happens if $n$ is even. In this case, we can have $n-2$ elements equal to $l$ which means the & operation will be $l$ but the xor operation will be $0$.
 
-The last two elements should satisfy the condition that $l & v_1 & v_2 = v_1 \oplus v_2 = res$. Consider a single bit in $l$, if we want to keep this bit in the result $res$, this bit should be set in both $v_1$ and $v_2$. If both bits are set, then $xor$ will be $0$ and that means they are not valid. 
+The last two elements should satisfy the condition that $l \And v_1 \And v_2 = v_1 \oplus v_2 = res$. Consider a single bit in $l$, if we want to keep this bit in the result $res$, this bit should be set in both $v_1$ and $v_2$. If both bits are set, then $xor$ will be $0$ and that means they are not valid.
 So for all bits that are set in $l$, we can not set them in both $v_1$ and $v_2$.
 And the values $v_1$ and $v_2$ should be greater than $l$.
 So we can have $v_1 = v_2 = 1 << \text{(largest bit of } l\text{)}$. In this case, res = 0 and $v_1$, $v_2$ is the smallest possible value. 

@@ -14,5 +14,6 @@ This section provide solutions for [Educational Codeforces Round 180 (Rated for 
   {{< card link="b.-shrinking-array" title="B. Shrinking Array" icon="document-text" >}}
   {{< card link="c.-coloring-game" title="C. Coloring Game" icon="document-text" >}}
   {{< card link="d.-reachability-and-tree" title="D. Reachability and Tree" icon="document-text" >}}
+  {{< card link="e.-tree-colorings" title="E. Tree Colorings" icon="document-text" >}}
 
 {{< /cards >}}

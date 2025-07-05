@@ -12,6 +12,20 @@ toc: false
   </div>
 </div> 
 
+## Publications
+
+- G. Chen, Z.-H. Mao, M. Sun, K. Liu, and W. Jia, "Shape-preserving generation of food images for automatic dietary assessment," in *Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)*, Seattle, WA, USA, pp. 3721--3731, June 2024.
+
+- G. Chen, W. Jia, Y. Zhao, Z.-H. Mao, B. Lo, A. K. Anderson, G. Frost, M. L. Jobarteh, M. A. McCrory, E. Sazonov, M. Steiner-Asiedu, R. S. Ansong, T. Baranowski, L. Burke, and M. Sun, "Food/Non-Food classification of real-life egocentric images in low- and middle-income countries based on image tagging features," *Frontiers in Artificial Intelligence*, vol. 4, Apr 2021.
+
+- G. Chen, M. Sun, Z.-H. Mao, K. Liu, and W. Jia, "Mechanisms of generative image-to-image translation networks," submitted, Nov 2024.
+
+- M. Sun, W. Jia, G. Chen, M. Hou, J. Chen, and Z.-H. Mao, "Improved wearable devices for dietary assessment using a new camera system," *Sensors*, vol. 22, no. 20, p. 8006, 2022.
+
+- W. Jia, B. Li, Q. Xu, G. Chen, Z.-H. Mao, M. A. McCrory, T. Baranowski, L. E. Burke, B. Lo, and A. K. Anderson, "Image-based volume estimation for food in a bowl," *Journal of Food Engineering*, vol. 372, p. 111943, 2024.
+
+- K. Liu, G. Chen, K. Woeppel, X. T. Cui, and R. Kubendran, "Active Impedance Monitoring in Programmable Stimulator for Closed-Loop Charge Balancing," submitted.
+
 <!-- Hello! I'm Guangzong Chen, currently pursuing a Ph.D. in Electrical and Computer Engineering at the University of Pittsburgh. I hold a B.S. in Automation from the Beijing Institute of Technology.
 
 ## Research and Experience
@@ -48,17 +62,6 @@ During my internship at Nimbus Robotics, I contributed to:
 -   **Programming Languages:** C/C++, Python, MATLAB, Rust
 -   **Specialties:** Embedded Systems, Algorithms, RTOS, Circuit Design, Communication Protocols (I2C, SPI, UART, USB, eMMC)
 Of course, here is the content from the image converted to Markdown.
-
-
-## Publications
-
----
-
-* "Mechanisms of Generative Image-to-Image Translation Networks." 10.48550/arXiv.2411.10368., 2024
-* "Shape-Preserving Generation of Food Images for Automatic Dietary Assessment," CVPR, 2024.
-* "Image-based volume estimation for food in a bowl," Journal of Food Engineering, Jul. 2024.
-* "Improved Wearable Devices for Dietary Assessment Using a New Camera System," Sensors, Oct. 2022.
-* "Food/Non-Food Classification of Real-Life Egocentric Images in Low- and Middle-Income Countries Based on Image Tagging Features," Frontiers in Artificial Intelligence, Apr. 2021.
 
 
 ## Explore

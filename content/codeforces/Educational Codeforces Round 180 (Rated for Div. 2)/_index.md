@@ -9,7 +9,7 @@ sidebar:
 
 This section provide solutions for [Educational Codeforces Round 180 (Rated for Div. 2)](https://codeforces.com/contest/2112).
 
-{{< cards >}}
+{{< cards cols="1" >}}
   {{< card link="a.-race" title="A. Race" icon="document-text" >}}
   {{< card link="b.-shrinking-array" title="B. Shrinking Array" icon="document-text" >}}
   {{< card link="c.-coloring-game" title="C. Coloring Game" icon="document-text" >}}

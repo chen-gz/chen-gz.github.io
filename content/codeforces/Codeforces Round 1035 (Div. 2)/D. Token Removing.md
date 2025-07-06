@@ -1,6 +1,6 @@
 ---
 title: "D. Token Removing"
-type: "doc"
+type: "docs"
 math: true
 ---
 

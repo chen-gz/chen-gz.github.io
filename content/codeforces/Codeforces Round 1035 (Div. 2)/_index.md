@@ -1,5 +1,5 @@
 ---
-title: Codeforces Round 1034 (Div. 3)
+title: Codeforces Round 1035 (Div. 2)
 type: docs
 # prev: docs/first-page
 # next: docs/folder/leaf

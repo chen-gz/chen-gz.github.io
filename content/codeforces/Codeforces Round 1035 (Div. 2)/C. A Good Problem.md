@@ -36,7 +36,7 @@ Then we can think what happens if $n$ is even. In this case, we can have $n-2$ e
 The last two elements should satisfy the condition that $l \And v_1 \And v_2 = v_1 \oplus v_2 = res$. Consider a single bit in $l$, if we want to keep this bit in the result $res$, this bit should be set in both $v_1$ and $v_2$. If both bits are set, then $xor$ will be $0$ and that means they are not valid.
 So for all bits that are set in $l$, we can not set them in both $v_1$ and $v_2$.
 And the values $v_1$ and $v_2$ should be greater than $l$.
-So we can have $v_1 = v_2 = 1 << \text{(largest bit of } l\text{)}$. In this case, res = 0 and $v_1$, $v_2$ is the smallest possible value. 
+So we can have $v_1 = v_2 = 2^{\text{(largest bit of } l\text{)}}$. In this case, $\text{res} = 0$ and $v_1$, $v_2$ is the smallest possible value. 
 
 
 [submission link](https://codeforces.com/contest/2119/submission/327589616)

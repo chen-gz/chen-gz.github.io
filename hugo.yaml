@@ -27,11 +27,11 @@ menu:
     - name: Blog
       pageRef: /blog
       weight: 3
-    - name: Contact ↗
-      url: "https://ggeta.com"
-      weight: 4
+    # - name: Contact ↗
+    #   url: "https://ggeta.com"
+    #   weight: 4
     - name: Search
-      weight: 5
+      weight: 4
       params:
         type: search
     # - name: GitHub

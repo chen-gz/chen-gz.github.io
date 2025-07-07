@@ -12,7 +12,7 @@ toc: false
   </div>
 </div> 
 
-## Publications
+<!-- ## Publications
 
 - G. Chen, Z.-H. Mao, M. Sun, K. Liu, and W. Jia, "Shape-preserving generation of food images for automatic dietary assessment," in *Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)*, Seattle, WA, USA, pp. 3721--3731, June 2024.
 
@@ -24,7 +24,7 @@ toc: false
 
 - W. Jia, B. Li, Q. Xu, G. Chen, Z.-H. Mao, M. A. McCrory, T. Baranowski, L. E. Burke, B. Lo, and A. K. Anderson, "Image-based volume estimation for food in a bowl," *Journal of Food Engineering*, vol. 372, p. 111943, 2024.
 
-- K. Liu, G. Chen, K. Woeppel, X. T. Cui, and R. Kubendran, "Active Impedance Monitoring in Programmable Stimulator for Closed-Loop Charge Balancing," submitted.
+- K. Liu, G. Chen, K. Woeppel, X. T. Cui, and R. Kubendran, "Active Impedance Monitoring in Programmable Stimulator for Closed-Loop Charge Balancing," submitted. -->
 
 <!-- Hello! I'm Guangzong Chen, currently pursuing a Ph.D. in Electrical and Computer Engineering at the University of Pittsburgh. I hold a B.S. in Automation from the Beijing Institute of Technology.
 

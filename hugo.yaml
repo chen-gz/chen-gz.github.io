@@ -24,6 +24,9 @@ menu:
     - name: About
       pageRef: /about
       weight: 2
+    - name: Blog
+      pageRef: /blog
+      weight: 3
     - name: Contact ↗
       url: "https://ggeta.com"
       weight: 3

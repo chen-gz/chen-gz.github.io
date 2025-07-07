@@ -29,9 +29,9 @@ menu:
       weight: 3
     - name: Contact ↗
       url: "https://ggeta.com"
-      weight: 3
-    - name: Search
       weight: 4
+    - name: Search
+      weight: 5
       params:
         type: search
     # - name: GitHub

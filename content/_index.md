@@ -12,6 +12,13 @@ toc: false
   </div>
 </div> 
 
+## My great friends and families
+
+![](connie-pitt.jpg)
+
+
+
+
 <!-- Hello! I'm Guangzong Chen, currently pursuing a Ph.D. in Electrical and Computer Engineering at the University of Pittsburgh. I hold a B.S. in Automation from the Beijing Institute of Technology.
 
 ## Research and Experience

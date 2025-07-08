@@ -48,4 +48,4 @@ type: about
 
 - K. Liu, G. Chen, K. Woeppel, X. T. Cui, and R. Kubendran, "Active Impedance Monitoring in Programmable Stimulator for Closed-Loop Charge Balancing," submitted.
 
-- W. Jia, Y. Zheng, B. Li, K. Chen, G. Chen, J. Chen, Z.-H. Mao, and M. Sun, "AUTOMATIC COUNTING OF CARBOHYDRATE INTAKE FOR INDIVIDUALS WITH DIABETES USING LARGE LANGUAGE MODELS," submitted.
+- W. Jia, Y. Zheng, B. Li, K. Chen, G. Chen, J. Chen, Z.-H. Mao, and M. Sun, "Automatic Counting of Carbohydrate Intake for Individuals with Diabetes Using Large Language Models," submitted.

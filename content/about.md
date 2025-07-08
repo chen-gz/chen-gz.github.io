@@ -47,3 +47,5 @@ type: about
 - W. Jia, B. Li, Q. Xu, G. Chen, Z.-H. Mao, M. A. McCrory, T. Baranowski, L. E. Burke, B. Lo, and A. K. Anderson, "Image-based volume estimation for food in a bowl," *Journal of Food Engineering*, vol. 372, p. 111943, 2024.
 
 - K. Liu, G. Chen, K. Woeppel, X. T. Cui, and R. Kubendran, "Active Impedance Monitoring in Programmable Stimulator for Closed-Loop Charge Balancing," submitted.
+
+- W. Jia, Y. Zheng, B. Li, K. Chen, G. Chen, J. Chen, Z.-H. Mao, and M. Sun, "AUTOMATIC COUNTING OF CARBOHYDRATE INTAKE FOR INDIVIDUALS WITH DIABETES USING LARGE LANGUAGE MODELS," submitted.

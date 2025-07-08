@@ -8,7 +8,7 @@ type: about
     <p style="margin: 0; font-size: 18px; line-height: 1.6;">Hello! I'm Kangni (Connie) Liu, a Ph.D. student in analog/RF IC design with 5+ years of hands-on experience in CMOS circuit development, system-level verification, and tapeout-ready block design (TSMC 180nm). I am expected to graduate in December 2025 and I am looking for hardware engineer positions.</p>
   </div>
   <div style="flex: 0 0 120px;">
-    <img src="connie-pitt.jpg" alt="Kangni Liu" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+    <img src="/images/connie-pitt.jpg" alt="Kangni Liu" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
   </div>
 </div> 
 

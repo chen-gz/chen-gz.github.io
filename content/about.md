@@ -33,6 +33,11 @@ type: about
   *Nimbus Robotics, Pittsburgh, PA, USA*  
   *May 2020 - August 2020*
 
+## Contact
+
+- **Email**: [chen@ggeta.com](mailto:chen@ggeta.com)
+- **GitHub**: [github.com/chen-gz](https://github.com/chen-gz)
+- **LinkedIn**: [linkedin.com/in/guangzong-chen](https://linkedin.com/in/guangzong-chen)
 
 ## Publications
 

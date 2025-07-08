@@ -14,7 +14,7 @@ toc: false
 
 ## My great friends and families
 
-![](connie-pitt.jpg)
+![](/images/connie-pitt.jpg)
 
 
 

@@ -56,4 +56,4 @@ params:
 
   editURL:
     enable: true
-    base: "https://github.com/chen-gz/cf/edit/main/content/"
+    base: "https://github.com/chen-gz/chen-gz.github.io/edit/main/content/"

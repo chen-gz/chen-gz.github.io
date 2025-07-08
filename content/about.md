@@ -13,17 +13,26 @@ type: about
 </div> 
 
 ## Education
-- **Ph.D. in Electrical and Computer Engineering** (2019.9 - 2025.8)
-University of Pittsburgh, Pittsburgh, PA, USA  
-Advisor: [Zhi-Hong Mao](https://www.engineering.pitt.edu/people/faculty/zhi-hong-mao/) ([Homepage](https://sites.pitt.edu/~zhm4/)), [Mingui Sun](https://www.neurosurgery.pitt.edu/people/mingui-sun)
-- **B.S. in Automation** (2015.9 - 2019.6)
-Beijing Institute of Technology, Beijing, China
+
+- **Ph.D. in Electrical and Computer Engineering**  
+  *University of Pittsburgh, Pittsburgh, PA, USA*  
+  *September 2019 - August 2025*  
+  Advisors: [Zhi-Hong Mao](https://www.engineering.pitt.edu/people/faculty/zhi-hong-mao/) ([Homepage](https://sites.pitt.edu/~zhm4/)), [Mingui Sun](https://www.neurosurgery.pitt.edu/people/mingui-sun)
+
+- **B.S. in Automation**  
+  *Beijing Institute of Technology, Beijing, China*  
+  *September 2015 - June 2019*
 
 ## Work Experience
-- **Graduate Research Assistant** (2020.1 - 2025.8)
-  University of Pittsburgh, Pittsburgh, PA, USA
-- **Firmware Engineer Intern** (2020.5 - 2020.8)
-  Nimbus Robotics, Pittsburgh, PA, USA
+
+- **Graduate Research Assistant**  
+  *University of Pittsburgh, Pittsburgh, PA, USA*  
+  *January 2020 - August 2025*
+
+- **Firmware Engineer Intern**  
+  *Nimbus Robotics, Pittsburgh, PA, USA*  
+  *May 2020 - August 2020*
+
 
 ## Publications
 

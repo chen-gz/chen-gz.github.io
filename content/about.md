@@ -16,7 +16,7 @@ type: about
 
 - **Ph.D. in Electrical and Computer Engineering**  
   *University of Pittsburgh, Pittsburgh, PA, USA*  
-  *September 2019 - August 2025*  
+  *August 2019 - August 2025*  
   Advisors: [Zhi-Hong Mao](https://www.engineering.pitt.edu/people/faculty/zhi-hong-mao/) ([Homepage](https://sites.pitt.edu/~zhm4/)), [Mingui Sun](https://www.neurosurgery.pitt.edu/people/mingui-sun)
 
 - **B.S. in Automation**  

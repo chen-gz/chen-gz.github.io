@@ -12,7 +12,7 @@ toc: false
   </div>
 </div> 
 
-## People I'm Proud to Know
+## Amazing People in My Life
 
 ### Kangni (Connie) Liu
 

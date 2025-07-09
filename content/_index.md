@@ -14,7 +14,7 @@ toc: false
 
 ## Amazing People in My Life
 
-### Kangni (Connie) Liu
+### [Kangni (Connie) Liu](/connie/)
 
 <div style="display: flex; align-items: center; gap: 30px; margin-bottom: 20px;">
   <div style="flex: 1;">

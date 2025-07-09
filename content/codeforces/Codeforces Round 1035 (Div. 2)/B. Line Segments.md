@@ -1,6 +1,6 @@
 ---
-title: "B. Line Segments"
-type: "docs"
+title: B. Line Segments
+type: docs
 math: true
 ---
 

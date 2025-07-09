@@ -1,6 +1,6 @@
 ---
-title: "C. A Good Problem"
-type: "docs"
+title: C. A Good Problem
+type: docs
 math: true
 ---
 

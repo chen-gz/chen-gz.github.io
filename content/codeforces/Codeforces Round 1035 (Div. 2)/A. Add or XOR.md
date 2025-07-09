@@ -1,6 +1,6 @@
 ---
-title: "A. Add or XOR"
-type: "docs"
+title: A. Add or XOR
+type: docs
 math: true
 ---
 

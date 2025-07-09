@@ -60,15 +60,23 @@ type: about
   *University of Pittsburgh, Pittsburgh, PA, USA*  
   *January 2021 - Present*
 
+## Contact Information
 
-- **Email**: [chen@ggeta.com](mailto:chen@ggeta.com)
-- **GitHub**: [github.com/chen-gz](https://github.com/chen-gz)
-- **LinkedIn**: [linkedin.com/in/guangzong-chen](https://linkedin.com/in/guangzong-chen)
+- **Email**: [connie@ggeta.com](mailto:connie@ggeta.com)
+- **Academic Email**: [connie.liu@pitt.edu](mailto:connie.liu@pitt.edu)
+- **LinkedIn**: [linkedin.com/in/kangni-liu-7975b41b5](https://www.linkedin.com/in/kangni-liu-7975b41b5/)
 
 ## Publications
 
-- K. Liu, G. Chen, K. Woeppel, X. T. Cui, and R. Kubendran, "Active Impedance Monitoring in Programmable Stimulator for Closed-Loop Charge Balancing," submitted.
+1. K. Liu, S. Hashemkhani, J. Rubin and R. Kubendran, "BioNN: Bio-Mimetic Neural Networks on Hardware Using Nonlinear Multi-Timescale Mixed-Feedback Control for Neuromodulatory Bursting Rhythms," in *IEEE Journal on Emerging and Selected Topics in Circuits and Systems*, vol. 13, no. 4, pp. 914-926, Dec. 2023, doi: 10.1109/JETCAS.2023.3330084.
 
-- G. Chen, Z.-H. Mao, M. Sun, K. Liu, and W. Jia, "Shape-preserving generation of food images for automatic dietary assessment," in *Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)*, Seattle, WA, USA, pp. 3721--3731, June 2024.
+2. K. Liu, S. Hashemkhani, J. Rubin and R. Kubendran, "Neuromorphic Networks using Nonlinear Mixed-feedback Multi-timescale Bio-mimetic Neurons," *2023 IEEE International Symposium on Circuits and Systems (ISCAS)*, Monterey, CA, USA, 2023, pp. 1-5, doi: 10.1109/ISCAS46773.2023.10182201.
 
-- G. Chen, M. Sun, Z.-H. Mao, K. Liu, and W. Jia, "Mechanisms of generative image-to-image translation networks," submitted, Nov 2024.
+3. K. Liu, A. Gormaley, K. Woeppel, T. Emerick, X. T. Cui and R. Kubendran, "Programmable Pulse Generator for Pain Relief Stimulation using Bioresorbable Electrodes," *2023 IEEE Biomedical Circuits and Systems Conference (BioCAS)*, Toronto, ON, Canada, 2023, pp. 1-5, doi: 10.1109/BioCAS58349.2023.10389016.
+
+4. K. Liu, G. Chen, K. Woeppel, X. T. Cui, and R. Kubendran, "Active Impedance Monitoring in Programmable Stimulator for Closed-Loop Charge Balancing," *submitted*.
+
+5. G. Chen, Z.-H. Mao, M. Sun, K. Liu, and W. Jia, "Shape-preserving generation of food images for automatic dietary assessment," in *Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)*, Seattle, WA, USA, pp. 3721-3731, June 2024.
+
+6. G. Chen, M. Sun, Z.-H. Mao, K. Liu, and W. Jia, "Mechanisms of generative image-to-image translation networks," *submitted*, Nov 2024.
+

@@ -11,7 +11,7 @@ You are given a sequence $a$ of length $n-1$ and a sequence $b$ of length $n$.
 You can perform the following operation any number of times (possibly zero):
 - Choose an index $1 \leq i \leq n$ and increment $b_i$ by 1 (i.e., set $b_i \leftarrow b_i + 1$).
 
-Your goal is to perform the minimum number of operations such that for every $1 \leq i \leq n-1$, the condition $b_i \& b_{i+1} = a_i$ holds, where $\&$ denotes the bitwise AND operation. If it is impossible to satisfy the condition, report it as well.
+Your goal is to perform the minimum number of operations such that for every $1 \leq i \leq n-1$, the condition $b_i & b_{i+1} = a_i$ holds, where $&$ denotes the bitwise AND operation. If it is impossible to satisfy the condition, report it as well.
 
 ### Input
 
@@ -39,9 +39,9 @@ If the goal can be achieved, output one integer — the minimum number of operat
 
 ### Necessary Condition Analysis
 
-The problem requires that $b_i \& b_{i+1} = a_i$ for all $i$, which means that all bits of $a_i$ must be set in both $b_i$ and $b_{i+1}$.
+The problem requires that $b_i & b_{i+1} = a_i$ for all $i$, which means that all bits of $a_i$ must be set in both $b_i$ and $b_{i+1}$.
 
-Since we also have $b_{i+1} \& b_{i+2} = a_{i+1}$, the bits of $a_{i+1}$ must be set in both $b_{i+1}$ and $b_{i+2}$.
+Since we also have $b_{i+1} & b_{i+2} = a_{i+1}$, the bits of $a_{i+1}$ must be set in both $b_{i+1}$ and $b_{i+2}$.
 
 For $b_{i+1}$ to satisfy both conditions simultaneously, it must have all bits set in both $a_i$ and $a_{i+1}$. Therefore, the minimum requirement is:
 $$b_i \geq a_i | a_{i-1}$$
@@ -50,9 +50,9 @@ Note that $b_1$ and $b_n$ only need to satisfy one condition each.
 
 ### Feasibility Check
 
-This gives us a necessary condition: if we construct $b$ with $b_i = a_i | a_{i-1}$ and this doesn't satisfy $b_i \& b_{i+1} = a_i$, then no valid solution exists (output -1).
+This gives us a necessary condition: if we construct $b$ with $b_i = a_i | a_{i-1}$ and this doesn't satisfy $b_i & b_{i+1} = a_i$, then no valid solution exists (output -1).
 
-Conversely, if $b$ satisfies the necessary condition and $b_i \& b_{i+1} = a_i$, then we can always find a valid $b$ that satisfies all constraints.
+Conversely, if $b$ satisfies the necessary condition and $b_i & b_{i+1} = a_i$, then we can always find a valid $b$ that satisfies all constraints.
 
 ## Optimized Dynamic Programming Solution
 

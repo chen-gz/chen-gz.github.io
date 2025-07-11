@@ -55,3 +55,9 @@ comment: false
 - K. Liu, G. Chen, K. Woeppel, X. T. Cui, and R. Kubendran, "Active Impedance Monitoring in Programmable Stimulator for Closed-Loop Charge Balancing," submitted.
 
 - W. Jia, Y. Zheng, B. Li, K. Chen, G. Chen, J. Chen, Z.-H. Mao, and M. Sun, "Automatic Counting of Carbohydrate Intake for Individuals with Diabetes Using Large Language Models," submitted.
+
+## Unpublished Documents
+
+This section contains documents that have not been published. There may be mistakes and typos in these documents, but the main results and experiments should be correct.
+
+[G. Chen, "Analysis of Cascode Converter Gain in Discontinuous Conduction Mode"](/papers/Paper%20-%20Analysis_of_Cascode_Converter_gain_in_Discontinuous_Conduction_Mode.pdf), 2019.

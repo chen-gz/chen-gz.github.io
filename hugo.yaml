@@ -22,7 +22,7 @@ menu:
       pageRef: /codeforces
       weight: 1
     - name: About
-      pageRef: /about
+      pageRef: /guangzong
       weight: 2
     - name: Blog
       pageRef: /blog

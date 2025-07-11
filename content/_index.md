@@ -1,7 +1,7 @@
 ---
 # title: Guangzong Chen
 toc: false
-comment: false
+comments: false
 ---
 
 <div style="display: flex; align-items: center; gap: 30px; margin-bottom: 20px;">

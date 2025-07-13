@@ -60,8 +60,8 @@ comments: false
 
 This section contains documents that have not been published. There may be mistakes and typos in these documents, but the main results and experiments should be correct.
 
-- [G. Chen, "ECE1670 2695 Lecture 10 Note - Other forms of learning"](/papers/Class%20ECE1670%202695%20Lecture%2010%20Note%20-%20Other%20forms%20of%20learning%20-%202023.pdf), 2023.
-- [G. Chen, "An Energy Efficient DRAM System For GPUs"](/papers/Class%20An%20Energy%20Efficient%20DRAM%20System%20For%20GPUs%20-%20Kangni%20-%202020.pdf), 2020.
-- [G. Chen, "The Analysis of 3D NAND Flash Memory"](/papers/Class%20ECE2263%20finial%20-%20The%20Analysis%20of%203D%20NAND%20Flash%20Memory%20-%202020.pdf), 2020.
-- [G. Chen, "Adversarial attacks and defense for machine learning"](/papers/Class%20Information%20Security%20Final%20Report%20-%20Adversarial%20attacks%20and%20defense%20for%20machine%20learning%20-%202020.pdf), 2020.
-- [G. Chen, "Analysis of Cascode Converter Gain in Discontinuous Conduction Mode"](/papers/Paper%20-%20Analysis%20of%20Cascode%20Converter%20gain%20in%20Discontinuous%20Conduction%20Mode%20-%202019.pdf), 2019.
+- G. Chen, ["ECE1670 2695 Lecture 10 Note - Other forms of learning"](/papers/Class%20ECE1670%202695%20Lecture%2010%20Note%20-%20Other%20forms%20of%20learning%20-%202023.pdf), 2023.
+- K. Liu, ["An Energy Efficient DRAM System For GPUs"](/papers/Class%20An%20Energy%20Efficient%20DRAM%20System%20For%20GPUs%20-%20Kangni%20-%202020.pdf), 2020.
+- G. Chen, K. Liu, S. Tang, ["The Analysis of 3D NAND Flash Memory"](/papers/Class%20ECE2263%20finial%20-%20The%20Analysis%20of%203D%20NAND%20Flash%20Memory%20-%202020.pdf), 2020.
+- G. Chen, ["Adversarial attacks and defense for machine learning"](/papers/Class%20Information%20Security%20Final%20Report%20-%20Adversarial%20attacks%20and%20defense%20for%20machine%20learning%20-%202020.pdf), 2020.
+- G. Chen, ["Analysis of Cascode Converter Gain in Discontinuous Conduction Mode"](/papers/Paper%20-%20Analysis%20of%20Cascode%20Converter%20gain%20in%20Discontinuous%20Conduction%20Mode%20-%202019.pdf), 2019.

@@ -1,4 +1,8 @@
-# Yanan Gong
+---
+title: Yanan Gong
+type: about
+comments: false
+---
 
 **Phone:** 434-466-5462  
 **Email:** gongyn3@gmail.com  

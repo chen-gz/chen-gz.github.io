@@ -13,7 +13,7 @@ comments: false
   </div>
 </div> 
 
-## Amazing People in My Life
+## Amazing Peoples
 
 ### [Kangni (Connie) Liu](/connie/)
 

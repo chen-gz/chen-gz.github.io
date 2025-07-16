@@ -26,6 +26,16 @@ comments: false
   </div>
 </div> 
 
+### [Yanan Gong](/yanan/)
+
+<div style="display: flex; align-items: center; gap: 30px; margin-bottom: 20px;">
+  <div style="flex: 1;">
+    <p style="margin: 0; font-size: 18px; line-height: 1.6;">Meet Yanan, a talented Senior Data Scientist and Machine Learning Engineer at the Air-Conditioning, Heating, and Refrigeration Institute. With expertise in AI, LLMs, and MLOps, she has led the development of GPT-4-based multi-agent AI systems and production-grade ML pipelines. Her work includes building anomaly detection systems that have saved $500K annually and developing AI-powered solutions that reduce engineering workloads by 80%.</p>
+  </div>
+  <div style="flex: 0 0 120px;">
+    <img src="https://avatars.githubusercontent.com/u/63657901?v=4" alt="Yanan Gong" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  </div>
+</div> 
 
 
 <!-- ![](/images/connie-pitt.jpg) -->

@@ -1,5 +1,5 @@
 ---
-title: "Codeforces Round 1037 (Div. 3)"
+title: "F. 1-1-1, Free Tree!"
 type: docs
 math: true
 ---

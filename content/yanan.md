@@ -1,4 +1,8 @@
-# Yanan Gong
+---
+title: Yanan Gong
+type: about
+comments: false
+---
 
 **Phone:** 434-466-5462  
 **Email:** gongyn3@gmail.com  
@@ -46,8 +50,4 @@
 
 - Led, designed, and deployed a scalable AI-powered mock interview platform leveraging **GPT-4**, **RAG**, and **multi-agent architectures**. Delivered role-specific questions, industry-tailored scenarios, and real-time AI feedback, reducing user costs by 80%
 - Implemented **Reasoning and Action** prompt engineering and LLM-based evaluations, deploying on **Kubernetes** with auto-scaling, supporting 1000 QPS and future scalability
-
-### [Plot Tweaking Chatbot](https://github.com/Yanan-Gong/Plot_Chatbot_APP) | Python, Panel | Spring 2024
-
-- Developed an AI-powered Matplotlib plot assistant integrating Mistral 8×7B LLMs and Panel. Achieved 40% reduction in user visualization adjustment time and streamlined publication-ready visualization
 

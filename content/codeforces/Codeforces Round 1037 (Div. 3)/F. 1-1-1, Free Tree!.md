@@ -94,7 +94,7 @@ Finally, we update the actual color array: `color[v] = x`.
 
 After these steps, `total_ans` holds the new correct total cost, which we print.
 
-### ## Conclusion
+### Conclusion
 
 By pre-calculating parent pointers and the `mem` maps, we can process each query by only looking at the vertex `v`, its parent, and its children. The use of maps allows for `O(log n)` updates.
 
@@ -103,5 +103,7 @@ By pre-calculating parent pointers and the `mem` maps, we can process each query
 * **Total Complexity:** `O(n log n + q log n)`
 
 This is highly efficient and easily meets the time limits of the problem.
+
 [TLE submission without optimization](https://codeforces.com/contest/2126/submission/330429690)
+
 [Optimized solution](https://codeforces.com/contest/2126/submission/330432359)

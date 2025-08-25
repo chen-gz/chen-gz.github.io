@@ -59,7 +59,7 @@ $$dp_m = \min(dp_{m/x} + dp_{x - 2})$$
 > [!TIP]
 > Think of it as having a tree root with green color that has $m/x$ colorings. Now we want to add another subtree to the root node of the tree with $m/x$ colorings. The new subtree has $x-2$ colorings with its root colored green. But this subtree can also be colored blue or yellow. Thus we have a new tree with $m/x \times (x - 2 + 2) = m/x \times x = m$ colorings.
 
-for all values of $x$. Note that $x$ must be a divisor of $m$. 
+for all values of $x$. Note that $x$ must be a divisor of $m$.
 
 
 

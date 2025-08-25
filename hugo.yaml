@@ -58,12 +58,12 @@ params:
     enable: true
     base: "https://github.com/chen-gz/chen-gz.github.io/edit/main/content/"
 
-  comments:
-    enable: true
-    type: giscus
+  # comments:
+  #   enable: true
+  #   type: giscus
 
-    giscus:
-      repo: "chen-gz/chen-gz.github.io"
-      repoId: "R_kgDOPIEjNQ"
-      category: "Codeforces"
-      categoryId: "DIC_kwDOPIEjNc4Csuk2"
+  #   giscus:
+  #     repo: "chen-gz/chen-gz.github.io"
+  #     repoId: "R_kgDOPIEjNQ"
+  #     category: "Codeforces"
+  #     categoryId: "DIC_kwDOPIEjNc4Csuk2"

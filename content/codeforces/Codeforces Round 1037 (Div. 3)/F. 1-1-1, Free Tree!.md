@@ -1,5 +1,5 @@
 ---
-title: F. 1-1-1, Free Tree!
+title: F. 1-1-1-Free Tree!
 type: docs
 math: true
 ---

@@ -45,6 +45,34 @@ We can show that an answer always exists. If there are multiple solutions, print
 
 ## Solution
 
-The basic idea is to remove the minimum of the left and right elements in odd rounds, and remove the maximum of the left and right elements in even rounds.
+The problem asks us to construct a "good" sequence `q` by repeatedly taking an element from either the left or the right end of a given permutation `p`. A sequence is "good" if it does not contain any contiguous subarray of length 5 that is strictly increasing or strictly decreasing.
 
-Refer to the official solution for more details.
+The problem guarantees that a solution always exists. This suggests that a greedy approach might work. At each step, we need to decide whether to take the leftmost element `p[l]` or the rightmost element `p[r]`.
+
+### Greedy Strategy
+
+A simple and effective greedy strategy is to alternate our goal at each turn. To break any potential monotonic (increasing or decreasing) sequence, we can alternate between picking the smaller of the two available elements and the larger of the two.
+
+Let's define the turns as `i = 1, 2, ..., n`.
+-   On **odd-numbered** turns (`i = 1, 3, 5, ...`), we aim to pick the **smaller** element. We compare `p[l]` and `p[r]` and take the one that is smaller.
+-   On **even-numbered** turns (`i = 2, 4, 6, ...`), we aim to pick the **larger** element. We compare `p[l]` and `p[r]` and take the one that is larger.
+
+#### Why this works (Intuition)
+By taking the smaller element on odd turns and the larger on even turns, the resulting sequence `q` will tend to oscillate. For example, `q_1` will be small, `q_2` will be large, `q_3` will be small, `q_4` will be large, and so on. A sequence like `small, large, small, large, small` is highly unlikely to be strictly increasing or decreasing for 5 consecutive terms. This strategy actively works against the formation of long monotonic chains.
+
+### Algorithm
+1.  Initialize two pointers, `l = 0` and `r = n-1`.
+2.  Initialize an empty result string `s`.
+3.  Iterate `i` from `1` to `n`:
+    -   If `i` is odd:
+        -   Compare `p[l]` and `p[r]`.
+        -   If `p[l] < p[r]`, append 'L' to `s` and increment `l`.
+        -   Else, append 'R' to `s` and decrement `r`.
+    -   If `i` is even:
+        -   Compare `p[l]` and `p[r]`.
+        -   If `p[l] > p[r]`, append 'L' to `s` and increment `l`.
+        -   Else, append 'R' to `s` and decrement `r`.
+        -   (Note: if `p[l] == p[r]`, which can only happen when `l==r`, the choice doesn't matter).
+4.  Output the string `s`.
+
+This greedy algorithm provides a valid construction for the sequence `q` in `O(n)` time.

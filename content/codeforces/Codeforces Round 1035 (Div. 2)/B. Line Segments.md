@@ -35,14 +35,25 @@ You can output the answer in any case (upper or lower). For example, the strings
 
 ## Solution
 
-For each move, we can choose any point on the circle with radius $a_i$ centered at the current position. The distance to the target point $(q_x, q_y)$ will then have a range of $[\max(0, d - a_i), d + a_i]$, where $d$ is the distance from the current position to $(q_x, q_y)$. We rewrite this range as $[d_{min}, d_{max}]$.
+This problem can be solved by tracking the range of possible distances from our current position to the target point $(q_x, q_y)$. Let `[d_min, d_max]` be this range of achievable distances.
 
-- We begin with the initial range $[d_{min}, d_{max}]$, where $d_{min} = d_{max} = d$, and $d$ is the distance from $(p_x, p_y)$ to $(q_x, q_y)$.
-- For each move $i$, we update the range as follows:
-  - $d'_{min} = \max(0, \min(|d_{min} - a_i|, |d_{max} - a_i|))$
-  - $d'_{max} = d_{max} + a_i$
-  - If $a_i \geq d_{max}$ or $a_i \geq d_{min}$, then the new minimum distance can be 0, so $d'_{min} = 0$.
-  - Update $d_{min} = d'_{min}$ and $d_{max} = d'_{max}$ for the next iteration.
-- After all moves, if $0$ is within the final range $[d_{min}, d_{max}]$, then it's possible to reach the target point.
+1.  **Initialization**:
+    -   Calculate the initial Euclidean distance `D` between the starting point `(p_x, p_y)` and the terminal point `(q_x, q_y)`.
+    -   Initially, we are at a single point, so our range of distances to the target is `[D, D]`. We set `d_min = D` and `d_max = D`.
+
+2.  **Iterating through moves**:
+    -   For each move `i` with distance `a_i`:
+        -   Let the current range of distances be `[d_min, d_max]`. After moving by `a_i`, we need to find the new range `[d'_min, d'_max]`.
+        -   By the triangle inequality, if our current distance to the target is `d`, the new distance will be in the range `[|d - a_i|, d + a_i]`.
+        -   To find the new range of all possible distances, we consider all `d` in `[d_min, d_max]`.
+        -   The new maximum possible distance is achieved by moving directly away from the target from the furthest possible point: `d'_max = d_max + a_i`.
+        -   The new minimum possible distance `d'_min` is `min_{d \in [d_min, d_max]} |d - a_i|`. The function `f(d) = |d - a_i|` has a V-shape with its minimum at `d = a_i`.
+            -   If `d_min <= a_i <= d_max` (i.e., `a_i` is within the current range), the minimum value of `f(d)` is `0`.
+            -   If `a_i < d_min`, the minimum value is `d_min - a_i`.
+            -   If `a_i > d_max`, the minimum value is `a_i - d_max`.
+        -   We update `d_min` and `d_max` with these new values for the next iteration.
+
+3.  **Final Check**:
+    -   After all `n` moves, we have a final range `[d_min, d_max]`. If `d_min` is exactly `0`, it means we can be at a distance of 0 from the target (i.e., at the target). So, the answer is "Yes". Otherwise, it's "No".
 
 [submission link](https://codeforces.com/contest/2119/submission/327566232)

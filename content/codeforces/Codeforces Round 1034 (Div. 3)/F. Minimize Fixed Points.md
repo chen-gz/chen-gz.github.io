@@ -27,8 +27,10 @@ For each test case, output on a single line an example of a good permutation of 
 ## Solution
 
 ### Idea
-Start by initializing the permutation as the identity permutation, i.e., $p_i = i$ for all $i$. Then, try to modify it to satisfy the condition.
+The core idea is to build the permutation by creating cycles of indices that share a common prime factor. This ensures the gcd condition is met and minimizes fixed points. `p[1]` must be `1`, so it is always a fixed point. For other numbers, we can proceed as follows:
 
-To achieve this, for each $i$, swap $p_i$ with $p_{spf(i)}$, where $spf(i)$ is the smallest prime factor of $i$. For example, if $i = 6$, the smallest prime factor is $2$, so swap $p_6$ with $p_2$. This ensures that $\gcd(p_6, 6) \ge 2$ and helps reduce the number of fixed points. The number of fixed points will reduce to the number of elements that are coprime to all other elements in the permutation.
+Iterate through numbers `i` from `n` down to `2`. If `i` has not been assigned a position in our permutation yet, it means we need to place it. We find its smallest prime factor, `p`. We then find all multiples of `p` less than or equal to `n` that have not been assigned yet. Let these be `m_1, m_2, ..., m_k` in increasing order. We can form a cycle: set `p[m_1] = m_2`, `p[m_2] = m_3`, ..., `p[m_{k-1}] = m_k`, and `p[m_k] = m_1`. This ensures that for each of these numbers, `p[m_j]` is a multiple of `p`, so `gcd(p[m_j], m_j) >= p > 1`. We mark all these numbers as assigned.
+
+This process guarantees that no composite number is a fixed point. The only possible fixed points, besides `1`, are prime numbers for which this process doesn't create a cycle (e.g., if a prime's multiples are already taken).
 
 [submission link](https://codeforces.com/contest/2123/submission/327012810)

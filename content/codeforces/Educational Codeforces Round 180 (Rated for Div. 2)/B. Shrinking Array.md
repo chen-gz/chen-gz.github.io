@@ -22,34 +22,24 @@ The size of the array decreases by 1 after each operation.
 
 ## Solution
 
-The problem asks for the minimum number of operations to make an array "beautiful". An array is beautiful if it has two adjacent elements `b_i, b_{i+1}` with `|b_i - b_{i+1}| <= 1`. An operation consists of merging two adjacent elements `a_i, a_{i+1}` into a new element `x`, where `x` can be any integer between `a_i` and `a_{i+1}` (inclusive).
+The answer can only be **-1**, **0**, or **1**.
 
-The solution can be found by checking for 0, 1, or more operations sequentially. It turns out we only need to check for 0 and 1 operations.
+### Algorithm
 
-### Case 1: 0 Operations (Answer = 0)
-First, we check if the array is already beautiful. We can do this by iterating through the array and checking if `|a_i - a_{i+1}| <= 1` for any `i`. If we find such a pair, no operations are needed, and the answer is 0.
+1. **Check if already beautiful (Answer: 0)**
+   - If there exist two adjacent elements with absolute difference ≤ 1, the answer is 0
 
-### Case 2: 1 Operation (Answer = 1)
-If the array is not already beautiful, we check if it can become beautiful after exactly one operation.
-A single operation merges `a_i` and `a_{i+1}` into a new element `x`. The new, shorter array looks like `[..., a_{i-1}, x, a_{i+2}, ...]`.
-For this new array to be beautiful, one of the new adjacencies must satisfy the condition:
--   `|a_{i-1} - x| <= 1` (if `i > 0`)
--   `|x - a_{i+2}| <= 1` (if `i+1 < n-1`)
+2. **Check if one operation suffices (Answer: 1)**
+   - For each pair of adjacent elements, we can merge them to get a new element between them
+   - Check if the element right before or after this merged position would create a beautiful array
+   - If any such pair exists, the answer is 1
 
-We can choose `x` to be any integer in the range `[min(a_i, a_{i+1}), max(a_i, a_{i+1})]`.
-So, to make `|a_{i-1} - x| <= 1`, we need to be able to choose an `x` that is in `[a_{i-1}-1, a_{i-1}+1]`. This is possible if and only if the interval `[min(a_i, a_{i+1}), max(a_i, a_{i+1})]` and the interval `[a_{i-1}-1, a_{i-1}+1]` have a non-empty intersection.
-Similarly for the other case with `a_{i+2}`.
+3. **Otherwise (Answer: -1)**
+   - If no such pair of adjacent elements exists that can lead to a beautiful array, the answer is -1
 
-The algorithm for checking for a 1-op solution is:
--   Iterate `i` from `0` to `n-2` (the pair to merge).
--   If `i > 0`, check if `[min(a_i, a_{i+1}), max(a_i, a_{i+1})]` intersects with `[a_{i-1}-1, a_{i-1}+1]`.
--   If `i+1 < n-1`, check if `[min(a_i, a_{i+1}), max(a_i, a_{i+1})]` intersects with `[a_{i+2}-1, a_{i+2}+1]`.
--   If any of these checks are true for any `i`, the answer is 1.
+### Key Insight
 
-### Case 3: Impossible (Answer = -1)
-The key insight is that if the array cannot be made beautiful in 0 or 1 operations, it's impossible to make it beautiful at all.
-The intuition is that if all adjacent pairs are "far" from each other, and merging any single pair doesn't bring it "close" to its new neighbors, the array has a structure of separated blocks of values. Subsequent merges will create values within the range of these blocks, but will not be able to bridge the gaps between them to satisfy the beauty condition with a new neighbor.
-Therefore, if the checks for 0 and 1 operations fail, the answer is -1.
+It can be proven that merging more than 1 pair of adjacent elements will not help to get a beautiful array, so we only need to consider at most one operation.
 
 ## Implementation
 

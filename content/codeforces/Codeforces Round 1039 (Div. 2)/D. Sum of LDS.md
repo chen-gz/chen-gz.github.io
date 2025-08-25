@@ -23,22 +23,29 @@ $$
 
 ## Solution Overview
 
-The property `max(p_i, p_{i+1}) > p_{i+2}` severely restricts the structure of the permutation. It can be shown that such permutations have a simple structure, which implies that the length of the Longest Decreasing Subsequence (LDS) in any subarray is small (at most 3).
+Let's analyze the problem step by step:
 
-The problem asks for `Sum_{l,r} LDS(l,r)`. A standard technique for this type of problem is to change the order of summation:
-`Sum_{l,r} LDS(l,r) = Sum_{l,r} Sum_{k>=1} [LDS(l,r) >= k] = Sum_{k>=1} (Number of subarrays [l,r] with LDS >= k)`.
+1. **Key Constraint:**
+   The condition $\max(p_i, p_{i+1}) > p_{i+2}$ ensures that two consecutive ascents cannot occur in the permutation.
 
-Let `N_k` be the number of subarrays with LDS length at least `k`. The answer is `N_1 + N_2 + N_3 + ...`.
-Since the maximum possible LDS length is small, we only need to compute a few `N_k` terms.
+2. **LDS Contribution:**
+   For any pair $(p_i, p_{i+1})$ where $p_i > p_{i+1}$, these two elements form a "block" that can contribute to the longest decreasing subsequence (LDS) in any subarray containing both. However, only one of them will actually increase the LDS length.
 
-1.  **`N_1`**: Any non-empty subarray has an LDS of length at least 1. The number of non-empty subarrays is `n * (n + 1) / 2`. So, `N_1 = n * (n + 1) / 2`.
+3. **Counting Contributions:**
+   For each such pair $(p_i, p_{i+1})$ with $p_i > p_{i+1}$, the number of subarrays containing both is $(i + 1) \times (n - i - 1)$, where $i$ is the index of $p_i$ (0-based).
 
-2.  **`N_2`**: A subarray has an LDS of length at least 2 if and only if it is not strictly increasing. We can find `N_2` by taking the total number of subarrays and subtracting the number of strictly increasing ones. A subarray is strictly increasing if `p_l < p_{l+1} < ... < p_r`. We can count these by finding all maximal contiguous increasing blocks in the permutation.
+4. **Total LDS Sum:**
+   If there are no such pairs, the sum is simply the sum over all subarrays of their lengths:
+   $$
+   n + 2(n-1) + 3(n-2) + \ldots + n
+   $$
+   Otherwise, subtract the overcounted contributions for each $(p_i, p_{i+1})$ where $p_i > p_{i+1}$. This part can be optimized using $O(1)$, but I did not implement it.
 
-3.  **`N_3`**: A subarray has an LDS of length at least 3 if it contains three elements `p_i > p_j > p_k` with `i < j < k`. We need to count the number of subarrays `[l,r]` that contain such a triplet. A systematic way to do this is to iterate through all possible middle elements `p_j` of a 3-LDS. For each `p_j`, we need to count how many `i < j` have `p_i > p_j` and how many `k > j` have `p_k < p_j`. This can be done efficiently using data structures like Fenwick trees or segment trees. Once we have these counts for each `j`, we can calculate `N_3`.
+5. **Algorithm Steps:**
+   - Iterate through the permutation and identify all pairs $(p_i, p_{i+1})$ with $p_i > p_{i+1}$.
+   - For each such pair, subtract $(i + 1) \times (n - i - 1)$ from the total LDS sum.
+   - Output the final result.
 
-4.  **Higher `N_k`**: It can be proven that for permutations with this property, no subarray has an LDS of length 4 or more. So, `N_4, N_5, ...` are all 0.
-
-The final answer is `N_1 + N_2 + N_3`. This approach breaks down the problem into more manageable counting subproblems that can be solved efficiently.
+This approach leverages the permutation's structure and efficiently computes the required sum.
 
 [submission](https://codeforces.com/contest/2128/submission/335212851)

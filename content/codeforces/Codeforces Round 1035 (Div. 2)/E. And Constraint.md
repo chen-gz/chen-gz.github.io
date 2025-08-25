@@ -35,44 +35,69 @@ If the goal can be achieved, output one integer — the minimum number of operat
 
 [submission link](https://codeforces.com/contest/2119/submission/328263885)
 
-Let `B_i` be the final values of the array after applying the operations. The problem is to find a sequence `B` that minimizes the total cost `sum(B_i - b_i)`, subject to:
-1. `B_i >= b_i` for all `i`.
-2. `B_i & B_{i+1} = a_i` for all `i` from `1` to `n-1`.
+## Key Observations
 
-### 1. Necessary Conditions and Feasibility
+### Necessary Condition Analysis
 
-From the condition `B_i & B_{i+1} = a_i`, we know that `a_i` must be a "submask" of both `B_i` and `B_{i+1}` (i.e., if a bit is 1 in `a_i`, it must be 1 in `B_i` and `B_{i+1}`).
-This gives us a necessary condition for each `B_i`:
-- `B_i` must be a supermask of `a_i`.
-- `B_i` must also be a supermask of `a_{i-1}` (from the condition `B_{i-1} & B_i = a_{i-1}`).
+The problem requires that $b_i \And b_{i+1} = a_i$ for all $i$, which means that all bits of $a_i$ must be set in both $b_i$ and $b_{i+1}$.
 
-Combining these, `B_i` must contain all the bits that are set in either `a_i` or `a_{i-1}`. Let's define `a_0 = 0` and `a_n = 0`. Then, for any `i`, `B_i` must be a supermask of `a_i | a_{i-1}`.
+Since we also have $b_{i+1} \And b_{i+2} = a_{i+1}$, the bits of $a_{i+1}$ must be set in both $b_{i+1}$ and $b_{i+2}$.
 
-Furthermore, since we can only increment `b_i`, `B_i` must be a supermask of the original `b_i`.
-So, the target value `B_i` must be a supermask of `L_i = b_i | a_i | a_{i-1}`. This also implies `B_i >= L_i`.
+For $b_{i+1}$ to satisfy both conditions simultaneously, it must have all bits set in both $a_i$ and $a_{i+1}$. Therefore, the minimum requirement is:
+$$b_i \geq a_i | a_{i-1}$$
 
-**Initial Feasibility Check**:
-Before starting, we can check if a solution is even possible. For each `i`, we must have `(L_i & L_{i+1})` be a supermask of `a_i`. If for any `i`, `(L_i & L_{i+1}) & a_i != a_i`, then no solution exists.
+Note that $b_1$ and $b_n$ only need to satisfy one condition each.
 
-### 2. Optimized Dynamic Programming
+### Feasibility Check
 
-This problem can be solved with dynamic programming. A naive DP state `dp[i][mask]` (min cost for prefix `i` with `B_i = mask`) is too slow due to the large state space for `mask`. The solution requires an optimized DP.
+This gives us a necessary condition: if we construct $b$ with $b_i = a_i | a_{i-1}$ and this doesn't satisfy $b_i \And b_{i+1} = a_i$, then no valid solution exists (output -1).
 
-**Core Idea of the Optimization:**
-The choice of `B_i` affects the cost at step `i` (`B_i - b_i`) and constrains the choices for `B_{i-1}` and `B_{i+1}`. We need to find a balance. Setting extra bits in `B_i` (bits not in `L_i`) increases the cost at `i` but might reduce the cost from previous steps by relaxing the constraints on `B_{i-1}`.
+Conversely, if $b$ satisfies the necessary condition and $b_i \And b_{i+1} = a_i$, then we can always find a valid $b$ that satisfies all constraints.
 
-The key insight is that we don't need to test every possible `mask` for `B_i`. For each position `i`, we only need to consider a small set of "useful" candidate masks for `B_i`. These useful masks are typically `L_i` itself, and variations of `L_i` where we add a few carefully chosen bits. The logic is that adding very high bits to `B_i` is expensive and often not optimal. The solution explores a limited number of candidate masks for each `B_i` that are likely to lead to the minimum total cost.
+## Optimized Dynamic Programming Solution
 
-**DP State:**
-`dp[i][j]` = minimum cost for the prefix `1...i`, where `B_i` is the `j`-th useful candidate mask for position `i`.
+### Problem Analysis
 
-**Transition:**
-To compute `dp[i][j]`, we consider the `j`-th candidate mask for `B_i`, let's call it `mask_j`.
-`cost_i = mask_j - b_i`.
-We then need to find the minimum cost from the previous step, `dp[i-1]`, considering all candidate masks `mask_k` for `B_{i-1}` that are compatible with `mask_j` (i.e., `mask_k & mask_j = a_{i-1}`).
-`dp[i][j] = cost_i + min(compatible_costs_from_dp[i-1])`.
+To find the minimum number of operations, we use dynamic programming since $b_i$ depends only on $b_{i-1}$, $a_{i-1}$, and $a_i$.
 
-This optimization reduces the number of states at each step from `2^29` to a small constant (e.g., ~30-60), making the DP feasible. The implementation often involves techniques like "Sum over Subsets" (SOS) DP to efficiently calculate the `min(compatible_costs)` part of the transition.
+The key insight is to determine which states of $b_i$ are useful for minimizing operations.
+
+### State Space Optimization
+
+Consider the constraint that $b_i$ must contain all bits from $a_i | a_{i-1}$. For any additional bits beyond this minimum requirement, we only need to consider a limited set of useful values.
+
+For example, if $a_i | a_{i-1} = \text{0xa}$, then $b_i$ must contain at least $\text{0xa}$. For additional bits, we only consider values that follow a specific pattern to avoid redundant computation.
+
+The key observation is that if we have a higher bit value that costs more operations to reach, and the lower bit value will not be needed, we should set all of them to 0 (check the code below to better understand this). This means we only need to consider approximately 30 possible values for each $b_i$.
+
+### Implementation Details
+
+We precompute useful bit patterns using:
+
+```cpp
+const int HIGHEST = 0x00ffffffffffffff;
+p[0] = make_pair(0xffffffffffff, 0);
+p[1] = make_pair(0xfffffffffffe, 1);
+for (int i = 2; i < 40; i++) {
+    p[i].first = p[i - 1].first << 1;
+    p[i].second = p[i - 1].second << 1;
+    p[i].first &= HIGHEST;
+}
+```
+
+For each position $i$, we compute the target value as:
+```cpp
+int target_val = (b[i] & bits.first) | bits.second | a[i] | a[i - 1];
+```
+
+This formula ensures that:
+- We preserve the necessary bits from $a_i | a_{i-1}$
+- We consider only the useful bit patterns from our precomputed set
+- We maintain the minimum cost to reach each valid state
+
+### Time Complexity
+
+The dynamic programming runs in $O(n \cdot k)$ time, where $n$ is the array length and $k \approx 30$ is the number of useful bit patterns per position. This is efficient enough for the given constraints.
 
 
 

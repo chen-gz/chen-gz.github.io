@@ -29,39 +29,15 @@ For each test case, print a single integer — the number of ways that Alice can
 
 ## Solution
 
-The input array `a` is already sorted. Alice chooses three indices `i, j, k` (let's assume `i < j < k`) to color red. To guarantee a win, her choice must be robust against Bob's best possible counter-move. Bob will choose an element `a_b` to color blue to best thwart Alice.
+First, sort the array $a$ in non-decreasing order. This ensures that for any three elements $a_i, a_j, a_k$ (where $i < j < k$), we have $a_i \leq a_j \leq a_k$.
 
-Let's analyze Bob's optimal strategy for a given red set `{a_i, a_j, a_k}`:
+For any three elements $a_i, a_j, a_k$ (where $i < j < k$), Alice can guarantee a win if the following conditions are met:
 
-1.  **Bob chooses one of Alice's elements to be blue:** To minimize Alice's win margin (`sum of red` - `blue`), Bob will choose the largest of her elements, `a_k`, to be blue. This maximizes the blue value and minimizes the remaining red sum.
-    -   **Blue element:** `a_k`
-    -   **Red elements:** `a_i, a_j`. Red sum: `a_i + a_j`.
-    -   For Alice to win in this scenario, she needs: `a_i + a_j > a_k`.
+1. $a_i + a_j > a_k$ (this ensures that the sum of the red elements is strictly greater than the blue element). This condition handles the case when Bob chooses the largest element $a_k$ as the blue element.
+2. $a_i + a_j + a_k > a_n$. This ensures that the sum of the red elements is strictly greater than the largest element in the array, which is $a_n$. This condition handles the case when Bob chooses the largest element $a_n$ as the blue element.
 
-2.  **Bob chooses an element that is not red:** Bob will again pick the value that hurts Alice most, which is the largest available value in the entire array, `a_n`. This is only an option for Bob if Alice didn't pick `a_n` herself (i.e., `k < n`).
-    -   **Blue element:** `a_n`.
-    -   **Red elements:** `a_i, a_j, a_k`. Red sum: `a_i + a_j + a_k`.
-    -   For Alice to win in this scenario, she needs: `a_i + a_j + a_k > a_n`.
-    -   (If Alice's choice includes `a_n`, so `k=n`, Bob's best non-red choice is `a_{n-1}`. The condition `a_i+a_j+a_n > a_{n-1}` is always true since `a_n >= a_{n-1}` and `a_i, a_j` are positive, so Alice doesn't need to worry about this case).
+As long as these two conditions are satisfied, Alice can guarantee a win regardless of Bob's choice.
 
-### Combined Conditions for a Guaranteed Win
-
-For Alice to guarantee a win, her chosen triplet `{i, j, k}` must satisfy the conditions for all of Bob's best responses. This simplifies to:
-1.  `a_i + a_j > a_k`
-2.  And if `k < n`, then also `a_i + a_j + a_k > a_n`.
-
-### Algorithm
-
-Our task is to count the number of triplets `(i, j, k)` with `i < j < k` that satisfy these conditions. A naive `O(n^3)` check is too slow. We can optimize to `O(n^2 log n)`:
-
-1.  Iterate through all possible pairs for the first two elements, `(a_i, a_j)`, where `i < j`. This takes `O(n^2)` time.
-2.  For each pair `(i, j)`, we need to count the number of valid indices `k` for the third element. A valid `k` must satisfy `j < k < n` and the two conditions above.
-    -   From condition 1: `a_k < a_i + a_j`.
-    -   From condition 2: `a_k > a_n - (a_i + a_j)`.
-3.  So, for a fixed `(i, j)`, we need to count indices `k` in the range `(j, n-1)` such that `a_n - (a_i + a_j) < a_k < a_i + a_j`.
-4.  Since the array `a` is sorted, we can find the number of such `k`'s efficiently using binary search (e.g., `std::upper_bound` and `std::lower_bound`) on the subarray `a[j+1...n-1]`. This count can be found in `O(log n)`.
-5.  If Alice chooses `k=n`, only condition 1 (`a_i + a_j > a_n`) needs to be checked. We add 1 to our count if it holds.
-
-The total complexity is `O(n^2 log n)`, which is feasible for the given constraints.
+We use two nested loops to iterate over all pairs $a_i$ and $a_j$ and check if there exists an $a_k$ such that both conditions are satisfied. To find $a_k$, we can use binary search to find the largest and smallest $a_k$ that satisfies the conditions.
 
 [submission link](https://codeforces.com/contest/2112/submission/327452467)

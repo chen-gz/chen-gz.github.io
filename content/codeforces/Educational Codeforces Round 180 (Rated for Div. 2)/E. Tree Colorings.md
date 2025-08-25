@@ -48,29 +48,18 @@ where $u_1, u_2, \ldots, u_k$ are the children of $v$.
 
 ### Dynamic Programming Approach
 
-The recursive formula for `cnt_v` shows that the number of colorings for a tree depends only on the number of colorings of the subtrees at its children. This allows us to solve the inverse problem using dynamic programming.
+Notice that the formula above shows the number of colorings for a tree depends solely on the number of colorings of its child subtrees. Therefore, we can solve the original problem using the following dynamic programming approach:
 
-Let `dp[m]` be the minimum number of vertices required for a tree to have exactly `m` beautiful colorings. Our goal is to compute `dp[1], dp[2], ..., dp[M]` up to the maximum required `m`.
+Let $dp_m$ be the minimum number of vertices in a tree with exactly $m$ beautiful colorings.
 
-**Base Case:**
-- `dp[1] = 1`. A single-node tree (the root) must be green. This is one beautiful coloring and uses one vertex.
+To calculate this, we can use the fact that the number of colorings of a tree is the product of colorings of its child subtrees. Let's iterate over the number of colorings of the last subtree (denote it $x$), then:
 
-**Recurrence Relation:**
-For `m > 1`, a tree with `m` colorings must have a root with at least one child. Let the root `r` (which must be green) have `k` children. These children are the roots of subtrees `T_1, ..., T_k`. Let the number of beautiful colorings for these subtrees be `c_1, ..., c_k` respectively.
-- The total number of vertices in the tree is `1 (for the root) + dp[c_1] + dp[c_2] + ... + dp[c_k]`.
-- The total number of colorings `m` is `(c_1 + 2) * (c_2 + 2) * ... * (c_k + 2)`.
+$$dp_m = \min(dp_{m/x} + dp_{x - 2})$$
 
-We need to find a factorization of `m` into factors `x_i = c_i + 2` that minimizes the sum of vertices `1 + sum(dp[x_i - 2])`.
+> [!TIP]
+> Think of it as having a tree root with green color that has $m/x$ colorings. Now we want to add another subtree to the root node of the tree with $m/x$ colorings. The new subtree has $x-2$ colorings with its root colored green. But this subtree can also be colored blue or yellow. Thus we have a new tree with $m/x \times (x - 2 + 2) = m/x \times x = m$ colorings.
 
-This can be solved iteratively. To compute `dp[m]`, we can think of constructing the tree by adding one branch at a time to the root. If we have a tree with `m/d` colorings, we can add a new branch. For the new combined tree to have `m` colorings, this new branch must contribute a factor of `d` to the product.
-- The number of ways to color the new branch (rooted at a child of the main root) must be `d`.
-- This means the number of beautiful colorings for the subtree on that branch must be `c = d - 2`.
-- The minimum number of vertices for this new subtree is `dp[d-2]`.
-- The total number of vertices for the new tree with `m` colorings is `dp[m/d] + dp[d-2]`.
-
-We can find the minimum by trying all possible divisors `d` of `m`. This gives the recurrence:
-`dp[m] = min_{d|m, d>=3} (dp[m/d] + dp[d-2])`
-(We require `d >= 3` because `c = d-2` must be at least 1).
+for all values of $x$. Note that $x$ must be a divisor of $m$.
 
 
 

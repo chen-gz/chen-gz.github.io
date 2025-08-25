@@ -25,23 +25,25 @@ For each test case, output an integer — the minimum cost to make $a = b$, or $
 
 ## Solution
 
-This problem can be modeled as finding the shortest path in a graph. The nodes of the graph are integers, and the edges represent the operations. We want to find the minimum cost to go from node `a` to node `b`.
+The second operation (XOR with 1) can increase the value of $a$ by 1 when $a$ is even and decrease the value of $a$ by 1 when $a$ is odd.
 
-The states in our search are the numbers we can reach. From any integer `u`, we can reach:
-1.  `u + 1` with a cost of `x`.
-2.  `u \oplus 1` (u XOR 1) with a cost of `y`.
+We can only reach $b$ from $a$ if $a \leq b$, since both operations can only increase $a$ (except when $a$ is odd and we XOR with 1, which decreases $a$ by 1).
 
-Since the edge costs are non-negative, we can use Dijkstra's algorithm to find the shortest path.
+The strategy is as follows:
+- If $a = b + 1$ and $a$ is odd, we can reach $b$ by XORing once, which costs $y$.
+- If $a = b$, no operations needed, so return $0$.
+- If $a < b$, we need to increase $a$ by $(b - a)$ units.
+- Else we cannot reach $b$ from $a$, so return `-1`.
 
-The algorithm is as follows:
-1.  Create a distance array `dist` to store the minimum cost to reach each number from `a`. Initialize `dist[a] = 0` and all other distances to infinity.
-2.  Use a priority queue to store pairs of `(cost, number)`. Initially, it contains `(0, a)`.
-3.  While the priority queue is not empty, extract the pair with the smallest cost, say `(c, u)`.
-4.  If `u` is our target `b`, we have found the minimum cost, and we can terminate.
-5.  Otherwise, for each possible operation from `u`:
-    -   Consider moving to `v = u + 1`. The new cost is `c + x`. If this is less than the current `dist[v]`, update `dist[v]` and add `(c + x, v)` to the priority queue.
-    -   Consider moving to `v = u \oplus 1`. The new cost is `c + y`. If this is less than the current `dist[v]`, update `dist[v]` and add `(c + y, v)` to the priority queue.
+For each unit increase, we can either:
+1. Use operation 1 (add 1) with cost $x$
+2. Use operation 2 (XOR with 1) when $a$ is even, which costs $y$.
 
-Since the values of `a` and `b` are small ($1 \leq a, b \leq 100$), this algorithm is very efficient. We need to consider a reasonable range for the numbers we can reach (e.g., up to 200, since we might overshoot `b` and come back). If the priority queue becomes empty and we haven't reached `b`, it means `b` is unreachable.
+Since the data is small, we can directly increase $a$ one by one until it reaches $b$ and calculate the cost accordingly.
+
+But actually, the cost can be calculated directly:
+
+- If $x \leq y$, always use operation 1 (add 1) to reach $b$ from $a$, which costs $(b - a) \cdot x$.
+- Otherwise, the cost $= (b - a) \div 2 \cdot (x + y)$, and if $(b - a)$ is odd, we need one more operation of type 1 or type 2.
 
 [submission link](https://codeforces.com/contest/2119/submission/327542396)

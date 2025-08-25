@@ -31,33 +31,6 @@ The edges can be printed in any order. If there are multiple answers, output any
 
 ## Solution
 
-The problem requires us to direct the edges of a tree such that there are exactly `n` "good pairs" (a pair `(u,v)` is good if there's a directed path from `u` to `v`).
-
-A key insight is to relate the total number of good pairs to the structure of the directed tree. If we root the tree at an arbitrary node `r` and direct all edges to point **towards the root** (from child to parent), the resulting graph is a set of paths all converging at `r`.
-
-In this structure, for any node `u`, there is a directed path from `u` to each of its ancestors. The number of ancestors of `u` is equal to its depth, `depth(u)` (where the root has depth 0). Therefore, the total number of good pairs in such a directed tree is the sum of the depths of all nodes: `Sum_{u in V} depth(u)`.
-
-This transforms the problem into: **Can we find a root node `r` in the tree such that if we root the tree at `r`, the sum of the depths of all nodes is exactly `n`?**
-
-### Algorithm
-
-1.  **Calculate Sum of Depths for an Arbitrary Root:**
-    -   First, pick an arbitrary root, say node 1.
-    -   Perform a DFS or BFS from node 1. During the traversal, for each node `u`, calculate its `depth_1(u)` (distance from root 1) and the `size(u)` (the number of nodes in the subtree rooted at `u`, including `u` itself).
-    -   Calculate the initial sum of depths for root 1: `S_1 = Sum_{u in V} depth_1(u)`.
-
-2.  **Re-rooting and Updating the Sum:**
-    -   We don't need to re-run the entire traversal for every possible root. We can efficiently calculate the sum of depths for a new root `v` based on the sum for an adjacent node `u`.
-    -   If we move the root from a parent `u` to its child `v`, all nodes in the subtree of `v` (which has `size(v)` nodes) get 1 level closer to the root, so their depths decrease by 1. All other `n - size(v)` nodes get 1 level further from the root, so their depths increase by 1.
-    -   The new sum of depths `S_v` can be calculated from the old sum `S_u` in O(1) time:
-        `S_v = S_u - size(v) + (n - size(v))`.
-    -   We can perform a second traversal (DFS) of the tree, starting from our arbitrary root (node 1). As we move from a parent `p` to a child `c`, we calculate `S_c` using the formula and the pre-calculated subtree sizes.
-
-3.  **Finding and Printing a Solution:**
-    -   During the second traversal, if we find any node `v` for which the calculated sum of depths `S_v` is equal to `n`, then we have found a valid root.
-    -   We output "YES". Then, to print the edge orientations, we can run a final traversal (like BFS or DFS) starting from our valid root `v`. For each edge `(x, y)` we traverse from parent `x` to child `y`, we know the direction must be towards the root, so we print `y, x`.
-    -   If, after checking all nodes as potential roots, we don't find any that result in a sum of `n`, then no solution exists, and we output "NO".
-
-This approach has a time complexity of `O(n)` because it's based on a few traversals of the tree.
+The idea is to find a node with degree 2. Suppose we have $v$ with degree 2, then we can have $u \rightarrow v \rightarrow w$. Then make all the other edges have length 1, and we will have $(n-1) + 1 = n$ good pairs. The $n-1$ good pairs are provided by the edges and 1 more is provided by $u \rightarrow w$.
 
 [submission link](https://codeforces.com/contest/2112/submission/327456854)

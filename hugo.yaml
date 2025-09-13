@@ -7,19 +7,6 @@ module:
     - path: github.com/imfing/hextra
 
 markup:
-  # allow raw html
-  goldmark:
-    renderer:
-      unsafe: true
-    extensions:
-      passthrough:
-        delimiters:
-          block:
-            - ['\[', '\]']
-            - ['$$', '$$']
-          inline:
-            - ['\(', '\)']
-        enable: true
 
   # enable hextra syntax highlight
   highlight:

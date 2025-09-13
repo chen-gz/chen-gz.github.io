@@ -27,7 +27,7 @@ comments: false
 ## Work Experience
 
 **Software Engineer, Platform and Infrastructure**  
-  *Google, USA*  
+  *Google, Sunnyvale, USA*  
   *August 2025 - Present*
 
 **Graduate Research Assistant**  

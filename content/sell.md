@@ -26,7 +26,7 @@ draft: false
 - ikea 柜子 （可做电视柜） $40
   - [ikea Link](https://www.ikea.com/us/en/p/kallax-shelf-unit-black-brown-20275885/)
 
-- Ikea DRÖNA 储物盒 $3/个    Ikea FÖSSTA 储物盒 $4/个
+- Ikea DRÖNA 储物盒 \$3/个    Ikea FÖSSTA 储物盒 \$4/个
   - [ikea Link](https://www.ikea.com/us/en/p/droena-box-black-60508430/)
 
 

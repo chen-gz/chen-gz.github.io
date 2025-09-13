@@ -3,8 +3,6 @@ title: Codeforces Round 1039 (Div. 2)
 type: docs
 # prev: docs/first-page
 # next: docs/folder/leaf
-sidebar:
-  open: true
 ---
 
 This section provides solutions for [Codeforces Round 1039 (Div. 2)](https://codeforces.com/contest/2128).

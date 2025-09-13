@@ -55,6 +55,8 @@ menu:
     #     icon: x-twitter
 
 params:
+  math:
+    engine: mathjax
   navbar:
     displayTitle: true
     displayLogo: false

@@ -53,7 +53,7 @@ menu:
 
 params:
   math:
-    engine: mathjax
+    engine: katex
   navbar:
     displayTitle: true
     displayLogo: false

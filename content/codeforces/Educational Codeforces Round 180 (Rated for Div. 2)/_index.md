@@ -3,8 +3,6 @@ title: Educational Codeforces Round 180 (Rated for Div. 2)
 type: docs
 # prev: docs/first-page
 # next: docs/folder/leaf
-sidebar:
-  open: true
 ---
 
 This section provide solutions for [Educational Codeforces Round 180 (Rated for Div. 2)](https://codeforces.com/contest/2112).

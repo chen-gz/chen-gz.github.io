@@ -25,16 +25,16 @@ $$
 
 Let's analyze the problem step by step:
 
-1. **Key Constraint:**  
+1. **Key Constraint:**
    The condition $\max(p_i, p_{i+1}) > p_{i+2}$ ensures that two consecutive ascents cannot occur in the permutation.
 
-2. **LDS Contribution:**  
+2. **LDS Contribution:**
    For any pair $(p_i, p_{i+1})$ where $p_i > p_{i+1}$, these two elements form a "block" that can contribute to the longest decreasing subsequence (LDS) in any subarray containing both. However, only one of them will actually increase the LDS length.
 
-3. **Counting Contributions:**  
+3. **Counting Contributions:**
    For each such pair $(p_i, p_{i+1})$ with $p_i > p_{i+1}$, the number of subarrays containing both is $(i + 1) \times (n - i - 1)$, where $i$ is the index of $p_i$ (0-based).
 
-4. **Total LDS Sum:**  
+4. **Total LDS Sum:**
    If there are no such pairs, the sum is simply the sum over all subarrays of their lengths:
    $$
    n + 2(n-1) + 3(n-2) + \ldots + n

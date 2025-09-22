@@ -23,30 +23,30 @@ $$
 \end{array}
 $$
 
-## Explaination
+## Explanation
 
 ![image-20220208141125368](https://raw.githubusercontent.com/chen-gz/picBed/master/uPic/image-20220208141125368.png)
 
-The picture show the data store in the binary indexed tree. 
+The picture shows the data stored in the binary indexed tree.
 
-Supporse the name of original array is `arr`, the name of binary indexed tree is `fenw`. Than we have following relationship between `arr` and `fenw`. 
+Suppose the name of the original array is `arr` and the name of the binary indexed tree is `fenw`. Then we have the following relationship between `arr` and `fenw`.
 
 ``` c++
 fenw[0] = arr[0];
 fenw[1] = arr[0] + arr[1];
 fenw[2] = arr[2];
-fenw[3] = arr[0] + arry[1] + arr[2] + arr[3];
+fenw[3] = arr[0] + arr[1] + arr[2] + arr[3];
 ```
 
-Now, we need to found the pattern. First we are going to found out all index in fenw which contains `arr[0]`. The indexes are `0, 1, 3, 7, 15, ...` . Now we see the pattern for `arr[0]`. First one is `0`; second one is `1` which is `0 + 1` = `0 + pow(2,0)`; third one `3` which is `1 + pow(2,1) = 3`, and so on.  When we are starting from `3` for array `3` , the next element in the binary index tree contains `arr[3]` is 7. So how we determine this. Actually when we have `1xxxx01111`, the next index is `1xxxx11111`. Because of only `1...1`contains previous value. 
+Now, we need to find the pattern. First, we are going to find out all indices in `fenw` that contain `arr[0]`. The indices are `0, 1, 3, 7, 15, ...` . Now we see the pattern for `arr[0]`. The first one is `0`; the second one is `1`, which is `0 + 1` = `0 + 2^0`; the third one is `3`, which is `1 + 2^1 = 3`, and so on. When we are starting from index `3`, the next element in the binary indexed tree that contains `arr[3]` is at index 7. So how do we determine this? To get the next index, we can use the formula `index | (index + 1)`. This works by flipping the least significant zero bit to a one.
 
-Next problem is how we write code for these. We can use `x | (x + 1)` to find the next element in the binary index tree.
+The next problem is how to write code for this. We can use `x | (x + 1)` to find the next element in the binary index tree.
 
-Suppose we are start from `0`, the next four element is `0 | 1 = 1, 1 | 2 = 3, 3 | 4 = 7 , 7 | 8 = 15 `. If we start from `2`, the next four element is `2 | 3 = 3` then as same as `0`. 
+Suppose we start from `0`. The next four elements are `0 | (0 + 1) = 1`, `1 | (1 + 1) = 3`, `3 | (3 + 1) = 7`, `7 | (7 + 1) = 15 `. If we start from `2`, the next element is `2 | (2 + 1) = 3`, and from there it follows the same pattern as starting from 0.
 
 ## Implementation[^2]
 
-<details> <summary>show detail</summary>
+<details><summary>Show Detail</summary>
 ``` cpp
 using namespace std;
  

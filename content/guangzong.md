@@ -6,7 +6,7 @@ comments: false
 
 <div style="display: flex; align-items: center; gap: 30px; margin-bottom: 20px;">
   <div style="flex: 1;">
-    <p style="margin: 0; font-size: 18px; line-height: 1.6;">Hello! I'm Guangzong Chen, I recently completed my Ph.D. in Electrical and Computer Engineering at the University of Pittsburgh in August 2025. I hold a B.S. in Automation from the Beijing Institute of Technology. My interest includes embedded systems and machine learning.</p>
+  <p style="margin: 0; font-size: 18px; line-height: 1.6;">Hello! I'm Guangzong Chen. I hold a Ph.D. in Electrical and Computer Engineering from the University of Pittsburgh (August 2025) and a B.S. in Automation from the Beijing Institute of Technology. I am currently working at Google in the Platform and Infrastructure team. My interests include embedded systems and machine learning.</p>
   </div>
   <div style="flex: 0 0 120px;">
     <img src="https://avatars.githubusercontent.com/u/18215354?v=4" alt="Guangzong Chen" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
@@ -26,11 +26,15 @@ comments: false
 
 ## Work Experience
 
-- **Graduate Research Assistant**  
+**Software Engineer, Platform and Infrastructure**  
+  *Google, Sunnyvale, USA*  
+  *August 2025 - Present*
+
+**Graduate Research Assistant**  
   *University of Pittsburgh, Pittsburgh, PA, USA*  
   *January 2020 - August 2025*
 
-- **Firmware Engineer Intern**  
+**Firmware Engineer Intern**  
   *Nimbus Robotics, Pittsburgh, PA, USA*  
   *May 2020 - August 2020*
 

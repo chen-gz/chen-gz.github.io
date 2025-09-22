@@ -25,9 +25,9 @@ For each test case, output an integer — the minimum cost to make $a = b$, or $
 
 ## Solution
 
-The second operation (XOR with 1) can increase the value of $a$ by 1 when $a$ is even and decrease the value of $a$ by 1 when $a$ is odd. 
+The second operation (XOR with 1) can increase the value of $a$ by 1 when $a$ is even and decrease the value of $a$ by 1 when $a$ is odd.
 
-We can only reach $b$ from $a$ if $a \leq b$, since both operations can only increase $a$ (except when $a$ is odd and we XOR with 1, which decreases $a$ by 1). 
+We can only reach $b$ from $a$ if $a \leq b$, since both operations can only increase $a$ (except when $a$ is odd and we XOR with 1, which decreases $a$ by 1).
 
 The strategy is as follows:
 - If $a = b + 1$ and $a$ is odd, we can reach $b$ by XORing once, which costs $y$.

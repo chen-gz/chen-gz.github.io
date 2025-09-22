@@ -29,7 +29,7 @@ It is guaranteed that the sum of $n^2$ over all test cases does not exceed $2.5 
 
 For each test case, output an integer — the sum of the weights over all $(n+1)!$ valid sequences of length $n$, modulo $m$.
 
-## Solution 
+## Solution
 The goal is to calculate the sum of weights f(a) over all possible valid sequences a, modulo m. The weight f(a) is the number of ways to remove tokens based on the sequence a.
 
 ### 1. The Core Idea: Changing Perspective
@@ -96,7 +96,7 @@ Combining these cases, we get the recurrence:
 
 $$\text{dp}[i][k] = \text{dp}[i+1][k] + \text{dp}[i+1][k-1] × i × (n - i + 2 - k)$$
 
-**Base Cases**: 
+**Base Cases**:
 - $\text{dp}[n+1][0] = 1$ (representing one way to choose an empty set)
 - $\text{dp}[n+1][k] = 0$ for $k > 0$
 

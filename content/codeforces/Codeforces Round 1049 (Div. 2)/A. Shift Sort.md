@@ -4,8 +4,6 @@ type: docs
 math: true
 ---
 
-time limit per test1 second
-
 ## Problem Statement
 
 You are given a binary string $s$ of length $n$. You may perform the following operation any number of times (including zero):

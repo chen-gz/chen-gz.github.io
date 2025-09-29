@@ -54,6 +54,8 @@ menu:
 params:
   math:
     engine: katex
+  page:
+    width: full
   navbar:
     displayTitle: true
     displayLogo: false

@@ -6,9 +6,6 @@ math: true
 
 ## Problem
 
-**time limit per test:** 1 second
-**memory limit per test:** 256 megabytes
-
 Given an array $a$ of $n$ elements, where each element is equal to $-1$, $0$, or $1$. In one operation, you can choose an index $i$ and increase $a_i$ by 1 (that is, assign $a_i := a_i + 1$). Operations can be performed any number of times, choosing any indices.
 
 The goal is to make the product of all elements in the array strictly positive with the minimum number of operations, that is, $a_1 \cdot a_2 \cdot a_3 \cdot \ldots \cdot a_n > 0$. Find the minimum number of operations.

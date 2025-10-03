@@ -4,7 +4,7 @@ type: docs
 math: true
 ---
 
-## A. Be Positive
+## Problem
 
 **time limit per test:** 1 second
 **memory limit per test:** 256 megabytes

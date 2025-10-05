@@ -1,5 +1,14 @@
 # Hugo configuration file
 title: Ggeta
+defaultContentLanguage: en
+
+languages:
+  en:
+    languageName: English
+    weight: 1
+  zh-cn:
+    languageName: 简体中文
+    weight: 2
 
 # import hextra as module
 module:
@@ -24,22 +33,27 @@ markup:
 
 menu:
   main:
-    - name: Codeforces
+    - identifier: codeforces
+      name: Codeforces
       pageRef: /codeforces
       weight: 1
-    - name: Leetcodes
+    - identifier: leetcode
+      name: Leetcodes
       pageRef: /leetcode
       weight: 1
-    - name: About
+    - identifier: about
+      name: About
       pageRef: /guangzong
       weight: 2
-    - name: Blog
+    - identifier: blog
+      name: Blog
       pageRef: /blog
       weight: 3
     # - name: Contact ↗
     #   url: "https://ggeta.com"
     #   weight: 4
-    - name: Search
+    - identifier: search
+      name: Search
       weight: 4
       params:
         type: search

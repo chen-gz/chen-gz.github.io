@@ -126,3 +126,106 @@ int32_t main() {
 {{% /details %}}
 
 [Submission Link](https://codeforces.com/contest/2149/submission/341949992)
+
+---
+
+## Alternative Solution: "At Most K" Principle
+
+A more robust and common strategy for "exactly k distinct elements" problems is to use the principle of inclusion-exclusion. The number of subarrays with **exactly `k`** distinct elements is equal to:
+
+(Number of subarrays with **at most `k`** distinct elements) - (Number of subarrays with **at most `k-1`** distinct elements).
+
+This approach simplifies the problem by avoiding the need to manage two separate windows for "exactly k" and "at most k" simultaneously. We can write a single, clean helper function that counts subarrays with at most a certain number of distinct elements and call it twice.
+
+Here's how that function works using a sliding window:
+
+1.  **Initialize**: Start with `left = 0`, `total_count = 0`, and a frequency map.
+2.  **Expand Window**: Iterate with a `right` pointer from `0` to `n-1`, adding `a[right]` to the window and updating its frequency.
+3.  **Shrink Window**: If the number of distinct elements in the window `[left, right]` exceeds the `max_distinct` limit, shrink the window from the left by incrementing `left` and updating frequencies until the window is valid again.
+4.  **Count Valid Subarrays**: Once the window `[left, right]` is valid, calculate the number of subarrays ending at `right` that also satisfy the length constraints `[l, r]`. Add this count to the total.
+
+The final answer is the result of `count_at_most(k, ...)` minus `count_at_most(k-1, ...)`.
+
+{{% details title="View Code" closed="true" %}}
+```cpp
+#include <iostream>
+#include <vector>
+#include <map>
+#include <algorithm>
+
+using namespace std;
+
+#define int long long
+
+// Function to count subarrays with at most `max_distinct` distinct elements
+// and length in the range [l_len, r_len].
+long long count_at_most(int max_distinct, int l_len, int r_len, int n, const vector<int>& a) {
+    if (max_distinct < 0) return 0; // Guard against k-1 < 0
+    map<int, int> counts;
+    int left = 0;
+    long long total_count = 0;
+    int current_distinct = 0;
+
+    for (int right = 0; right < n; ++right) {
+        if (counts[a[right]] == 0) {
+            current_distinct++;
+        }
+        counts[a[right]]++;
+
+        // Shrink the window if we have too many distinct elements
+        while (current_distinct > max_distinct) {
+            counts[a[left]]--;
+            if (counts[a[left]] == 0) {
+                current_distinct--;
+            }
+            left++;
+        }
+
+        // Now, the window [left, right] has at most `max_distinct` elements.
+        // We need to find how many of these satisfy the length constraints [l_len, r_len].
+
+        // Lower bound for valid start `b`: right - r_len + 1
+        int start_min = right - r_len + 1;
+        // Upper bound for valid start `b`: right - l_len + 1
+        int start_max = right - l_len + 1;
+
+        // The actual valid start `b` must be within the current window [left, right]
+        int valid_starts_min = max((long long)left, (long long)start_min);
+        int valid_starts_max = start_max;
+
+        if (valid_starts_max >= valid_starts_min) {
+            total_count += (valid_starts_max - valid_starts_min + 1);
+        }
+    }
+    return total_count;
+}
+
+void solve() {
+    int n, k, l, r;
+    cin >> n >> k >> l >> r;
+    vector<int> a(n);
+    for (int i = 0; i < n; i++) {
+        cin >> a[i];
+    }
+
+    // Count subarrays with at most k distinct elements
+    long long count_k = count_at_most(k, l, r, n, a);
+
+    // Count subarrays with at most k-1 distinct elements
+    long long count_k_minus_1 = count_at_most(k - 1, l, r, n, a);
+
+    cout << count_k - count_k_minus_1 << endl;
+}
+
+int32_t main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    int t;
+    cin >> t;
+    while (t--) {
+        solve();
+    }
+    return 0;
+}
+```
+{{% /details %}}

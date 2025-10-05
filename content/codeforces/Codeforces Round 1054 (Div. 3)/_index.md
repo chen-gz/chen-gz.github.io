@@ -9,4 +9,5 @@ This section provide solutions for [Codeforces Round 1054 (Div. 3)](https://code
   {{< card link="a.-be-positive" title="A. Be Positive" icon="document-text" >}}
   {{< card link="b.-unconventional-pairs" title="B. Unconventional Pairs" icon="document-text" >}}
   {{< card link="c.-mex-rose" title="C. MEX Rose" icon="document-text" >}}
+  {{< card link="e.-hidden-knowledge-of-the-ancients" title="E. Hidden Knowledge of the Ancients" icon="document-text" >}}
 {{< /cards >}}

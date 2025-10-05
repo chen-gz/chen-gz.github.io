@@ -1,5 +1,5 @@
 ---
-title: 龚雅南
+title: 龚亚南
 type: about
 comments: false
 ---

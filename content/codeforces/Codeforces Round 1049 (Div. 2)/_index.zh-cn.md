@@ -1,9 +1,9 @@
 ---
-title: "Codeforces 第 1049 轮 (Div. 2)"
+title: "Codeforces Round 1049 (Div. 2)"
 type: docs
 ---
 
-本节提供 [Codeforces 第 1049 轮 (Div. 2)](https://codeforces.com/contest/2140) 的题解。
+本节提供 [Codeforces Round 1049 (Div. 2)](https://codeforces.com/contest/2140) 的题解。
 
 {{< cards cols="1" >}}
   {{< card link="a.-shift-sort" title="A. Shift Sort" icon="document-text" >}}

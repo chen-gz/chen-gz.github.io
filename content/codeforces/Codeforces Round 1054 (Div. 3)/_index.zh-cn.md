@@ -1,9 +1,9 @@
 ---
-title: "Codeforces 第 1054 轮 (Div. 3)"
+title: "Codeforces Round 1054 (Div. 3)"
 type: docs
 ---
 
-本节提供 [Codeforces 第 1054 轮 (Div. 3)](https://codeforces.com/contest/2149) 的题解。
+本节提供 [Codeforces Round 1054 (Div. 3)](https://codeforces.com/contest/2149) 的题解。
 
 {{< cards cols="1" >}}
   {{< card link="a.-be-positive" title="A. Be Positive" icon="document-text" >}}

@@ -1,9 +1,9 @@
 ---
-title: "Codeforces 第 1037 轮 (Div. 3)"
+title: "Codeforces Round 1037 (Div. 3)"
 type: docs
 ---
 
-本节提供 [Codeforces 第 1037 轮 (Div. 3)](https://codeforces.com/contest/2126) 的题解。
+本节提供 [Codeforces Round 1037 (Div. 3)](https://codeforces.com/contest/2126) 的题解。
 {{< cards cols="1" >}}
   {{< card link="f.-1-1-1-free-tree" title="F. 1-1-1, Free Tree!" icon="document-text" >}}
   {{< card link="g1.-big-wins-easy-version" title="G1. Big Wins! (easy version)" icon="document-text" >}}

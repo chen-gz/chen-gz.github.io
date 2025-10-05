@@ -1,9 +1,9 @@
 ---
-title: "Codeforces 第 1035 轮 (Div. 2)"
+title: "Codeforces Round 1035 (Div. 2)"
 type: docs
 ---
 
-本节提供 [Codeforces 第 1035 轮 (Div. 2)](https://codeforces.com/contest/2119) 的题解。我认为 E 题比 D 题简单。
+本节提供 [Codeforces Round 1035 (Div. 2)](https://codeforces.com/contest/2119) 的题解。我认为 E 题比 D 题简单。
 
 {{< cards cols="1" >}}
   {{< card link="a.-add-or-xor" title="A. Add or XOR" icon="document-text" >}}

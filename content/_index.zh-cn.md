@@ -13,7 +13,6 @@ comments: false
   </div>
 </div>
 
-## 了不起的人们
 
 ### [刘康妮 (Connie)](/zh-cn/connie/)
 
@@ -26,13 +25,13 @@ comments: false
   </div>
 </div>
 
-### [龚雅南](/zh-cn/yanan/)
+### [龚亚南](/zh-cn/yanan/)
 
 <div style="display: flex; align-items: center; gap: 30px; margin-bottom: 20px;">
   <div style="flex: 1;">
-    <p style="margin: 0; font-size: 18px; line-height: 1.6;">来认识一下雅南，她是空调、供暖和制冷学会的一位才华横溢的高级数据科学家和机器学习工程师。凭借在人工智能、大型语言模型和MLOps方面的专业知识，她领导了基于GPT-4的多智能体AI系统和生产级ML管道的开发。她的工作包括构建每年节省50万美元的异常检测系统，以及开发将工程工作量减少80%的AI驱动解决方案。</p>
+    <p style="margin: 0; font-size: 18px; line-height: 1.6;">来认识一下亚南，她是空调、供暖和制冷学会的一位才华横溢的高级数据科学家和机器学习工程师。凭借在人工智能、大型语言模型和MLOps方面的专业知识，她领导了基于GPT-4的多智能体AI系统和生产级ML管道的开发。她的工作包括构建每年节省50万美元的异常检测系统，以及开发将工程工作量减少80%的AI驱动解决方案。</p>
   </div>
   <div style="flex: 0 0 120px;">
-    <img src="/images/yanan.png" alt="龚雅南" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+    <img src="/images/yanan.png" alt="龚亚南" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
   </div>
 </div>

@@ -1,9 +1,6 @@
 ---
 title: "C. The Ancient Wizards' Capes"
-date: 2024-07-28T15:23:45+08:00
-draft: false
-author: "Ggeta"
-tags: ["实现", "构造", "Codeforces"]
+type: docs
 ---
 
 ## 题目描述

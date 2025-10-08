@@ -1,7 +1,6 @@
 ---
 title: "Codeforces Round 1056 (Div. 2)"
-date: 2024-07-21
-draft: false
+type: docs
 ---
 
 {{< cards >}}

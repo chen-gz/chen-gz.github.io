@@ -1,7 +1,6 @@
 ---
 title: "B. Abraham's Great Escape"
-date: 2024-07-21
-draft: false
+type: docs
 ---
 ## Problem Statement
 Abraham is a brave explorer who goes where no other programmer has gone before. For his next expedition, he plans to investigate a peculiar maze. He knows that the maze is an $n \times n$ grid with an arrow in each cell that points in one of four directions: up, down, left and right.

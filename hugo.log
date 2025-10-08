@@ -1,4 +1,0 @@
-Watching for changes in /app/{content,i18n,layouts,static}
-Watching for config changes in /app/hugo.yaml, /app/go.mod
-Start building sites …
-hugo v0.147.7-189453612e4bedc4f27495a7b1145321c8d89807+extended linux/amd64 BuildDate=2025-05-31T12:41:12Z VendorInfo=gohugoio

@@ -1,5 +1,6 @@
 ---
 title: "A. El fucho"
+type: docs
 ---
 
 ## Problem Statement

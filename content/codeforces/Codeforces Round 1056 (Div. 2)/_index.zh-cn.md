@@ -6,5 +6,5 @@ type: docs
 {{< cards cols="1" >}}
   {{< card link="a-el-fucho" title="A. El fucho" icon="document-text" >}}
   {{< card link="b.-abrahams-great-escape" title="B. 亚伯拉罕的大逃亡" icon="document-text" >}}
-  {{< card link="c.-the-ancient-wizards'-caps" title="C.-The-Ancient-Wizards'-Capes" icon="document-text" >}}
+  {{< card link="c-the-ancient-wizards-capes" title="C. The Ancient Wizards' Capes" icon="document-text" >}}
 {{< /cards >}}

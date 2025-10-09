@@ -1,6 +1,7 @@
 ---
 title: "C. The Ancient Wizards' Capes"
 type: docs
+math: true
 ---
 
 ## Problem Statement

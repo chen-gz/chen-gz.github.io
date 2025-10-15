@@ -7,4 +7,5 @@ This section provide solutions for [Codeforces Round 1057 (Div. 2)](https://code
 
 {{< cards cols="1" >}}
   {{< card link="a-circle-of-apple-trees" title="A. Circle of Apple Trees" icon="document-text" >}}
+  {{< card link="b-bitwise-reversion" title="B. Bitwise Reversion" icon="document-text" >}}
 {{< /cards >}}

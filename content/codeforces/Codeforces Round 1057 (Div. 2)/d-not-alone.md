@@ -1,6 +1,5 @@
 ---
-title: "D. Not Alone"
-date: 2024-07-28T12:00:00+08:00
+title: D. Not Alone
 math: true
 ---
 

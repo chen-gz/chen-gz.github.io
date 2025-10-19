@@ -7,4 +7,5 @@ type: docs
 
 {{< cards cols="1" >}}
   {{< card link="a-beautiful-average" title="A. Beautiful Average" icon="document-text" >}}
+  {{< card link="C.-Beautiful-XOR" title="C. 异或之美" icon="document-text" >}}
 {{< /cards >}}

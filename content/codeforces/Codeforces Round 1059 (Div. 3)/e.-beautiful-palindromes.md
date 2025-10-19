@@ -1,7 +1,5 @@
 ---
 title: "E. Beautiful Palindromes"
-date: 2024-07-28T15:00:00+08:00
-draft: false
 math: true
 ---
 

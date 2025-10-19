@@ -12,4 +12,5 @@ type: docs
   {{< card link="d.-beautiful-permutation" title="D. Beautiful Permutation" icon="document-text" >}}
   {{< card link="e.-beautiful-palindromes" title="E. Beautiful Palindromes" icon="document-text" >}}
   {{< card link="f.-beautiful-intervals" title="F. 美丽的区间" icon="document-text" >}}
+  {{< card link="g-beautiful-tree" title="G. 美丽的树" icon="document-text" >}}
 {{< /cards >}}

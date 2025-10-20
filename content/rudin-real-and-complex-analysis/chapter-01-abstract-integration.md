@@ -401,7 +401,8 @@ $$h^{-1}(V) = f^{-1}(g^{-1}(V)),$$
 (b) shows that $h^{-1}(V) \in \mathcal{M}$.
 
 ////
-{{% details title="关于d的说明” closed="true" %}}
+
+{{% details title="关于d的说明" closed="true" %}}
 {{< callout >}}
 
 在定理 **1.12 (d)** 中，函数 $h = g \circ f$ 要是可测的，要求 $f: X \to Y$ 是**可测的**（measurable），而 $g: Y \to Z$ 必须是 **Borel 映射**（Borel mapping），即 $g$ 是**Borel 可测的**。

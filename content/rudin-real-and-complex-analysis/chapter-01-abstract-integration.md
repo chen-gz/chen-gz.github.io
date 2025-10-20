@@ -175,7 +175,7 @@ The class of measurable functions plays a fundamental role in integration theory
 
 It would perhaps be more satisfactory to apply the term "measurable space" to the ordered pair $(X, \mathcal{M})$, rather than to $X$. After all, $X$ is a set, and $X$ has not been changed in any way by the fact that we now also have a $\sigma$-algebra of its subsets in mind. Similarly, a topological space is an ordered pair $(X, \tau)$. But if this sort of thing were systematically done in all mathematics, the terminology would become awfully cumbersome. We shall discuss this again at somewhat greater length in Sec. 1.21.
 
-{{% details title=“Difference of 1.2 and 1.3" closed="true" %}}
+{{% details title="Difference between 1.2 and 1.3" closed="true" %}}
 {{< callout >}}
 您问的是 **$\sigma$-代数（$\sigma$-algebra）** 和 **拓扑（Topology）** 的区别。这是抽象数学中两个非常重要的概念，它们各自为不同的数学分支（**测度论/积分论** 和 **拓扑学**）提供基础。
 

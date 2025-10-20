@@ -91,7 +91,7 @@ If the range of  $f$  lies in the real line (or in the complex plane), then  $f$
 
 The class of measurable functions plays a fundamental role in integration theory. It has some basic properties in common with another most important class of functions, namely, the continuous ones. It is helpful to keep these similarities in mind. Our presentation is therefore organized in such a way that the analogies between the concepts *topological space*, *open set*, and *continuous function*, on the one hand, and *measurable space*, *measurable set*, and *measurable function*, on the other, are strongly emphasized. It seems that the relations between these concepts emerge most clearly when the setting is quite abstract, and this (rather than a desire for mere generality) motivates our approach to the subject.
 
-#### 1.2 Definition
+**1.2 Definition**
 
 (a) A collection  $\tau$  of subsets of a set  $X$  is said to be a *topology* in  $X$  if  $\tau$  has the following three properties:
 
@@ -103,7 +103,7 @@ The class of measurable functions plays a fundamental role in integration theory
 
 (c) If  $X$  and  $Y$  are topological spaces and if  $f$  is a mapping of  $X$  into  $Y$ , then  $f$  is said to be *continuous* provided that  $f^{-1}(V)$  is an open set in  $X$  for every open set  $V$  in  $Y$ .
 
-#### 1.3 Definition
+**1.3 Definition**
 
 (a) A collection  $\mathcal{M}$  of subsets of a set  $X$  is said to be a  *$\sigma$ -algebra* in  $X$  if  $\mathcal{M}$  has the following properties:
 

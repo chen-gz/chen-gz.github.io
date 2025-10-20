@@ -92,7 +92,20 @@ If the range of $f$ lies in the real line (or in the complex plane), then $f$ is
 The class of measurable functions plays a fundamental role in integration theory. It has some basic properties in common with another most important class of functions, namely, the continuous ones. It is helpful to keep these similarities in mind. Our presentation is therefore organized in such a way that the analogies between the concepts *topological space*, *open set*, and *continuous function*, on the one hand, and *measurable space*, *measurable set*, and *measurable function*, on the other, are strongly emphasized. It seems that the relations between these concepts emerge most clearly when the setting is quite abstract, and this (rather than a desire for mere generality) motivates our approach to the subject.
 
 **1.2 Definition**
+{{< callout >}}
+“拓扑”这个名称源于希腊语 $\tau \acute{o} \pi o \varsigma$（*tópos*），意思是**地方**或**位置**，以及 $-\lambda o \gamma \acute{i} \alpha$（*-logía*），意思是**研究**。
 
+因此，**拓扑学的字面意思就是“对地方/位置的研究”**。
+
+在数学上，拓扑学（或称为“橡皮泥几何学”）是研究空间在连续变形（如拉伸、扭曲，但不允许撕裂或粘合）下保持不变的性质。
+
+您在页面上看到的**抽象拓扑**定义（即对开集集合 $\tau$ 的三个性质要求），是现代拓扑学的核心。它将我们从熟悉的欧几里得空间（如直线、平面）中关于“近”（靠近）和“连续”的直觉抽象出来，形成了一套可以在任何抽象集合 $X$ 上定义的规则。
+
+它被称为“拓扑”正是因为它提供了一种最一般的方法来描述一个集合 $X$ 上的**“结构”**，允许我们谈论集合 $X$ 中哪些子集是“开放的”，从而在不依赖距离（metric）的情况下讨论**连续性**、**收敛性**和**连通性**等**空间属性**。
+
+* **开集**（Open sets）是定义拓扑的基本元素，它们在某种意义上代表了集合中的“邻域”概念。
+* 通过开集的这三条**公理**（空集和全集、有限交集、任意并集），数学家们能够在最广泛的背景下研究这些与“位置”和“邻近”相关的概念。
+{{< /callout >}}
 (a) A collection $\tau$ of subsets of a set $X$ is said to be a *topology* in $X$ if $\tau$ has the following three properties:
 
 1. $\emptyset \in \tau$ and $X \in \tau$.

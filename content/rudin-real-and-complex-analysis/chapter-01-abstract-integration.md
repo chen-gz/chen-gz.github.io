@@ -92,7 +92,7 @@ If the range of $f$ lies in the real line (or in the complex plane), then $f$ is
 The class of measurable functions plays a fundamental role in integration theory. It has some basic properties in common with another most important class of functions, namely, the continuous ones. It is helpful to keep these similarities in mind. Our presentation is therefore organized in such a way that the analogies between the concepts *topological space*, *open set*, and *continuous function*, on the one hand, and *measurable space*, *measurable set*, and *measurable function*, on the other, are strongly emphasized. It seems that the relations between these concepts emerge most clearly when the setting is quite abstract, and this (rather than a desire for mere generality) motivates our approach to the subject.
 
 **1.2 Definition**
-{{% details title="拓扑名字的解释" %}}
+{{% details title="拓扑名字的解释" closed="true" %}}
 {{< callout >}}
 “拓扑”这个名称源于希腊语 $\tau \acute{o} \pi o \varsigma$（*tópos*），意思是**地方**或**位置**，以及 $-\lambda o \gamma \acute{i} \alpha$（*-logía*），意思是**研究**。
 
@@ -119,7 +119,7 @@ The class of measurable functions plays a fundamental role in integration theory
 
 (c) If $X$ and $Y$ are topological spaces and if $f$ is a mapping of $X$ into $Y$, then $f$ is said to be *continuous* provided that $f^{-1}(V)$ is an open set in $X$ for every open set $V$ in $Y$.
 
-{{% details title="Examples" %}}
+{{% details title="Examples" closed="true" %}}
 {{< callout >}}
 我们以最常见、最直观的两个空间为例：
 
@@ -172,6 +172,41 @@ The class of measurable functions plays a fundamental role in integration theory
 (c) If $X$ is a measurable space, $Y$ is a topological space, and $f$ is a mapping of $X$ into $Y$, then $f$ is said to be *measurable* provided that $f^{-1}(V)$ is a measurable set in $X$ for every open set $V$ in $Y$.
 
 It would perhaps be more satisfactory to apply the term "measurable space" to the ordered pair $(X, \mathcal{M})$, rather than to $X$. After all, $X$ is a set, and $X$ has not been changed in any way by the fact that we now also have a $\sigma$-algebra of its subsets in mind. Similarly, a topological space is an ordered pair $(X, \tau)$. But if this sort of thing were systematically done in all mathematics, the terminology would become awfully cumbersome. We shall discuss this again at somewhat greater length in Sec. 1.21.
+
+{{% details title=“Difference between 1.2 and 1.3 closed="true" %}}
+{{< callout >}}
+您问的是 **$\sigma$-代数（$\sigma$-algebra）** 和 **拓扑（Topology）** 的区别。这是抽象数学中两个非常重要的概念，它们各自为不同的数学分支（**测度论/积分论** 和 **拓扑学**）提供基础。
+
+最大的区别在于它们对 **并集** 和 **交集** 的要求，以及它们引入的核心概念不同：
+
+| 特征 | 拓扑（Topology $\tau$） | $\sigma$-代数（$\sigma$-algebra $M$） |
+| :--- | :--- | :--- |
+| **主要用途** | 定义**开集**，研究**连续性**、**收敛性**、**连通性**。 | 定义**可测集**，研究**测度（Measure）**和**积分（Integration）**。 |
+| **核心概念** | **开集**（Open Set） | **可测集**（Measurable Set） |
+| **任意并集** | 必须封闭（**任意**个开集的并集仍是开集）。 | **不**要求封闭。 |
+| **可数并集** | 必须封闭（因为“任意”包含“可数”）。 | 必须封闭（**可数**个可测集的并集仍是可测集）。 |
+| **有限交集** | 必须封闭（**有限**个开集的交集仍是开集）。 | 必须封闭（因为 $\sigma$-代数对可数并集和补集封闭，故对有限交集也封闭）。 |
+| **可数交集** | **不**要求封闭（开集的可数交集可能不是开集，例如 $\bigcap_{n=1}^{\infty} (-1/n, 1/n) = \{0\}$）。 | 必须封闭（因为 $\sigma$-代数对**补集**和**可数并集**封闭，故对可数交集也封闭，例如 $\bigcap A_n = (\bigcup A_n^c)^c$）。 |
+| **补集** | **不**要求封闭（开集的补集是闭集，不一定是开集）。 | 必须封闭（可测集的补集仍是可测集）。 |
+
+**1. 拓扑（Topology $\tau$）** (1.2 Definition)
+   * **并集强势：** 对**任意**并集封闭（性质 3）。
+   * **交集弱势：** 只对**有限**交集封闭（性质 2）。
+   * **缺少补集：** 不要求对补集封闭。
+
+**2. $\sigma$-代数（$\sigma$-algebra $M$）** (1.3 Definition)
+   * **并集限制：** 只对**可数**并集封闭（性质 3）。
+   * **补集要求：** 必须对补集封闭（性质 2）。
+   * **可数交集：** 正是由于对补集和可数并集封闭，可以推导出它也对**可数交集**封闭（见 1.6 Comments (c)）。
+
+总而言之：
+
+* **拓扑**关心的是 **“近”** 和 **“连续”** 的抽象概念，并集是其核心操作。
+* **$\sigma$-代数**关心的是 **“可测”** 和 **“测度”** 的抽象概念，它对**可数**并集和**补集**的要求，使其能够承载一个定义良好的**可加性**的**测度**。
+
+在测度论中，$\sigma$-代数通常包含一个空间中的所有**开集**（通过 **Borel $\sigma$-代数** 的概念，如 1.11 Borel Sets 中所述），从而将拓扑结构纳入积分理论的框架中。
+{{< /callout >}}
+{{% /details %}}
 
 **1.4 Comments on Definition 1.2** The most familiar topological spaces are the *metric spaces*. We shall assume some familiarity with metric spaces but shall give the basic definitions, for the sake of completeness.
 

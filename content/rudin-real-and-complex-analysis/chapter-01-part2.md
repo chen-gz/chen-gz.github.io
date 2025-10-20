@@ -1,4 +1,4 @@
-### Corollaries
+## Corollaries
 
 (a) The limit of every pointwise convergent sequence of complex measurable functions is measurable.
 
@@ -6,15 +6,13 @@
 
 $$f^+ = \max\{f, 0\} \quad \text{and} \quad f^- = -\min\{f, 0\}.$$
 
-1.15 The above functions  $f^+$  and  $f^-$  are called the positive and negative parts of  $f$ . We have  $|f| = f^+ + f^-$  and  $f = f^+ - f^-$ , a standard representation of  $f$  as a difference of two nonnegative functions, with a certain minimality property:
-
-**Proposition** If  $f = g - h$ ,  $g \ge 0$ , and  $h \ge 0$ , then  $f^+ \le g$  and  $f^- \le h$ .
+**1.15 Proposition** The above functions  $f^+$  and  $f^-$  are called the positive and negative parts of  $f$ . We have  $|f| = f^+ + f^-$  and  $f = f^+ - f^-$ , a standard representation of  $f$  as a difference of two nonnegative functions, with a certain minimality property: If  $f = g - h$ ,  $g \ge 0$ , and  $h \ge 0$ , then  $f^+ \le g$  and  $f^- \le h$ .
 
 PROOF  $f \le g$  and  $0 \le g$  clearly implies  $\max\{f, 0\} \le g$ . ////
 
-### Simple Functions
+## Simple Functions
 
-1.16 **Definition** A complex function  $s$  on a measurable space  $X$  whose range consists of only finitely many points will be called a *simple function*. Among these are the nonnegative simple functions, whose range is a finite subset of  $[0, \infty)$ . Note that we explicitly exclude  $\infty$  from the values of a simple function.
+**1.16 Definition** A complex function  $s$  on a measurable space  $X$  whose range consists of only finitely many points will be called a *simple function*. Among these are the nonnegative simple functions, whose range is a finite subset of  $[0, \infty)$ . Note that we explicitly exclude  $\infty$  from the values of a simple function.
 
 If  $\alpha_1, \dots, \alpha_n$  are the distinct values of a simple function  $s$ , and if we set  $A_i = \{x: s(x) = \alpha_i\}$ , then clearly
 
@@ -24,7 +22,7 @@ where  $\chi_{A_i}$  is the characteristic function of  $A_i$ , as defined in Se
 
 It is also clear that  $s$  is measurable if and only if each of the sets  $A_i$  is measurable.
 
-1.17 **Theorem** Let  $f: X \to [0, \infty]$  be measurable. There exist simple measurable functions  $s_n$  on  $X$  such that
+**1.17 Theorem** Let  $f: X \to [0, \infty]$  be measurable. There exist simple measurable functions  $s_n$  on  $X$  such that
 
 (a)  $0 \le s_1 \le s_2 \le \dots \le f$ .
 
@@ -48,7 +46,7 @@ satisfy (a) and (b); they are measurable, by Theorem 1.12(d).
 
 ## Elementary Properties of Measures
 
-### 1.18 Definition
+**1.18 Definition**
 
 (a) A *positive measure* is a function  $\mu$ , defined on a  $\sigma$ -algebra  $\mathcal{M}$ , whose range is in  $[0, \infty]$  and which is *countably additive*. This means that if  $\{A_i\}$  is a disjoint countable collection of members of  $\mathcal{M}$ , then
 
@@ -130,9 +128,9 @@ Similarly, a topological space is an ordered pair  $(X, \tau)$ , where  $\tau$  
 
 This sort of tacit convention is used throughout mathematics. Most mathematical systems are sets with some class of distinguished subsets or some binary operations or some relations (which are required to have certain properties), and one can list these and then describe the system as an ordered pair, triple, etc., depending on what is needed. For instance, the real line may be described as a quadruple  $(\mathbb{R}^1, +, \cdot, <)$ , where  $+$ ,  $\cdot$ , and  $<$  satisfy the axioms of a complete archimedean ordered field. But it is a safe bet that very few mathematicians think of the real field as an ordered quadruple.
 
-### Arithmetic in $[0, \infty]$
+## Arithmetic in $[0, \infty]$
 
-1.22 Throughout integration theory, one inevitably encounters  $\infty$ . One reason is that one wants to be able to integrate over sets of infinite measure; after all, the real line has infinite length. Another reason is that even if one is primarily interested in real-valued functions, the lim sup of a sequence of positive real functions or the sum of a sequence of positive real functions may well be  $\infty$  at some points, and much of the elegance of theorems like 1.26 and 1.27 would be lost if one had to make some special provisions whenever this occurs.
+**1.22** Throughout integration theory, one inevitably encounters  $\infty$ . One reason is that one wants to be able to integrate over sets of infinite measure; after all, the real line has infinite length. Another reason is that even if one is primarily interested in real-valued functions, the lim sup of a sequence of positive real functions or the sum of a sequence of positive real functions may well be  $\infty$  at some points, and much of the elegance of theorems like 1.26 and 1.27 would be lost if one had to make some special provisions whenever this occurs.
 
 Let us define  $a + \infty = \infty + a = \infty$  if  $0 \le a \le \infty$ , and
 
@@ -148,7 +146,7 @@ $$\text{If } 0 \le a_1 \le a_2 \le \cdots, 0 \le b_1 \le b_2 \le \cdots, a_n \to
 
 If we combine this with Theorems 1.17 and 1.14, we see that sums and products of measurable functions into  $[0, \infty]$  are measurable.
 
-### Integration of Positive Functions
+## Integration of Positive Functions
 
 In this section,  $\mathcal{M}$  will be a  $\sigma$ -algebra in a set  $X$  and  $\mu$  will be a positive measure on  $\mathcal{M}$ .
 
@@ -332,7 +330,7 @@ We assign no independent meaning to the symbols  $d\varphi$  and  $d\mu$ ; (6) m
 
 Theorem 1.29 has a very important converse, the Radon-Nikodym theorem, which will be proved in Chap. 6.
 
-### Integration of Complex Functions
+## Integration of Complex Functions
 
 As before,  $\mu$  will in this section be a positive measure on an arbitrary measurable space  $X$ .
 

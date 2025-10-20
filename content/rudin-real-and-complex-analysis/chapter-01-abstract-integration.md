@@ -92,6 +92,7 @@ If the range of $f$ lies in the real line (or in the complex plane), then $f$ is
 The class of measurable functions plays a fundamental role in integration theory. It has some basic properties in common with another most important class of functions, namely, the continuous ones. It is helpful to keep these similarities in mind. Our presentation is therefore organized in such a way that the analogies between the concepts *topological space*, *open set*, and *continuous function*, on the one hand, and *measurable space*, *measurable set*, and *measurable function*, on the other, are strongly emphasized. It seems that the relations between these concepts emerge most clearly when the setting is quite abstract, and this (rather than a desire for mere generality) motivates our approach to the subject.
 
 **1.2 Definition**
+{{% details title="拓扑名字的解释" %}}
 {{< callout >}}
 “拓扑”这个名称源于希腊语 $\tau \acute{o} \pi o \varsigma$（*tópos*），意思是**地方**或**位置**，以及 $-\lambda o \gamma \acute{i} \alpha$（*-logía*），意思是**研究**。
 
@@ -106,6 +107,8 @@ The class of measurable functions plays a fundamental role in integration theory
 * **开集**（Open sets）是定义拓扑的基本元素，它们在某种意义上代表了集合中的“邻域”概念。
 * 通过开集的这三条**公理**（空集和全集、有限交集、任意并集），数学家们能够在最广泛的背景下研究这些与“位置”和“邻近”相关的概念。
 {{< /callout >}}
+{{% details title="Details" %}}
+
 (a) A collection $\tau$ of subsets of a set $X$ is said to be a *topology* in $X$ if $\tau$ has the following three properties:
 
 1. $\emptyset \in \tau$ and $X \in \tau$.
@@ -115,6 +118,45 @@ The class of measurable functions plays a fundamental role in integration theory
 (b) If $\tau$ is a topology in $X$, then $X$ is called a *topological space*, and the members of $\tau$ are called the *open sets* in $X$.
 
 (c) If $X$ and $Y$ are topological spaces and if $f$ is a mapping of $X$ into $Y$, then $f$ is said to be *continuous* provided that $f^{-1}(V)$ is an open set in $X$ for every open set $V$ in $Y$.
+
+{{% details title="Examples" %}}
+{{< callout >}}
+我们以最常见、最直观的两个空间为例：
+
+### 1. 欧几里得空间 $\mathbb{R}$ 上的**标准拓扑**
+
+这是我们在实数线上最熟悉的拓扑。**开集**的定义是：任何一个开区间 $(a, b)$，以及任意数量（有限、可数或不可数）的开区间的并集。
+
+| 性质 | 抽象拓扑要求 | 欧几里得空间 $\mathbb{R}$ 中的例子 |
+| :--- | :--- | :--- |
+| **有限交集** 必须是开集 | **有限**个开集的交集 $\in \tau$ | **两个开集的交集：** $(1, 5) \cap (3, 7) = (3, 5)$。  $(3, 5)$ 仍然是一个开区间，是开集。 |
+| **任意并集** 必须是开集 | **任意**个开集的并集 $\in \tau$ | **可数个并集：** $\bigcup_{n=1}^\infty (-n, n) = (-\infty, \infty) = \mathbb{R}$。 $\mathbb{R}$ 是全集，是开集。 |
+| **可数交集** **不**要求是开集 | **不**要求可数交集 $\in \tau$ | **可数个交集（反例）：** $\bigcap_{n=1}^\infty \left(-\frac{1}{n}, \frac{1}{n}\right) = \{0\}$。 单点集 $\{0\}$ **不是**开集，而是一个闭集。 |
+
+### 2. 离散拓扑 (Discrete Topology)
+
+在一个集合 $X$ 上，如果**所有子集**都是开集，那么这个拓扑被称为**离散拓扑**。
+
+在这种情况下，拓扑 $\tau$ 就是 $X$ 的**幂集** $\mathcal{P}(X)$。
+
+| 性质 | 抽象拓扑要求 | 离散拓扑 $X$ 中的体现 |
+| :--- | :--- | :--- |
+| **有限交集** | 必须是开集 | 任何两个子集 $A, B \subset X$ 的交集 $A \cap B$ 必然是 $X$ 的一个子集，因此它**总是**开集。 |
+| **任意并集** | 必须是开集 | 任意数量的子集 $\bigcup A_\alpha$ 的并集必然是 $X$ 的一个子集，因此它**总是**开集。 |
+| **单点集** | 任意并集 | 在离散拓扑中，任何单点集 $\{x\}$ 都是开集，因为它是 $X$ 的一个子集。 |
+
+### 3. 平凡拓扑 (Trivial Topology)
+
+在一个集合 $X$ 上，如果只有**空集** $\emptyset$ 和**全集** $X$ 被定义为开集，那么这个拓扑被称为**平凡拓扑**。
+
+在这种情况下，拓扑 $\tau = \{\emptyset, X\}$。
+
+| 性质 | 抽象拓扑要求 | 平凡拓扑 $X$ 中的体现 |
+| :--- | :--- | :--- |
+| **有限交集** | 必须是开集 | $\emptyset \cap X = \emptyset$, $\emptyset \cap \emptyset = \emptyset$, $X \cap X = X$。结果都在 $\tau$ 中。 |
+| **任意并集** | 必须是开集 | $\emptyset \cup X = X$, $\emptyset \cup \emptyset = \emptyset$, $X \cup X = X$。结果都在 $\tau$ 中。 |
+| **结论** | - | 这是最“粗糙”的拓扑，它限制了你对集合 $X$ 进行“邻近”研究的能力。 |
+{{< /callout >}}
 
 **1.3 Definition**
 

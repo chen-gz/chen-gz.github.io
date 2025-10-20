@@ -226,6 +226,17 @@ If $x \in X$ and $r \ge 0$, the *open ball* with center at $x$ and radius $r$ is
 
 If $X$ is a metric space and if $\tau$ is the collection of all sets $E \subset X$ which are arbitrary unions of open balls, then $\tau$ is a topology in $X$. This is not hard to verify; the intersection property depends on the fact that if $x \in B_1 \cap B_2$, where $B_1$ and $B_2$ are open balls, then $x$ is the center of an open ball $B \subset B_1 \cap B_2$. We leave this as an exercise.
 
+{{% details title="度量$\rightarrow$拓扑" closed="true" %}}
+{{< callout >}}
+定义：设 $\tau$ 是度量空间 $X$ 中所有开集构成的集合族（即所有开球的任意并集），则 $(X, \tau)$ 构成一个拓扑空间。这个结论可以通过验证 $\tau$ 满足拓扑的三个性质来证明：
+1. $\emptyset, X \in \tau$
+2. $\tau$ 中任意有限个开集的交集仍在 $\tau$ 中
+3. $\tau$ 中任意（可以是无限个）开集的并集仍在 $\tau$ 中
+
+这是从度量空间到拓扑空间的基本桥梁。
+{{< /callout >}}
+{{% /details %}}
+
 For instance, in the real line $\mathbb{R}^1$ a set is open if and only if it is a union of open segments $(a, b)$. In the plane $\mathbb{R}^2$, the open sets are those which are unions of open circular discs.
 
 Another topological space, which we shall encounter frequently, is the extended real line $[-\infty, \infty]$; its topology is defined by declaring the following sets to be open: $(a, b)$, $[-\infty, a)$, $(a, \infty]$, and any union of segments of this type.
@@ -244,6 +255,7 @@ The following easy proposition relates the local and global definitions of conti
 
 If $f$ is continuous at every point of $X$ and if $V$ is open in $Y$, every point $x \in f^{-1}(V)$ has a neighborhood $W_x$ such that $f(W_x) \subset V$. Therefore $W_x \subset f^{-1}(V)$. It follows that $f^{-1}(V)$ is the union of the open sets $W_x$, so $f^{-1}(V)$ is itself open. Thus $f$ is continuous. ////
 
+
 **1.6 Comments on Definition 1.3** Let $\mathcal{M}$ be a $\sigma$-algebra in a set $X$. Referring to Properties (i) to (iii) of Definition 1.3(a), we immediately derive the following facts.
 
 (a) Since $\emptyset = X^c$, (i) and (ii) imply that $\emptyset \in \mathcal{M}$. 
@@ -257,7 +269,15 @@ $$\bigcap_{n=1}^{\infty} A_n = \left( \bigcup_{n=1}^{\infty} A_n^c \right)^c,$$
 
 The prefix $\sigma$ refers to the fact that (iii) is required to hold for all *countable* unions of members of $\mathcal{M}$. If (iii) is required for finite unions only, then $\mathcal{M}$ is called an *algebra* of sets.
 
+{{< callout >}}
+1.6 中给出的结论其实就是可数包含了有限。这里单独给出的原因大概是为了公理的最小化和严谨性。
+{{< /callout >}}
+
+
 **1.7 Theorem** Let $Y$ and $Z$ be topological spaces, and let $g: Y \to Z$ be continuous.
+{{< callout >}}
+连续函数不改变可测性和连续性。
+{{< /callout >}}
 
 (a) If $X$ is a topological space, if $f: X \to Y$ is continuous, and if $h = g \circ f$, then $h: X \to Z$ is continuous. 
 (b) If $X$ is a measurable space, if $f: X \to Y$ is measurable, and if $h = g \circ f$, then $h: X \to Z$ is measurable.
@@ -381,6 +401,91 @@ $$h^{-1}(V) = f^{-1}(g^{-1}(V)),$$
 (b) shows that $h^{-1}(V) \in \mathcal{M}$.
 
 ////
+{{% details title="关于d的说明” closed="true" %}}
+{{< callout >}}
+
+在定理 **1.12 (d)** 中，函数 $h = g \circ f$ 要是可测的，要求 $f: X \to Y$ 是**可测的**（measurable），而 $g: Y \to Z$ 必须是 **Borel 映射**（Borel mapping），即 $g$ 是**Borel 可测的**。
+
+**为什么要限制 $g$ 为 Borel 映射，而不是一般的可测映射？**
+
+这是因为 $g$ 的定义域 $Y$ 是一个**拓扑空间**，而 $f$ 的值域 $Y$ 在 $X$ 上是**可测空间**的像。具体来说：
+
+1.  **可测函数的定义 (Definition 1.3(c)) 依赖于 $Y$ 的开集：**
+    $f: X \to Y$ 是可测的，意味着对于 $Y$ 中**每个开集** $V$，其原像 $f^{-1}(V)$ 必须是 $X$ 中的**可测集**（即 $f^{-1}(V) \in M$）。
+
+2.  **复合函数的可测性依赖于 $g$ 的原像：**
+    要证明 $h = g \circ f$ 可测，我们需要证明对于 $Z$ 中**每个开集** $V$，其原像 $h^{-1}(V)$ 必须是 $X$ 中的**可测集**。
+    根据复合函数的性质：
+    $$h^{-1}(V) = (g \circ f)^{-1}(V) = f^{-1}(g^{-1}(V))$$
+
+3.  **对 $g$ 的要求：**
+    * 因为 $f$ 只能保证将 $Y$ 中**开集**的原像拉回到 $X$ 中的**可测集**。
+    * 为了确保 $h^{-1}(V) = f^{-1}(\mathbf{g^{-1}(V)})$ 是 $X$ 中的可测集，我们必须保证 $g^{-1}(V)$ 是 $Y$ 中的一个**Borel 集**。
+    * **Borel 映射的定义 (Section 1.11, 1.12(b))：** $g: Y \to Z$ 是 Borel 映射（或 Borel 可测），当且仅当对于 $Z$ 中**每个开集** $V$，其原像 $g^{-1}(V)$ 必须是 $Y$ 中的 **Borel 集**。
+
+**结论：**
+
+* 如果 $g$ 只是一个**一般可测映射**（即 $g^{-1}(V)$ 只是 $Y$ 中的**一般可测集**），那么 $f^{-1}(g^{-1}(V))$ 不一定在 $X$ 上是可测的。因为 $f$ 的可测性只对 $Y$ 中的**开集**（及其生成的 Borel 集）的原像有保证。
+* **Borel 映射**确保了 $g^{-1}(V)$（对于 $Z$ 中的开集 $V$）是 $Y$ 中由**开集生成的 $\sigma$-代数**中的一个集合（即 Borel 集）。根据**定理 1.12(b)**，可测函数 $f$ 能够将 $Y$ 中的 Borel 集的原像拉回到 $X$ 中的**可测集**，从而证明 $h$ 是可测的。
+
+因此，**将 $g$ 限制为 Borel 映射是确保 $g^{-1}(V)$ 是 $Y$ 的 Borel 集所必需的**，这样才能利用 $f$ 的可测性（特别是**定理 1.12(b)**）来完成证明。
+
+非常经典的**反例**来展示，如果不要求 $g$ 是 Borel 映射（或者说，如果 $f$ 仅仅是 Lebesgue 可测，而 $g$ 也是 Lebesgue 可测，但不满足更强的条件），复合函数 $g \circ f$ 可能就不是可测的。
+
+这个反例通常涉及到 $\mathbb{R}$ 上的 **Lebesgue 可测集 $\mathcal{L}$** 和 **Borel 可测集 $\mathcal{B}$** 之间的区别。
+
+### 经典反例构造 (使用不可测集)
+
+在 $\mathbb{R}$ 上，我们考虑 **Lebesgue 测度** $\mu$，对应的 $\sigma$-代数是 $\mathcal{L}$（Lebesgue 可测集）。我们知道 **Borel $\sigma$-代数** $\mathcal{B}$ 是严格包含于 $\mathcal{L}$ 的 ($\mathcal{B} \subsetneq \mathcal{L}$)。
+
+我们选取一个**非 Lebesgue 可测集** $E \subset \mathbb{R}$ (例如著名的 **Vitali 集**)。
+
+现在我们来构造函数 $f$ 和 $g$：
+
+1.  **构造 $f: \mathbb{R} \to \mathbb{R}$ (可测函数):**
+    我们希望 $f$ 是一个（在 $(\mathbb{R}, \mathcal{L})$ 上）可测的函数，并且它的值域能够帮助我们“隔离”出 $E$。
+    
+    选择一个连续的、严格递增的函数 $\Psi: \mathbb{R} \to \mathbb{R}$，它的逆函数 $\Psi^{-1}$ 也是连续的（因此是 **Borel 映射**，进而也是 Lebesgue 可测的）。
+    
+    * **例：** 可以利用 **Cantor 函数** $\phi$ 构造 $\Psi(x) = x + \phi(x)$。$\Psi$ 是连续严格递增的，将 $[0, 1]$ 映射到 $[0, 2]$。我们可以将 $\Psi$ 推广到整个 $\mathbb{R}$ 上，使其逆函数 $\Psi^{-1}$ 仍然是连续的。
+    
+    设 $A = \Psi(E)$。由于 $\Psi^{-1}$ 是连续函数（因此是 Borel 映射），我们有：
+    $$(\Psi^{-1})^{-1}(E) = \Psi(E) = A$$
+    
+    我们知道 $A$ 几乎处处为零（因为它在 $[0, 2]$ 内，且 $\mu(A)=1$ 的情况会导致 $E$ 可测，因此 $\mu(A)$ 必须是 $1$ 或 $\mu(A) = 0$ 且 $\mu^*(A)>0$）。**关键的一点是：** $\Psi$ 的构造保证了存在一个 **Lebesgue 可测集** $A \subset \mathbb{R}$，其原像 $\Psi^{-1}(A)$ 是**非 Lebesgue 可测集** $E$。
+    
+    我们定义 $f = \Psi^{-1}$。
+    * **$f$ 的性质：** $f$ 是**连续函数**，因此 $f$ 是 **Borel 映射** (即 $f^{-1}(\text{Borel Set}) = \text{Borel Set}$)，进而也是 **Lebesgue 可测函数**（因为 $\mathcal{B} \subset \mathcal{L}$）。
+
+2.  **构造 $g: \mathbb{R} \to \mathbb{R}$ (可测函数):**
+    我们定义 $g$ 为集 $A$ 的**示性函数 (characteristic function)**:
+    $$g(x) = \chi_A(x) = \begin{cases} 1 & \text{if } x \in A \\ 0 & \text{if } x \notin A \end{cases}$$
+    * **$g$ 的性质：** $A$ 是一个 Lebesgue 可测集 ($\mathcal{L}$ 中的元素)。示性函数 $g$ 是可测的，当且仅当它的定义集 $A$ 是可测的。所以 $g$ 是 **Lebesgue 可测函数** (在 $(\mathbb{R}, \mathcal{L})$ 上)。
+
+3.  **计算复合函数 $h = g \circ f$:**
+    $$h(x) = (g \circ f)(x) = g(f(x)) = \chi_A(f(x))$$
+    
+    我们检查 $h$ 的可测性。对于开集 $V = (1/2, 3/2) \subset \mathbb{R}$，我们有：
+    $$\begin{align*} h^{-1}(V) &= \{x \in \mathbb{R} : h(x) \in (1/2, 3/2)\} \\ &= \{x \in \mathbb{R} : \chi_A(f(x)) = 1\} \\ &= \{x \in \mathbb{R} : f(x) \in A\} \\ &= f^{-1}(A) \\ &= \Psi(A) \\ &= E \end{align*}$$
+    
+    因为 $h^{-1}(V) = E$ 是一个**非 Lebesgue 可测集**，所以复合函数 $h = g \circ f$ **不是 Lebesgue 可测的**。
+
+### 总结
+
+在这个反例中：
+
+* $f$ 是 **Borel 可测** (甚至**连续**) 的，因此是 **Lebesgue 可测**的。
+* $g$ 是 **Lebesgue 可测**的，因为 $A$ 是 Lebesgue 可测集。
+* **但是 $g$ 不是 Borel 映射**，因为 $A$ 是 $\mathcal{L}$ 中的一个集合，但不是 $\mathcal{B}$ 中的 Borel 集。
+
+这完美地说明了，Rudin (定理 1.12(d)) 中要求 $g$ 必须是 **Borel 映射** 的重要性。**如果 $g$ 只是一个一般可测映射（指 $(\mathbb{R}, \mathcal{L}) \to (\mathbb{R}, \mathcal{B})$ 可测），它可能将 Borel 集的原像拉回到一个非 Borel 可测集 $A$。** 当 $f$ 是 Borel 映射时，它能保证 $f^{-1}(A)$ 仍然可测，但在这个反例中，我们选择了一个能将 $A$ 的原像 $E$ 拉回到**非可测集**的 $f$ 的逆，从而导致了复合函数不可测。
+
+总之，**复合函数的可测性需要 $g$ 具有“足够好”的性质来保证 $g^{-1}(V)$ 是 $f$ 可以处理的集合（即 $Y$ 中的 Borel 集）**。
+* 如果 $g$ 是 **Borel 映射**，则 $g^{-1}(V)$ 是 $Y$ 中的 Borel 集，而 $f$ 作为可测函数可以将 Borel 集的原像 $f^{-1}(g^{-1}(V))$ 拉回 $X$ 中的可测集。
+* 如果 $g$ 只是**一般可测**，那么 $g^{-1}(V)$ 可能是 $Y$ 中的非 Borel 可测集 $A$，而 $f$ 并不保证 $f^{-1}(A)$ 仍然是可测的。
+
+{{< /callout >}}
+{{% /details %}}
 
 **1.13 Definition** Let $\{a_n\}$ be a sequence in $[-\infty, \infty]$, and put
 
@@ -416,7 +521,9 @@ the limit being assumed to exist at every $x \in X$, then we call $f$ the *point
 
 $$g = \sup_{n \ge 1} f_n, \quad h = \limsup_{n \to \infty} f_n,$$ 
 
-then $g$ and $h$ are measurable.**PROOF** $g^{-1}((\alpha, \infty]) = \bigcup_{n=1}^{\infty} f_n^{-1}((\alpha, \infty])$. Hence Theorem 1.12(c) implies that $g$ is measurable. The same result holds of course with inf in place of sup, and since
+then $g$ and $h$ are measurable.
+
+**PROOF** $g^{-1}((\alpha, \infty]) = \bigcup_{n=1}^{\infty} f_n^{-1}((\alpha, \infty])$. Hence Theorem 1.12(c) implies that $g$ is measurable. The same result holds of course with inf in place of sup, and since
 
 $$h = \inf_{k \ge 1} \left\{ \sup_{i \ge k} f_i \right\},$$ 
 

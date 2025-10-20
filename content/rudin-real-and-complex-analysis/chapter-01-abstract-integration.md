@@ -177,7 +177,7 @@ It would perhaps be more satisfactory to apply the term "measurable space" to th
 
 {{% details title="Difference between 1.2 and 1.3" closed="true" %}}
 {{< callout >}}
-您问的是 **$\sigma$-代数（$\sigma$-algebra）** 和 **拓扑（Topology）** 的区别。这是抽象数学中两个非常重要的概念，它们各自为不同的数学分支（**测度论/积分论** 和 **拓扑学**）提供基础。
+**$\sigma$-代数（$\sigma$-algebra）** 和 **拓扑（Topology）** 的区别。这是抽象数学中两个非常重要的概念，它们各自为不同的数学分支（**测度论/积分论** 和 **拓扑学**）提供基础。
 
 最大的区别在于它们对 **并集** 和 **交集** 的要求，以及它们引入的核心概念不同：
 

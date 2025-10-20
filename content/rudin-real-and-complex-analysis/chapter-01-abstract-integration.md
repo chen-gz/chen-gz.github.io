@@ -107,7 +107,7 @@ The class of measurable functions plays a fundamental role in integration theory
 * **开集**（Open sets）是定义拓扑的基本元素，它们在某种意义上代表了集合中的“邻域”概念。
 * 通过开集的这三条**公理**（空集和全集、有限交集、任意并集），数学家们能够在最广泛的背景下研究这些与“位置”和“邻近”相关的概念。
 {{< /callout >}}
-{{% details title="Details" %}}
+{{% /details %}}
 
 (a) A collection $\tau$ of subsets of a set $X$ is said to be a *topology* in $X$ if $\tau$ has the following three properties:
 
@@ -157,6 +157,7 @@ The class of measurable functions plays a fundamental role in integration theory
 | **任意并集** | 必须是开集 | $\emptyset \cup X = X$, $\emptyset \cup \emptyset = \emptyset$, $X \cup X = X$。结果都在 $\tau$ 中。 |
 | **结论** | - | 这是最“粗糙”的拓扑，它限制了你对集合 $X$ 进行“邻近”研究的能力。 |
 {{< /callout >}}
+{{% /details %}}
 
 **1.3 Definition**
 

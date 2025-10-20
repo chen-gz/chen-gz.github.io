@@ -1,3 +1,6 @@
+---
+type: docs
+---
 # Chapter 1: Abstract Integration
 Toward the end of the nineteenth century it became clear to many mathematicians that the Riemann integral (about which one learns in calculus courses) should be replaced by some other type of integral, more general and more flexible, better suited for dealing with limit processes. Among the attempts made in this direction, the most notable ones were due to Jordan, Borel, W. H. Young, and Lebesgue. It was Lebesgue's construction which turned out to be the most successful.
 
@@ -529,3 +532,15 @@ then $g$ and $h$ are measurable.
 $$h = \inf_{k \ge 1} \left\{ \sup_{i \ge k} f_i \right\},$$ 
 
 it follows that $h$ is measurable. ////
+
+**Corollaries**
+
+(a) The limit of every pointwise convergent sequence of complex measurable functions is measurable.
+
+(b) If  $f$  and  $g$  are measurable (with range in  $[-\infty, \infty]$ ), then so are  $\max\{f, g\}$  and  $\min\{f, g\}$ . In particular, this is true of the functions
+
+$$f^+ = \max\{f, 0\} \quad \text{and} \quad f^- = -\min\{f, 0\}.$$
+
+**1.15 Proposition** The above functions  $f^+$  and  $f^-$  are called the positive and negative parts of  $f$ . We have  $|f| = f^+ + f^-$  and  $f = f^+ - f^-$ , a standard representation of  $f$  as a difference of two nonnegative functions, with a certain minimality property: If  $f = g - h$ ,  $g \ge 0$ , and  $h \ge 0$ , then  $f^+ \le g$  and  $f^- \le h$ .
+
+PROOF  $f \le g$  and  $0 \le g$  clearly implies  $\max\{f, 0\} \le g$ . ////

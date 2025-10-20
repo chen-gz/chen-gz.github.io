@@ -1,14 +1,6 @@
-## Corollaries
-
-(a) The limit of every pointwise convergent sequence of complex measurable functions is measurable.
-
-(b) If  $f$  and  $g$  are measurable (with range in  $[-\infty, \infty]$ ), then so are  $\max\{f, g\}$  and  $\min\{f, g\}$ . In particular, this is true of the functions
-
-$$f^+ = \max\{f, 0\} \quad \text{and} \quad f^- = -\min\{f, 0\}.$$
-
-**1.15 Proposition** The above functions  $f^+$  and  $f^-$  are called the positive and negative parts of  $f$ . We have  $|f| = f^+ + f^-$  and  $f = f^+ - f^-$ , a standard representation of  $f$  as a difference of two nonnegative functions, with a certain minimality property: If  $f = g - h$ ,  $g \ge 0$ , and  $h \ge 0$ , then  $f^+ \le g$  and  $f^- \le h$ .
-
-PROOF  $f \le g$  and  $0 \le g$  clearly implies  $\max\{f, 0\} \le g$ . ////
+---
+type: docs
+---
 
 ## Simple Functions
 
@@ -43,6 +35,7 @@ $$s_n = \varphi_n \circ f \quad (3)$$
 satisfy (a) and (b); they are measurable, by Theorem 1.12(d).
 
 ///
+
 
 ## Elementary Properties of Measures
 

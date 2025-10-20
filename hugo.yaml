@@ -37,10 +37,6 @@ menu:
       name: Codeforces
       pageRef: /codeforces
       weight: 1
-    - identifier: leetcode
-      name: Leetcodes
-      pageRef: /leetcode
-      weight: 1
     - identifier: about
       name: About
       pageRef: /guangzong

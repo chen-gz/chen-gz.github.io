@@ -215,9 +215,9 @@ It would perhaps be more satisfactory to apply the term "measurable space" to th
 
 A *metric space* is a set $X$ in which a *distance function* (or *metric*) $\rho$ is defined, with the following properties:
 
-(a) $0 \le \rho(x, y) < \infty$ for all $x$ and $y \in X$. 
-(b) $\rho(x, y) = 0$ if and only if $x = y$. 
-(c) $\rho(x, y) = \rho(y, x)$ for all $x$ and $y \in X$. 
+(a) $0 \le \rho(x, y) < \infty$ for all $x$ and $y \in X$.  
+(b) $\rho(x, y) = 0$ if and only if $x = y$.  
+(c) $\rho(x, y) = \rho(y, x)$ for all $x$ and $y \in X$.  
 (d) $\rho(x, y) \le \rho(x, z) + \rho(z, y)$ for all $x, y$, and $z \in X$.
 
 Property (d) is called the *triangle inequality*.

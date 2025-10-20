@@ -106,6 +106,7 @@ The class of measurable functions plays a fundamental role in integration theory
 
 * **开集**（Open sets）是定义拓扑的基本元素，它们在某种意义上代表了集合中的“邻域”概念。
 * 通过开集的这三条**公理**（空集和全集、有限交集、任意并集），数学家们能够在最广泛的背景下研究这些与“位置”和“邻近”相关的概念。
+
 {{< /callout >}}
 {{% /details %}}
 
@@ -156,6 +157,7 @@ The class of measurable functions plays a fundamental role in integration theory
 | **有限交集** | 必须是开集 | $\emptyset \cap X = \emptyset$, $\emptyset \cap \emptyset = \emptyset$, $X \cap X = X$。结果都在 $\tau$ 中。 |
 | **任意并集** | 必须是开集 | $\emptyset \cup X = X$, $\emptyset \cup \emptyset = \emptyset$, $X \cup X = X$。结果都在 $\tau$ 中。 |
 | **结论** | - | 这是最“粗糙”的拓扑，它限制了你对集合 $X$ 进行“邻近”研究的能力。 |
+
 {{< /callout >}}
 {{% /details %}}
 
@@ -173,7 +175,7 @@ The class of measurable functions plays a fundamental role in integration theory
 
 It would perhaps be more satisfactory to apply the term "measurable space" to the ordered pair $(X, \mathcal{M})$, rather than to $X$. After all, $X$ is a set, and $X$ has not been changed in any way by the fact that we now also have a $\sigma$-algebra of its subsets in mind. Similarly, a topological space is an ordered pair $(X, \tau)$. But if this sort of thing were systematically done in all mathematics, the terminology would become awfully cumbersome. We shall discuss this again at somewhat greater length in Sec. 1.21.
 
-{{% details title=“Difference between 1.2 and 1.3" closed="true" %}}
+{{% details title=“Difference of 1.2 and 1.3" closed="true" %}}
 {{< callout >}}
 您问的是 **$\sigma$-代数（$\sigma$-algebra）** 和 **拓扑（Topology）** 的区别。这是抽象数学中两个非常重要的概念，它们各自为不同的数学分支（**测度论/积分论** 和 **拓扑学**）提供基础。
 
@@ -205,6 +207,7 @@ It would perhaps be more satisfactory to apply the term "measurable space" to th
 * **$\sigma$-代数**关心的是 **“可测”** 和 **“测度”** 的抽象概念，它对**可数**并集和**补集**的要求，使其能够承载一个定义良好的**可加性**的**测度**。
 
 在测度论中，$\sigma$-代数通常包含一个空间中的所有**开集**（通过 **Borel $\sigma$-代数** 的概念，如 1.11 Borel Sets 中所述），从而将拓扑结构纳入积分理论的框架中。
+
 {{< /callout >}}
 {{% /details %}}
 

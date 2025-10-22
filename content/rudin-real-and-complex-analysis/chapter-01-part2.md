@@ -37,7 +37,7 @@ satisfy (a) and (b); they are measurable, by Theorem 1.12(d).
 ///
 {{% details title="简单说明” closed="true" %}}
 {{< callout >}}
-$\phi_n(t)$ 是一个阶梯函数。
+$\varphi_n(t)$ 是一个阶梯函数。
 {{< /callout >}}
 {{% /details %}}
 

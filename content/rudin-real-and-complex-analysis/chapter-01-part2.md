@@ -35,7 +35,7 @@ $$s_n = \varphi_n \circ f \quad (3)$$
 satisfy (a) and (b); they are measurable, by Theorem 1.12(d).
 
 ///
-{{% details title="简单说明” closed="true" %}}
+{{% details title="简单说明" closed="true" %}}
 {{< callout >}}
 $\varphi_n(t)$ 是一个阶梯函数。
 {{< /callout >}}

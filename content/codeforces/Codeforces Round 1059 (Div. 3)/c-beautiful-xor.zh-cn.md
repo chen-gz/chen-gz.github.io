@@ -1,5 +1,5 @@
 ---
-title: C. 异或之美
+title: C. Beautiful XOR
 math: true
 ---
 

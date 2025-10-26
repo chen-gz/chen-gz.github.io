@@ -1,5 +1,5 @@
 ---
-title: "D. Beautiful Permutation"
+title: D. Beautiful Permutation
 ---
 
 这是一个交互式问题。

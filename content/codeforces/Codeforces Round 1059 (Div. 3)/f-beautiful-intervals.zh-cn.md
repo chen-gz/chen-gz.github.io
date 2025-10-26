@@ -1,5 +1,5 @@
 ---
-title: "F. 美丽的区间"
+title: F. Beautiful Intervals
 math: true
 ---
 

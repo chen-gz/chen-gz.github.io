@@ -1,5 +1,5 @@
 ---
-title: "D. Beautiful Permutation"
+title: D. Beautiful Permutation
 ---
 
 This is an interactive problem.

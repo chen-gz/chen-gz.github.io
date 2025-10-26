@@ -1,5 +1,5 @@
 ---
-title: "G. 美丽的树"
+title: G. Beautiful Tree
 math: true
 ---
 

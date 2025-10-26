@@ -1,5 +1,5 @@
 ---
-title: "E. Beautiful Palindromes"
+title: E. Beautiful Palindromes
 math: true
 ---
 

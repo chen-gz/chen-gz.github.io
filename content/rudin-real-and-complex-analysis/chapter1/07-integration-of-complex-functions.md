@@ -1,5 +1,6 @@
 ---
 title: Integration of Complex Functions
+type: docs
 ---
 
 As before,  $\mu$  will in this section be a positive measure on an arbitrary measurable space  $X$ .

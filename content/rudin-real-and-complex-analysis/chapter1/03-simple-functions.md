@@ -1,5 +1,6 @@
 ---
 title: Simple Functions
+type: docs
 ---
 
 **1.16 Definition** A complex function  $s$  on a measurable space  $X$  whose range consists of only finitely many points will be called a *simple function*. Among these are the nonnegative simple functions, whose range is a finite subset of  $[0, \infty)$ . Note that we explicitly exclude  $\infty$  from the values of a simple function.

@@ -1,5 +1,6 @@
 ---
 title: Arithmetic in $[0, \infty]$
+type: docs
 ---
 
 **1.22** Throughout integration theory, one inevitably encounters  $\infty$ . One reason is that one wants to be able to integrate over sets of infinite measure; after all, the real line has infinite length. Another reason is that even if one is primarily interested in real-valued functions, the lim sup of a sequence of positive real functions or the sum of a sequence of positive real functions may well be  $\infty$  at some points, and much of the elegance of theorems like 1.26 and 1.27 would be lost if one had to make some special provisions whenever this occurs.

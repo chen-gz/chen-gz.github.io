@@ -1,5 +1,6 @@
 ---
 title: Elementary Properties of Measures
+type: docs
 ---
 
 

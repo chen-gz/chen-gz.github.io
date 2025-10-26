@@ -1,6 +1,5 @@
 ---
-title: "B. Bitwise Reversion"
-type: docs
+title: B. Bitwise Reversion
 math: true
 ---
 

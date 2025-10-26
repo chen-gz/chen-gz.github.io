@@ -1,5 +1,5 @@
 ---
-title: "Codeforces Round 1057 (Div. 2)"
+title: Codeforces Round 1057 (Div. 2)
 type: docs
 ---
 

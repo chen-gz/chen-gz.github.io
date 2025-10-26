@@ -1,5 +1,5 @@
 ---
-title: "C. Symmetrical Polygons"
+title: C. Symmetrical Polygons
 math: true
 ---
 

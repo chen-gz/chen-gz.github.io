@@ -1,6 +1,5 @@
 ---
-title: "A. Circle of Apple Trees"
-type: docs
+title: A. Circle of Apple Trees
 math: true
 ---
 

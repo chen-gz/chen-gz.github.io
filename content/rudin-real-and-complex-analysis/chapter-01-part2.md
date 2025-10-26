@@ -20,7 +20,7 @@ It is also clear that  $s$  is measurable if and only if each of the sets  $A_i$
 
 (b)  $s_n(x) \to f(x)$  as  $n \to \infty$ , for every  $x \in X$ .
 
-PROOF Put  $\delta_n = 2^{-n}$ . To each positive integer  $n$  and each real number  $t$  corresponds a unique integer  $k = k_n(t)$  that satisfies  $k\delta_n \le t < (k+1)\delta_n$ . Define
+**PROOF** Put  $\delta_n = 2^{-n}$ . To each positive integer  $n$  and each real number  $t$  corresponds a unique integer  $k = k_n(t)$  that satisfies  $k\delta_n \le t < (k+1)\delta_n$ . Define
 
 $$\varphi_n(t) = \begin{cases} k_n(t)\delta_n & \text{if } 0 \le t < n \\ n & \text{if } n \le t \le \infty. \end{cases} \quad (1)$$
 
@@ -35,6 +35,11 @@ $$s_n = \varphi_n \circ f \quad (3)$$
 satisfy (a) and (b); they are measurable, by Theorem 1.12(d).
 
 ///
+{{% details title="简单说明" closed="true" %}}
+{{< callout >}}
+$\varphi_n(t)$ 是一个阶梯函数。
+{{< /callout >}}
+{{% /details %}}
 
 
 ## Elementary Properties of Measures

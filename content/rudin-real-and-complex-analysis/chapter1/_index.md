@@ -1,5 +1,6 @@
 ---
 title: "Chapter 1: Abstract Integration"
+type: docs
 ---
 
 ## Sections

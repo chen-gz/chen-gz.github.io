@@ -1,4 +1,6 @@
-## Set-Theoretic Notations and Terminology
+---
+title: "Set-Theoretic Notations and Terminology"
+---
 
 **1.1** Some sets can be described by listing their members. Thus $\{x_1, \dots, x_n\}$ is the set whose members are $x_1, \dots, x_n$; and $\{x\}$ is the set whose only member is $x$. More often, sets are described by properties. We write
 
@@ -16,7 +18,7 @@ for the union and intersection of $\{A_\alpha\}$:
 
 $$\bigcup_{\alpha \in I} A_\alpha = \{x: x \in A_\alpha \text{ for at least one } \alpha \in I\}$$
 
-$$\bigcap_{\alpha \in I} A_\alpha = \{x: x \in A_\alpha \text{ for every } \alpha \in I\}.$$ 
+$$\bigcap_{\alpha \in I} A_\alpha = \{x: x \in A_\alpha \text{ for every } \alpha \in I\}.$$
 
 If $I$ is the set of all positive integers, the customary notations are
 
@@ -34,11 +36,11 @@ $$R^k = R^1 \times \cdots \times R^1 \quad (k \text{ factors}).$$
 
 The extended real number system is $R^1$ with two symbols, $\infty$ and $-\infty$, adjoined, and with the obvious ordering. If $-\infty \le a \le b \le \infty$, the interval $[a, b]$ and the segment $(a, b)$ are defined to be
 
-$$[a, b] = \{x: a \le x \le b\}, \quad (a, b) = \{x: a < x < b\}.$$ 
+$$[a, b] = \{x: a \le x \le b\}, \quad (a, b) = \{x: a < x < b\}.$$
 
 We also write
 
-$$[a, b) = \{x: a \le x < b\}, \quad (a, b] = \{x: a < x \le b\}.$$ 
+$$[a, b) = \{x: a \le x < b\}, \quad (a, b] = \{x: a < x \le b\}.$$
 
 If $E \subset [-\infty, \infty]$ and $E \ne \emptyset$, the least upper bound (supremum) and greatest lower bound (infimum) of $E$ exist in $[-\infty, \infty]$ and are denoted by $\sup E$ and $\inf E$.
 
@@ -52,7 +54,7 @@ means that $f$ is a function (or mapping or transformation) of the set $X$ into 
 
 $$f(A) = \{y: y = f(x) \text{ for some } x \in A\},$$
 
-$$f^{-1}(B) = \{x: f(x) \in B\}.$$ 
+$$f^{-1}(B) = \{x: f(x) \in B\}.$$
 
 Note that $f^{-1}(B)$ may be empty even when $B \ne \emptyset$.
 

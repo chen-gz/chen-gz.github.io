@@ -1,4 +1,6 @@
-## Integration of Positive Functions
+---
+title: Integration of Positive Functions
+---
 
 In this section,  $\mathcal{M}$  will be a  $\sigma$ -algebra in a set  $X$  and  $\mu$  will be a positive measure on  $\mathcal{M}$ .
 

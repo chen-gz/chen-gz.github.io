@@ -1,4 +1,7 @@
-## Elementary Properties of Measures
+---
+title: Elementary Properties of Measures
+---
+
 
 **1.18 Definition**
 

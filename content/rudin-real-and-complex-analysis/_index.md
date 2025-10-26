@@ -1,5 +1,6 @@
 ---
 title: "Rudin's Real and Complex Analysis"
+type: docs
 ---
 
 This contains Walter Rudin's books.

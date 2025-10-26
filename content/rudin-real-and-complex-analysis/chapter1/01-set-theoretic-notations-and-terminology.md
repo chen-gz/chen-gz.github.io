@@ -1,7 +1,7 @@
 ---
-title: "Set-Theoretic Notations and Terminology"
 type: docs
 ---
+## Set-Theoretic Notations and Terminology
 
 **1.1** Some sets can be described by listing their members. Thus $\{x_1, \dots, x_n\}$ is the set whose members are $x_1, \dots, x_n$; and $\{x\}$ is the set whose only member is $x$. More often, sets are described by properties. We write
 

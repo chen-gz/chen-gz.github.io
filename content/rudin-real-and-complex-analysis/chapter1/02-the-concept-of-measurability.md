@@ -1,7 +1,7 @@
 ---
-title: The Concept of Measurability
 type: docs
 ---
+## The Concept of Measurability
 
 The class of measurable functions plays a fundamental role in integration theory. It has some basic properties in common with another most important class of functions, namely, the continuous ones. It is helpful to keep these similarities in mind. Our presentation is therefore organized in such a way that the analogies between the concepts *topological space*, *open set*, and *continuous function*, on the one hand, and *measurable space*, *measurable set*, and *measurable function*, on the other, are strongly emphasized. It seems that the relations between these concepts emerge most clearly when the setting is quite abstract, and this (rather than a desire for mere generality) motivates our approach to the subject.
 

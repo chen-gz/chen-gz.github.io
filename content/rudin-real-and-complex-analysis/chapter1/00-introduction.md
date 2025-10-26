@@ -1,7 +1,7 @@
 ---
-title: "Chapter 1: Abstract Integration"
 type: docs
 ---
+## Chapter 1: Abstract Integration
 
 Toward the end of the nineteenth century it became clear to many mathematicians that the Riemann integral (about which one learns in calculus courses) should be replaced by some other type of integral, more general and more flexible, better suited for dealing with limit processes. Among the attempts made in this direction, the most notable ones were due to Jordan, Borel, W. H. Young, and Lebesgue. It was Lebesgue's construction which turned out to be the most successful.
 

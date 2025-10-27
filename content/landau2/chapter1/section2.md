@@ -1,4 +1,4 @@
---- 
+---
 type: docs
 title: "§ 2. Intervals"
 weight: 2
@@ -15,17 +15,17 @@ It is frequently useful for reasons of presentation to use a fictitious four-dim
 
 space, on the axes of which are marked three space coordinates and the time. In this space events are represented by points, called *world points*. In this fictitious four-dimensional space there corresponds to each particle a certain line, called a *world line*. The points of this line determine the coordinates of the particle at all moments of time. It is easy to show that to a particle in uniform rectilinear motion there corresponds a straight world line.
 
-We now express the principle of the invariance of the velocity of light in mathematical form. For this purpose we consider two reference systems  $K$  and  $K\' $  moving relative to each other with constant velocity. We choose the coordinate axes so that the axes  $X$  and  $X\' $  coincide, while the  $Y$  and  $Z$  axes are parallel to  $Y\' $  and  $Z\' $ ; we designate the time in the systems  $K$  and  $K\' $  by  $t$  and  $t\' $ .
+We now express the principle of the invariance of the velocity of light in mathematical form. For this purpose we consider two reference systems  $K$  and  $K'$  moving relative to each other with constant velocity. We choose the coordinate axes so that the axes  $X$  and  $X'$  coincide, while the  $Y$  and  $Z$  axes are parallel to  $Y'$  and  $Z'$ ; we designate the time in the systems  $K$  and  $K'$  by  $t$  and  $t'$ .
 
 Let the first event consist of sending out a signal, propagating with light velocity, from a point having coordinates  $x_1 y_1 z_1$  in the  $K$  system, at time  $t_1$  in this system. We observe the propagation of this signal in the  $K$  system. Let the second event consist of the arrival of the signal at point  $x_2 y_2 z_2$  at the moment of time  $t_2$ . The signal propagates with velocity  $c$ ; the distance covered by it is therefore  $c(t_1 - t_2)$ . On the other hand, this same distance equals  $[(x_2 - x_1)^2 + (y_2 - y_1)^2 + (z_2 - z_1)^2]^{1/2}$ . Thus we can write the following relation between the coordinates of the two events in the  $K$  system:
 
 $$(x_2 - x_1)^2 + (y_2 - y_1)^2 + (z_2 - z_1)^2 - c^2(t_2 - t_1)^2 = 0. ext{ (2.1)}$$
 
-The same two events, i.e. the propagation of the signal, can be observed from the  $K\' $  system:
+The same two events, i.e. the propagation of the signal, can be observed from the  $K'$  system:
 
-Let the coordinates of the first event in the  $K\' $  system be  $x\' _1 y\' _1 z\' _1 t\' _1$ , and of the second:  $x\' _2 y\' _2 z\' _2 t\' _2$ . Since the velocity of light is the same in the  $K$  and  $K\' $  systems, we have, similarly to (2.1):
+Let the coordinates of the first event in the  $K'$  system be  $x'_1 y'_1 z'_1 t'_1$ , and of the second:  $x'_2 y'_2 z'_2 t'_2$ . Since the velocity of light is the same in the  $K$  and  $K'$  systems, we have, similarly to (2.1):
 
-$$(x\' _2 - x\' _1)^2 + (y\' _2 - y\' _1)^2 + (z\' _2 - z\' _1)^2 - c^2(t\' _2 - t\' _1)^2 = 0. ext{ (2.2)}$$
+$$(x'_2 - x'_1)^2 + (y'_2 - y'_1)^2 + (z'_2 - z'_1)^2 - c^2(t'_2 - t'_1)^2 = 0. ext{ (2.2)}$$
 
 If  $x_1 y_1 z_1 t_1$  and  $x_2 y_2 z_2 t_2$  are the coordinates of any two events, then the quantity
 
@@ -41,13 +41,13 @@ $$ds^2 = c^2 dt^2 - dx^2 - dy^2 - dz^2. ext{ (2.4)}$$
 
 The form of expressions (2.3) and (2.4) permits us to regard the interval, from the formal point of view, as the distance between two points in a fictitious four-dimensional space (whose axes are labelled by  $x$ ,  $y$ ,  $z$ , and the product  $ct$ ). But there is a basic difference between the rule for forming this quantity and the rule in ordinary geometry: in forming the square of the interval, the squares of the coordinate differences along the different axes are summed, not with the same sign, but rather with varying signs.†
 
-As already shown, if  $ds = 0$  in one inertial system, then  $ds\' = 0$  in any other system. On
+As already shown, if  $ds = 0$  in one inertial system, then  $ds' = 0$  in any other system. On
 
 † The four-dimensional geometry described by the quadratic form (2.4) was introduced by H. Minkowski, in connection with the theory of relativity. This geometry is called *pseudo-euclidean*, in contrast to ordinary euclidean geometry.
 
-the other hand,  $ds$  and  $ds\' $  are infinitesimals of the same order. From these two conditions it follows that  $ds^2$  and  $ds\' ^2$  must be proportional to each other:
+the other hand,  $ds$  and  $ds'$  are infinitesimals of the same order. From these two conditions it follows that  $ds^2$  and  $ds'^2$  must be proportional to each other:
 
-$$ds^2 = a ds\' ^2$$
+$$ds^2 = a ds'^2$$
 
 where the coefficient  $a$  can depend only on the absolute value of the relative velocity of the two inertial systems. It cannot depend on the coordinates or the time, since then different points in space and different moments in time would not be equivalent, which would be in contradiction to the homogeneity of space and time. Similarly, it cannot depend on the direction of the relative velocity, since that would contradict the isotropy of space.
 
@@ -57,7 +57,7 @@ $$ds^2 = a(V_1) ds_1^2, ext{ } ds^2 = a(V_2) ds_2^2.$$
 
 Similarly we can write
 
-$$ds_1^2 = a(V_{12}) ds_2^2,$$ 
+$$ds_1^2 = a(V_{12}) ds_2^2,$$
 
 where  $V_{12}$  is the absolute value of the velocity of  $K_2$  relative to  $K_1$ . Comparing these relations with one another, we find that we must have
 
@@ -67,13 +67,13 @@ But  $V_{12}$  depends not only on the absolute values of the vectors  $V_1$  an
 
 Thus,
 
-$$ds^2 = ds\' ^2, ext{ (2.6)}$$
+$$ds^2 = ds'^2, ext{ (2.6)}$$
 
-and from the equality of the infinitesimal intervals there follows the equality of finite intervals:  $s = s\' $ .
+and from the equality of the infinitesimal intervals there follows the equality of finite intervals:  $s = s'$ .
 
 Thus we arrive at a very important result: the interval between two events is the same in all inertial systems of reference, i.e. it is invariant under transformation from one inertial system to any other. This invariance is the mathematical expression of the constancy of the velocity of light.
 
-Again let  $x_1 y_1 z_1 t_1$  and  $x_2 y_2 z_2 t_2$  be the coordinates of two events in a certain reference system  $K$ . Does there exist a coordinate system  $K\' $ , in which these two events occur at one and the same point in space?
+Again let  $x_1 y_1 z_1 t_1$  and  $x_2 y_2 z_2 t_2$  be the coordinates of two events in a certain reference system  $K$ . Does there exist a coordinate system  $K'$ , in which these two events occur at one and the same point in space?
 
 We introduce the notation
 
@@ -83,29 +83,29 @@ Then the interval between events in the  $K$  system is:
 
 $$s_{12}^2 = c^2 t_{12}^2 - l_{12}^2$$
 
-and in the  $K\' $  system
+and in the  $K'$  system
 
-$${s\'}_{12}^2 = c^2 {t\'}_{12}^2 - {l\'}_{12}^2,$$ 
+$$s'_{12}^2 = c^2 t'_{12}^2 - l'_{12}^2,$$
 
 whereupon, because of the invariance of intervals,
 
-$$c^2 t_{12}^2 - l_{12}^2 = c^2 {t\'}_{12}^2 - {l\'}_{12}^2.$$
+$$c^2 t_{12}^2 - l_{12}^2 = c^2 t'_{12}^2 - l'_{12}^2.$$
 
-We want the two events to occur at the same point in the  $K\' $  system, that is, we require  $l\' _{12} = 0$ . Then
+We want the two events to occur at the same point in the  $K'$  system, that is, we require  $l'_{12} = 0$ . Then
 
-$$s_{12}^2 = c^2 t_{12}^2 - l_{12}^2 = c^2 {t\'}_{12}^2 > 0.$$
+$$s_{12}^2 = c^2 t_{12}^2 - l_{12}^2 = c^2 t'_{12}^2 > 0.$$
 
 Consequently a system of reference with the required property exists if  $s_{12}^2 > 0$ , that is, if the interval between the two events is a real number. Real intervals are said to be *timelike*.
 
 Thus, if the interval between two events is timelike, then there exists a system of reference in which the two events occur at one and the same place. The time which elapses between the two events in this system is
 
-$$t\' _{12} = rac{1}{c} \sqrt{c^2 t_{12}^2 - l_{12}^2} = rac{s_{12}}{c}. \quad (2.7)$$
+$$t'_{12} = \frac{1}{c} \sqrt{c^2 t_{12}^2 - l_{12}^2} = \frac{s_{12}}{c}. \quad (2.7)$$
 
 If two events occur in one and the same body, then the interval between them is always timelike, for the distance which the body moves between the two events cannot be greater than  $ct_{12}$ , since the velocity of the body cannot exceed  $c$ . So we have always
 
 $$l_{12} < ct_{12}.$$
 
-Let us now ask whether or not we can find a system of reference in which the two events occur at one and the same time. As before, we have for the  $K$  and  $K\' $  systems  $c^2 t_{12}^2 - l_{12}^2 = c^2 {t\'}_{12}^2 - {l\'}_{12}^2$ . We want to have  $t\' _{12} = 0$ , so that
+Let us now ask whether or not we can find a system of reference in which the two events occur at one and the same time. As before, we have for the  $K$  and  $K'$  systems  $c^2 t_{12}^2 - l_{12}^2 = c^2 t'_{12}^2 - l'_{12}^2$ . We want to have  $t'_{12} = 0$ , so that
 
 $$s_{12}^2 = -l_{12}^2 < 0.$$
 
@@ -113,7 +113,7 @@ Consequently the required system can be found only for the case when the interva
 
 Thus if the interval between two events is spacelike, there exists a reference system in which the two events occur simultaneously. The distance between the points where the events occur in this system is
 
-$$l\' _{12} = \sqrt{l_{12}^2 - c^2 t_{12}^2} = is_{12}. \quad (2.8)$$
+$$l'_{12} = \sqrt{l_{12}^2 - c^2 t_{12}^2} = is_{12}. \quad (2.8)$$
 
 The division of intervals into space- and timelike intervals is, because of their invariance, an absolute concept. This means that the timelike or spacelike character of an interval is independent of the reference system.
 

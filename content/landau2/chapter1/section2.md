@@ -47,7 +47,7 @@ As already shown, if  $ds = 0$  in one inertial system, then  $ds' = 0$  in any 
 
 the other hand,  $ds$  and  $ds'$  are infinitesimals of the same order. From these two conditions it follows that  $ds^2$  and  $ds'^2$  must be proportional to each other:
 
-$$ds^2 = a ds'^2$$
+$$ds^2 = a {ds'}^2$$
 
 where the coefficient  $a$  can depend only on the absolute value of the relative velocity of the two inertial systems. It cannot depend on the coordinates or the time, since then different points in space and different moments in time would not be equivalent, which would be in contradiction to the homogeneity of space and time. Similarly, it cannot depend on the direction of the relative velocity, since that would contradict the isotropy of space.
 
@@ -67,7 +67,7 @@ But  $V_{12}$  depends not only on the absolute values of the vectors  $V_1$  an
 
 Thus,
 
-$$ds^2 = ds'^2, ext{ (2.6)}$$
+$$ds^2 = {ds'}^2, ext{ (2.6)}$$
 
 and from the equality of the infinitesimal intervals there follows the equality of finite intervals:  $s = s'$ .
 
@@ -85,15 +85,15 @@ $$s_{12}^2 = c^2 t_{12}^2 - l_{12}^2$$
 
 and in the  $K'$  system
 
-$$s'_{12}^2 = c^2 t'_{12}^2 - l'_{12}^2,$$
+$${s'}_{12}^2 = c^2 {t'}_{12}^2 - {l'}_{12}^2,$$
 
 whereupon, because of the invariance of intervals,
 
-$$c^2 t_{12}^2 - l_{12}^2 = c^2 t'_{12}^2 - l'_{12}^2.$$
+$$c^2 t_{12}^2 - l_{12}^2 = c^2 {t'}_{12}^2 - {l'}_{12}^2.$$
 
 We want the two events to occur at the same point in the  $K'$  system, that is, we require  $l'_{12} = 0$ . Then
 
-$$s_{12}^2 = c^2 t_{12}^2 - l_{12}^2 = c^2 t'_{12}^2 > 0.$$
+$$s_{12}^2 = c^2 t_{12}^2 - l_{12}^2 = c^2 {t'}_{12}^2 > 0.$$
 
 Consequently a system of reference with the required property exists if  $s_{12}^2 > 0$ , that is, if the interval between the two events is a real number. Real intervals are said to be *timelike*.
 
@@ -105,7 +105,7 @@ If two events occur in one and the same body, then the interval between them is 
 
 $$l_{12} < ct_{12}.$$
 
-Let us now ask whether or not we can find a system of reference in which the two events occur at one and the same time. As before, we have for the  $K$  and  $K'$  systems  $c^2 t_{12}^2 - l_{12}^2 = c^2 t'_{12}^2 - l'_{12}^2$ . We want to have  $t'_{12} = 0$ , so that
+Let us now ask whether or not we can find a system of reference in which the two events occur at one and the same time. As before, we have for the  $K$  and  $K'$  systems  $c^2 t_{12}^2 - l_{12}^2 = c^2 {t'}_{12}^2 - {l'}_{12}^2$ . We want to have  $t'_{12} = 0$ , so that
 
 $$s_{12}^2 = -l_{12}^2 < 0.$$
 

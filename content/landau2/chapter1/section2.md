@@ -19,17 +19,17 @@ We now express the principle of the invariance of the velocity of light in mathe
 
 Let the first event consist of sending out a signal, propagating with light velocity, from a point having coordinates  $x_1 y_1 z_1$  in the  $K$  system, at time  $t_1$  in this system. We observe the propagation of this signal in the  $K$  system. Let the second event consist of the arrival of the signal at point  $x_2 y_2 z_2$  at the moment of time  $t_2$ . The signal propagates with velocity  $c$ ; the distance covered by it is therefore  $c(t_1 - t_2)$ . On the other hand, this same distance equals  $[(x_2 - x_1)^2 + (y_2 - y_1)^2 + (z_2 - z_1)^2]^{1/2}$ . Thus we can write the following relation between the coordinates of the two events in the  $K$  system:
 
-$$(x_2 - x_1)^2 + (y_2 - y_1)^2 + (z_2 - z_1)^2 - c^2(t_2 - t_1)^2 = 0. ext{ (2.1)}$$
+$$(x_2 - x_1)^2 + (y_2 - y_1)^2 + (z_2 - z_1)^2 - c^2(t_2 - t_1)^2 = 0. \tag{2.1}$$
 
 The same two events, i.e. the propagation of the signal, can be observed from the  $K'$  system:
 
 Let the coordinates of the first event in the  $K'$  system be  $x'_1 y'_1 z'_1 t'_1$ , and of the second:  $x'_2 y'_2 z'_2 t'_2$ . Since the velocity of light is the same in the  $K$  and  $K'$  systems, we have, similarly to (2.1):
 
-$$(x'_2 - x'_1)^2 + (y'_2 - y'_1)^2 + (z'_2 - z'_1)^2 - c^2(t'_2 - t'_1)^2 = 0. ext{ (2.2)}$$
+$$(x'_2 - x'_1)^2 + (y'_2 - y'_1)^2 + (z'_2 - z'_1)^2 - c^2(t'_2 - t'_1)^2 = 0. \tag{2.2}$$
 
 If  $x_1 y_1 z_1 t_1$  and  $x_2 y_2 z_2 t_2$  are the coordinates of any two events, then the quantity
 
-$$s_{12} = [c^2(t_2 - t_1)^2 - (x_2 - x_1)^2 - (y_2 - y_1)^2 - (z_2 - z_1)^2]^{1/2} ext{ (2.3)}$$
+$$s_{12} = [c^2(t_2 - t_1)^2 - (x_2 - x_1)^2 - (y_2 - y_1)^2 - (z_2 - z_1)^2]^{1/2} \tag{2.3}$$
 
 is called the *interval* between these two events.
 
@@ -37,7 +37,7 @@ Thus it follows from the principle of invariance of the velocity of light that i
 
 If two events are infinitely close to each other, then the interval  $ds$  between them is
 
-$$ds^2 = c^2 dt^2 - dx^2 - dy^2 - dz^2. ext{ (2.4)}$$
+$$ds^2 = c^2 dt^2 - dx^2 - dy^2 - dz^2. \tag{2.4}$$
 
 The form of expressions (2.3) and (2.4) permits us to regard the interval, from the formal point of view, as the distance between two points in a fictitious four-dimensional space (whose axes are labelled by  $x$ ,  $y$ ,  $z$ , and the product  $ct$ ). But there is a basic difference between the rule for forming this quantity and the rule in ordinary geometry: in forming the square of the interval, the squares of the coordinate differences along the different axes are summed, not with the same sign, but rather with varying signs.†
 
@@ -53,7 +53,7 @@ where the coefficient  $a$  can depend only on the absolute value of the relativ
 
 Let us consider three reference systems  $K$ ,  $K_1$ ,  $K_2$ , and let  $V_1$  and  $V_2$  be the velocities of systems  $K_1$  and  $K_2$  relative to  $K$ . We then have:
 
-$$ds^2 = a(V_1) ds_1^2, ext{ } ds^2 = a(V_2) ds_2^2.$$
+$$ds^2 = a(V_1) ds_1^2, \quad ds^2 = a(V_2) ds_2^2.$$
 
 Similarly we can write
 
@@ -61,13 +61,13 @@ $$ds_1^2 = a(V_{12}) ds_2^2,$$
 
 where  $V_{12}$  is the absolute value of the velocity of  $K_2$  relative to  $K_1$ . Comparing these relations with one another, we find that we must have
 
-$$rac{a(V_2)}{a(V_1)} = a(V_{12}). ext{ (2.5)}$$
+$$rac{a(V_2)}{a(V_1)} = a(V_{12}). \tag{2.5}$$
 
 But  $V_{12}$  depends not only on the absolute values of the vectors  $V_1$  and  $V_2$ , but also on the angle between them. However, this angle does not appear on the left side of formula (2.5). It is therefore clear that this formula can be correct only if the function  $a(V)$  reduces to a constant, which is equal to unity according to this same formula.
 
 Thus,
 
-$$ds^2 = {ds'}^2, ext{ (2.6)}$$
+$$ds^2 = {ds'}^2, \tag{2.6}$$
 
 and from the equality of the infinitesimal intervals there follows the equality of finite intervals:  $s = s'$ .
 
@@ -77,7 +77,7 @@ Again let  $x_1 y_1 z_1 t_1$  and  $x_2 y_2 z_2 t_2$  be the coordinates of two 
 
 We introduce the notation
 
-$$t_2 - t_1 = t_{12}, ext{ } (x_2 - x_1)^2 + (y_2 - y_1)^2 + (z_2 - z_1)^2 = l_{12}^2.$$
+$$t_2 - t_1 = t_{12}, \quad (x_2 - x_1)^2 + (y_2 - y_1)^2 + (z_2 - z_1)^2 = l_{12}^2.$$
 
 Then the interval between events in the  $K$  system is:
 

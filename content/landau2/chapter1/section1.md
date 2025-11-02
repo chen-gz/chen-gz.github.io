@@ -51,7 +51,7 @@ To clarify this, it is instructive to consider the following simple example.
 
 Let us look at two inertial reference systems  $K$  and  $K'$  with coordinate axes  $XYZ$  and  $X'Y'Z'$  respectively, where the system  $K'$  moves relative to  $K$  along the  $X(X')$  axis (Fig. 1).
 
-![Diagram showing two inertial reference frames, K and K'. Frame K has axes X, Y, Z. Frame K' moves relative to K along the X axis and has axes X', Y', Z'. A point A is marked on the X' axis, with points B and C equidistant from A on the X' axis.](images/landau2/fig1.png)
+![Diagram showing two inertial reference frames, K and K'. Frame K has axes X, Y, Z. Frame K' moves relative to K along the X axis and has axes X', Y', Z'. A point A is marked on the X' axis, with points B and C equidistant from A on the X' axis.](/images/landau2/fig1.png)
 
 Suppose signals start out from some point  $A$  on the  $X'$  axis in two opposite directions. Since the velocity of propagation of a signal in the  $K'$  system, as in all inertial systems, is equal (for both directions) to  $c$ , the signals will reach points  $B$  and  $C$ , equidistant from  $A$ , at one and the same time (in the  $K'$  system)
 

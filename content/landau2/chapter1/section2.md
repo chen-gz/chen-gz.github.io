@@ -122,7 +122,7 @@ Let us take some event $O$ as our origin of time and space coordinates. In other
 
 In other words, the interval between any event in this region and the event $O$ is timelike. In this region $t > 0$ , i.e. all the events in this region occur "after" the event $O$ . But two events which are separated by a timelike interval cannot occur simultaneously in any reference system. Consequently it is impossible to find a reference system in which any of the events in region $aOc$ occurred "before" the event $O$ , i.e. at time $t < 0$ . Thus all the events in region $aOc$ are future events relative to $O$ in all reference systems. Therefore this region can be called the _absolute future_ relative to $O$ .
 
-![Diagram showing a spacetime diagram centered at event O. The vertical axis is time (t) and the horizontal axis is space (x). The region above the t-axis (t > 0) is labeled 'Absolute future' (containing points a and c). The region below the t-axis (t < 0) is labeled 'Absolute past' (containing points d and b). The region between the two lines forming the cone is labeled 'Absolutely separated'.](images/landau2/fig1.png)
+![Diagram showing a spacetime diagram centered at event O. The vertical axis is time (t) and the horizontal axis is space (x). The region above the t-axis (t > 0) is labeled 'Absolute future' (containing points a and c). The region below the t-axis (t < 0) is labeled 'Absolute past' (containing points d and b). The region between the two lines forming the cone is labeled 'Absolutely separated'.](images/landau2/fig2.png)
 
 In exactly the same way, all events in the region $bOd$ are in the _absolute past_ relative to $O$ ; i.e. events in this region occur before the event $O$ in all systems of reference.
 

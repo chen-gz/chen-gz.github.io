@@ -4,8 +4,6 @@ title: "§ 1. Velocity of propagation of interaction"
 weight: 1
 ---
 
-## § 1. Velocity of propagation of interaction
-
 For the description of processes taking place in nature, one must have a *system of reference*. By a system of reference we understand a system of coordinates serving to indicate the position of a particle in space, as well as clocks fixed in this system serving to indicate the time.
 
 There exist systems of reference in which a freely moving body, i.e. a moving body which is not acted upon by external forces, proceeds with constant velocity. Such reference systems are said to be *inertial*.

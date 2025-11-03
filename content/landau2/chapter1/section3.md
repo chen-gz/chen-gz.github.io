@@ -4,8 +4,6 @@ title: "§ 3. Proper time"
 weight: 3
 ---
 
-## § 3. Proper time
-
 Suppose that in a certain inertial reference system we observe clocks which are moving relative to us in an arbitrary manner. At each different moment of time this motion can be considered as uniform. Thus at each moment of time we can introduce a coordinate system
 
 rigidly linked to the moving clocks, which with the clocks constitutes an inertial reference system.

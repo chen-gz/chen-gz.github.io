@@ -4,8 +4,6 @@ title: "§ 4. The Lorentz transformation"
 weight: 4
 ---
 
-## § 4. The Lorentz transformation
-
 Our purpose is now to obtain the formula of transformation from one inertial reference system to another, that is, a formula by means of which, knowing the coordinates  $x, y, z, t$ , of a certain event in the  $K$  system, we can find the coordinates  $x', y', z', t'$  of the same event in another inertial system  $K'$ .
 
 In classical mechanics this question is resolved very simply. Because of the absolute nature of time we there have  $t = t'$ ; if, furthermore, the coordinate axes are chosen as usual (axes  $X, X'$  coincident,  $Y, Z$  axes parallel to  $Y', Z'$ , motion along  $X, X'$ ) then the coordinates  $y, z$  clearly are equal to  $y', z'$ , while the coordinates  $x$  and  $x'$  differ by the distance traversed by one system relative to the other. If the time origin is chosen as the moment when the two coordinate systems coincide, and if the velocity of the  $K'$  system relative to  $K$  is  $V$ , then this distance is  $Vt$ . Thus

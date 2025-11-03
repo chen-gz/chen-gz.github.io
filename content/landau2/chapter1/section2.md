@@ -4,10 +4,6 @@ title: "§ 2. Intervals"
 weight: 2
 ---
 
-# THE PRINCIPLE OF RELATIVITY
-
-## § 2. Intervals
-
 In what follows we shall frequently use the concept of an _event_. An event is described by the place where it occurred and the time when it occurred. Thus an event occurring in a certain material particle is defined by the three coordinates of that particle and the time when the event occurs.
 
 It is frequently useful for reasons of presentation to use a fictitious four-dimensional

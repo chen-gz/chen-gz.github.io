@@ -1,6 +1,8 @@
-# The Classical Theory of Fields
-
-This repository contains a digitized version of "The Classical Theory of Fields" by Landau and Lifshitz.
+---
+type: docs
+title: "The Classical Theory of Fields"
+weight: 1
+---
 
 ## Table of Contents
 

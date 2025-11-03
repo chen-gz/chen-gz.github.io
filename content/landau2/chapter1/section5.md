@@ -56,7 +56,7 @@ $$\sin \theta = \frac{\sqrt{1 - \frac{V^2}{c^2}}}{1 + \frac{V}{c} \cos \theta'} 
 
 In case  $V \ll c$ , we find from this formula, correct to terms of order  $V/c$ :
 
-$$\sin \theta - \sin \theta' = -\frac{V}{c} \sin \theta' \cos \theta'.$
+$$\sin \theta - \sin \theta' = -\frac{V}{c} \sin \theta' \cos \theta'.$$
 
 Introducing the angle  $\Delta\theta = \theta' - \theta$  (the aberration angle), we find to the same order of accuracy
 

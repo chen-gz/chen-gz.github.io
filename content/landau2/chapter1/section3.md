@@ -3,9 +3,6 @@ type: docs
 title: "§ 3. Proper time"
 weight: 3
 ---
-## CHAPTER I
-
-# THE PRINCIPLE OF RELATIVITY
 
 ## § 3. Proper time
 
@@ -37,9 +34,7 @@ The time read by a clock moving with a given object is called the *proper time* 
 
 As we see from (3.1) or (3.2), the proper time of a moving object is always less than the corresponding interval in the rest system. In other words, moving clocks go more slowly than those at rest.
 
-Suppose some clocks are moving in uniform rectilinear motion relative to an inertial system  $K$ . A reference frame  $K'$  linked to the latter is also inertial. Then from the point of view of an observer in the  $K$  system the clocks in the  $K'$  system fall behind. And conversely, from the point of view of the  $K'$  system, the clocks in  $K$  lag. To convince ourselves that there is no contradiction, let us note the following. In order to establish that the clocks in the  $K'$  system lag behind those in the  $K$  system, we must proceed in the following fashion. Suppose that at a certain moment the clock in  $K'$  passes by the clock in  $K$ , and at that moment the readings of the two clocks coincide. To compare the rates of the two clocks in  $K$  and  $K'$  we must once more compare the readings of the same moving clock in  $K'$  with the clocks in  $K$ . But now we compare this clock with *different* clocks in  $K$ —with those past which the clock in  $K'$  goes at this new time. Then we find that the clock in  $K'$  lags behind the clocks in  $K$  with which it is being compared. We see that to compare the rates of clocks in two reference
-
-frames we require several clocks in one frame and one in the other, and that therefore this process is not symmetric with respect to the two systems. The clock that appears to lag is always the one which is being compared with different clocks in the other system.
+Suppose some clocks are moving in uniform rectilinear motion relative to an inertial system  $K$ . A reference frame  $K'$  linked to the latter is also inertial. Then from the point of view of an observer in the  $K$  system the clocks in the  $K'$  system fall behind. And conversely, from the point of view of the  $K'$  system, the clocks in  $K$  lag. To convince ourselves that there is no contradiction, let us note the following. In order to establish that the clocks in the  $K'$  system lag behind those in the  $K$  system, we must proceed in the following fashion. Suppose that at a certain moment the clock in  $K'$  passes by the clock in  $K$ , and at that moment the readings of the two clocks coincide. To compare the rates of the two clocks in  $K$  and  $K'$  we must once more compare the readings of the same moving clock in  $K'$  with the clocks in  $K$ . But now we compare this clock with *different* clocks in  $K$ —with those past which the clock in  $K'$  goes at this new time. Then we find that the clock in  $K'$  lags behind the clocks in  $K$  with which it is being compared. We see that to compare the rates of clocks in two reference frames we require several clocks in one frame and one in the other, and that therefore this process is not symmetric with respect to the two systems. The clock that appears to lag is always the one which is being compared with different clocks in the other system.
 
 If we have two clocks, one of which describes a closed path returning to the starting point (the position of the clock which remained at rest), then clearly the moving clock appears to lag relative to the one at rest. The converse reasoning, in which the moving clock would be considered to be at rest (and vice versa) is now impossible, since the clock describing a closed trajectory does not carry out a uniform rectilinear motion, so that a coordinate system linked to it will not be inertial.
 

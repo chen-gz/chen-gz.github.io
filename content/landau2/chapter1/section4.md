@@ -3,9 +3,6 @@ type: docs
 title: "§ 4. The Lorentz transformation"
 weight: 4
 ---
-## CHAPTER I
-
-# THE PRINCIPLE OF RELATIVITY
 
 ## § 4. The Lorentz transformation
 

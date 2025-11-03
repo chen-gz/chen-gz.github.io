@@ -4,8 +4,6 @@ title: "§ 2. Intervals"
 weight: 2
 ---
 
-## CHAPTER I
-
 # THE PRINCIPLE OF RELATIVITY
 
 ## § 2. Intervals

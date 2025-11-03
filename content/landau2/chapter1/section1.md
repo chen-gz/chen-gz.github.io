@@ -3,9 +3,6 @@ type: docs
 title: "§ 1. Velocity of propagation of interaction"
 weight: 1
 ---
-## CHAPTER I
-
-# THE PRINCIPLE OF RELATIVITY
 
 ## § 1. Velocity of propagation of interaction
 

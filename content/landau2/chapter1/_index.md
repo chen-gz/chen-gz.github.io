@@ -1,5 +1,5 @@
 ---
 type: docs
-title: "The Principle of Relativity"
+title: "Chapter 1: The Principle of Relativity"
 weight: 1
 ---

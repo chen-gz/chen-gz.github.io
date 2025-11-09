@@ -50,7 +50,7 @@ comments: false
 
 - G. Chen, W. Jia, Y. Zhao, Z.-H. Mao, B. Lo, A. K. Anderson, G. Frost, M. L. Jobarteh, M. A. McCrory, E. Sazonov, M. Steiner-Asiedu, R. S. Ansong, T. Baranowski, L. Burke, and M. Sun, "Food/Non-Food classification of real-life egocentric images in low- and middle-income countries based on image tagging features," *Frontiers in Artificial Intelligence*, vol. 4, Apr 2021.
 
-- G. Chen, M. Sun, Z.-H. Mao, K. Liu, and W. Jia, "Mechanisms of generative image-to-image translation networks," submitted, Nov 2024.
+- G. Chen, M. Sun, Z.-H. Mao, K. Liu, and W. Jia, "Mechanisms of generative image-to-image translation networks," Accepted, Nov 2024.
 
 - M. Sun, W. Jia, G. Chen, M. Hou, J. Chen, and Z.-H. Mao, "Improved wearable devices for dietary assessment using a new camera system," *Sensors*, vol. 22, no. 20, p. 8006, 2022.
 

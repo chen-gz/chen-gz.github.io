@@ -4,9 +4,7 @@ title: "§ 5. Transformation of velocities"
 weight: 5
 ---
 
-In the preceding section we obtained formulas which enable us to find from the coordinates of an event in one reference frame, the coordinates of the same event in a second reference
-
-frame. Now we find formulas relating the velocity of a material particle in one reference system to its velocity in a second reference system.
+In the preceding section we obtained formulas which enable us to find from the coordinates of an event in one reference frame, the coordinates of the same event in a second reference frame. Now we find formulas relating the velocity of a material particle in one reference system to its velocity in a second reference system.
 
 Let us suppose once again that the  $K'$  system moves relative to the  $K$  system with velocity  $V$  along the  $x$  axis. Let  $v_x = dx/dt$  be the component of the particle velocity in the  $K$  system and  $v'_x = dx'/dt'$  the velocity component of the same particle in the  $K'$  system. From (4.3), we have
 

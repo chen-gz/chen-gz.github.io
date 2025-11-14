@@ -57,7 +57,7 @@ $$A^i = (A^0, A).$$
 
 The covariant components of the same four-vector are  $A_i = (A^0, -A)$ , and the square of the four-vector is  $A^i A_i = (A^0)^2 - A^2$ . Thus, for the radius four-vector:
 
-$$x^i = (ct, r), ext{ } x_i = (ct, -r), ext{ } x^i x_i = c^2 t^2 - r^2.$$
+$$x^i = (ct, r), \qquad x_i = (ct, -r), \qquad x^i x_i = c^2 t^2 - r^2.$$
 
 For three-dimensional vectors (with coordinates  $x, y, z$ ) there is no need to distinguish between contra- and covariant components. Whenever this can be done without causing confusion, we shall write their components as  $A_\alpha$  ( $\alpha = x, y, z$ ) using Greek letters for subscripts. In particular we shall assume a summation over  $x, y, z$  for any repeated index (for example,  $A \cdot B = A_\alpha B_\alpha$ ).
 
@@ -65,7 +65,7 @@ A *four-dimensional tensor* (*four-tensor*) of the second rank is a set of sixte
 
 The components of a second-rank tensor can be written in three forms: covariant,  $A_{ik}$ , contravariant,  $A^{ik}$ , and mixed,  $A^i_k$  (where, in the last case, one should distinguish between  $A^i_k$  and  $A^k_i$ , i.e. one should be careful about which of the two is superscript and which a subscript). The connection between the different types of components is determined from the general rule: raising or lowering a space index (1, 2, 3) changes the sign of the component, while raising or lowering the time index (0) does not. Thus:
 
-$$A_{00} = A^{00}, ext{ } A_{01} = -A^{01}, ext{ } A_{11} = A^{11}, ext{ } \dots, ext{ } A_0^0 = A^{00}, ext{ } A_0^1 = A^{01}, ext{ } A_1^0 = -A^{01}, ext{ } A_1^1 = -A^{11}, ext{ } \dots$$
+$$A_{00} = A^{00}, \qquad A_{01} = -A^{01}, \qquad A_{11} = A^{11}, \qquad \dots, \qquad A_0^0 = A^{00}, \qquad A_0^1 = A^{01}, \qquad A_1^0 = -A^{01}, \qquad A_1^1 = -A^{11}, \qquad \dots$$
 
 Under purely spatial transformations, the nine quantities  $A^{11}, A^{12}, \dots$  form a three-tensor. The three components  $A^{01}, A^{02}, A^{03}$  and the three components  $A^{10}, A^{20}, A^{30}$  constitute three-dimensional vectors, while the component  $A^{00}$  is a three-dimensional scalar.
 

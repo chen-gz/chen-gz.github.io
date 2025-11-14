@@ -17,7 +17,7 @@ It does not change under any rotations of the four-dimensional coordinate system
 
 In general a set of four quantities  $A^0, A^1, A^2, A^3$  which transform like the components of the radius four-vector  $x^i$  under transformations of the four-dimensional coordinate system is called a *four-dimensional vector (four-vector)*  $A^i$ . Under Lorentz transformations,
 
-$$A^0 = \frac{A'^0 + \frac{V}{c}A'^1}{\sqrt{1 - \frac{V^2}{c^2}}}, \quad A^1 = \frac{A'^1 + \frac{V}{c}A'^0}{\sqrt{1 - \frac{V^2}{c^2}}}, \quad A^2 = A'^2, \quad A^3 = A'^3. \quad (6.1)$$
+$$A^0 = \frac{A'^0 + \frac{V}{c}A'^1}{\sqrt{1 - \frac{V^2}{c^2}}}, \quad A^1 = \frac{A'^1 + \frac{V}{c}A'^0}{\sqrt{1 - \frac{V^2}{c^2}}}, \quad A^2 = A'^2, \quad A^3 = A'^3. \quad \tag{6.1}$$
 
 The square magnitude of any four-vector is defined analogously to the square of the radius four-vector:
 
@@ -25,7 +25,7 @@ $$(A^0)^2 - (A^1)^2 - (A^2)^2 - (A^3)^2.$$
 
 For convenience of notation, we introduce two "types" of components of four-vectors, denoting them by the symbols  $A^i$  and  $A_i$ , with superscripts and subscripts. These are related by
 
-$$A_0 = A^0, \quad A_1 = -A^1, \quad A_2 = -A^2, \quad A_3 = -A^3. \quad (6.2)$$
+$$A_0 = A^0, \quad A_1 = -A^1, \quad A_2 = -A^2, \quad A_3 = -A^3. \quad \tag{6.2}$$
 
 The square of the four-vector then appears in the form
 
@@ -85,25 +85,25 @@ The formation of the scalar product of two vectors, considered earlier, is a con
 
 The unit four-tensor  $\delta^i_k$  satisfies the condition that for any four-vector  $A^i$ ,
 
-$$\delta^k_i A^i = A^k. \quad (6.3)$$
+$$\delta^k_i A^i = A^k. \quad \tag{6.3}$$
 
 It is clear that the components of this tensor are
 
-$$\delta^k_i = \begin{cases} 1, & \text{if } i = k \\ 0, & \text{if } i \neq k \end{cases} \quad (6.4)$$
+$$\delta^k_i = \begin{cases} 1, & \text{if } i = k \\ 0, & \text{if } i \neq k \end{cases} \quad \tag{6.4}$$
 
 Its trace is  $\delta^i_i = 4$ .
 
 By raising the one index or lowering the other in  $\delta^k_i$ , we can obtain the contravariant tensor  $g^{ik}$  or  $g_{ik}$ , which is called the *metric tensor*. The tensors  $g^{ik}$  and  $g_{ik}$  have identical components, which can be written as a matrix:
 
-$$(g^{ik}) = (g_{ik}) = \begin{pmatrix} 1 & 0 & 0 & 0 \\ 0 & -1 & 0 & 0 \\ 0 & 0 & -1 & 0 \\ 0 & 0 & 0 & -1 \end{pmatrix} \quad (6.5)$$
+$$(g^{ik}) = (g_{ik}) = \begin{pmatrix} 1 & 0 & 0 & 0 \\ 0 & -1 & 0 & 0 \\ 0 & 0 & -1 & 0 \\ 0 & 0 & 0 & -1 \end{pmatrix} \quad \tag{6.5}$$
 
 (the index  $i$  labels the rows, and  $k$  the columns, in the order 0, 1, 2, 3). It is clear that
 
-$$g_{ik} A^k = A_i, \quad g^{ik} A_k = A^i. \quad (6.6)$$
+$$g_{ik} A^k = A_i, \quad g^{ik} A_k = A^i. \quad \tag{6.6}$$
 
 The scalar product of two four-vectors can therefore be written in the form:
 
-$$A^i A_i = g_{ik} A^i A^k = g^{ik} A_i A_k. \quad (6.7)$$
+$$A^i A_i = g_{ik} A^i A^k = g^{ik} A_i A_k. \quad \tag{6.7}$$
 
 The tensors  $\delta^i_k$ ,  $g_{ik}$ ,  $g^{ik}$  are special in the sense that their components are the same in all coordinate systems. The *completely antisymmetric unit tensor* of fourth rank,  $e^{iklm}$ , has the same property. This is the tensor whose components change sign under interchange of any pair of indices, and whose nonzero components are  $\pm 1$ . From the antisymmetry it follows that all components in which two indices are the same are zero, so that the only non-vanishing components are those for which all four indices are different. We set
 

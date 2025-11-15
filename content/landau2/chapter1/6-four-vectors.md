@@ -107,11 +107,11 @@ $$A^i A_i = g_{ik} A^i A^k = g^{ik} A_i A_k. \quad \tag{6.7}$$
 
 The tensors  $\delta^i_k$ ,  $g_{ik}$ ,  $g^{ik}$  are special in the sense that their components are the same in all coordinate systems. The *completely antisymmetric unit tensor* of fourth rank,  $e^{iklm}$ , has the same property. This is the tensor whose components change sign under interchange of any pair of indices, and whose nonzero components are  $\pm 1$ . From the antisymmetry it follows that all components in which two indices are the same are zero, so that the only non-vanishing components are those for which all four indices are different. We set
 
-$$e^{0123} = +1 \quad (6.8)$$
+$$e^{0123} = +1 \quad \tag{6.8}$$
 
 (hence  $e_{0123} = -1$ ). Then all the other nonvanishing components  $e^{iklm}$  are equal to  $+1$  or  $-1$ , according as the numbers  $i, k, l, m$  can be brought to the arrangement 0, 1, 2, 3 by an even or an odd number of transpositions. The number of such components is  $4! = 24$ . Thus,
 
-$$e^{iklm} e_{iklm} = -24. \quad (6.9)$$
+$$e^{iklm} e_{iklm} = -24. \quad \tag{6.9}$$
 
 With respect to rotations of the coordinate system, the quantities  $e^{iklm}$  behave like the components of a tensor; but if we change the sign of one or three of the coordinates the components  $e^{iklm}$ , being defined as the same in all coordinate systems, do not change, whereas some of the components of a tensor should change sign. Thus  $e^{iklm}$  is, strictly speaking, not a tensor, but rather a pseudotensor. Pseudotensors of any rank, in particular pseudoscalars, behave like tensors under all coordinate transformations except those that cannot be reduced to rotations, i.e. reflections, which are changes in sign of the coordinates that are not reducible to a rotation.
 
@@ -149,7 +149,7 @@ $$C_{\alpha} = \frac{1}{2} e_{\alpha\beta\gamma} C_{\beta\gamma}, \quad \text{wh
 
 Now consider four-tensors. The space components ( $i, k, = 1, 2, 3$ ) of the antisymmetric tensor  $A^{ik}$  form a three-dimensional antisymmetric tensor with respect to purely spatial transformations; according to our statement its components can be expressed in terms of the components of a three-dimensional axial vector. With respect to these same transformations the components  $A^{01}, A^{02}, A^{03}$  form a three-dimensional polar vector. Thus the components of an antisymmetric four-tensor can be written as a matrix:
 
-$$(A^{ik}) = \begin{vmatrix} 0 & p_x & p_y & p_z \\ -p_x & 0 & -a_z & a_y \\ -p_y & a_z & 0 & -a_x \\ -p_z & -a_y & a_x & 0 \end{vmatrix}, \quad (6.10)$$
+$$(A^{ik}) = \begin{vmatrix} 0 & p_x & p_y & p_z \\ -p_x & 0 & -a_z & a_y \\ -p_y & a_z & 0 & -a_x \\ -p_z & -a_y & a_x & 0 \end{vmatrix}, \quad \tag{6.10}$$
 
 where, with respect to spatial transformations,  $p$  and  $a$  are polar and axial vectors, respectively. In enumerating the components of an antisymmetric four-tensor, we shall write them in the form
 
@@ -191,7 +191,7 @@ In three-dimensional space one can extend integrals over a volume, a surface or 
 
 (2) Integral over a (two-dimensional) surface in four-space. As we know, in three-space the projections of the area of the parallelogram formed from the vectors  $d\mathbf{r}$  and  $d\mathbf{r}'$  on the coordinate planes  $x_\alpha x_\beta$  are  $dx_\alpha dx'_\beta - dx_\beta dx'_\alpha$ . Analogously, in four-space the infinitesimal element of surface is given by the antisymmetric tensor of second rank  $df^{ik} = dx^i dx'^k - dx^k dx'^i$ ; its components are the projections of the element of area on the coordinate planes. In three-dimensional space, as we know, one uses as surface element in place of the tensor  $df_{\alpha\beta}$  the vector  $df_\alpha$  dual to the tensor  $df_{\alpha\beta}$ :  $df_\alpha = \frac{1}{2} e_{\alpha\beta\gamma} df_{\beta\gamma}$ . Geometrically this is a vector normal to the surface element and equal in absolute magnitude to the area of the element. In four-space we cannot construct such a vector, but we can construct the tensor  $df^{*ik}$  dual to the tensor  $df^{ik}$ ,
 
-$$df^{*ik} = \frac{1}{2} e^{iklm} df_{lm}. \quad (6.11)$$
+$$df^{*ik} = \frac{1}{2} e^{iklm} df_{lm}. \quad \tag{6.11}$$
 
 Geometrically it describes an element of surface equal to and “normal” to the element of
 

@@ -1,5 +1,6 @@
 ---
 title: "The Riesz Representation Theorem"
+type: docs
 ---
 
 

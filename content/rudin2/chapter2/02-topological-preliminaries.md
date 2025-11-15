@@ -1,7 +1,8 @@
 ---
-title: "Topological Preliminaries"
 type: docs
 ---
+
+## Topological Preliminaries
 
 **2.3 Definitions** Let  $X$  be a topological space, as defined in Sec. 1.2.
 

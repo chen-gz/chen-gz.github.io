@@ -1,7 +1,8 @@
 ---
-title: "Vector Spaces"
 type: docs
 ---
+
+## Vector Spaces
 
 **2.1 Definition** A *complex vector space* (or a vector space over the complex field) is a set  $V$ , whose elements are called *vectors* and in which two operations, called *addition* and *scalar multiplication*, are defined, with the following familiar algebraic properties:
 

@@ -1,6 +1,7 @@
 ---
-title: "Exercises"
 type: docs
 ---
+## Exercises
+
 
 This section will contain the exercises for Chapter 2.

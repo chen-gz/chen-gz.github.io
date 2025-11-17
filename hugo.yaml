@@ -48,11 +48,14 @@ menu:
       pageRef: /rudin2
       weight: 4
     - name: Field
-      pageRef: landau2
+      pageRef: /landau2
       weight: 5
+    - name: Riemannian Geometry
+      pageRef: /riemannian-geometry
+      weight: 6
     - identifier: search
       name: Search
-      weight: 6
+      weight: 7
       params:
         type: search
     # - name: GitHub

@@ -72,7 +72,7 @@ First, let us extend the idea of differentiability to mappings between manifolds
 
 **2.5 DEFINITION**. Let  $M_1^n$  and  $M_2^m$  be differentiable manifolds. A mapping  $\varphi: M_1 \to M_2$  is *differentiable at*  $p \in M_1$  if given a parametrization  $\mathbf{y}: V \subset \mathbb{R}^n \to M_2$  at  $\varphi(p)$  there exists a parametrization  $\mathbf{x}: U \subset \mathbb{R}^n \to M_1$  at  $p$  such that  $\varphi(\mathbf{x}(U)) \subset \mathbf{y}(V)$  and the mapping
 
-$$(1) \quad \mathbf{y}^{-1} \circ \varphi \circ \mathbf{x}: U \subset \mathbb{R}^n \to \mathbb{R}^m$$
+$$ \quad \mathbf{y}^{-1} \circ \varphi \circ \mathbf{x}: U \subset \mathbb{R}^n \to \mathbb{R}^m \tag{1}$$
 
 ![](/images/remannian_geometry/figure_2.png)
 

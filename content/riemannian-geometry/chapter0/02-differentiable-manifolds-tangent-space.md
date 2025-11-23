@@ -114,7 +114,7 @@ $$\begin{aligned} \alpha'(0)f &= \left. \frac{d}{dt}(f \circ \alpha) \right|_{t=
 
 In other words, the vector  $\alpha'(0)$  can be expressed in the parametrization  $\mathbf{x}$  by
 
-$$(2) \quad \alpha'(0) = \sum_i x'_i(0) \left( \frac{\partial}{\partial x_i} \right)_0.$$
+$$ \quad \alpha'(0) = \sum_i x'_i(0) \left( \frac{\partial}{\partial x_i} \right)_0. \tag{2}$$
 
 Observe that  $\left( \frac{\partial}{\partial x_i} \right)_0$  is the tangent vector at  $p$  of the “coordinate curve” (Fig. 3):
 
@@ -146,7 +146,7 @@ $$\mathbf{y}^{-1} \circ \beta(t) = (y_1(x_1(t), \dots, x_n(t)), \dots, y_m(x_1(t
 
 It follows that the expression for  $\beta'(0)$  with respect to the basis  $\left\{ \left( \frac{\partial}{\partial y_i} \right)_0 \right\}$  of  $T_{\varphi(p)} M_2$ , associated to the parametrization  $\mathbf{y}$ , is given by
 
-$$(3) \quad \beta'(0) = \left( \sum_{i=1}^{n} \frac{\partial y_1}{\partial x_i} x'_i(0), \dots, \sum_{i=1}^{n} \frac{\partial y_m}{\partial x_i} x'_i(0) \right).$$
+$$ \quad \beta'(0) = \left( \sum_{i=1}^{n} \frac{\partial y_1}{\partial x_i} x'_i(0), \dots, \sum_{i=1}^{n} \frac{\partial y_m}{\partial x_i} x'_i(0) \right). \tag{3}$$
 
 The relation (3) shows immediately that  $\beta'(0)$  does not depend on the choice of  $\alpha$ . In addition, (3) can be written as
 

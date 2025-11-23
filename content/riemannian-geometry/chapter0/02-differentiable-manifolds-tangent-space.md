@@ -14,7 +14,7 @@ The pair  $(U_\alpha, \mathbf{x}_\alpha)$  (or the mapping  $\mathbf{x}_\alpha$ 
 
 The condition (3) is included for purely technical reasons. Indeed, given a differentiable structure on  $M$ , we can easily complete it to a maximal one, by taking the union of all the parametrizations that, together with any of the parametrizations of the given structure, satisfy condition (2). Therefore, with a certain abuse of language, we can say that a differentiable manifold is a set provided with a differentiable structure. In general, the extension to the maximal structure will be done without further comment.
 
-![image](/static/images/remannian_geometry/figure_1.png)
+![image](/images/remannian_geometry/figure_1.png)
 
 **2.2 REMARK** A comparison between the definition 2.1 and the definition of a regular surface in  $\mathbb{R}^3$  shows that the essential point (except for the change of dimension from 2 to  $n$ ) was to distinguish the fundamental property of the change of parameters (which is a theorem for surfaces in  $\mathbb{R}^3$ ) and incorporate it as an axiom. This is precisely condition 2 of Definition 2.1. As we shall soon see, this is the condition that allows us to carry over all of the ideas of differential calculus in  $\mathbb{R}^n$  to differentiable manifolds.
 
@@ -74,7 +74,7 @@ First, let us extend the idea of differentiability to mappings between manifolds
 
 $$(1) \quad \mathbf{y}^{-1} \circ \varphi \circ \mathbf{x}: U \subset \mathbb{R}^n \to \mathbb{R}^m$$
 
-![](static/images/remannian_geometry/figure_2.png)
+![](/images/remannian_geometry/figure_2.png)
 
 Figure 2is differentiable at  $x^{-1}(p)$  (Fig. 2).  $\varphi$  is differentiable on an open set of  $M_1$  if it is differentiable at all of the points of this open set.
 

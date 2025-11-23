@@ -14,9 +14,7 @@ The pair  $(U_\alpha, \mathbf{x}_\alpha)$  (or the mapping  $\mathbf{x}_\alpha$ 
 
 The condition (3) is included for purely technical reasons. Indeed, given a differentiable structure on  $M$ , we can easily complete it to a maximal one, by taking the union of all the parametrizations that, together with any of the parametrizations of the given structure, satisfy condition (2). Therefore, with a certain abuse of language, we can say that a differentiable manifold is a set provided with a differentiable structure. In general, the extension to the maximal structure will be done without further comment.
 
-![Figure 1 illustrates the concept of a differentiable manifold M. The manifold M is shown as a curved surface. A region W is highlighted on M. The coordinate charts x_alpha and x_beta are shown mapping regions U_alpha and U_beta on M to open sets in R^n. The transition map x_alpha^{-1} * x_beta is indicated between the coordinate systems.]()![](_page_2_Picture_1.jpeg)
-
-Figure 1
+![image](/static/images/remannian_geometry/figure_1.png)
 
 **2.2 REMARK** A comparison between the definition 2.1 and the definition of a regular surface in  $\mathbb{R}^3$  shows that the essential point (except for the change of dimension from 2 to  $n$ ) was to distinguish the fundamental property of the change of parameters (which is a theorem for surfaces in  $\mathbb{R}^3$ ) and incorporate it as an axiom. This is precisely condition 2 of Definition 2.1. As we shall soon see, this is the condition that allows us to carry over all of the ideas of differential calculus in  $\mathbb{R}^n$  to differentiable manifolds.
 
@@ -76,7 +74,7 @@ First, let us extend the idea of differentiability to mappings between manifolds
 
 $$(1) \quad \mathbf{y}^{-1} \circ \varphi \circ \mathbf{x}: U \subset \mathbb{R}^n \to \mathbb{R}^m$$
 
-![Figure 2 illustrates the transition map between two parametrizations of a manifold. The diagram shows two surfaces, M1 and M2, and their respective coordinate neighborhoods U and V. The parametrization x maps U to M1, and y maps V to M2. The transition map is shown as y^{-1} \circ \varphi \circ x, mapping U to V. The mapping \varphi is shown mapping x(U) to y(V) on the surfaces.]()![](_page_5_Picture_2.jpeg)
+![](static/images/remannian_geometry/figure_2.png)
 
 Figure 2is differentiable at  $x^{-1}(p)$  (Fig. 2).  $\varphi$  is differentiable on an open set of  $M_1$  if it is differentiable at all of the points of this open set.
 

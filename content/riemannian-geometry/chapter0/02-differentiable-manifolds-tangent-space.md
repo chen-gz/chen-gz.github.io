@@ -4,7 +4,7 @@ type: docs
 
 ## 2. Differentiable manifolds; tangent space
 
-2.1 DEFINITION. A *differentiable manifold* of dimension  $n$  is a set  $M$  and a family of injective mappings  $\mathbf{x}_\alpha: U_\alpha \subset \mathbb{R}^n \to M$  of open sets  $U_\alpha$  of  $\mathbb{R}^n$  into  $M$  such that:
+**2.1 DEFINITION.** A *differentiable manifold* of dimension  $n$  is a set  $M$  and a family of injective mappings  $\mathbf{x}_\alpha: U_\alpha \subset \mathbb{R}^n \to M$  of open sets  $U_\alpha$  of  $\mathbb{R}^n$  into  $M$  such that:
 
 1. $\bigcup_\alpha \mathbf{x}_\alpha(U_\alpha) = M$ .
 2. for any pair  $\alpha, \beta$ , with  $\mathbf{x}_\alpha(U_\alpha) \cap \mathbf{x}_\beta(U_\beta) = W \neq \emptyset$ , the sets  $\mathbf{x}_\alpha^{-1}(W)$  and  $\mathbf{x}_\beta^{-1}(W)$  are open sets in  $\mathbb{R}^n$  and the mappings  $\mathbf{x}_\beta^{-1} \circ \mathbf{x}_\alpha$  are differentiable (Fig. 1).
@@ -16,15 +16,17 @@ The condition (3) is included for purely technical reasons. Indeed, given a diff
 
 ![Figure 1 illustrates the concept of a differentiable manifold M. The manifold M is shown as a curved surface. A region W is highlighted on M. The coordinate charts x_alpha and x_beta are shown mapping regions U_alpha and U_beta on M to open sets in R^n. The transition map x_alpha^{-1} * x_beta is indicated between the coordinate systems.]()![](_page_2_Picture_1.jpeg)
 
-Figure 12.2 REMARK. A comparison between the definition 2.1 and the definition of a regular surface in  $\mathbb{R}^3$  shows that the essential point (except for the change of dimension from 2 to  $n$ ) was to distinguish the fundamental property of the change of parameters (which is a theorem for surfaces in  $\mathbb{R}^3$ ) and incorporate it as an axiom. This is precisely condition 2 of Definition 2.1. As we shall soon see, this is the condition that allows us to carry over all of the ideas of differential calculus in  $\mathbb{R}^n$  to differentiable manifolds.
+Figure 1
 
-2.3 REMARK. A differentiable structure on a set  $M$  induces a natural topology on  $M$ . It suffices to define  $A \subset M$  to be an *open set* in  $M$  if and only if  $x_\alpha^{-1}(A \cap x_\alpha(U_\alpha))$  is an open set in  $\mathbb{R}^n$  for all  $\alpha$ . It is easy to verify that  $M$  and the empty set are open sets, that a union of open sets is again an open set and that the finite intersection of open sets remains an open set. Observe that the topology is defined in such a way that the sets  $x_\alpha(U_\alpha)$  are open and that the mappings  $x_\alpha$  are continuous.
+**2.2 REMARK** A comparison between the definition 2.1 and the definition of a regular surface in  $\mathbb{R}^3$  shows that the essential point (except for the change of dimension from 2 to  $n$ ) was to distinguish the fundamental property of the change of parameters (which is a theorem for surfaces in  $\mathbb{R}^3$ ) and incorporate it as an axiom. This is precisely condition 2 of Definition 2.1. As we shall soon see, this is the condition that allows us to carry over all of the ideas of differential calculus in  $\mathbb{R}^n$  to differentiable manifolds.
+
+**2.3 REMARK** A differentiable structure on a set  $M$  induces a natural topology on  $M$ . It suffices to define  $A \subset M$  to be an *open set* in  $M$  if and only if  $x_\alpha^{-1}(A \cap x_\alpha(U_\alpha))$  is an open set in  $\mathbb{R}^n$  for all  $\alpha$ . It is easy to verify that  $M$  and the empty set are open sets, that a union of open sets is again an open set and that the finite intersection of open sets remains an open set. Observe that the topology is defined in such a way that the sets  $x_\alpha(U_\alpha)$  are open and that the mappings  $x_\alpha$  are continuous.
 
 The Euclidean space  $\mathbb{R}^n$ , with the differentiable structure
 
 given by the identity, is a trivial example of a differentiable manifold. Now we shall see a non-trivial example.
 
-2.4 EXAMPLE. *The real projective space*  $P^n(\mathbb{R})$ . Let us denote by  $P^n(\mathbb{R})$  the set of straight lines of  $\mathbb{R}^{n+1}$  which pass through the origin  $0 = (0, \dots, 0) \in \mathbb{R}^{n+1}$ ; that is,  $P^n(\mathbb{R})$  is the set of "directions" of  $\mathbb{R}^{n+1}$ .
+**2.4 EXAMPLE** *The real projective space*  $P^n(\mathbb{R})$ . Let us denote by  $P^n(\mathbb{R})$  the set of straight lines of  $\mathbb{R}^{n+1}$  which pass through the origin  $0 = (0, \dots, 0) \in \mathbb{R}^{n+1}$ ; that is,  $P^n(\mathbb{R})$  is the set of "directions" of  $\mathbb{R}^{n+1}$ .
 
 Let us introduce a differentiable structure on  $P^n(\mathbb{R})$ . For this, let  $(x_1, \dots, x_{n+1}) \in \mathbb{R}^{n+1}$  and observe, to begin with, that  $P^n(\mathbb{R})$  is the quotient space of  $\mathbb{R}^{n+1} - \{0\}$  by the equivalence relation:
 
@@ -70,7 +72,7 @@ Before presenting further examples of differentiable manifolds we should present
 
 First, let us extend the idea of differentiability to mappings between manifolds.
 
-2.5 DEFINITION. Let  $M_1^n$  and  $M_2^m$  be differentiable manifolds. A mapping  $\varphi: M_1 \to M_2$  is *differentiable at*  $p \in M_1$  if given a parametrization  $\mathbf{y}: V \subset \mathbb{R}^n \to M_2$  at  $\varphi(p)$  there exists a parametrization  $\mathbf{x}: U \subset \mathbb{R}^n \to M_1$  at  $p$  such that  $\varphi(\mathbf{x}(U)) \subset \mathbf{y}(V)$  and the mapping
+**2.5 DEFINITION**. Let  $M_1^n$  and  $M_2^m$  be differentiable manifolds. A mapping  $\varphi: M_1 \to M_2$  is *differentiable at*  $p \in M_1$  if given a parametrization  $\mathbf{y}: V \subset \mathbb{R}^n \to M_2$  at  $\varphi(p)$  there exists a parametrization  $\mathbf{x}: U \subset \mathbb{R}^n \to M_1$  at  $p$  such that  $\varphi(\mathbf{x}(U)) \subset \mathbf{y}(V)$  and the mapping
 
 $$(1) \quad \mathbf{y}^{-1} \circ \varphi \circ \mathbf{x}: U \subset \mathbb{R}^n \to \mathbb{R}^m$$
 
@@ -94,7 +96,7 @@ $$\left. \frac{d(f \circ \alpha)}{dt} \right|_{t=0} = \sum_{i=1}^{n} \left. \fra
 
 Therefore, the directional derivative with respect to  $v$  is an operator on differentiable functions that depends uniquely on  $v$ . This is the characteristic property that we are going to use to define tangent vectors on a manifold.
 
-2.6 DEFINITION. Let  $M$  be a differentiable manifold. A differentiable function  $\alpha: (-\varepsilon, \varepsilon) \to M$  is called a (differentiable) *curve* in  $M$ . Suppose that  $\alpha(0) = p \in M$ , and let  $\mathcal{D}$  be the set of functions on  $M$  that are differentiable at  $p$ . The *tangent vector to the curve*  $\alpha$  at  $t=0$  is a function  $\alpha'(0): \mathcal{D} \to \mathbf{R}$  given by
+**2.6 DEFINITION**. Let  $M$  be a differentiable manifold. A differentiable function  $\alpha: (-\varepsilon, \varepsilon) \to M$  is called a (differentiable) *curve* in  $M$ . Suppose that  $\alpha(0) = p \in M$ , and let  $\mathcal{D}$  be the set of functions on  $M$  that are differentiable at  $p$ . The *tangent vector to the curve*  $\alpha$  at  $t=0$  is a function  $\alpha'(0): \mathcal{D} \to \mathbf{R}$  given by
 
 $$\alpha'(0)f = \left. \frac{d(f \circ \alpha)}{dt} \right|_{t=0}, \quad f \in \mathcal{D}.$$
 
@@ -128,7 +130,7 @@ The expression (2) shows that the tangent vector to the curve  $\alpha$  at  $p$
 
 With the idea of tangent space we can extend to differentiable manifolds the notion of the differential of a differentiable mapping.
 
-2.7 PROPOSITION. Let  $M_1^n$  and  $M_2^m$  be differentiable manifolds and let  $\varphi: M_1 \to M_2$  be a differentiable mapping. For every  $p \in M_1$  and for each  $v \in T_p M_1$ , choose a differentiable curve  $\alpha: (-\varepsilon, \varepsilon) \to M_1$  with  $\alpha(0) = p$ ,  $\alpha'(0) = v$ . Take  $\beta = \varphi \circ \alpha$ . The mapping  $d\varphi_p: T_p M_1 \to T_{\varphi(p)} M_2$  given by  $d\varphi_p(v) = \beta'(0)$  is a linear mapping that does not depend on the choice of  $\alpha$  (Fig. 4).
+**2.7 PROPOSITION**. Let  $M_1^n$  and  $M_2^m$  be differentiable manifolds and let  $\varphi: M_1 \to M_2$  be a differentiable mapping. For every  $p \in M_1$  and for each  $v \in T_p M_1$ , choose a differentiable curve  $\alpha: (-\varepsilon, \varepsilon) \to M_1$  with  $\alpha(0) = p$ ,  $\alpha'(0) = v$ . Take  $\beta = \varphi \circ \alpha$ . The mapping  $d\varphi_p: T_p M_1 \to T_{\varphi(p)} M_2$  given by  $d\varphi_p(v) = \beta'(0)$  is a linear mapping that does not depend on the choice of  $\alpha$  (Fig. 4).
 
 Proof. Let  $\mathbf{x}: U \to M_1$  and  $\mathbf{y}: V \to M_2$  be parametrizations at  $p$  and  $\varphi(p)$ , respectively. Expressing  $\varphi$  in these parametrizations, we can write
 

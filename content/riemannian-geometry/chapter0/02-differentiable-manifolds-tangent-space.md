@@ -76,7 +76,7 @@ $$ \quad \mathbf{y}^{-1} \circ \varphi \circ \mathbf{x}: U \subset \mathbb{R}^n 
 
 ![](/images/remannian_geometry/figure_2.png)
 
-Figure 2is differentiable at  $x^{-1}(p)$  (Fig. 2).  $\varphi$  is differentiable on an open set of  $M_1$  if it is differentiable at all of the points of this open set.
+is differentiable at  $x^{-1}(p)$  (Fig. 2).  $\varphi$  is differentiable on an open set of  $M_1$  if it is differentiable at all of the points of this open set.
 
 It follows from condition (2) of Definition 2.1 that the given definition is independent of the choice of the parametrizations. The mapping (1) is called the *expression* of  $\varphi$  in the parametrizations  $x$  and  $y$ .
 
@@ -120,9 +120,7 @@ Observe that  $\left( \frac{\partial}{\partial x_i} \right)_0$  is the tangent v
 
 $$x_i \to \mathbf{x}(0, \dots, 0, x_i, 0, \dots, 0).$$
 
-![Figure 3 illustrates the tangent space T_p M. On the left, a coordinate system (x_i, x_n) shows a point q and the origin 0. An arrow labeled x points from the coordinate system to the manifold M on the right. On the manifold M, a point x(q) is shown. A tangent vector field is indicated by arrows, and a specific tangent vector is labeled as the partial derivative operator \frac{\partial}{\partial x_i} at x(q).]()![](_page_7_Picture_7.jpeg)
-
-Figure 3
+![image](/images/remannian_geometry/figure_1.png)
 
 The expression (2) shows that the tangent vector to the curve  $\alpha$  at  $p$  depends only the derivative of  $\alpha$  in a coordinate system. It follows also from (2) that the set  $T_p M$ , with the usual operations of functions, forms a vector space of dimension  $n$ , and that the choice of a parametrization  $\mathbf{x}: U \to M$  determines an *associated basis*  $\left\{ \left( \frac{\partial}{\partial x_1} \right)_0, \dots, \left( \frac{\partial}{\partial x_n} \right)_0 \right\}$  in  $T_p M$  (Fig. 3). It is immediate that the linear structure in  $T_p M$  defined above does not depend on the parametrization  $\mathbf{x}$ . The vector space  $T_p M$  is called the *tangent space* of  $M$  at  $p$ .
 
@@ -156,9 +154,9 @@ $$i = 1, \dots, m; \quad j = 1, \dots, n,$$
 
 where  $\left( \frac{\partial y_i}{\partial x_j} \right)$  denotes an  $m \times n$  matrix and  $x'_j(0)$  denotes a column matrix with  $n$  elements. Therefore,  $d\varphi_p$  is a linear mapping of  $T_p M_1$ 
 
-![Figure 4 illustrates the differential of a mapping phi between manifolds M1 and M2. A tangent vector v at point p on M1 is mapped via phi to a tangent vector d phi_p(v) at the image point phi(p) on M2. A coordinate system is shown near p on M1, with axes 0, epsilon, and alpha.]()![](_page_9_Picture_2.jpeg)
+![image](/images/remannian_geometry/figure_4.png)
 
-Figure 4into  $T_{\varphi(p)}M_2$  whose matrix in the associated bases obtained from the parametrizations  $\mathbf{x}$  and  $\mathbf{y}$  is precisely the matrix  $\left(\frac{\partial y_i}{\partial x_j}\right)$ .  $\square$ 
+into  $T_{\varphi(p)}M_2$  whose matrix in the associated bases obtained from the parametrizations  $\mathbf{x}$  and  $\mathbf{y}$  is precisely the matrix  $\left(\frac{\partial y_i}{\partial x_j}\right)$ .  $\square$ 
 
 **2.8 DEFINITION.** The linear mapping  $d\varphi_p$  defined by Proposition 2.7 is called the *differential* of  $\varphi$  at  $p$ .
 

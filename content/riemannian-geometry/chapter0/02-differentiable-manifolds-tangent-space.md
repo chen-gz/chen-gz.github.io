@@ -120,7 +120,7 @@ Observe that  $\left( \frac{\partial}{\partial x_i} \right)_0$  is the tangent v
 
 $$x_i \to \mathbf{x}(0, \dots, 0, x_i, 0, \dots, 0).$$
 
-![image](/images/remannian_geometry/figure_1.png)
+![image](/images/remannian_geometry/figure_3.png)
 
 The expression (2) shows that the tangent vector to the curve  $\alpha$  at  $p$  depends only the derivative of  $\alpha$  in a coordinate system. It follows also from (2) that the set  $T_p M$ , with the usual operations of functions, forms a vector space of dimension  $n$ , and that the choice of a parametrization  $\mathbf{x}: U \to M$  determines an *associated basis*  $\left\{ \left( \frac{\partial}{\partial x_1} \right)_0, \dots, \left( \frac{\partial}{\partial x_n} \right)_0 \right\}$  in  $T_p M$  (Fig. 3). It is immediate that the linear structure in  $T_p M$  defined above does not depend on the parametrization  $\mathbf{x}$ . The vector space  $T_p M$  is called the *tangent space* of  $M$  at  $p$ .
 

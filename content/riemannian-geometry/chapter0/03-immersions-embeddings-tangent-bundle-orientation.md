@@ -15,21 +15,22 @@ It can be seen that if  $\varphi: M^m \to N^n$  is an immersion, then  $m \le n$
 
 **3.3 EXAMPLE** The curve  $\alpha: \mathbb{R} \to \mathbb{R}^2$  given by  $\alpha(t) = (t^3, t^2)$  is a differentiable mapping but is not an immersion. Indeed, the condition for the map to be an immersion in this case is equivalent to the fact that  $\alpha'(t) \neq 0$ , which does not occur for  $t = 0$  (Fig. 6).
 
+![image](/images/remannian_geometry/figure_6.png)
+
 **3.4 EXAMPLE** The curve  $\alpha(t) = (t^3 - 4t, t^2 - 4)$  (Fig. 7) is an immersion  $\alpha: \mathbb{R} \to \mathbb{R}^2$  which has a self-intersection for  $t = 2, t = -2$ . Therefore,  $\alpha$  is not an embedding.
+
+![image](/images/remannian_geometry/figure_7.png)
 
 **3.5 EXAMPLE** The curve (Fig. 8)
 
 $$\alpha(t) = \begin{cases} (0, -(t+2)), & t \in (-3, -1), \\ \text{regular curve (see Fig. 8)}, & t \in (-1, -\frac{1}{\pi}) \\ (-t, -\sin \frac{1}{t}), & t \in (-\frac{1}{\pi}, 0) \end{cases}$$
 
-![image](/images/remannian_geometry/figure_6.png)
 
 is an immersion  $\alpha: (-3, 0) \to \mathbb{R}^2$  without self-intersections. Nevertheless,  $\alpha$  is not an embedding. Indeed, a neighborhood of a point  $p$ , in the vertical part of the curve (Fig. 8) consists of an infinite number of connected components in the topology induced from  $\mathbb{R}^2$ . On the other hand, a neighborhood of such a point in the topology “induced” from  $\alpha$  (that is the topology of the line) is an open interval, hence a connected set.
 
-![image](/images/remannian_geometry/figure_7.png)
+![image](/images/remannian_geometry/figure_8.png)
 
 **3.6 EXAMPLE**. It is clear that a regular surface  $S \subset \mathbb{R}^3$  has a differentiable structure given by its parametrizations  $\mathbf{x}_\alpha: U_\alpha \to S$ . With
-
-![image](/images/remannian_geometry/figure_8.png)
 
 such a structure, the mappings  $\mathbf{x}_\alpha$  are differentiable and, indeed, are embeddings of  $U_\alpha$  into  $S$ ; that is an immediate consequence of conditions (a) and (b) of the definition of regular surface given in the introduction. We are going to show that the inclusion  $i: S \subset \mathbf{R}^3$  is an embedding, that is,  $S$  is a submanifold of  $\mathbf{R}^3$ .
 

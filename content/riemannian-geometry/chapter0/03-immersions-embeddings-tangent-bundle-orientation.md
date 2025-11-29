@@ -10,9 +10,8 @@ It can be seen that if  $\varphi: M^m \to N^n$  is an immersion, then  $m \le n$
 
 **3.2 EXAMPLE** The curve  $\alpha: \mathbb{R} \to \mathbb{R}^2$  given by  $\alpha(t) = (t, |t|)$  is not differentiable at  $t = 0$  (Fig. 5).
 
-![Figure 5 shows a graph in the xy-plane. The curve starts at the origin (0, 0) and consists of two rays: one in the first quadrant (x > 0, y = x) and one in the second quadrant (x < 0, y = -x). The curve is not differentiable at the origin.]()![](_page_10_Figure_5.jpeg)
+![image](/images/remannian_geometry/figure_5.png)
 
-Figure 5
 
 **3.3 EXAMPLE** The curve  $\alpha: \mathbb{R} \to \mathbb{R}^2$  given by  $\alpha(t) = (t^3, t^2)$  is a differentiable mapping but is not an immersion. Indeed, the condition for the map to be an immersion in this case is equivalent to the fact that  $\alpha'(t) \neq 0$ , which does not occur for  $t = 0$  (Fig. 6).
 
@@ -22,21 +21,15 @@ Figure 5
 
 $$\alpha(t) = \begin{cases} (0, -(t+2)), & t \in (-3, -1), \\ \text{regular curve (see Fig. 8)}, & t \in (-1, -\frac{1}{\pi}) \\ (-t, -\sin \frac{1}{t}), & t \in (-\frac{1}{\pi}, 0) \end{cases}$$
 
-![Figure 6: A graph showing a curve in the xy-plane, resembling a parabola opening upwards, with an arrow indicating the direction of traversal. The origin is labeled 0.]()![](_page_11_Figure_2.jpeg)
-
-Figure 6
+![image](/images/remannian_geometry/figure_6.png)
 
 is an immersion  $\alpha: (-3, 0) \to \mathbb{R}^2$  without self-intersections. Nevertheless,  $\alpha$  is not an embedding. Indeed, a neighborhood of a point  $p$ , in the vertical part of the curve (Fig. 8) consists of an infinite number of connected components in the topology induced from  $\mathbb{R}^2$ . On the other hand, a neighborhood of such a point in the topology “induced” from  $\alpha$  (that is the topology of the line) is an open interval, hence a connected set.
 
-![Figure 7: A graph showing a curve in the xy-plane, resembling a figure-eight shape centered at the origin, with arrows indicating the direction of traversal.]()![](_page_11_Figure_5.jpeg)
-
-Figure 7
+![image](/images/remannian_geometry/figure_7.png)
 
 **3.6 EXAMPLE**. It is clear that a regular surface  $S \subset \mathbb{R}^3$  has a differentiable structure given by its parametrizations  $\mathbf{x}_\alpha: U_\alpha \to S$ . With
 
-![Figure 8 shows a curve in the xy-plane. The curve starts at point p = (0, -1) on the y-axis, moves up and down rapidly near the origin, and then extends to the right, crossing the x-axis at point q = (1/\pi, 0). The curve is labeled with arrows indicating direction.]()![](_page_12_Figure_3.jpeg)
-
-Figure 8
+![image](/images/remannian_geometry/figure_8.png)
 
 such a structure, the mappings  $\mathbf{x}_\alpha$  are differentiable and, indeed, are embeddings of  $U_\alpha$  into  $S$ ; that is an immediate consequence of conditions (a) and (b) of the definition of regular surface given in the introduction. We are going to show that the inclusion  $i: S \subset \mathbf{R}^3$  is an embedding, that is,  $S$  is a submanifold of  $\mathbf{R}^3$ .
 

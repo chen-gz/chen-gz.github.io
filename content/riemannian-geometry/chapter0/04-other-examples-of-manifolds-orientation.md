@@ -63,7 +63,7 @@ We are then able to apply the inverse function theorem, which guarantees the exi
 
 From what we have just proved, it follows by an entirely similar argument as in Example 3.6 that  $M^k$  is a differentiable manifold of dimension  $k$  and that the inclusion  $i: M^k \subset \mathbb{R}^n$  is an embedding, that is,  $M^k$  is a submanifold of  $\mathbb{R}^n$ .
 
-4.3 EXAMPLE. (*Inverse image of a regular value*). Before discussing the next example, we need some definitions.
+**4.3 EXAMPLE** (*Inverse image of a regular value*). Before discussing the next example, we need some definitions.
 
 Let  $F: U \subset \mathbb{R}^n \to \mathbb{R}^m$  be a differentiable mapping of an open set  $U$  of  $\mathbb{R}^n$ . A point  $p \in U$  is defined to be a *critical point* of  $F$  if the differential  $dF_p: \mathbb{R}^n \to \mathbb{R}^m$  is not surjective. The image  $F(p)$  of a critical point is called a *critical value* of  $F$ . A point  $a \in \mathbb{R}^m$  that is not a critical value is said to be a *regular value* of  $F$ . Note that any point  $a \notin F(U)$  is trivially a regular value of  $F$  and that if there exists a regular value of  $F$  in  $\mathbb{R}^m$ , then  $n \ge m$ .
 
@@ -89,7 +89,7 @@ where  $(a_1, \dots, a_m) = a$ . It is easy to check that  $\varphi$  satisfies 
 
 Before going on to other examples of differentiable manifolds, we should introduce the important global notion of orientation.
 
-4.4 DEFINITION. Let  $M$  be a differentiable manifold. We say that  $M$  is *orientable* if  $M$  admits a differentiable structure  $\{(U_\alpha, \mathbf{x}_\alpha)\}$  such that:
+**4.4 DEFINITION** Let  $M$  be a differentiable manifold. We say that  $M$  is *orientable* if  $M$  admits a differentiable structure  $\{(U_\alpha, \mathbf{x}_\alpha)\}$  such that:
 
 (i) for every pair  $\alpha, \beta$ , with  $\mathbf{x}_\alpha(U_\alpha) \cap \mathbf{x}_\beta(U_\beta) = W \neq \emptyset$ , the differential of the change of coordinates  $\mathbf{x}_\beta^{-1} \circ \mathbf{x}_\alpha$  has positive determinant.
 
@@ -99,9 +99,9 @@ It is not difficult to verify that if  $M$  is orientable and connected there ex
 
 Now let  $M_1$  and  $M_2$  be differentiable manifolds and let  $\varphi: M_1 \to M_2$  be a diffeomorphism. It is easy to verify that  $M_1$  is orientable if and only if  $M_2$  is orientable. If, additionally,  $M_1$  and  $M_2$  are connected and are oriented,  $\varphi$  induces an orientation on  $M_2$  which may or may not coincide with the initial orientation of  $M_2$ . In the first case, we say that  $\varphi$  *preserves the orientation* and in the second case, that  $\varphi$  *reverses the orientation*.
 
-4.5 EXAMPLE. If  $M$  can be covered by two coordinate neighborhoods  $V_1$  and  $V_2$  in such a way that the intersection  $V_1 \cap V_2$  is connected, then  $M$  is orientable. Indeed, since the determinant of the differential of the coordinate change is  $\neq 0$ , it does not change sign in  $V_1 \cap V_2$ ; if it is negative at a single point, it suffices to change the sign of one of the coordinates to make it positive at that point, hence on  $V_1 \cap V_2$ .
+**4.5 EXAMPLE** If  $M$  can be covered by two coordinate neighborhoods  $V_1$  and  $V_2$  in such a way that the intersection  $V_1 \cap V_2$  is connected, then  $M$  is orientable. Indeed, since the determinant of the differential of the coordinate change is  $\neq 0$ , it does not change sign in  $V_1 \cap V_2$ ; if it is negative at a single point, it suffices to change the sign of one of the coordinates to make it positive at that point, hence on  $V_1 \cap V_2$ .
 
-4.6 EXAMPLE. The simple criterion of the previous example can be used to show that the sphere
+**4.6 EXAMPLE.** The simple criterion of the previous example can be used to show that the sphere
 
 $$S^n = \left\{ (x_1, \dots, x_{n+1}) \in \mathbf{R}^{n+1}; \sum_{i=1}^{n+1} x_i^2 = 1 \right\} \subset \mathbf{R}^{n+1}$$
 
@@ -130,6 +130,7 @@ Figure 9Now let  $A: S^n \to S^n$  be the antipodal map given by  $A(p) = -p$ , 
 We are now in a position to exhibit some other examples of differentiable manifolds.
 
 **4.7 EXAMPLE.** (*Another description of projective space*). The set  $P^n(\mathbb{R})$  of lines of  $\mathbb{R}^{n+1}$  that pass through the origin can be thought of as the quotient space of the unit sphere  $S^n = \{p \in \mathbb{R}^{n+1}; |p| = 1\}$  by the equivalence relation that identifies  $p \in S^n$  with its antipodal point,  $A(p) = -p$ . Indeed, each line that passes through the origin determines two antipodal points and the correspondence so obtained is evidently bijective.
+
 
 Taking into account this fact, we are going to introduce another differentiable structure on  $P^n(\mathbb{R})$  (Cf. Example 2.4). For this, we initially introduce on  $S^n \subset \mathbb{R}^{n+1}$  the structure of a regular surface, defining parametrizations
 

@@ -137,3 +137,93 @@ We are now in a position to exhibit some other examples of differentiable manifo
 Taking into account this fact, we are going to introduce another differentiable structure on  $P^n(\mathbb{R})$  (Cf. Example 2.4). For this, we initially introduce on  $S^n \subset \mathbb{R}^{n+1}$  the structure of a regular surface, defining parametrizations
 
 $$\mathbf{x}_i^+: U_i \to S^n, \quad \mathbf{x}_i^-: U_i \to S^n, \quad i = 1, \dots, n+1,$$
+
+in the following way:
+
+$$U_i = \{(x_1, \dots, x_{n+1}) \in \mathbb{R}^{n+1}; x_i = 0, \\ x_1^2 + \dots + x_{i-1}^2 + x_{i+1}^2 + \dots + x_{n+1}^2 < 1\},$$
+
+$$\mathbf{x}_i^+(x_1, \dots, x_{i-1}, x_{i+1}, \dots, x_{n+1}) \\ = (x_1, \dots, x_{i-1}, D_i, x_{i+1}, \dots, x_{n+1}),$$
+
+$$\mathbf{x}_i^-(x_1, \dots, x_{i-1}, x_{i+1}, \dots, x_{n+1}) \\ = (x_1, \dots, x_{i-1}, -D_i, x_{i+1}, \dots, x_{n+1}),$$
+
+where  $D_i = \sqrt{1 - (x_1^2 + \dots + x_{i-1}^2 + x_{i+1}^2 + \dots + x_{n+1}^2)}$ . It is easy to verify that conditions (a) and (b) of the definition in Example 4.2 are satisfied. Therefore, the family
+
+$$\{(U_i, \mathbf{x}_i^+), (U_i, \mathbf{x}_i^-)\}, \quad i = 1, \dots, n+1$$
+
+is a differentiable structure on  $S^n$ . Geometrically, this is equivalent to covering the sphere  $S^n$  with coordinate neighborhoods that are hemi-spheres perpendicular to the axes  $x_i$  and taking as coordinates on, for example,  $\mathbf{x}_i^+(U_i)$ , the coordinates of the orthogonal projection of  $\mathbf{x}_i^+(U_i)$  on the hyperplane  $x_i = 0$  (Fig. 10).
+
+![Diagram illustrating the coordinate neighborhoods used to cover the sphere S^n. A central sphere is shown, surrounded by six hemispheres (coordinate neighborhoods) arranged symmetrically around it. Each hemisphere is oriented perpendicular to one of the axes (x_1, x_2, ..., x_{n+1}). Arrows indicate the direction of projection onto the hyperplane x_i = 0.]()![](_page_20_Picture_8.jpeg)
+
+Figure 10
+
+Let  $\pi: S^n \to P^n(\mathbb{R})$  be the canonical projection, that is,  $\pi(p) = \{p, -p\}$ ; observe that  $\pi(x_i^+(U_i)) = \pi(x_i^-(U_i))$ . We are going to define a mapping  $y_i: U_i \to P^n(\mathbb{R})$  by
+
+$$y_i = \pi \circ x_i^+.$$
+
+Since  $\pi$  restricted to  $x_i^+(U_i)$  is one-to-one, we have that
+
+$$y_i^{-1} \circ y_j = (\pi \circ x_i^+)^{-1} \circ (\pi \circ x_j^+) = (x_i^+)^{-1} \circ x_j^+,$$
+
+which yields the differentiability of  $y_i^{-1} \circ y_j$ , for all  $i, j = 1, \dots, n+1$ . Thus the family  $\{(U_i, y_i)\}$  is a differentiable structure for  $P^n(\mathbb{R})$ .
+
+In fact, this differentiable structure and that of Example 2.4 give rise to the same maximal structure. Indeed, the coordinate neighborhoods are the same and the change of coordinates are given by:
+
+$$\left(\frac{x_1}{x_i}, \dots, \frac{x_{i-1}}{x_i}, 1, \frac{x_{i+1}}{x_i}, \dots, \frac{x_{n+1}}{x_i}\right) \leftrightarrow \\ \leftrightarrow (x_1, \dots, x_{i-1}, D_i, x_{i+1}, \dots, x_{n+1})$$
+
+which, since  $x_i \neq 0$  and  $D_i \neq 0$ , is differentiable.
+
+As we shall see in Exercise 9,  $P^n(\mathbb{R})$  is orientable if and only if  $n$  is odd.
+
+4.8 EXAMPLE. (*Discontinuous action of a group*). There is a way of constructing differentiable manifolds that generalizes the process above, which is given by the following considerations.
+
+We say that a group  $G$  acts on a differentiable manifold  $M$  if there exists a mapping  $\varphi: G \times M \to M$  such that:
+
+1. For each  $g \in G$ , the mapping  $\varphi_g: M \to M$  given by  $\varphi_g(p) = \varphi(g, p)$ ,  $p \in M$ , is a diffeomorphism, and  $\varphi_e = \text{identity}$ .
+2. If  $g_1, g_2 \in G$ ,  $\varphi_{g_1 g_2} = \varphi_{g_1} \circ \varphi_{g_2}$ .
+
+Frequently, when dealing with a single action, we set  $\varphi(g, p) = gp$ ; in this notation, condition (ii) can be interpreted as a form of associativity:  $(g_1 g_2)p = g_1(g_2 p)$ .
+
+We say that the action is *properly discontinuous* if every  $p \in M$  has a neighborhood  $U \subset M$  such that  $U \cap g(U) = \emptyset$  for all  $g \neq e$ .
+
+When  $G$  acts on  $M$ , the action determines an equivalence relation  $\sim$  on  $M$ , in which  $p_1 \sim p_2$  if and only if  $p_2 = gp_1$ , for some
+
+ $g \in G$ . Denote the quotient space of  $M$  by this equivalence relation by  $M/G$ . The mapping  $\pi: M \to M/G$ , given by
+
+$$\pi(p) = \text{equiv. class of } p = Gp$$
+
+will be called the *projection* of  $M$  onto  $M/G$ .
+
+Now let  $M$  be a differentiable manifold and let  $G \times M \to M$  be a properly discontinuous action of a group  $G$  on  $M$ . We are going to show that  $M/G$  has a differentiable structure with respect to which the projection  $\pi: M \to M/G$  is a local diffeomorphism.
+
+For each  $p \in M$  choose a parametrization  $\mathbf{x}: V \to M$  at  $p$  so that  $\mathbf{x}(V) \subset U$ , where  $U \subset M$  is a neighborhood of  $p$  such that  $U \cap g(U) = \emptyset$ ,  $g \neq e$ . Clearly  $\pi|_U$  is injective, hence  $y = \pi \circ \mathbf{x}: V \to M/G$  is injective. The family  $\{(V, y)\}$  clearly covers  $M/G$ ; for such a family to be a differentiable structure, it suffices to show that given two mappings  $y_1 = \pi \circ \mathbf{x}_1: V_1 \to M/G$  and  $y_2 = \pi \circ \mathbf{x}_2: V_2 \to M/G$  with  $y_1(V_1) \cap y_2(V_2) \neq \emptyset$ , then  $y_1^{-1} \circ y_2$  is differentiable.
+
+For this, let  $\pi_i$  be the restriction of  $\pi$  to  $x_i(V_i)$ ,  $i = 1, 2$ . Let  $q \in y_1(V_1) \cap y_2(V_2)$  and let  $r = \mathbf{x}_2^{-1} \circ \pi_2^{-1}(q)$ . Let  $W \subset V_2$  be a neighborhood of  $r$  such that  $(\pi_2 \circ \mathbf{x}_2)(W) \subset y_1(V_1) \cap y_2(V_2)$  (Fig. 11). Then, the restriction to  $W$  is given by
+
+$$y_1^{-1} \circ y_2 | W = \mathbf{x}_1^{-1} \circ \pi_1^{-1} \circ \pi_2 \circ \mathbf{x}_2.$$
+
+Therefore, it is enough to show that  $\pi_1^{-1} \circ \pi_2$  is differentiable at  $p_2 = \pi_2^{-1}(q)$ . Let  $p_1 = \pi_1^{-1} \circ \pi_2(p_2)$ . Then  $p_1$  and  $p_2$  are equivalent in  $M$ , hence there is a  $g \in G$  such that  $gp_2 = p_1$ . It follows easily that the restriction  $\pi_1^{-1} \circ \pi_2 | \mathbf{x}_2(W)$  coincides with the diffeomorphism  $\varphi_g | \mathbf{x}_2(W)$ , which proves that  $\pi_1^{-1} \circ \pi_2$  is differentiable at  $p_2$ , as stated.
+
+From the very way in which this differentiable structure is constructed,  $\pi: M \to M/G$  is a local diffeomorphism. A criterion for the orientability of  $M/G$  is given in Exercise 9. Observe that the situation in the previous example reduces to the present one, by taking  $M = S^n$  and  $G$  the group of diffeomorphisms of  $S^n$  formed by the antipodal mapping  $A$  and the identity  $I = A^2$  of  $S^n$ .
+
+4.9 EXAMPLE. (special cases of Example 4.8).
+
+4.9 (a). Consider the group  $G$  of “integral” translations of  $\mathbb{R}^k$  where the action of  $G$  on  $\mathbb{R}^k$  is given by
+
+ $y_1^{-1} \circ y_2 | W = x_1^{-1} \circ \pi_1^{-1} \circ \pi_2 \circ x_2.$ 
+
+Diagram illustrating the relationship between coordinate charts  $V_1$  and  $V_2$  on  $R^n$ , their images  $x_1(V_1)$  and  $x_2(V_2)$  on  $M$ , and their images  $y_1(V_1)$  and  $y_2(V_2)$  on  $M/G$ . The diagram shows the overlap region  $x_2(V_2) \cap x_1(V_1)$  on  $M$  and the corresponding overlap region  $y_2(V_2) \cap y_1(V_1)$  on  $M/G$ . The mapping  $y_1^{-1} \circ y_2$  is defined on the overlap region  $W$  of  $y_1(V_1)$  and  $y_2(V_2)$  on  $M/G$ . The relationship between the coordinates is given by the equation above.
+
+![](_page_23_Figure_3.jpeg)
+
+Figure 11
+$$G(x_1, \dots, x_k) = (x_1 + n_1, \dots, x_k + n_k), \quad n_1, \dots, n_k \in \mathbb{Z},$$
+
+$$(x_1, \dots, x_k) \in \mathbb{R}^k.$$
+
+It is easy to check that the mapping above defines an action of  $G$  on  $\mathbb{R}^k$ , which is properly discontinuous. The quotient space  $\mathbb{R}^k/G$ , with the differentiable structure described in Example 4.8, is called the  $k$ -torus  $T^k$ . When  $k=2$ , the 2-torus  $T^2$  is diffeomorphic to the torus of revolution in  $\mathbb{R}^3$  obtained as the inverse image of zero of the function  $f: \mathbb{R}^3 \to \mathbb{R}$ 
+
+$$f(x, y, z) = z^2 + (\sqrt{x^2 + y^2} - a)^2 - r^2.$$
+
+(Cf. M. do Carmo [dC 2], p. 62).
+
+4.9 (b). Let  $S \subset \mathbb{R}^3$  be a regular surface in  $\mathbb{R}^3$ , symmetric relative to the origin  $0 \in \mathbb{R}^3$ , that is, if  $p \in S$  then  $-p = A(p) \in S$ . The group of diffeomorphisms of  $S$  formed by  $\{A, Id.\}$  acts on  $S$  in a properly discontinuous manner. Introduce on  $S/G$  the differentiable structure given by Example 4.8. When  $S$  is the torus of revolution  $T^2$ ,  $S/G = K$  is called the *Klein bottle*; when  $S$  is the right circular cylinder given by  $C = \{(x, y, z) \in \mathbb{R}^3; x^2 + y^2 = 1, -1 < z < 1\}$ ,  $S/G$  is called the *Möbius band*. As we shall see in Exercise 9, the Klein bottle and the Möbius band are non-orientable. In Exercise 6, we shall indicate how the Klein bottle can be embedded in  $\mathbb{R}^4$ .

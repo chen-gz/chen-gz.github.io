@@ -125,7 +125,9 @@ A diagram illustrating the stereographic projection from the unit sphere  $S^n$ 
 
 ![](_page_19_Figure_2.jpeg)
 
-Figure 9Now let  $A: S^n \to S^n$  be the antipodal map given by  $A(p) = -p$ ,  $p \in \mathbb{R}^{n+1}$ .  $A$  is differentiable and  $A^2 = \text{ident}$ . Therefore,  $A$  is a diffeomorphism of  $S^n$ . Observe that when  $n$  is even,  $A$  reverses the orientation of  $S^n$  and when  $n$  is odd,  $A$  preserves the orientation of  $S^n$ .
+Figure 9
+
+Now let  $A: S^n \to S^n$  be the antipodal map given by  $A(p) = -p$ ,  $p \in \mathbb{R}^{n+1}$ .  $A$  is differentiable and  $A^2 = \text{ident}$ . Therefore,  $A$  is a diffeomorphism of  $S^n$ . Observe that when  $n$  is even,  $A$  reverses the orientation of  $S^n$  and when  $n$  is odd,  $A$  preserves the orientation of  $S^n$ .
 
 We are now in a position to exhibit some other examples of differentiable manifolds.
 

@@ -123,9 +123,8 @@ $$y'_j = \frac{y_j}{\sum_{i=1}^n y_i^2}$$
 
 A diagram illustrating the stereographic projection from the unit sphere  $S^n$  (represented by a circle) onto the plane  $\mathbb{R}^n$  (represented by the horizontal axis). The vertical axis is labeled  $x_{n+1}$ . The origin is labeled 0, and the top point is labeled N (North pole). The bottom point is labeled S (South pole). A point  $p$  on the sphere is shown, with coordinates  $p = (0, \dots, 0, x_i, 0, \dots, x_{n+1})$ . The projection  $\pi_1(p)$  is shown on the positive  $x_i$  axis, with coordinates  $\pi_1(p) = (0, \dots, 0, \frac{x_i}{1-x_{n+1}}, 0, \dots, 0)$ . The projection  $\pi_2(p)$  is shown on the negative  $x_i$  axis, with coordinates  $\pi_2(p) = (0, \dots, 0, \frac{x_i}{1+x_{n+1}}, 0, \dots, 0)$ .
 
-![](_page_19_Figure_2.jpeg)
 
-Figure 9
+![image](/images/remannian_geometry/figure_9.png)
 
 Now let  $A: S^n \to S^n$  be the antipodal map given by  $A(p) = -p$ ,  $p \in \mathbb{R}^{n+1}$ .  $A$  is differentiable and  $A^2 = \text{ident}$ . Therefore,  $A$  is a diffeomorphism of  $S^n$ . Observe that when  $n$  is even,  $A$  reverses the orientation of  $S^n$  and when  $n$  is odd,  $A$  preserves the orientation of  $S^n$ .
 
@@ -152,9 +151,7 @@ $$\{(U_i, \mathbf{x}_i^+), (U_i, \mathbf{x}_i^-)\}, \quad i = 1, \dots, n+1$$
 
 is a differentiable structure on  $S^n$ . Geometrically, this is equivalent to covering the sphere  $S^n$  with coordinate neighborhoods that are hemi-spheres perpendicular to the axes  $x_i$  and taking as coordinates on, for example,  $\mathbf{x}_i^+(U_i)$ , the coordinates of the orthogonal projection of  $\mathbf{x}_i^+(U_i)$  on the hyperplane  $x_i = 0$  (Fig. 10).
 
-![Diagram illustrating the coordinate neighborhoods used to cover the sphere S^n. A central sphere is shown, surrounded by six hemispheres (coordinate neighborhoods) arranged symmetrically around it. Each hemisphere is oriented perpendicular to one of the axes (x_1, x_2, ..., x_{n+1}). Arrows indicate the direction of projection onto the hyperplane x_i = 0.]()![](_page_20_Picture_8.jpeg)
-
-Figure 10
+![image](/images/remannian_geometry/figure_10.png)
 
 Let  $\pi: S^n \to P^n(\mathbb{R})$  be the canonical projection, that is,  $\pi(p) = \{p, -p\}$ ; observe that  $\pi(x_i^+(U_i)) = \pi(x_i^-(U_i))$ . We are going to define a mapping  $y_i: U_i \to P^n(\mathbb{R})$  by
 
@@ -174,7 +171,7 @@ which, since  $x_i \neq 0$  and  $D_i \neq 0$ , is differentiable.
 
 As we shall see in Exercise 9,  $P^n(\mathbb{R})$  is orientable if and only if  $n$  is odd.
 
-4.8 EXAMPLE. (*Discontinuous action of a group*). There is a way of constructing differentiable manifolds that generalizes the process above, which is given by the following considerations.
+**4.8 EXAMPLE** (*Discontinuous action of a group*). There is a way of constructing differentiable manifolds that generalizes the process above, which is given by the following considerations.
 
 We say that a group  $G$  acts on a differentiable manifold  $M$  if there exists a mapping  $\varphi: G \times M \to M$  such that:
 
@@ -205,7 +202,7 @@ Therefore, it is enough to show that  $\pi_1^{-1} \circ \pi_2$  is differentiabl
 
 From the very way in which this differentiable structure is constructed,  $\pi: M \to M/G$  is a local diffeomorphism. A criterion for the orientability of  $M/G$  is given in Exercise 9. Observe that the situation in the previous example reduces to the present one, by taking  $M = S^n$  and  $G$  the group of diffeomorphisms of  $S^n$  formed by the antipodal mapping  $A$  and the identity  $I = A^2$  of  $S^n$ .
 
-4.9 EXAMPLE. (special cases of Example 4.8).
+**4.9 EXAMPLE** (special cases of Example 4.8).
 
 4.9 (a). Consider the group  $G$  of “integral” translations of  $\mathbb{R}^k$  where the action of  $G$  on  $\mathbb{R}^k$  is given by
 
@@ -213,9 +210,8 @@ From the very way in which this differentiable structure is constructed,  $\pi: 
 
 Diagram illustrating the relationship between coordinate charts  $V_1$  and  $V_2$  on  $R^n$ , their images  $x_1(V_1)$  and  $x_2(V_2)$  on  $M$ , and their images  $y_1(V_1)$  and  $y_2(V_2)$  on  $M/G$ . The diagram shows the overlap region  $x_2(V_2) \cap x_1(V_1)$  on  $M$  and the corresponding overlap region  $y_2(V_2) \cap y_1(V_1)$  on  $M/G$ . The mapping  $y_1^{-1} \circ y_2$  is defined on the overlap region  $W$  of  $y_1(V_1)$  and  $y_2(V_2)$  on  $M/G$ . The relationship between the coordinates is given by the equation above.
 
-![](_page_23_Figure_3.jpeg)
+![image](/images/remannian_geometry/figure_11.png)
 
-Figure 11
 $$G(x_1, \dots, x_k) = (x_1 + n_1, \dots, x_k + n_k), \quad n_1, \dots, n_k \in \mathbb{Z},$$
 
 $$(x_1, \dots, x_k) \in \mathbb{R}^k.$$

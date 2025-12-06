@@ -1,5 +1,5 @@
 ---
-type:docs
+type: docs
 ---
 
 ### 原文

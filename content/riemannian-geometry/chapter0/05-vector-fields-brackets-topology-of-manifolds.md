@@ -8,7 +8,7 @@ type: docs
 
 Considering a parametrization $\mathbf{x}: U \subset \mathbb{R}^n \to M$ we can write
 
-$$\quad X(p) = \sum\_{i=1}^{n} a_i(p) \frac{\partial}{\partial x_i}, \tag{4}$$
+$$\quad X(p) = \sum_{i=1}^{n} a_i(p) \frac{\partial}{\partial x_i}, \tag{4}$$
 
 where each $a_i: U \to \mathbb{R}$ is a function on $U$ and $\left\{\frac{\partial}{\partial x_i}\right\}$ is the basis associated to $\mathbf{x}$ , $i = 1, \dots, n$ . It is clear that $X$ is differentiable if and only if the functions $a_i$ are differentiable for some (and, therefore, for any) parametrization.
 

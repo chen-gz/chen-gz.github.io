@@ -8,17 +8,15 @@ type: docs
 
 Considering a parametrization $\mathbf{x}: U \subset \mathbb{R}^n \to M$ we can write
 
-$$ \quad X(p) = \sum\_{i=1}^{n} a_i(p) \frac{\partial}{\partial x_i}, \tag{4}$$
+$$\quad X(p) = \sum\_{i=1}^{n} a_i(p) \frac{\partial}{\partial x_i}, \tag{4}$$
 
 where each $a_i: U \to \mathbb{R}$ is a function on $U$ and $\left\{\frac{\partial}{\partial x_i}\right\}$ is the basis associated to $\mathbf{x}$ , $i = 1, \dots, n$ . It is clear that $X$ is differentiable if and only if the functions $a_i$ are differentiable for some (and, therefore, for any) parametrization.
 
 Occasionally, it is convenient to use the idea suggested by (4) and think of a vector field as a mapping $X: \mathcal{D} \to \mathcal{F}$ from the set $\mathcal{D}$ of differentiable functions on $M$ to the set $\mathcal{F}$ of functions on $M$ , defined in the following way
 
-$$(5) \quad (Xf)(p) = \sum_i a_i(p) \frac{\partial f}{\partial x_i}(p),$$
+$$\quad (Xf)(p) = \sum_i a_i(p) \frac{\partial f}{\partial x_i}(p), \tag{5}$$
 
-where $f$ denotes, by abuse of notation, the expression of $f$ in the parametrization $\mathbf{x}$ . Indeed, this idea of a vector as a directional
-
-derivative was precisely what was used to define the notion of tangent vector. It is easy to check that the function $Xf$ obtained in (5) does not depend on the choice of parametrization $x$ . In this context, it is immediate that $X$ is differentiable if and only if $X: \mathcal{D} \to \mathcal{D}$ , that is, $Xf \in \mathcal{D}$ for all $f \in \mathcal{D}$ .
+where $f$ denotes, by abuse of notation, the expression of $f$ in the parametrization $\mathbf{x}$ . Indeed, this idea of a vector as a directional derivative was precisely what was used to define the notion of tangent vector. It is easy to check that the function $Xf$ obtained in (5) does not depend on the choice of parametrization $x$ . In this context, it is immediate that $X$ is differentiable if and only if $X: \mathcal{D} \to \mathcal{D}$ , that is, $Xf \in \mathcal{D}$ for all $f \in \mathcal{D}$ .
 
 Observe that if $\varphi: M \to M$ is a diffeomorphism, $v \in T_p M$ and $f$ is a differentiable function in a neighborhood of $\varphi(p)$ , we have
 

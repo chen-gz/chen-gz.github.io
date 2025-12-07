@@ -1,0 +1,25 @@
+---
+import Layout from './Layout.astro';
+import Sidebar from '../components/Sidebar.astro';
+import { CollectionEntry } from 'astro:content';
+
+interface Props {
+  chapters: CollectionEntry<'blog'>[];
+  currentPage: CollectionEntry<'blog'>;
+}
+
+const { chapters, currentPage } = Astro.props;
+---
+
+<Layout>
+  <div class="flex">
+    <aside class="w-1/4 p-4">
+      <Sidebar chapters={chapters} currentPage={currentPage} />
+    </aside>
+    <main class="w-3/4 p-4">
+      <div class="prose-custom max-w-none">
+        <slot />
+      </div>
+    </main>
+  </div>
+</Layout>

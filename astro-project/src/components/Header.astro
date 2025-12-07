@@ -1,0 +1,59 @@
+---
+// src/components/Header.astro
+---
+
+<header class="flex justify-between items-center p-4 bg-gray-100">
+  <nav class="flex justify-between items-center w-full">
+    <div class="flex-shrink-0">
+      <a href="/">
+        <img src="/favicon.svg" alt="Logo" class="h-10">
+      </a>
+    </div>
+    <div class="flex-grow flex justify-end mr-8 space-x-4">
+      <a href="/blog" class="text-gray-700 hover:text-gray-900 text-lg font-medium">Blog</a>
+      <a href="/blog" class="text-gray-700 hover:text-gray-900 text-lg font-medium">Posts</a>
+      <a href="/about" class="text-gray-700 hover:text-gray-900 text-lg font-medium">About</a>
+    </div>
+    <div class="flex-shrink-0 flex items-center space-x-4">
+      <div class="relative">
+        <button id="search-icon" class="p-2 rounded-md hover:bg-gray-300">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+        </button>
+        <input id="search-input" type="text" placeholder="Search..." class="absolute right-0 top-full mt-2 p-2 rounded-md bg-white border border-gray-300 shadow-lg w-64 hidden" style="z-index: 10;">
+      </div>
+      <button id="theme-switcher" class="p-2 rounded-md hover:bg-gray-300">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+        </svg>
+      </button>
+      <button id="lang-switcher" class="p-2 rounded-md hover:bg-gray-300">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="2" y1="12" x2="22" y2="12"></line>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+        </svg>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<script>
+  const searchIcon = document.getElementById('search-icon');
+  const searchInput = document.getElementById('search-input');
+
+  searchIcon.addEventListener('click', (event) => {
+    event.stopPropagation();
+    searchInput.classList.toggle('hidden');
+    if (!searchInput.classList.contains('hidden')) {
+      searchInput.focus();
+    }
+  });
+
+  document.addEventListener('click', (event) => {
+    if (!searchInput.contains(event.target) && !searchIcon.contains(event.target)) {
+      searchInput.classList.add('hidden');
+    }
+  });
+</script>

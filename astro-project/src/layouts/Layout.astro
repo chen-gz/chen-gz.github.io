@@ -1,5 +1,6 @@
 ---
 import Header from '../components/Header.astro';
+import '../styles/global.css';
 ---
 <!doctype html>
 <html lang="en">
@@ -9,9 +10,6 @@ import Header from '../components/Header.astro';
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro Basics</title>
-		<style is:global>
-			@import '../styles/global.css';
-		</style>
 	</head>
 	<body>
 		<Header />

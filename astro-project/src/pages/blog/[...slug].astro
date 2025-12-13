@@ -27,8 +27,6 @@ const chapters = allPosts
 ---
 
 <PostLayout chapters={chapters} currentPage={post}>
-  <div class="prose max-w-none">
-    <h1>{post.data.title}</h1>
-    <Content />
-  </div>
+  <h1>{post.data.title}</h1>
+  <Content />
 </PostLayout>

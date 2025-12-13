@@ -110,4 +110,91 @@ Let `v_ans` be the value returned by our binary search. We need to prove `v_ans`
 
 Combining both parts, we have `v_ans = v_max`. The algorithm is correct.
 
+### Code
+
+{{% details title="View Code" closed="true" %}}
+```cpp
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+// Check if there exists a subarray of length >= k with median >= x
+bool check(int x, int n, int k, const vector<int>& a, pair<int, int>& range) {
+    // Transform array: 1 if a[i] >= x, -1 otherwise
+    // We want sum >= 0
+    vector<int> b(n);
+    for (int i = 0; i < n; ++i) {
+        b[i] = (a[i] >= x ? 1 : -1);
+    }
+
+    // Prefix sums
+    vector<int> p(n + 1, 0);
+    for (int i = 0; i < n; ++i) {
+        p[i + 1] = p[i] + b[i];
+    }
+
+    // Iterate r from k to n. We need min P[l-1] for 1 <= l <= r - k + 1
+    // i.e., min P[j] for 0 <= j <= r - k
+    int min_prev = p[0];
+    int min_idx = 0;
+
+    for (int r = k; r <= n; ++r) {
+        int allowable_l_minus_1_idx = r - k;
+        if (p[allowable_l_minus_1_idx] < min_prev) {
+            min_prev = p[allowable_l_minus_1_idx];
+            min_idx = allowable_l_minus_1_idx;
+        }
+
+        if (p[r] >= min_prev) {
+            range = {min_idx + 1, r}; // 1-based indices
+            return true;
+        }
+    }
+
+    return false;
+}
+
+void solve() {
+    int n, k;
+    if (!(cin >> n >> k)) return;
+    vector<int> a(n);
+    for (int i = 0; i < n; ++i) {
+        cin >> a[i];
+    }
+
+    int low = 1, high = n;
+    int ans = 1;
+    pair<int, int> ans_range = {1, k};
+
+    while (low <= high) {
+        int mid = low + (high - low) / 2;
+        pair<int, int> range;
+        if (check(mid, n, k, a, range)) {
+            ans = mid;
+            ans_range = range;
+            low = mid + 1;
+        } else {
+            high = mid - 1;
+        }
+    }
+
+    cout << ans << " " << ans_range.first << " " << ans_range.second << "\n";
+}
+
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    int t;
+    if (cin >> t) {
+        while (t--) {
+            solve();
+        }
+    }
+    return 0;
+}
+```
+{{% /details %}}
+
 [submission](https://codeforces.com/contest/2128/submission/337179469)

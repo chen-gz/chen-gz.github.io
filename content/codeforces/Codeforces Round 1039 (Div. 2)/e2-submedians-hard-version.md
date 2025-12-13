@@ -96,4 +96,211 @@ The algorithm proceeds as follows:
 
 This process constructively finds a valid subarray for every single submedian from `v_min` to `v_max`, solving the problem. The complexity of the sliding window part is proportional to the distance between the two subarrays, which is at most $O(n)$, with each step taking $O(\log k)$, leading to a total complexity dominated by the initial $O(n \log n)$ searches.
 
+### Code
+
+{{% details title="View Code" closed="true" %}}
+```cpp
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <set>
+
+using namespace std;
+
+// Function to find v_max and its subarray
+// Returns {v_max, {l, r}}
+pair<int, pair<int, int>> solve_max(int n, int k, const vector<int>& a) {
+    auto check = [&](int x, pair<int, int>& range) -> bool {
+        // b[i] = 1 if a[i] >= x else -1
+        // We track prefix sums.
+        // We want P[r] - P[l-1] >= 0 with r - (l-1) >= k
+        int current_p = 0;
+        vector<int> p(n + 1);
+        p[0] = 0;
+        for(int i=0; i<n; ++i) {
+            p[i+1] = p[i] + (a[i] >= x ? 1 : -1);
+        }
+
+        int min_prev = p[0];
+        int min_idx = 0;
+
+        for (int r = k; r <= n; ++r) {
+            if (p[r-k] < min_prev) {
+                min_prev = p[r-k];
+                min_idx = r-k;
+            }
+            if (p[r] >= min_prev) {
+                range = {min_idx + 1, r};
+                return true;
+            }
+        }
+        return false;
+    };
+
+    int low = 1, high = n;
+    int ans = 1;
+    pair<int, int> ans_range = {1, k};
+
+    while (low <= high) {
+        int mid = low + (high - low) / 2;
+        pair<int, int> range;
+        if (check(mid, range)) {
+            ans = mid;
+            ans_range = range;
+            low = mid + 1;
+        } else {
+            high = mid - 1;
+        }
+    }
+    return {ans, ans_range};
+}
+
+struct MedianFinder {
+    multiset<int> low, high;
+
+    void balance() {
+        while (low.size() > high.size() + 1) {
+            high.insert(*low.rbegin());
+            low.erase(prev(low.end()));
+        }
+        while (high.size() > low.size()) {
+            low.insert(*high.begin());
+            high.erase(high.begin());
+        }
+    }
+
+    void add(int x) {
+        if (low.empty() || x <= *low.rbegin()) low.insert(x);
+        else high.insert(x);
+        balance();
+    }
+
+    void remove(int x) {
+        auto it = low.find(x);
+        if (it != low.end()) low.erase(it);
+        else high.erase(high.find(x));
+        balance();
+    }
+
+    pair<int, int> get_median_range(int m) {
+        // returns [min_median, max_median]
+        // medians are from sorted element at index (m-1)/2 to m/2 (0-based)
+        // If m is odd: (m-1)/2 == m/2. Single median.
+        // If m is even: range.
+        // low has size ceil(m/2). high has floor(m/2).
+        // 0-based indices:
+        // low contains 0 .. ceil(m/2)-1.
+        // high contains ceil(m/2) .. m-1.
+
+        // (m-1)/2 is always in low.
+        // m/2: if m is odd, m/2 = (m-1)/2, in low.
+        //      if m is even, m/2 = ceil(m/2), in high.
+
+        int min_med = *low.rbegin();
+        int max_med = (m % 2 != 0) ? *low.rbegin() : *high.begin();
+        return {min_med, max_med};
+    }
+};
+
+void solve() {
+    int n, k;
+    if (!(cin >> n >> k)) return;
+    vector<int> a(n);
+    for (int i = 0; i < n; ++i) cin >> a[i];
+
+    // 1. Find v_max and range
+    auto res_max = solve_max(n, k, a);
+    int v_max = res_max.first;
+    int l_max = res_max.second.first;
+    int r_max = res_max.second.second;
+
+    // 2. Find v_min and range
+    // v_min(a) = (n+1) - v_max(n+1 - a)
+    vector<int> a_prime(n);
+    for(int i=0; i<n; ++i) a_prime[i] = (n + 1) - a[i];
+    auto res_prime = solve_max(n, k, a_prime);
+    int v_min = (n + 1) - res_prime.first;
+    int l_min = res_prime.second.first;
+    int r_min = res_prime.second.second;
+
+    cout << (v_max - v_min + 1) << "\n";
+
+    // 3. Sliding window
+    MedianFinder mf;
+    int cur_l = l_min;
+    int cur_r = r_min;
+    for (int i = cur_l - 1; i < cur_r; ++i) mf.add(a[i]);
+
+    set<int> needed;
+    for(int v = v_min; v <= v_max; ++v) needed.insert(v);
+
+    vector<pair<int, pair<int, int>>> results;
+
+    auto record = [&]() {
+        if (needed.empty()) return;
+        int m = cur_r - cur_l + 1;
+        pair<int, int> meds = mf.get_median_range(m);
+
+        auto it = needed.lower_bound(meds.first);
+        while (it != needed.end() && *it <= meds.second) {
+            results.push_back({*it, {cur_l, cur_r}});
+            it = needed.erase(it);
+        }
+    };
+
+    record();
+
+    // Steps to transform [l_min, r_min] to [l_max, r_max]
+    // Order: expand r, expand l (decrease l), shrink r, shrink l (increase l)
+
+    // 1. Expand r to max(r_min, r_max)
+    int target_r_temp = max(r_min, r_max);
+    while (cur_r < target_r_temp) {
+        cur_r++;
+        mf.add(a[cur_r - 1]);
+        record();
+    }
+
+    // 2. Expand l to min(l_min, l_max) (decrease l)
+    int target_l_temp = min(l_min, l_max);
+    while (cur_l > target_l_temp) {
+        cur_l--;
+        mf.add(a[cur_l - 1]);
+        record();
+    }
+
+    // 3. Shrink r to r_max
+    while (cur_r > r_max) {
+        mf.remove(a[cur_r - 1]);
+        cur_r--;
+        record();
+    }
+
+    // 4. Shrink l to l_max
+    while (cur_l < l_max) {
+        mf.remove(a[cur_l - 1]);
+        cur_l++;
+        record();
+    }
+
+    // Output results
+    for (const auto& res : results) {
+        cout << res.first << " " << res.second.first << " " << res.second.second << "\n";
+    }
+}
+
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    int t;
+    if (cin >> t) {
+        while (t--) {
+            solve();
+        }
+    }
+    return 0;
+}
+```
+{{% /details %}}
+
 [submission](https://codeforces.com/contest/2128/submission/337203561)

@@ -31,7 +31,7 @@ import background from '../assets/background.svg';
 		<svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"
 			><path
 				d="M24.667 12c1.333 1.414 2 3.192 2 5.334 0 4.62-4.934 5.7-7.334 12C18.444 28.567 18 27.456 18 26c0-4.642 6.667-7.053 6.667-14Zm-5.334-5.333c1.6 1.65 2.4 3.43 2.4 5.333 0 6.602-8.06 7.59-6.4 17.334C13.111 27.787 12 25.564 12 22.666c0-4.434 7.333-8 7.333-16Zm-6-5.333C15.111 3.555 16 5.556 16 7.333c0 8.333-11.333 10.962-5.333 22-3.488-.774-6-4-6-8 0-8.667 8.666-10 8.666-20Z"
-				fill="#111827"></path></svg
+				fill="currentColor"></path></svg
 		>
 		<h2>What's New in Astro 5.0?</h2>
 		<p>
@@ -74,6 +74,7 @@ import background from '../assets/background.svg';
 	h1 {
 		font-size: 22px;
 		margin-top: 0.25em;
+        color: var(--color-text-primary);
 	}
 
 	#links {
@@ -85,14 +86,18 @@ import background from '../assets/background.svg';
 		display: flex;
 		align-items: center;
 		padding: 10px 12px;
-		color: #111827;
+		color: var(--color-text-primary);
 		text-decoration: none;
 		transition: color 0.2s;
 	}
 
 	#links a:hover {
-		color: rgb(78, 80, 86);
+		color: #4b5563;
 	}
+
+    :global(.dark) #links a:hover {
+        color: #d1d5db;
+    }
 
 	#links a svg {
 		height: 1em;
@@ -132,6 +137,10 @@ import background from '../assets/background.svg';
 		font-size: 20px;
 	}
 
+    :global(.dark) h2 {
+        color: #f3f4f6;
+    }
+
 	p {
 		color: #4b5563;
 		font-size: 16px;
@@ -139,6 +148,10 @@ import background from '../assets/background.svg';
 		letter-spacing: -0.006em;
 		margin: 0;
 	}
+
+    :global(.dark) p {
+        color: #9ca3af;
+    }
 
 	code {
 		display: inline-block;
@@ -157,6 +170,16 @@ import background from '../assets/background.svg';
 		border: 1px solid white;
 	}
 
+    :global(.dark) .box {
+        background: rgba(31, 41, 55, 1);
+        border: 1px solid #374151;
+        color: #f3f4f6;
+    }
+
+    :global(.dark) .box svg {
+        fill: #f3f4f6;
+    }
+
 	#news {
 		position: absolute;
 		bottom: 16px;
@@ -170,6 +193,10 @@ import background from '../assets/background.svg';
 	#news:hover {
 		background: rgba(255, 255, 255, 0.55);
 	}
+
+    :global(.dark) #news:hover {
+        background: rgba(31, 41, 55, 0.55);
+    }
 
 	@media screen and (max-height: 368px) {
 		#news {

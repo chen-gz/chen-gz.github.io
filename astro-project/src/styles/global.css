@@ -1,0 +1,19 @@
+@import "tailwindcss";
+@config "../../tailwind.config.mjs";
+
+@layer base {
+  :root {
+    --color-bg-primary: #ffffff;
+    --color-text-primary: #111827;
+  }
+
+  :root.dark {
+    --color-bg-primary: #111827;
+    --color-text-primary: #f3f4f6;
+  }
+
+  body {
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+  }
+}

@@ -16,8 +16,8 @@ const { chapters, currentPage } = Astro.props;
     <aside class="w-1/4 p-4">
       <Sidebar chapters={chapters} currentPage={currentPage} />
     </aside>
-    <main class="w-3/4 p-4">
-      <div class="prose-custom max-w-none">
+    <main class="w-full md:w-3/4 p-4">
+      <div class="prose prose-custom dark:prose-invert max-w-none">
         <slot />
       </div>
     </main>

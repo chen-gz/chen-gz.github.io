@@ -17,7 +17,10 @@ $$y_\alpha: U_\alpha \times \mathbf{R}^n \to TM,$$
 by
 
 $$
-y_\alpha(x_1^\alpha, \dots, x_n^\alpha, u_1, \dots, u_n) = \\ = (\mathbf{x}_\alpha(x_1^\alpha, \dots, x_n^\alpha), \sum_{i=1}^n u_i \frac{\partial}{\partial x_i^\alpha}), \quad (u_1, \dots, u_n) \in \mathbf{R}^n.
+\begin{aligned}
+y_\alpha(x_1^\alpha, \dots, x_n^\alpha, u_1, \dots, u_n) &= \\
+&= (\mathbf{x}_\alpha(x_1^\alpha, \dots, x_n^\alpha), \sum_{i=1}^n u_i \frac{\partial}{\partial x_i^\alpha}), \quad (u_1, \dots, u_n) \in \mathbf{R}^n.
+\end{aligned}
 $$
 
 Geometrically, this means that we are taking as coordinates of a point $(p, v) \in TM$ the coordinates $x_1^\alpha, \dots, x_n^\alpha$ of $p$ together with the coordinates of $v$ in the basis $\left\{\frac{\partial}{\partial x_1^\alpha}, \dots, \frac{\partial}{\partial x_n^\alpha}\right\}$.

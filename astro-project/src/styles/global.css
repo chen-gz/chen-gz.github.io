@@ -17,3 +17,10 @@
     color: var(--color-text-primary);
   }
 }
+
+
+/* Fix for KaTeX display math overflow */
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+}

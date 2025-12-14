@@ -31,9 +31,9 @@ for (const postSlug in posts) {
             <div class="p-6">
               <h2 class="text-2xl font-bold mb-2 capitalize text-gray-800 dark:text-gray-200">{postSlug.replace(/-/g, ' ')}</h2>
               <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">
-                Published on {firstChapter.data.pubDate.toLocaleDateString()}
+                {firstChapter.data.pubDate && `Published on ${firstChapter.data.pubDate.toLocaleDateString()}`}
               </p>
-              <p class="text-gray-700 dark:text-gray-300 mb-4 line-clamp-3">{firstChapter.data.description}</p>
+              {firstChapter.data.description && <p class="text-gray-700 dark:text-gray-300 mb-4 line-clamp-3">{firstChapter.data.description}</p>}
               <div class="flex justify-between items-center text-sm text-gray-500 dark:text-gray-400">
                 <span>{chapters.length} Chapters</span>
                 <span class="text-blue-500 dark:text-blue-400 group-hover:underline">Read More &rarr;</span>

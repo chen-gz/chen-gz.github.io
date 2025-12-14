@@ -123,9 +123,7 @@ A) _Hausdorff Axiom:_ Given two distinct points of $M$ there exist neighborhoods
 
 B) _Countable Basis Axiom:_ $M$ can be covered by a countable number of coordinate neighborhoods (we say then that $M$ has a _countable basis_).
 
-Axiom A is essential for the uniqueness of limits of convergent sequences and Axiom B is essential for existence of a differentiable partition of unity, an almost indispensable tool for the study of certain questions on manifolds. (Indeed, if $M$ is connected, Axioms
-
-A and B are equivalent to the existence of a partition of unity; see Theorem 5.6 below.)
+Axiom A is essential for the uniqueness of limits of convergent sequences and Axiom B is essential for existence of a differentiable partition of unity, an almost indispensable tool for the study of certain questions on manifolds. (Indeed, if $M$ is connected, Axioms A and B are equivalent to the existence of a partition of unity; see Theorem 5.6 below.)
 
 For example, a natural question in the theory of differentiable manifolds is to know whether a given manifold can be immersed or embedded into some euclidean space. A fundamental result in this direction is the famous theorem of Whitney which states the following: _Any differentiable manifold (which is Hausdorff and has a countable basis!) of dimension $n$ can be immersed in $\mathbb{R}^{2n}$ and embedded in $\mathbb{R}^{2n+1}$ , (in fact, the theorem can be refined to $\mathbb{R}^{2n-1}$ , $n > 1$ , and $\mathbb{R}^{2n}$ , respectively). A proof of this theorem is not compatible with the intent of this introduction and can be found in M. W. Hirsch [Hi]._
 

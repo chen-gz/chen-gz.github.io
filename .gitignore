@@ -7,3 +7,4 @@ hugo_server.log
 
 # Editor
 .vscode/
+!astro-project/public/

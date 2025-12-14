@@ -1,0 +1,24 @@
+
+> astro-project@0.0.1 dev
+> astro dev
+
+▶ Astro collects anonymous usage data.
+  This information helps us improve Astro.
+  Run "astro telemetry disable" to opt-out.
+  https://astro.build/telemetry
+
+04:55:28 [types] Generated 1ms
+04:55:28 [content] Syncing content
+04:55:30 [content] Synced content
+
+ astro  v5.16.5 ready in 2326 ms
+
+┃ Local    http://localhost:4321/
+┃ Network  use --host to expose
+
+04:55:30 watching for file changes...
+04:56:04 [200] / 225ms
+05:00:29 [200] /blog/getting-started-with-astro/chapter-1 15ms
+05:01:19 [watch] src/layouts/PostLayout.astro
+05:01:19 [watch] src/layouts/PostLayout.astro
+05:01:27 [200] /blog/getting-started-with-astro/chapter-1 149ms

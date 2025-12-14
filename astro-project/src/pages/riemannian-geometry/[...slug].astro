@@ -1,36 +1,36 @@
 ---
-import { getCollection, CollectionEntry } from 'astro:content';
-import PostLayout from '../../layouts/PostLayout.astro';
+import { getCollection, CollectionEntry } from "astro:content";
+import PostLayout from "../../layouts/PostLayout.astro";
 
 export async function getStaticPaths() {
-  const posts = await getCollection('riemannian-geometry', ({ id }) => {
-    return !id.startsWith('datalab-');
-  });
-  return posts.map((post) => {
-    const slug = post.slug.replace(/(\/)?_index$/, '') || post.slug;
-    return {
-      params: { slug: slug },
-      props: { post },
-    }
-  });
+    const posts = await getCollection("riemannian-geometry", ({ id }) => {
+        return !id.startsWith("datalab-");
+    });
+    return posts.map((post) => {
+        const slug = post.slug.replace(/(\/)?_index$/, "") || post.slug;
+        return {
+            params: { slug: slug },
+            props: { post },
+        };
+    });
 }
 
 interface Props {
-  post: CollectionEntry<'riemannian-geometry'>;
+    post: CollectionEntry<"riemannian-geometry">;
 }
 
 const { post } = Astro.props;
 const { Content } = await post.render();
 
 // Logic to find all chapters of the current post
-const allPosts = await getCollection('riemannian-geometry');
-const postSlug = post.slug.split('/')[0];
+const allPosts = await getCollection("riemannian-geometry");
+const postSlug = post.slug.split("/")[0];
 const chapters = allPosts
-  .filter((p) => p.slug.startsWith(postSlug) && !p.slug.endsWith('_index'))
-  .sort((a, b) => a.slug.localeCompare(b.slug));
+    .filter((p) => p.slug.startsWith(postSlug) && !p.slug.endsWith("_index"))
+    .sort((a, b) => a.slug.localeCompare(b.slug));
 ---
 
 <PostLayout chapters={chapters} currentPage={post} collection="riemannian-geometry">
-  <h1>{post.data.title || post.slug}</h1>
-  <Content />
+    <h1>{post.data.title || post.slug}</h1>
+    <Content />
 </PostLayout>

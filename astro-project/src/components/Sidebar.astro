@@ -1,12 +1,15 @@
 ---
 import { CollectionEntry } from 'astro:content';
 
+type AnyCollectionEntry = CollectionEntry<'blog' | 'riemannian-geometry'>;
+
 interface Props {
-  chapters: CollectionEntry<'blog'>[];
-  currentPage: CollectionEntry<'blog'>;
+  chapters: AnyCollectionEntry[];
+  currentPage: AnyCollectionEntry;
+  collection: 'blog' | 'riemannian-geometry';
 }
 
-const { chapters, currentPage } = Astro.props;
+const { chapters, currentPage, collection } = Astro.props;
 const postTitle = currentPage.slug.split('/')[0].replace(/-/g, ' ');
 ---
 
@@ -16,10 +19,11 @@ const postTitle = currentPage.slug.split('/')[0].replace(/-/g, ' ');
   <ul class="space-y-2">
     {chapters.map(chapter => {
       const isActive = chapter.slug === currentPage.slug;
+      const slug = chapter.slug.replace(/(\/)?_index$/, '') || chapter.slug;
       return (
         <li>
           <a
-            href={`/blog/${chapter.slug}`}
+            href={`/${collection}/${slug}`}
             class:list={[
               "block p-2 rounded-md text-sm transition-colors",
               isActive 
@@ -27,7 +31,7 @@ const postTitle = currentPage.slug.split('/')[0].replace(/-/g, ' ');
                 : "text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white"
             ]}
           >
-            {chapter.data.title}
+            {chapter.data.title || chapter.slug}
           </a>
         </li>
       )

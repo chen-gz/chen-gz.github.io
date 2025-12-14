@@ -1,10 +1,6 @@
 ---
-title: "Chapter 2: Project Structure"
-description: "Understanding the structure of an Astro project."
-pubDate: "2025-12-07"
-chapter: 2
+type: docs
 ---
-
 
 ## 4. Other examples of manifolds. Orientation
 
@@ -12,15 +8,11 @@ chapter: 2
 
 Let $\{(U_\alpha, \mathbf{x}_\alpha)\}$ be a maximal differentiable structure on $M$ . Denote by $(x_1^\alpha, \dots, x_n^\alpha)$ the coordinates of $U_\alpha$ and by $\left\{\frac{\partial}{\partial x_1^\alpha}, \dots, \frac{\partial}{\partial x_n^\alpha}\right\}$ the associated bases to the tangent spaces of $\mathbf{x}_\alpha(U_\alpha)$ . For every $\alpha$ , define
 
-$$
-y_\alpha: U_\alpha \times \mathbf{R}^n \to TM,
-$$
+$$y_\alpha: U_\alpha \times \mathbf{R}^n \to TM,$$
 
 by
 
-$$
-y_\alpha(x_1^\alpha, \dots, x_n^\alpha, u_1, \dots, u_n) = (\mathbf{x}_\alpha(x_1^\alpha, \dots, x_n^\alpha), \sum_{i=1}^n u_i \frac{\partial}{\partial x_i^\alpha}), \quad (u_1, \dots, u_n) \in \mathbf{R}^n.
-$$
+$$y_\alpha(x_1^\alpha, \dots, x_n^\alpha, u_1, \dots, u_n) = \\ = (\mathbf{x}_\alpha(x_1^\alpha, \dots, x_n^\alpha), \sum_{i=1}^n u_i \frac{\partial}{\partial x_i^\alpha}), \quad (u_1, \dots, u_n) \in \mathbf{R}^n.$$
 
 Geometrically, this means that we are taking as coordinates of a point $(p, v) \in TM$ the coordinates $x_1^\alpha, \dots, x_n^\alpha$ of $p$ together with the coordinates of $v$ in the basis $\left\{\frac{\partial}{\partial x_1^\alpha}, \dots, \frac{\partial}{\partial x_n^\alpha}\right\}$.
 

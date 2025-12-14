@@ -26,7 +26,7 @@ const chapters = allPosts
   .sort((a, b) => a.data.chapter - b.data.chapter);
 ---
 
-<PostLayout chapters={chapters} currentPage={post}>
+<PostLayout chapters={chapters} currentPage={post} collection="blog">
   <h1>{post.data.title}</h1>
   <Content />
 </PostLayout>

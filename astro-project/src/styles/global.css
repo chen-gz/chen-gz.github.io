@@ -2,27 +2,26 @@
 @config "../../tailwind.config.mjs";
 
 @layer base {
-  :root {
-    --color-bg-primary: #ffffff;
-    --color-text-primary: #111827;
-  }
+    :root {
+        --color-bg-primary: #ffffff;
+        --color-text-primary: #111827;
+    }
 
-  :root.dark {
-    --color-bg-primary: #111827;
-    --color-text-primary: #f3f4f6;
-  }
+    :root.dark {
+        --color-bg-primary: #111827;
+        --color-text-primary: #f3f4f6;
+    }
 
-  body {
-    background-color: var(--color-bg-primary);
-    color: var(--color-text-primary);
-  }
+    body {
+        background-color: var(--color-bg-primary);
+        color: var(--color-text-primary);
+    }
 }
 
-
 /* Fix for KaTeX display math overflow */
-.katex-display {
+/*.katex-display {
   overflow-x: auto;
   overflow-y: hidden;
   text-align: center;
   margin: 1em 0;
-}
+}*/

@@ -13,4 +13,11 @@ const blog = defineCollection({
   }),
 });
 
-export const collections = { blog };
+const riemannianGeometry = defineCollection({
+  schema: z.object({
+    title: z.string().optional(),
+    type: z.string().optional(),
+  }),
+});
+
+export const collections = { blog, 'riemannian-geometry': riemannianGeometry };

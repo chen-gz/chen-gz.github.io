@@ -1,8 +1,7 @@
 ---
-type: docs
+title: Other examples of manifolds. Orientation
 ---
 
-## 4. Other examples of manifolds. Orientation
 
 **4.1 EXAMPLE** (The tangent bundle). Let $M^n$ be a differentiable manifold and let $TM = \{(p, v); p \in M, v \in T_p M\}$ . We are going to provide the set $TM$ with a differentiable structure (of dimension $2n$ ); with such a structure $TM$ will be called the _tangent bundle_ of $M$ . This is the natural space to work with when treating questions that involve positions and velocities, as in the case of mechanics.
 

@@ -1,8 +1,7 @@
 ---
-type: docs
+title: Vector fields; brackets. Topology of manifolds
 ---
 
-## 5. Vector fields; brackets. Topology of manifolds
 
 **5.1 DEFINITION** A **vector field** $X$ on a differentiable manifold $M$ is a correspondence that associates to each point $p \in M$ a vector $X(p) \in T_p M$ . In terms of mappings, $X$ is a mapping of $M$ into the tangent bundle $TM$ (see Example 4.1). The field is **differentiable** if the mapping $X: M \to TM$ is differentiable.
 

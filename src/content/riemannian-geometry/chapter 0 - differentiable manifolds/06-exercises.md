@@ -1,4 +1,6 @@
-## EXERCISES
+---
+title: Exercises
+---
 
 1. (Product manifold). Let $M$ and $N$ be differentiable manifolds and let $\{(U_\alpha, x_\alpha)\}$ , $\{V_\beta, y_\beta\}$ differentiable structures on $M$ and $N$ , respectively. Consider the cartesian product $M \times N$ and the mappings $z_{\alpha\beta}(p, q) = (x_\alpha(p), y_\beta(q))$ , $p \in U_\alpha$ , $q \in V_\beta$ .
    1. Prove that $\{(U_\alpha \times V_\beta, z_{\alpha\beta})\}$ is a differentiable structure on $M \times N$ in which the projections $\pi_1: M \times N \to M$ and

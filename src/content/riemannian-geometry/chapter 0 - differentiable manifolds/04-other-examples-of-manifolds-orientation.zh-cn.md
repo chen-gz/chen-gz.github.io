@@ -1,8 +1,6 @@
 ---
-type: docs
+title: Other examples of manifolds. Orientation
 ---
-
-### 原文
 
 **4.8 例（群的不连续作用 / Discontinuous action of a group）**
 

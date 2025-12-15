@@ -1,8 +1,6 @@
 ---
-type: docs
+title: Immersions and embeddings; examples
 ---
-
-## 3. Immersions and embeddings; examples
 
 **3.1 DEFINITION** Let  $M^m$  and  $N^n$  be differentiable manifolds. A differentiable mapping  $\varphi: M \to N$  is said to be an *immersion* if  $d\varphi_p: T_p M \to T_{\varphi(p)} N$  is injective for all  $p \in M$ . If, in addition,  $\varphi$  is a homeomorphism onto  $\varphi(M) \subset N$ , where  $\varphi(M)$  has the subspace topology induced from  $N$ , we say that  $\varphi$  is an *embedding*. If  $M \subset N$  and the inclusion  $i: M \subset N$  is an embedding, we say that  $M$  is a *submanifold* of  $N$ .
 

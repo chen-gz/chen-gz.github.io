@@ -1,5 +1,6 @@
 ---
-import { getCollection, CollectionEntry } from "astro:content";
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
 import PostLayout from "../../layouts/PostLayout.astro";
 
 export async function getStaticPaths() {
@@ -25,9 +26,15 @@ const { Content } = await post.render();
 // Logic to find all chapters of the current post
 const allPosts = await getCollection("riemannian-geometry");
 const postSlug = post.slug.split("/")[0];
-const chapters = allPosts
+const chaptersData = allPosts
     .filter((p) => p.slug.startsWith(postSlug) && !p.slug.endsWith("_index"))
     .sort((a, b) => a.slug.localeCompare(b.slug));
+
+const chapters = chaptersData.map((chapter) => {
+    const titleMatch = chapter.body.match(/^# (.*)/m);
+    const titleFromContent = titleMatch ? titleMatch[1] : null;
+    return { ...chapter, data: { ...chapter.data, title: chapter.data.title || titleFromContent } };
+});
 ---
 
 <PostLayout chapters={chapters} currentPage={post} collection="riemannian-geometry">

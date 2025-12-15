@@ -1,8 +1,6 @@
 ---
-type: docs
+title: Differentiable manifolds; tangent space
 ---
-
-## 2. Differentiable manifolds; tangent space
 
 **2.1 DEFINITION.** A *differentiable manifold* of dimension  $n$  is a set  $M$  and a family of injective mappings  $\mathbf{x}_\alpha: U_\alpha \subset \mathbb{R}^n \to M$  of open sets  $U_\alpha$  of  $\mathbb{R}^n$  into  $M$  such that:
 

@@ -1,7 +1,7 @@
 ---
-type: docs
+title: Introduction 
 ---
-## 1. Introduction
+
 The notion of a differentiable manifold is necessary for extending the methods of differential calculus to spaces more general than  $\mathbb{R}^n$ . The first example of a manifold, accessible to our experience, is a regular surface in  $\mathbb{R}^3$ . Recall that a subset  $S \subset \mathbb{R}^3$  is a regular surface if, for every point  $p \in S$ , there exist a neighborhood  $V$  of  $p$  in  $\mathbb{R}^3$  and a mapping  $\mathbf{x}: U \subset \mathbb{R}^2 \to V \cap S$  of an open set  $U \subset \mathbb{R}^2$  onto  $V \cap S$ , such that:
 
 1. $\mathbf{x}$  is a differentiable homeomorphism;

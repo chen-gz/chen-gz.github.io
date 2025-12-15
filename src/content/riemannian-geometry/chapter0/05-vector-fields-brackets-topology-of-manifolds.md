@@ -8,23 +8,31 @@ type: docs
 
 Considering a parametrization $\mathbf{x}: U \subset \mathbb{R}^n \to M$ we can write
 
-$$\quad X(p) = \sum_{i=1}^{n} a_i(p) \frac{\partial}{\partial x_i}, \tag{4}$$
+$$
+\quad X(p) = \sum_{i=1}^{n} a_i(p) \frac{\partial}{\partial x_i}, \tag{4}
+$$
 
 where each $a_i: U \to \mathbb{R}$ is a function on $U$ and $\left\{\frac{\partial}{\partial x_i}\right\}$ is the basis associated to $\mathbf{x}$ , $i = 1, \dots, n$ . It is clear that $X$ is differentiable if and only if the functions $a_i$ are differentiable for some (and, therefore, for any) parametrization.
 
 Occasionally, it is convenient to use the idea suggested by (4) and think of a vector field as a mapping $X: \mathcal{D} \to \mathcal{F}$ from the set $\mathcal{D}$ of differentiable functions on $M$ to the set $\mathcal{F}$ of functions on $M$ , defined in the following way
 
-$$\quad (Xf)(p) = \sum_i a_i(p) \frac{\partial f}{\partial x_i}(p), \tag{5}$$
+$$
+\quad (Xf)(p) = \sum_i a_i(p) \frac{\partial f}{\partial x_i}(p), \tag{5}
+$$
 
 where $f$ denotes, by abuse of notation, the expression of $f$ in the parametrization $\mathbf{x}$ . Indeed, this idea of a vector as a directional derivative was precisely what was used to define the notion of tangent vector. It is easy to check that the function $Xf$ obtained in (5) does not depend on the choice of parametrization $x$ . In this context, it is immediate that $X$ is differentiable if and only if $X: \mathcal{D} \to \mathcal{D}$ , that is, $Xf \in \mathcal{D}$ for all $f \in \mathcal{D}$ .
 
 Observe that if $\varphi: M \to M$ is a diffeomorphism, $v \in T_p M$ and $f$ is a differentiable function in a neighborhood of $\varphi(p)$ , we have
 
-$$(d\varphi(v)f)\varphi(p) = v(f \circ \varphi)(p).$$
+$$
+(d\varphi(v)f)\varphi(p) = v(f \circ \varphi)(p).
+$$
 
 Indeed, let $\alpha: (-\varepsilon, \varepsilon) \to M$ be a differentiable curve with $\alpha'(0) = v$ , $\alpha(0) = p$ . Then
 
-$$(d\varphi(v)f)\varphi(p) = \left. \frac{d}{dt} (f \circ \varphi \circ \alpha) \right|_{t=0} = v(f \circ \varphi)(p).$$
+$$
+(d\varphi(v)f)\varphi(p) = \left. \frac{d}{dt} (f \circ \varphi \circ \alpha) \right|_{t=0} = v(f \circ \varphi)(p).
+$$
 
 The interpretation of $X$ as an operator on $\mathcal{D}$ permits us to consider the iterates of $X$ . For example, if $X$ and $Y$ are differentiable fields on $M$ and $f: M \to \mathbb{R}$ is a differentiable function, we can consider the functions $X(Yf)$ and $Y(Xf)$ . In general, such operations do not lead to vector fields, because they involve derivatives of order higher than one. Nevertheless, we can affirm the following.
 
@@ -32,17 +40,25 @@ The interpretation of $X$ as an operator on $\mathcal{D}$ permits us to consider
 
 _Proof._ First, we prove that if $Z$ exists, then it is unique. Assume, therefore, the existence of such a $Z$ . Let $p \in M$ and let $x: U \to M$ be a parametrization at $p$ , and let
 
-$$X = \sum_i a_i \frac{\partial}{\partial x_i}, \quad Y = \sum_j b_j \frac{\partial}{\partial x_j}$$
+$$
+X = \sum_i a_i \frac{\partial}{\partial x_i}, \quad Y = \sum_j b_j \frac{\partial}{\partial x_j}
+$$
 
 be the expressions for $X$ and $Y$ in these parametrizations. Then for all $f \in \mathcal{D}$ ,
 
-$$XYf = X\left(\sum_j b_j \frac{\partial f}{\partial x_j}\right) = \sum_{i,j} a_i \frac{\partial b_j}{\partial x_i} \frac{\partial f}{\partial x_j} + \sum_{i,j} a_i b_j \frac{\partial^2 f}{\partial x_i \partial x_j},$$
+$$
+XYf = X\left(\sum_j b_j \frac{\partial f}{\partial x_j}\right) = \sum_{i,j} a_i \frac{\partial b_j}{\partial x_i} \frac{\partial f}{\partial x_j} + \sum_{i,j} a_i b_j \frac{\partial^2 f}{\partial x_i \partial x_j},
+$$
 
-$$YXf = Y\left(\sum_i a_i \frac{\partial f}{\partial x_i}\right) = \sum_{i,j} b_j \frac{\partial a_i}{\partial x_j} \frac{\partial f}{\partial x_i} + \sum_{i,j} a_i b_j \frac{\partial^2 f}{\partial x_i \partial x_j}.$$
+$$
+YXf = Y\left(\sum_i a_i \frac{\partial f}{\partial x_i}\right) = \sum_{i,j} b_j \frac{\partial a_i}{\partial x_j} \frac{\partial f}{\partial x_i} + \sum_{i,j} a_i b_j \frac{\partial^2 f}{\partial x_i \partial x_j}.
+$$
 
 Therefore, $Z$ is given, in the parametrization $x$ , by
 
-$$Zf = XYf - YXf = \sum_{i,j} \left( a_i \frac{\partial b_j}{\partial x_i} - b_i \frac{\partial a_j}{\partial x_i} \right) \frac{\partial f}{\partial x_j}$$
+$$
+Zf = XYf - YXf = \sum_{i,j} \left( a_i \frac{\partial b_j}{\partial x_i} - b_i \frac{\partial a_j}{\partial x_i} \right) \frac{\partial f}{\partial x_j}
+$$
 
 which proves the uniqueness of $Z$ .
 
@@ -61,7 +77,9 @@ The bracket operation has the following properties:
 
 _Proof._ (a) and (b) are immediate. In order to prove (c), it suffices to observe that, on the one hand,
 
-$$[[X, Y], Z] = [XY - YX, Z] = XYZ - YXZ - ZXY + ZYX$$
+$$
+[[X, Y], Z] = [XY - YX, Z] = XYZ - YXZ - ZXY + ZYX
+$$
 
 while, on the other hand,
 
@@ -71,7 +89,9 @@ Because the second members of the expressions above are equal, (c) follows using
 
 Finally, to prove (d), calculate
 
-$$\begin{aligned} [fX, gY] &= fX(gY) - gY(fX) = fgXY + fX(g)Y \\ &- gY(f)X = fg[X, Y] + fX(g)X - gY(f)X. \square \end{aligned}$$
+$$
+\begin{aligned} [fX, gY] &= fX(gY) - gY(fX) = fgXY + fX(g)Y \\ &- gY(f)X = fg[X, Y] + fX(g)X - gY(f)X. \square \end{aligned}
+$$
 
 The bracket $[X, Y]$ can also be interpreted as a derivation of $Y$ along the “trajectories” of $X$ . To describe this interpretation, we need some preliminary ideas on differential equations.
 
@@ -85,37 +105,53 @@ The interpretation of the bracket $[X, Y]$ , mentioned above, is contained in th
 
 **5.4 PROPOSITION** Let $X, Y$ be differentiable vector fields on a differentiable manifold $M$ , let $p \in M$ , and let $\varphi_t$ be the local flow of $X$ in a neighborhood $U$ of $p$ . Then
 
-$$[X, Y](p) = \lim_{t \to 0} \frac{1}{t} [Y - d\varphi_t Y](\varphi_t(p)).$$
+$$
+[X, Y](p) = \lim_{t \to 0} \frac{1}{t} [Y - d\varphi_t Y](\varphi_t(p)).
+$$
 
 For the proof, we need the following lemma from calculus.
 
 **5.5 LEMMA** Let $h: (-\delta, \delta) \times U \to \mathbb{R}$ be a differentiable mapping with $h(0, q) = 0$ for all $q \in U$ . Then there exists a differentiable mapping $g: (-\delta, \delta) \times U \to \mathbb{R}$ with $h(t, q) = tg(t, q)$ ; in particular,
 
-$$g(0, q) = \left. \frac{\partial h(t, q)}{\partial t} \right|_{t=0}.$$
+$$
+g(0, q) = \left. \frac{\partial h(t, q)}{\partial t} \right|_{t=0}.
+$$
 
 _Proof of lemma._ It suffices to define, for fixed $t$ ,
 
-$$g(t, q) = \int_0^1 \frac{\partial h(ts, q)}{\partial (ts)} ds$$
+$$
+g(t, q) = \int_0^1 \frac{\partial h(ts, q)}{\partial (ts)} ds.
+$$
 
 and, after changing variables, observe that
 
-$$tg(t, q) = \int_0^t \frac{\partial h(ts, q)}{\partial(ts)} d(ts) = h(t, q).$$
+$$
+tg(t, q) = \int_0^t \frac{\partial h(ts, q)}{\partial(ts)} d(ts) = h(t, q).
+$$
 
 _Proof of the Proposition._ Let $f$ be a differentiable function in a neighborhood of $p$ . Putting
 
-$$h(t, q) = f(\varphi_t(q)) - f(q),$$
+$$
+h(t, q) = f(\varphi_t(q)) - f(q),
+$$
 
 and applying the lemma we obtain a differentiable function $g(t, q)$ such that
 
-$$f \circ \varphi_t(q) = f(q) + tg(t, q) \quad \text{and} \quad g(0, q) = Xf(q).$$
+$$
+f \circ \varphi_t(q) = f(q) + tg(t, q) \quad \text{and} \quad g(0, q) = Xf(q).
+$$
 
 Accordingly
 
-$$((d\varphi_t Y)f)(\varphi_t(p)) = (Y(f \circ \varphi_t))(p) = Yf(p) + t(Yg(t, p)).$$
+$$
+((d\varphi_t Y)f)(\varphi_t(p)) = (Y(f \circ \varphi_t))(p) = Yf(p) + t(Yg(t, p)).
+$$
 
 Therefore
 
-$$\begin{aligned} \lim_{t \to 0} \frac{1}{t} [Y - d\varphi_t Y] f(\varphi_t p) &= \lim_{t \to 0} \frac{(Yf)(\varphi_t p) - Yf(p)}{t} - (Yg(0, p)) \\ &= (X(Yf))(p) - (Y(Xf))(p) \\ &= ((XY - YX)f)(p) = ([X, Y]f)(p). \quad \square \end{aligned}$$
+$$
+\begin{aligned} \lim_{t \to 0} \frac{1}{t} [Y - d\varphi_t Y] f(\varphi_t p) &= \lim_{t \to 0} \frac{(Yf)(\varphi_t p) - Yf(p)}{t} - (Yg(0, p)) \\ &= (X(Yf))(p) - (Y(Xf))(p) \\ &= ((XY - YX)f)(p) = ([X, Y]f)(p). \quad \square \end{aligned}
+$$
 
 Up till now we have put no restrictions on the topology of a differentiable manifold. In fact, the natural topology of a manifold can be quite strange. In particular, it can happen that one (or both) of the following axioms not be satisfied:
 
@@ -143,4 +179,18 @@ It is customary to say that the partition of unity $\{f_\alpha\}$ is _subordinat
 
 For a proof see F. Brickell and R.S. Clark, _Differentiable Manifolds_, Van Nostrand Reinhold Co., London 1970, Chap. 3.
 
-**5.7 REMARK.** Recall that given $p \in \mathbb{R}^n$ and an open ball $B_r(p) \subset \mathbb{R}^n$ centered at $p$ with radius $r$ , there exists a neighborhood $U$ of $p$
+**5.7 REMARK.** Recall that given $p \in \mathbb{R}^n$ and an open ball $B_r(p) \subset \mathbb{R}^n$ centered at $p$ with radius $r$ , there exists a neighborhood $U$ of $p$ with  $\bar{U} \subset B_r(p)$  and a differentiable function  $f: \mathbb{R}^n \to \mathbb{R}$  such that  $0 \le f(q) \le 1$  for all  $q \in \mathbb{R}^n$  and
+
+$$
+f(q) = \begin{cases} 1, & \text{if } q \in \bar{U}, \\ 0, & \text{if } q \notin B_r(p). \end{cases}
+$$
+
+Indeed, if we take, for simplicity,  $r = 2$ , we can choose  $U = B_1(p)$  and define  $f$  by  $f(q) = \beta(-|p-q|)$ ,  $q \in \mathbb{R}^n$ , where  $\beta: \mathbb{R} \to \mathbb{R}$  is given by
+
+$$
+\beta(t) = \frac{\int_{-\infty}^{t} \alpha(s) ds}{\int_{-2}^{-1} \alpha(s) ds},
+$$
+
+and  $\alpha: \mathbb{R} \to \mathbb{R}$  is the smooth function equaling  $\exp\left(-\frac{1}{(t+2)(-1-t)}\right)$  on  $[-2, -1]$  and zero off this interval. It is easy to check that  $f$  satisfies the required conditions.
+
+Clearly, the same thing happens in a neighborhood contained in a coordinate neighborhood on a differentiable manifold  $M$ . In other words, if  $p \in M$  and  $V \subset M$  is a neighborhood of  $p$  contained in a coordinate neighborhood of  $p$  which is diffeomorphic to an open ball, then there exists a neighborhood  $U$  of  $p$  with  $\bar{U} \subset V$  and a differentiable function  $f: M \to \mathbb{R}$  with  $0 \le f(q) \le 1$  if  $q \in M$ ,  $f(q) = 1$  if  $q \in \bar{U}$ , and  $f(q) = 0$  if  $q \notin V$ . This fact allows us to show that certain globally defined objects on  $M$  are, in reality, local, that is, their behavior at  $p$  only depends on how  $M$  behaves in a neighborhood of  $p$  (cf. the definition of the bracket of two vector fields in this chapter and the definition of an affine connection in Chapter 2).

@@ -1,0 +1,51 @@
+---
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+import PostLayout from "../../layouts/PostLayout.astro";
+
+export async function getStaticPaths() {
+    const posts = await getCollection("codeforces", ({ id }) => {
+        return !id.startsWith("datalab-");
+    });
+    return posts.map((post) => {
+        const slug = post.slug.replace(/(\/)?_index$/, "") || post.slug;
+        return {
+            params: { slug: slug },
+            props: { post },
+        };
+    });
+}
+
+interface Props {
+    post: CollectionEntry<"codeforces">;
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+
+// Logic to find all problems of the current round
+const allPosts = await getCollection("codeforces");
+const postSlug = post.slug.split("/")[0];
+const chaptersData = allPosts
+    .filter(
+        (p) =>
+            p.slug.startsWith(postSlug) &&
+            !p.slug.endsWith("_index") &&
+            !p.id.endsWith(".zh-cn.md"),
+    )
+    .sort((a, b) => a.slug.localeCompare(b.slug));
+
+const chapters = chaptersData.map((chapter) => {
+    // For codeforces, maybe we want the problem title.
+    // The original logic tried to find a H1 in the markdown content body.
+    // We can stick with that or just use frontmatter title.
+    const titleMatch = chapter.body.match(/^# (.*)/m);
+    const titleFromContent = titleMatch ? titleMatch[1] : null;
+    return { ...chapter, data: { ...chapter.data, title: chapter.data.title || titleFromContent } };
+});
+---
+
+<PostLayout chapters={chapters} currentPage={post} collection="codeforces">
+    <h1>{post.data.title || post.slug}</h1>
+    <Content />
+</PostLayout>

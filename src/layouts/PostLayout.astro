@@ -3,12 +3,12 @@ import Layout from "./Layout.astro";
 import Sidebar from "../components/Sidebar.astro";
 import { CollectionEntry } from "astro:content";
 
-type AnyCollectionEntry = CollectionEntry<"blog" | "riemannian-geometry">;
+type AnyCollectionEntry = CollectionEntry<"blog" | "riemannian-geometry" | "codeforces">;
 
 interface Props {
     chapters: AnyCollectionEntry[];
     currentPage: AnyCollectionEntry;
-    collection: "blog" | "riemannian-geometry";
+    collection: "blog" | "riemannian-geometry" | "codeforces";
 }
 
 const { chapters, currentPage, collection } = Astro.props;

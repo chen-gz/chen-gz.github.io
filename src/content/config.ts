@@ -20,4 +20,11 @@ const riemannianGeometry = defineCollection({
   }),
 });
 
-export const collections = { blog, 'riemannian-geometry': riemannianGeometry };
+const codeforces = defineCollection({
+  schema: z.object({
+    title: z.string().optional(),
+    math: z.boolean().optional(),
+  }),
+});
+
+export const collections = { blog, 'riemannian-geometry': riemannianGeometry, codeforces };

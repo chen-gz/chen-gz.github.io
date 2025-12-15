@@ -1,5 +1,5 @@
 ---
-title: Introduction
+title: Introduction of Riemannian Metrics
 ---
 
 Historically, Riemannian geometry was a natural development of the differential geometry of surfaces in $\mathbf{R}^3$ . Given a surface $S \subset \mathbf{R}^3$ , we have a natural way of measuring the lengths of vectors tangent to $S$ , namely: the inner product $\langle v, w \rangle$ of two vectors tangent to $S$ at a point $p$ of $S$ is simply the inner product of these vectors in $\mathbf{R}^3$ . The way to compute the length of a curve is, by definition, to integrate the length of its velocity vector. The definition of $\langle, \rangle$ permits us to measure not only the lengths of curves in $S$ but also the area of domains in $S$ , as well as the angle between two curves, and all the other “metric” ideas used in geometry. More generally, these notions lead us to define on $S$ certain special curves, called geodesics, which possess the following property: given any two points $p$ and $q$ on a geodesic, sufficiently close (in a sense to be made precise later, Cf. Chap. 3), the length of such a curve is less than or equal to the length of any other curve joining $p$ to $q$ . Such curves behave, in many situations, as if they were “the straight lines” of $S$ , and, as we shall see later, play an important role in the development of geometry.

@@ -15,66 +15,51 @@ const { chapters, currentPage, collection } = Astro.props;
 ---
 
 <Layout>
-    <div class="flex flex-col lg:flex-row">
-        <aside id="sidebar" class="w-full lg:w-80 lg:flex-shrink-0 p-4">
-            <Sidebar chapters={chapters} currentPage={currentPage} collection={collection} />
-        </aside>
-        <main class="w-full p-4 relative">
-            <button
-                id="sidebar-toggle"
-                class="fixed bottom-4 left-4 bg-gray-800 text-white p-2 rounded-full shadow-lg z-50"
-            >
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                >
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"
-                    ></path>
-                </svg>
-            </button>
-            <div class="prose prose-custom dark:prose-invert max-w-none mx-auto">
-                <slot />
-            </div>
-        </main>
-    </div>
+    <main class="w-full p-4">
+        <div class="prose prose-custom dark:prose-invert max-w-none mx-auto">
+            <slot />
+        </div>
+    </main>
+    <button id="sidebar-toggle" class="fixed bottom-4 left-4 bg-gray-800 text-white p-2 rounded-full shadow-lg z-50">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+    </button>
+    <aside
+        id="sidebar"
+        class="absolute w-64 bg-white dark:bg-gray-800 z-40 shadow-lg rounded-lg p-4 hidden max-h-96 overflow-y-auto"
+    >
+        <Sidebar chapters={chapters} currentPage={currentPage} collection={collection} />
+    </aside>
     <script>
         const sidebar = document.getElementById("sidebar");
         const toggleButton = document.getElementById("sidebar-toggle");
 
-        let manuallyHidden = null; // null: auto, true: hidden, false: shown
-
-        const updateSidebar = () => {
-            if (manuallyHidden === true) {
-                sidebar.classList.add("hidden");
-            } else if (manuallyHidden === false) {
-                sidebar.classList.remove("hidden");
-            } else {
-                // auto mode
-                if (window.innerWidth < 1024) {
-                    sidebar.classList.add("hidden");
-                } else {
-                    sidebar.classList.remove("hidden");
-                }
-            }
+        const openMenu = () => {
+            const btnRect = toggleButton.getBoundingClientRect();
+            // Position the menu above the button
+            sidebar.style.left = `${btnRect.left}px`;
+            sidebar.style.bottom = `${window.innerHeight - btnRect.top}px`;
+            sidebar.classList.remove("hidden");
         };
 
-        toggleButton.addEventListener("click", () => {
+        const closeMenu = () => {
+            sidebar.classList.add("hidden");
+        };
+
+        toggleButton.addEventListener("click", (e) => {
+            e.stopPropagation();
             if (sidebar.classList.contains("hidden")) {
-                manuallyHidden = false;
+                openMenu();
             } else {
-                manuallyHidden = true;
+                closeMenu();
             }
-            updateSidebar();
         });
 
-        window.addEventListener("resize", () => {
-            updateSidebar();
+        document.addEventListener("click", (e) => {
+            if (!sidebar.contains(e.target) && !toggleButton.contains(e.target)) {
+                closeMenu();
+            }
         });
-
-        // Initial state
-        updateSidebar();
     </script>
 </Layout>

@@ -1,28 +1,80 @@
 ---
-import Layout from './Layout.astro';
-import Sidebar from '../components/Sidebar.astro';
-import { CollectionEntry } from 'astro:content';
+import Layout from "./Layout.astro";
+import Sidebar from "../components/Sidebar.astro";
+import { CollectionEntry } from "astro:content";
 
-type AnyCollectionEntry = CollectionEntry<'blog' | 'riemannian-geometry'>;
+type AnyCollectionEntry = CollectionEntry<"blog" | "riemannian-geometry">;
 
 interface Props {
-  chapters: AnyCollectionEntry[];
-  currentPage: AnyCollectionEntry;
-  collection: 'blog' | 'riemannian-geometry';
+    chapters: AnyCollectionEntry[];
+    currentPage: AnyCollectionEntry;
+    collection: "blog" | "riemannian-geometry";
 }
 
 const { chapters, currentPage, collection } = Astro.props;
 ---
 
 <Layout>
-  <div class="flex flex-col md:flex-row">
-    <aside class="w-full md:w-80 md:flex-shrink-0 p-4">
-      <Sidebar chapters={chapters} currentPage={currentPage} collection={collection} />
-    </aside>
-    <main class="w-full p-4">
-      <div class="prose prose-custom dark:prose-invert max-w-none mx-auto">
-        <slot />
-      </div>
-    </main>
-  </div>
+    <div class="flex flex-col lg:flex-row">
+        <aside id="sidebar" class="w-full lg:w-80 lg:flex-shrink-0 p-4">
+            <Sidebar chapters={chapters} currentPage={currentPage} collection={collection} />
+        </aside>
+        <main class="w-full p-4 relative">
+            <button
+                id="sidebar-toggle"
+                class="fixed bottom-4 left-4 bg-gray-800 text-white p-2 rounded-full shadow-lg z-50"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                >
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"
+                    ></path>
+                </svg>
+            </button>
+            <div class="prose prose-custom dark:prose-invert max-w-none mx-auto">
+                <slot />
+            </div>
+        </main>
+    </div>
+    <script>
+        const sidebar = document.getElementById("sidebar");
+        const toggleButton = document.getElementById("sidebar-toggle");
+
+        let manuallyHidden = null; // null: auto, true: hidden, false: shown
+
+        const updateSidebar = () => {
+            if (manuallyHidden === true) {
+                sidebar.classList.add("hidden");
+            } else if (manuallyHidden === false) {
+                sidebar.classList.remove("hidden");
+            } else {
+                // auto mode
+                if (window.innerWidth < 1024) {
+                    sidebar.classList.add("hidden");
+                } else {
+                    sidebar.classList.remove("hidden");
+                }
+            }
+        };
+
+        toggleButton.addEventListener("click", () => {
+            if (sidebar.classList.contains("hidden")) {
+                manuallyHidden = false;
+            } else {
+                manuallyHidden = true;
+            }
+            updateSidebar();
+        });
+
+        window.addEventListener("resize", () => {
+            updateSidebar();
+        });
+
+        // Initial state
+        updateSidebar();
+    </script>
 </Layout>

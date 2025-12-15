@@ -10,7 +10,10 @@ interface Props {
 }
 
 const { chapters, currentPage, collection } = Astro.props;
-const postTitle = currentPage.slug.split("/")[0].replace(/-/g, " ");
+const postTitle = currentPage.slug
+    .split("/")[0]
+    .replace(/^chapter\d+-/, "")
+    .replace(/-/g, " ");
 
 const formatChapterTitle = (slug: string) => {
     const title = slug.split("/").pop() || "";

@@ -1,6 +1,6 @@
 # Ggeta's Blog
 
-This repository contains the source code for my personal blog, [ggeta.com](https://ggeta.com). It's built with [Hugo](https://gohugo.io/) and the [Hextra](https://github.com/imfing/hextra) theme.
+This repository contains the source code for my personal blog, [ggeta.com](https://ggeta.com). It's built with [Astro](https://astro.build/).
 
 ## Features
 
@@ -11,21 +11,34 @@ This repository contains the source code for my personal blog, [ggeta.com](https
 
 ## Getting Started
 
-To run the website locally, you need to have [Hugo](https://gohugo.io/getting-started/installing/) installed.
+To run the website locally, you need to have Node.js and npm installed.
 
 1.  Clone the repository:
     ```bash
     git clone https://github.com/chen-gz/chen-gz.github.io.git
     ```
-2.  Initialize the theme submodule:
+2.  Install dependencies:
     ```bash
-    git submodule update --init --recursive
+    npm install
     ```
-3.  Start the Hugo server:
+3.  Start the Astro dev server:
     ```bash
-    hugo server
+    npm run dev
     ```
-The website will be available at `http://localhost:1313/`.
+The website will be available at `http://localhost:4321/`.
+
+## Commands
+
+All commands are run from the root of the project, from a terminal:
+
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |
 
 ## Content
 

@@ -2,13 +2,14 @@
 import Header from '../components/Header.astro';
 import '../styles/global.css';
 import 'katex/dist/katex.min.css';
+import { getRelativePath } from '../utils/path';
 ---
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href={getRelativePath("favicon.svg")} />
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro Basics</title>
 		<script is:inline>

@@ -62,4 +62,45 @@ const { chapters, currentPage, collection } = Astro.props;
             }
         });
     </script>
+    <script>
+        document.addEventListener("copy", (event) => {
+            const selection = document.getSelection();
+            if (selection.rangeCount === 0) return;
+
+            const range = selection.getRangeAt(0);
+            const clonedSelection = range.cloneContents();
+            
+            let copiedText = "";
+
+            function traverse(node) {
+                if (node.nodeType === Node.TEXT_NODE) {
+                    copiedText += node.textContent;
+                } else if (node.nodeType === Node.ELEMENT_NODE && (node.classList.contains('katex') || node.classList.contains('katex-display'))) {
+                    const annotation = node.querySelector('annotation, annotation[encoding="application/x-tex"]');
+                    if (annotation) {
+                        let latexSource = annotation.textContent;
+                        if (node.classList.contains('katex-display')) {
+                            copiedText += `$$${latexSource}$$`;
+                        } else {
+                            copiedText += `$${latexSource}$`;
+                        }
+                    }
+                } else if (node.nodeType === Node.ELEMENT_NODE && node.closest('pre')) {
+                    copiedText += node.closest('pre').innerText;
+                }
+                else if (node.nodeType === Node.ELEMENT_NODE) {
+                    node.childNodes.forEach(traverse);
+                }
+            }
+
+            const container = document.createElement("div");
+            container.appendChild(clonedSelection);
+            traverse(container);
+
+            if (copiedText) {
+                event.clipboardData.setData("text/plain", copiedText);
+                event.preventDefault();
+            }
+        });
+    </script>
 </Layout>

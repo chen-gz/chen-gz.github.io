@@ -18,7 +18,7 @@ $$
 \quad \langle u, v \rangle_p = \langle df_p(u), df_p(v) \rangle_{f(p)}, \text{ for all } p \in M, u, v \in T_p M. \tag{1}
 $$
 
-2.3 DEFINITION. Let $M$ and $N$ be Riemannian manifolds. A differentiable mapping $f: M \to N$ is a _local isometry_ at $p \in M$ if there is a neighborhood $U \subset M$ of $p$ such that $f: U \to f(U)$ is a diffeomorphism satisfying (1).
+**2.3 DEFINITION** Let $M$ and $N$ be Riemannian manifolds. A differentiable mapping $f: M \to N$ is a _local isometry_ at $p \in M$ if there is a neighborhood $U \subset M$ of $p$ such that $f: U \to f(U)$ is a diffeomorphism satisfying (1).
 
 It is common to say that a Riemannian manifold $M$ is _locally isometric_ to a Riemannian manifold $N$ if for every $p$ in $M$ there exists a neighborhood $U$ of $p$ in $M$ and a local isometry $f: U \to f(U) \subset N$ .
 

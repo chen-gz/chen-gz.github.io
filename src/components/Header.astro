@@ -1,5 +1,7 @@
 ---
 // src/components/Header.astro
+import { Image } from "astro:assets";
+import logo from "../assets/favicon.svg";
 ---
 
 <header
@@ -8,7 +10,8 @@
     <nav class="flex justify-between items-center w-full container mx-auto">
         <div class="shrink-0">
             <a href="/">
-                <img src="../assets/favicon.svg" alt="Logo" class="h-10" />
+                <img src="/assets/favicon.svg" alt="Logo" width={40} height={40} class="h-10" />
+                <!-- <Image src={logo} alt="Logo" width={40} height={40} class="h-10" /> -->
             </a>
         </div>
         <div class="hidden md:flex grow justify-end mr-8 space-x-6">

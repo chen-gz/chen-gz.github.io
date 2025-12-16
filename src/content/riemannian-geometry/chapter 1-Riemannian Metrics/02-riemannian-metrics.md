@@ -14,7 +14,9 @@ After introducing any type of mathematical structure, we must introduce a notion
 
 **2.2 DEFINITION.** Let $M$ and $N$ be Riemannian manifolds. A diffeomorphism $f: M \to N$ (that is, $f$ is a differentiable bijection with a differentiable inverse) is called an _isometry_ if:
 
-$$(1) \quad \langle u, v \rangle_p = \langle df_p(u), df_p(v) \rangle_{f(p)}, \text{ for all } p \in M, u, v \in T_p M.$$
+$$
+\quad \langle u, v \rangle_p = \langle df_p(u), df_p(v) \rangle_{f(p)}, \text{ for all } p \in M, u, v \in T_p M. \tag{1}
+$$
 
 2.3 DEFINITION. Let $M$ and $N$ be Riemannian manifolds. A differentiable mapping $f: M \to N$ is a _local isometry_ at $p \in M$ if there is a neighborhood $U \subset M$ of $p$ such that $f: U \to f(U)$ is a diffeomorphism satisfying (1).
 

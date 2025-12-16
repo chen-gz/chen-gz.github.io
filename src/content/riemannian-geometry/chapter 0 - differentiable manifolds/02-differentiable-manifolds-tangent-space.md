@@ -12,7 +12,7 @@ The pair  $(U_\alpha, \mathbf{x}_\alpha)$  (or the mapping  $\mathbf{x}_\alpha$ 
 
 The condition (3) is included for purely technical reasons. Indeed, given a differentiable structure on  $M$ , we can easily complete it to a maximal one, by taking the union of all the parametrizations that, together with any of the parametrizations of the given structure, satisfy condition (2). Therefore, with a certain abuse of language, we can say that a differentiable manifold is a set provided with a differentiable structure. In general, the extension to the maximal structure will be done without further comment.
 
-![image](/images/remannian_geometry/figure_1.png)
+![image](./02-z_figure_1.png)
 
 **2.2 REMARK** A comparison between the definition 2.1 and the definition of a regular surface in  $\mathbb{R}^3$  shows that the essential point (except for the change of dimension from 2 to  $n$ ) was to distinguish the fundamental property of the change of parameters (which is a theorem for surfaces in  $\mathbb{R}^3$ ) and incorporate it as an axiom. This is precisely condition 2 of Definition 2.1. As we shall soon see, this is the condition that allows us to carry over all of the ideas of differential calculus in  $\mathbb{R}^n$  to differentiable manifolds.
 
@@ -26,7 +26,9 @@ given by the identity, is a trivial example of a differentiable manifold. Now we
 
 Let us introduce a differentiable structure on  $P^n(\mathbb{R})$ . For this, let  $(x_1, \dots, x_{n+1}) \in \mathbb{R}^{n+1}$  and observe, to begin with, that  $P^n(\mathbb{R})$  is the quotient space of  $\mathbb{R}^{n+1} - \{0\}$  by the equivalence relation:
 
-$$(x_1, \dots, x_{n+1}) \sim (\lambda x_1, \dots, \lambda x_{n+1}), \quad \lambda \in \mathbb{R}, \quad \lambda \neq 0.$$
+$$
+(x_1, \dots, x_{n+1}) \sim (\lambda x_1, \dots, \lambda x_{n+1}), \quad \lambda \in \mathbb{R}, \quad \lambda \neq 0.
+$$
 
 The points of  $P^n(\mathbb{R})$  will be denoted by  $[x_1, \dots, x_{n+1}]$ . Observe that, if  $x_i \neq 0$ ,
 
@@ -70,9 +72,11 @@ First, let us extend the idea of differentiability to mappings between manifolds
 
 **2.5 DEFINITION**. Let  $M_1^n$  and  $M_2^m$  be differentiable manifolds. A mapping  $\varphi: M_1 \to M_2$  is *differentiable at*  $p \in M_1$  if given a parametrization  $\mathbf{y}: V \subset \mathbb{R}^n \to M_2$  at  $\varphi(p)$  there exists a parametrization  $\mathbf{x}: U \subset \mathbb{R}^n \to M_1$  at  $p$  such that  $\varphi(\mathbf{x}(U)) \subset \mathbf{y}(V)$  and the mapping
 
-$$ \quad \mathbf{y}^{-1} \circ \varphi \circ \mathbf{x}: U \subset \mathbb{R}^n \to \mathbb{R}^m \tag{1}$$
+$$
+\quad \mathbf{y}^{-1} \circ \varphi \circ \mathbf{x}: U \subset \mathbb{R}^n \to \mathbb{R}^m \tag{1}
+$$
 
-![](/images/remannian_geometry/figure_2.png)
+![](./02-z_figure_2.png)
 
 is differentiable at  $x^{-1}(p)$  (Fig. 2).  $\varphi$  is differentiable on an open set of  $M_1$  if it is differentiable at all of the points of this open set.
 
@@ -84,7 +88,9 @@ The next considerations will motivate the definition that we
 
 are going to present below. Let  $\alpha: (-\varepsilon, \varepsilon) \to \mathbf{R}^n$  be a differentiable curve in  $\mathbf{R}^n$ , with  $\alpha(0) = p$ . Write
 
-$$\alpha(t) = (x_1(t), \dots, x_n(t)), \quad t \in (-\varepsilon, \varepsilon), \quad (x_1, \dots, x_n) \in \mathbf{R}^n.$$
+$$
+\alpha(t) = (x_1(t), \dots, x_n(t)), \quad t \in (-\varepsilon, \varepsilon), \quad (x_1, \dots, x_n) \in \mathbf{R}^n.
+$$
 
 Then  $\alpha'(0) = (x'_1(0), \dots, x'_n(0)) = v \in \mathbf{R}^n$ . Now let  $f$  be a differentiable function defined in a neighborhood of  $p$ . We can restrict  $f$  to the curve  $\alpha$  and express the directional derivative with respect to the vector  $v \in \mathbf{R}^n$  as
 
@@ -100,25 +106,35 @@ A *tangent vector at  $p$*  is the tangent vector at  $t=0$  of some curve  $\al
 
 If we choose a parametrization  $\mathbf{x}: U \to M^n$  at  $p = \mathbf{x}(0)$ , we can express the function  $f$  and the curve  $\alpha$  in this parametrization by
 
-$$f \circ \mathbf{x}(q) = f(x_1, \dots, x_n), \quad q = (x_1, \dots, x_n) \in U,$$
+$$
+f \circ \mathbf{x}(q) = f(x_1, \dots, x_n), \quad q = (x_1, \dots, x_n) \in U,
+$$
 
 and
 
-$$\mathbf{x}^{-1} \circ \alpha(t) = (x_1(t), \dots, x_n(t)),$$
+$$
+\mathbf{x}^{-1} \circ \alpha(t) = (x_1(t), \dots, x_n(t)),
+$$
 
 respectively. Therefore, restricting  $f$  to  $\alpha$ , we obtain
 
-$$\begin{aligned} \alpha'(0)f &= \left. \frac{d}{dt}(f \circ \alpha) \right|_{t=0} = \left. \frac{d}{dt}f(x_1(t), \dots, x_n(t)) \right|_{t=0} \\ &= \sum_{i=1}^{n} x'_i(0) \left( \frac{\partial f}{\partial x_i} \right) = \left( \sum_{i} x'_i(0) \left( \frac{\partial}{\partial x_i} \right)_0 \right) f. \end{aligned}$$
+$$
+\begin{aligned} \alpha'(0)f &= \left. \frac{d}{dt}(f \circ \alpha) \right|_{t=0} = \left. \frac{d}{dt}f(x_1(t), \dots, x_n(t)) \right|_{t=0} \\ &= \sum_{i=1}^{n} x'_i(0) \left( \frac{\partial f}{\partial x_i} \right) = \left( \sum_{i} x'_i(0) \left( \frac{\partial}{\partial x_i} \right)_0 \right) f. \end{aligned}
+$$
 
 In other words, the vector  $\alpha'(0)$  can be expressed in the parametrization  $\mathbf{x}$  by
 
-$$ \quad \alpha'(0) = \sum_i x'_i(0) \left( \frac{\partial}{\partial x_i} \right)_0. \tag{2}$$
+$$
+\quad \alpha'(0) = \sum_i x'_i(0) \left( \frac{\partial}{\partial x_i} \right)_0. \tag{2}
+$$
 
 Observe that  $\left( \frac{\partial}{\partial x_i} \right)_0$  is the tangent vector at  $p$  of the “coordinate curve” (Fig. 3):
 
-$$x_i \to \mathbf{x}(0, \dots, 0, x_i, 0, \dots, 0).$$
+$$
+x_i \to \mathbf{x}(0, \dots, 0, x_i, 0, \dots, 0).
+$$
 
-![image](/images/remannian_geometry/figure_3.png)
+![image](./02-z_figure_3.png)
 
 The expression (2) shows that the tangent vector to the curve  $\alpha$  at  $p$  depends only the derivative of  $\alpha$  in a coordinate system. It follows also from (2) that the set  $T_p M$ , with the usual operations of functions, forms a vector space of dimension  $n$ , and that the choice of a parametrization  $\mathbf{x}: U \to M$  determines an *associated basis*  $\left\{ \left( \frac{\partial}{\partial x_1} \right)_0, \dots, \left( \frac{\partial}{\partial x_n} \right)_0 \right\}$  in  $T_p M$  (Fig. 3). It is immediate that the linear structure in  $T_p M$  defined above does not depend on the parametrization  $\mathbf{x}$ . The vector space  $T_p M$  is called the *tangent space* of  $M$  at  $p$ .
 
@@ -128,31 +144,45 @@ With the idea of tangent space we can extend to differentiable manifolds the not
 
 Proof. Let  $\mathbf{x}: U \to M_1$  and  $\mathbf{y}: V \to M_2$  be parametrizations at  $p$  and  $\varphi(p)$ , respectively. Expressing  $\varphi$  in these parametrizations, we can write
 
-$$\mathbf{y}^{-1} \circ \varphi \circ \mathbf{x}(q) = (y_1(x_1, \dots, x_n), \dots, y_m(x_1, \dots, x_n))$$
+$$
+\mathbf{y}^{-1} \circ \varphi \circ \mathbf{x}(q) = (y_1(x_1, \dots, x_n), \dots, y_m(x_1, \dots, x_n))
+$$
 
-$$q = (x_1, \dots, x_n) \in U, \quad (y_1, \dots, y_m) \in V.$$
+$$
+q = (x_1, \dots, x_n) \in U, \quad (y_1, \dots, y_m) \in V.
+$$
 
 On the other hand, expressing  $\alpha$  in the parametrization  $\mathbf{x}$ , we obtain
 
-$$\mathbf{x}^{-1} \circ \alpha(t) = (x_1(t), \dots, x_n(t)).$$
+$$
+\mathbf{x}^{-1} \circ \alpha(t) = (x_1(t), \dots, x_n(t)).
+$$
 
 Therefore,
 
-$$\mathbf{y}^{-1} \circ \beta(t) = (y_1(x_1(t), \dots, x_n(t)), \dots, y_m(x_1(t), \dots, x_n(t))).$$
+$$
+\mathbf{y}^{-1} \circ \beta(t) = (y_1(x_1(t), \dots, x_n(t)), \dots, y_m(x_1(t), \dots, x_n(t))).
+$$
 
 It follows that the expression for  $\beta'(0)$  with respect to the basis  $\left\{ \left( \frac{\partial}{\partial y_i} \right)_0 \right\}$  of  $T_{\varphi(p)} M_2$ , associated to the parametrization  $\mathbf{y}$ , is given by
 
-$$ \quad \beta'(0) = \left( \sum_{i=1}^{n} \frac{\partial y_1}{\partial x_i} x'_i(0), \dots, \sum_{i=1}^{n} \frac{\partial y_m}{\partial x_i} x'_i(0) \right). \tag{3}$$
+$$
+\quad \beta'(0) = \left( \sum_{i=1}^{n} \frac{\partial y_1}{\partial x_i} x'_i(0), \dots, \sum_{i=1}^{n} \frac{\partial y_m}{\partial x_i} x'_i(0) \right). \tag{3}
+$$
 
 The relation (3) shows immediately that  $\beta'(0)$  does not depend on the choice of  $\alpha$ . In addition, (3) can be written as
 
-$$\beta'(0) = d\varphi_p(v) = \left( \frac{\partial y_i}{\partial x_j} \right) (x'_j(0)),$$
+$$
+\beta'(0) = d\varphi_p(v) = \left( \frac{\partial y_i}{\partial x_j} \right) (x'_j(0)),
+$$
 
-$$i = 1, \dots, m; \quad j = 1, \dots, n,$$
+$$
+i = 1, \dots, m; \quad j = 1, \dots, n,
+$$
 
 where  $\left( \frac{\partial y_i}{\partial x_j} \right)$  denotes an  $m \times n$  matrix and  $x'_j(0)$  denotes a column matrix with  $n$  elements. Therefore,  $d\varphi_p$  is a linear mapping of  $T_p M_1$ 
 
-![image](/images/remannian_geometry/figure_4.png)
+![image](./02-z_figure_4.png)
 
 into  $T_{\varphi(p)}M_2$  whose matrix in the associated bases obtained from the parametrizations  $\mathbf{x}$  and  $\mathbf{y}$  is precisely the matrix  $\left(\frac{\partial y_i}{\partial x_j}\right)$ .  $\square$ 
 

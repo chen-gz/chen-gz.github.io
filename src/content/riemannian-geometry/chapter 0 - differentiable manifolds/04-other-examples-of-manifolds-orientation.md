@@ -122,7 +122,7 @@ $$y'_j = \frac{y_j}{\sum_{i=1}^n y_i^2}$$
 
 A diagram illustrating the stereographic projection from the unit sphere $S^n$ (represented by a circle) onto the plane $\mathbb{R}^n$ (represented by the horizontal axis). The vertical axis is labeled $x_{n+1}$ . The origin is labeled 0, and the top point is labeled N (North pole). The bottom point is labeled S (South pole). A point $p$ on the sphere is shown, with coordinates $p = (0, \dots, 0, x_i, 0, \dots, x_{n+1})$ . The projection $\pi_1(p)$ is shown on the positive $x_i$ axis, with coordinates $\pi_1(p) = (0, \dots, 0, \frac{x_i}{1-x_{n+1}}, 0, \dots, 0)$ . The projection $\pi_2(p)$ is shown on the negative $x_i$ axis, with coordinates $\pi_2(p) = (0, \dots, 0, \frac{x_i}{1+x_{n+1}}, 0, \dots, 0)$ .
 
-![image](/images/remannian_geometry/figure_9.png)
+![image](./04-z_figure_9.png)
 
 Now let $A: S^n \to S^n$ be the antipodal map given by $A(p) = -p$ , $p \in \mathbb{R}^{n+1}$ . $A$ is differentiable and $A^2 = \text{ident}$ . Therefore, $A$ is a diffeomorphism of $S^n$ . Observe that when $n$ is even, $A$ reverses the orientation of $S^n$ and when $n$ is odd, $A$ preserves the orientation of $S^n$ .
 
@@ -148,7 +148,7 @@ $$\{(U_i, \mathbf{x}_i^+), (U_i, \mathbf{x}_i^-)\}, \quad i = 1, \dots, n+1$$
 
 is a differentiable structure on $S^n$ . Geometrically, this is equivalent to covering the sphere $S^n$ with coordinate neighborhoods that are hemi-spheres perpendicular to the axes $x_i$ and taking as coordinates on, for example, $\mathbf{x}_i^+(U_i)$ , the coordinates of the orthogonal projection of $\mathbf{x}_i^+(U_i)$ on the hyperplane $x_i = 0$ (Fig. 10).
 
-![image](/images/remannian_geometry/figure_10.png)
+![image](./04-z_figure_10.png)
 
 Let $\pi: S^n \to P^n(\mathbb{R})$ be the canonical projection, that is, $\pi(p) = \{p, -p\}$ ; observe that $\pi(x_i^+(U_i)) = \pi(x_i^-(U_i))$. We are going to define a mapping $y_i: U_i \to P^n(\mathbb{R})$ by
 
@@ -207,7 +207,7 @@ $$y_1^{-1} \circ y_2 | W = x_1^{-1} \circ \pi_1^{-1} \circ \pi_2 \circ x_2.$$
 
 Diagram illustrating the relationship between coordinate charts $V_1$ and $V_2$ on $R^n$ , their images $x_1(V_1)$ and $x_2(V_2)$ on $M$ , and their images $y_1(V_1)$ and $y_2(V_2)$ on $M/G$ . The diagram shows the overlap region $x_2(V_2) \cap x_1(V_1)$ on $M$ and the corresponding overlap region $y_2(V_2) \cap y_1(V_1)$ on $M/G$ . The mapping $y_1^{-1} \circ y_2$ is defined on the overlap region $W$ of $y_1(V_1)$ and $y_2(V_2)$ on $M/G$ . The relationship between the coordinates is given by the equation above.
 
-![image](/images/remannian_geometry/figure_11.png)
+![image](./04-z_figure_11.png)
 
 $$G(x_1, \dots, x_k) = (x_1 + n_1, \dots, x_k + n_k), \quad n_1, \dots, n_k \in \mathbb{Z},$$
 

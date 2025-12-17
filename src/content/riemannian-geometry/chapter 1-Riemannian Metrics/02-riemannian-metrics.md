@@ -36,15 +36,19 @@ For example, let $h: \mathbb{R}^n \to \mathbb{R}$ be given by $h(x_1, \dots, x_n
 
 We say that a Riemannian metric on $G$ is _left invariant_ if $\langle u, v \rangle_y = \langle d(L_x)_y u, d(L_x)_y v \rangle_{L_x(y)}$ for all $x, y \in G$ , $u, v \in T_y G$ , that is, if $L_x$ is an isometry. Analogously, we can define a _right invariant Riemannian metric_. A Riemannian metric on $G$ which is both right and left invariant is said to be _bi-invariant_.
 
-We say that a differentiable vector field $X$ on a Lie group $G$ is _left invariant_ if $dL_x X = X$ for all $x \in G$ . The left invariant vector fields are completely determined by their values at a single point of $G$ . This allows us to introduce an additional structure on the tangent space to the neutral element $e \in G$ in the following manner. To each vector $X_e \in T_e G$ we associate the left invariant $X$ defined by $X_a = dL_a X_e$ , $a \in G$ . Let $X, Y$ be left invariant vector fields on $G$ . Since for each $x \in G$ and for any differentiable function $f$ on $G$ ,
+We say that a differentiable vector field $X$ on a Lie group $G$ is _left invariant_ if $dL_x X = X$ for all $x \in G$ . The left invariant vector fields are completely determined by their values at a single point of $G$ . This allows us to introduce an additional structure on the tangent space to the neutral element $e \in G$ in the following manner. To each vector $X_e \in T_e G$ we associate the left invariant $X$ defined by $X_a = dL_a X_e$ , $a \in G$ . Let $X, Y$ be left invariant vector fields on $G$ . Since for each $x \in G$ and for any differentiable function $f$ on $G,$
 
-$$\begin{aligned}dL_x[X, Y]f &= [X, Y](f \circ L_x) = X(dL_x Y)f - Y(dL_x X)f \\&= (XY - YX)f = [X, Y]f,\end{aligned}$$
+$$
+\begin{aligned}dL_x[X, Y]f &= [X, Y](f \circ L_x) = X(dL_x Y)f - Y(dL_x X)f \\&= (XY - YX)f = [X, Y]f,\end{aligned}
+$$
 
 we conclude that the bracket of any two left invariant vector fields is again a left invariant vector field. If $X_e, Y_e \in T_e G$ , we put $[X_e, Y_e] = [X, Y]_e$ . With this operation, $T_e G$ is called the _Lie algebra_ of $G$ , denoted by $\mathcal{G}$ . From now on, the elements in the Lie algebra $\mathcal{G}$ will be thought of either as vectors in $T_e G$ or as left invariant vector fields on $G$ .
 
 To introduce a left invariant metric on $G$ , take any arbitrary inner product $\langle \cdot, \cdot \rangle_e$ on $\mathcal{G}$ and define
 
-$$(2) \quad \langle u, v \rangle_x = \langle (dL_{x^{-1}})_x(u), (dL_{x^{-1}})_x(v) \rangle_e, \quad x \in G, u, v \in T_x G.$$
+$$
+\quad \langle u, v \rangle_x = \langle (dL_{x^{-1}})_x(u), (dL_{x^{-1}})_x(v) \rangle_e, \quad x \in G, u, v \in T_x G. \tag{2}
+$$
 
 Since $L_x$ depends differentiably on $x$ , this construction actually produces a Riemannian metric, which is clearly left invariant.
 
@@ -52,4 +56,6 @@ In an analogous manner we can construct a right invariant metric on $G$ . If $G$
 
 If $G$ has a bi-invariant metric, the inner product that the metric determines on $\mathcal{G}$ satisfies the following relation: For any $U, V, X \in \mathcal{G}$ ,
 
-$$(3) \quad \langle [U, X], V \rangle = -\langle U, [V, X] \rangle.$$
+$$
+\quad \langle [U, X], V \rangle = -\langle U, [V, X] \rangle. \tag{3}
+$$

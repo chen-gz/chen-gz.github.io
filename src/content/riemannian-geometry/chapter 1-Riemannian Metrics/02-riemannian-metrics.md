@@ -59,3 +59,114 @@ If $G$ has a bi-invariant metric, the inner product that the metric determines o
 $$
 \quad \langle [U, X], V \rangle = -\langle U, [V, X] \rangle. \tag{3}
 $$
+
+Before proving the relation above, we need some preliminary facts about Lie groups.
+
+For any  $a\in G$ , let  $R_{a^{-1}}L_a:G\rightarrow G$  be the inner automorphism of  $G$  determined by  $a$ . Such a mapping is a diffeomorphism that keeps  $e$  fixed. Thus, the differential  $d(R_{a^{-1}}L_a)=Ad(a):\mathcal{G}\rightarrow\mathcal{G}$  is a linear map (in fact, it is a homomorphism of the Lie algebra, but we do not need this fact). Explicitly,
+
+$$Ad(a)Y=dR_{a^{-1}}dL_aY=dR_{a^{-1}}Y,\text{ for all }Y\in\mathcal{G}.$$
+
+Let  $x_t$  be the flow of  $X\in\mathcal{G}$ . Then, from Proposition 5.4 of Chapter 0,
+
+$$[Y,X]=\lim_{t\rightarrow 0}\frac{1}{t}(dx_t(Y)-Y).$$
+
+On the other hand, since  $X$  is left invariant,  $L_y\circ x_t=x_t\circ L_y$ , giving
+
+$$x_t(y)=x_t(L_y(e))=L_y(x_t(e))=yx_t(e)=R_{x_t(e)}(y).$$
+
+Therefore,  $dx_t=dR_{x_t(e)}$ , and
+
+$$[Y,X]=\lim_{t\rightarrow 0}\frac{1}{t}(dR_{x_t(e)}(Y)-Y)=\lim_{t\rightarrow 0}\frac{1}{t}(Ad(x_t^{-1}(e))Y-Y).$$
+
+Let us now return to the proof of (3). Let  $\langle,\rangle$  be a bi-invariant metric on a Lie group  $G$ . Then for any  $X,U,V\in\mathcal{G}$ ,
+
+$$\langle U,V\rangle=\langle dR_{x_t(e)}\circ dL_{x_t^{-1}(e)}U,dR_{x_t(e)}\circ dL_{x_t^{-1}(e)}V\rangle=\\=\langle dR_{x_t(e)}U,dR_{x_t(e)}V\rangle.$$
+
+Differentiating the expression above with respect to  $t$ , recalling that  $\langle,\rangle$  is bilinear, and setting  $t=0$  in the expression obtained, we conclude that
+
+$$0=\langle[U,X],V\rangle+\langle U,[V,X]\rangle,$$
+
+which is the equation (3).
+
+The important point about the relation above is that it characterizes the bi-invariant metrics of  $G$ , in the following sense. If a positive bilinear form  $\langle,\rangle_e$  defined on  $\mathcal{G}$  satisfies the relation (3), then the Riemannian metric defined on  $G$  by (2) is bi-invariant. It is not difficult to prove this fact but we will not go into the proof here.
+
+2.7 EXAMPLE. *The product metric.* Let  $M_1$  and  $M_2$  be Riemannian manifolds and consider the cartesian product  $M_1 \times M_2$  with the product structure. Let  $\pi_1: M_1 \times M_2 \to M_1$  and  $\pi_2: M_1 \times M_2 \to M_2$  be the natural projections. Introduce on  $M_1 \times M_2$  a Riemannian metric as follows:
+
+$$\langle u, v \rangle_{(p,q)} = \langle d\pi_1 \cdot u, d\pi_1 \cdot v \rangle_p + \langle d\pi_2 \cdot u, d\pi_2 \cdot v \rangle_q,$$
+
+for all  $(p,q) \in M_1 \times M_2$ ,  $u, v \in T_{(p,q)}(M_1 \times M_2)$ .
+
+It is easy to verify that this is really a Riemannian metric on the product. For example, the torus  $S^1 \times \cdots \times S^1 = T^n$  has a Riemannian structure obtained by choosing the induced Riemannian metric from  $\mathbf{R}^2$  on the circle  $S^1 \subset \mathbf{R}^2$  and then taking the product metric. The torus  $T^n$  with this metric is called the *flat torus*.
+
+We are now going to show how a Riemannian metric can be used to calculate the lengths of curves.
+
+2.8 DEFINITION. A differentiable mapping  $c: I \to M$  of an open interval  $I \subset \mathbf{R}$  into a differentiable manifold  $M$  is called a (parametrized) *curve*.
+
+Observe that a parametrized curve can admit self-intersections as well as "corners" (Fig. 1).
+
+![Diagram illustrating a parametrized curve c on a manifold M. The curve c is shown on the manifold M, which is curved. The curve starts at a point on the interval I (parametrized by t) and proceeds along the curve. The interval I is shown on the left, with a vertical arrow indicating the direction of increasing t, labeled with the derivative d/dt. A horizontal arrow indicates the curve c. The curve c on M is shown with arrows indicating its direction of traversal. The curve exhibits self-intersections and corners.](ab488a6d7d5801f36752e3906ad1b3b5_img.jpg)
+
+Diagram illustrating a parametrized curve c on a manifold M. The curve c is shown on the manifold M, which is curved. The curve starts at a point on the interval I (parametrized by t) and proceeds along the curve. The interval I is shown on the left, with a vertical arrow indicating the direction of increasing t, labeled with the derivative d/dt. A horizontal arrow indicates the curve c. The curve c on M is shown with arrows indicating its direction of traversal. The curve exhibits self-intersections and corners.
+
+Figure 1
+
+## 2.9 DEFINITION.
+
+A *vector field  $V$  along a curve  $c: I \to M$*  is a differentiable mapping that associates to every  $t \in I$  a tangent vector  $V(t) \in T_{c(t)}M$ . To say that  $V$  is *differentiable* means that for any differentiable function  $f$  on  $M$ , the function  $t \to V(t)f$  is a differentiable function on  $I$ .
+
+The vector field  $dc(\frac{d}{dt})$ , denoted by  $\frac{dc}{dt}$ , is called the *velocity field* (or tangent vector field) of  $c$ . Observe that a vector field along  $c$  cannot necessarily be extended to a vector field on an open set of  $M$ .
+
+The restriction of a curve  $c$  to a closed interval  $[a, b] \subset I$  is called a *segment*. If  $M$  is a Riemannian manifold, we define the length of a segment by
+
+$$\ell_a^b(c) = \int_a^b \left\langle \frac{dc}{dt}, \frac{dc}{dt} \right\rangle^{1/2} dt.$$
+
+Let us now prove a theorem on the existence of Riemannian metrics.
+
+## 2.10 PROPOSITION.
+
+A *differentiable manifold  $M$  (Hausdorff with countable basis)* has a Riemannian metric.
+
+*Proof.* Let  $\{f_\alpha\}$  be a differentiable partition of unity on  $M$  subordinate to a covering  $\{V_\alpha\}$  of  $M$  by coordinate neighborhoods. This means (See Chap. 0, Sec. 5) that  $\{V_\alpha\}$  is a locally finite covering (i.e., any point of  $M$  has a neighborhood  $U$  such that  $U \cap V_\alpha \neq \emptyset$  at most for a finite number of indices) and  $\{f_\alpha\}$  is a family of differentiable functions on  $M$  satisfying:
+
+1. $f_\alpha \ge 0$ ,  $f_\alpha = 0$  on the complement of the closed set  $\overline{V_\alpha}$ .
+2. $\sum_\alpha f_\alpha(p) = 1$  for all  $p$  on  $M$ .
+
+It is clear that we can define a Riemannian metric  $\langle, \rangle^\alpha$  on each  $V_\alpha$ : the metric induced by the system of local coordinates. Let us then set  $\langle u, v \rangle_p = \sum_\alpha f_\alpha(p) \langle u, v \rangle_p^\alpha$  for all  $p \in M$ ,  $u, v \in T_p M$ . It is easy to verify that this construction defines a Riemannian metric on  $M$ .  $\square$
+
+To conclude this chapter, we are going to show how a Riemannian metric permits us to define a notion of volume on a given oriented manifold  $M^n$ .
+
+As usual we need some preliminary facts. Let  $p \in M$  and let  $x: U \subset \mathbb{R}^n \to M$  be a parametrization about  $p$  which belongs to a
+
+family of parametrizations consistent with the orientation of  $M$  (we say that such parametrizations are positive). Consider a positive orthonormal basis  $\{e_1, \dots, e_n\}$  of  $T_p M$  and write  $X_i(p) = \frac{\partial}{\partial x_i}(p)$  in the basis  $\{e_i\}$ :  $X_i(p) = \sum_{j} a_{ij} e_j$ . Then
+
+$$g_{ik}(p) = \langle X_i, X_k \rangle (p) = \sum_{j\ell} a_{ij} a_{k\ell} \langle e_j, e_\ell \rangle = \sum_j a_{ij} a_{kj}.$$
+
+Since the volume  $\text{vol}(X_1(p), \dots, X_n(p))$  of the parallelepiped formed by the vectors  $X_1(p), \dots, X_n(p)$  in  $T_p M$  is equal to  $\text{vol}(e_1, \dots, e_n) = 1$  multiplied by the determinant of the matrix  $(a_{ij})$ , we obtain
+
+$$\text{vol}(X_1(p), \dots, X_n(p)) = \det(a_{ij}) = \sqrt{\det(g_{ij})}(p).$$
+
+If  $y: V \subset \mathbb{R}^n \to M$  is another positive parametrization about  $p$ , with  $Y_i(p) = \frac{\partial}{\partial y_i}(p)$  and  $h_{ij}(p) = \langle Y_i, Y_j \rangle (p)$ , we obtain
+
+$$\begin{aligned} (4) \quad \sqrt{\det(g_{ij})}(p) &= \text{vol}(X_1(p), \dots, X_n(p)) \\ &= J \text{vol}(Y_1(p), \dots, Y_n(p)) = J \sqrt{\det(h_{ij})}(p), \end{aligned}$$
+
+where  $J = \det(\frac{\partial x_i}{\partial y_j}) = \det(dy^{-1} \circ dx)(p) > 0$  is the determinant of the derivative of the change of coordinates.
+
+Now let  $R \subset M$  be a region (an open connected subset), whose closure is compact. We suppose that  $R$  is contained in a coordinate neighborhood  $x(U)$  with a positive parametrization  $x: U \to M$ , and that the boundary of  $x^{-1}(R) \subset U$  has measure zero in  $\mathbb{R}^n$  (observe that the notion of measure zero in  $\mathbb{R}^n$  is invariant by diffeomorphism). Let us define the *volume*  $\text{vol}(R)$  of  $R$  by the integral in  $\mathbb{R}^n$
+
+$$(5) \quad \text{vol}(R) = \int_{x^{-1}(R)} \sqrt{\det(g_{ij})} dx_1 \dots dx_n.$$
+
+The expression above is well-defined. Indeed, if  $R$  is contained in another coordinate neighborhood  $y(V)$  with a positive parametrization  $y: V \subset \mathbb{R}^n \to M$ , we obtain from the change of
+
+variable theorem for multiple integrals, (using the same notation as in (4),
+
+$$\int_{\mathbf{x}^{-1}(R)} \sqrt{\det(g_{ij})} dx_1 \dots dx_n \\ = \int_{\mathbf{y}^{-1}(R)} \sqrt{\det h_{ij}} dy_1 \dots dy_n = \text{vol}(R),$$
+
+which proves that the definition given by (5) does not depend on the choice of the coordinate system (here the hypothesis of the orientability of  $M$  enters by guaranteeing that  $\text{vol}(R)$  does not change sign).
+
+2.11 REMARK. The reader familiar with differential forms will note that equation (4) implies that the integrand in the formula for the volume in expression (5) is a positive differential form of degree  $n$ , which is usually called a *volume form* (or *volume element*)  $\nu$  on  $M$ . In order to define the volume of a compact region  $R$ , which is not contained in a coordinate neighborhood it is necessary to consider a partition of unity  $\{\varphi_i\}$  subordinate to a (finite) covering of  $R$  consisting of coordinate neighborhoods  $\mathbf{x}(U_i)$  and to take
+
+$$\text{vol}(R) = \sum_i \int_{\mathbf{x}_i^{-1}(R)} \varphi_i \nu.$$
+
+It follows immediately that the expression above does not depend on the choice of the partition of unity.
+
+2.12 REMARK. It is clear that the existence of a globally defined positive differential form of degree  $n$  (volume element) leads to a notion of volume on a differentiable manifold. A Riemannian metric is only one of the ways through which a volume element can be obtained.

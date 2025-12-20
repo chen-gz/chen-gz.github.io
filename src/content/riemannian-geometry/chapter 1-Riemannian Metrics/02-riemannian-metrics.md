@@ -64,27 +64,39 @@ Before proving the relation above, we need some preliminary facts about Lie grou
 
 For any  $a\in G$ , let  $R_{a^{-1}}L_a:G\rightarrow G$  be the inner automorphism of  $G$  determined by  $a$ . Such a mapping is a diffeomorphism that keeps  $e$  fixed. Thus, the differential  $d(R_{a^{-1}}L_a)=Ad(a):\mathcal{G}\rightarrow\mathcal{G}$  is a linear map (in fact, it is a homomorphism of the Lie algebra, but we do not need this fact). Explicitly,
 
-$$Ad(a)Y=dR_{a^{-1}}dL_aY=dR_{a^{-1}}Y,\text{ for all }Y\in\mathcal{G}.$$
+$$
+Ad(a)Y=dR_{a^{-1}}dL_aY=dR_{a^{-1}}Y,\text{ for all }Y\in\mathcal{G}.
+$$
 
 Let  $x_t$  be the flow of  $X\in\mathcal{G}$ . Then, from Proposition 5.4 of Chapter 0,
 
-$$[Y,X]=\lim_{t\rightarrow 0}\frac{1}{t}(dx_t(Y)-Y).$$
+$$
+[Y,X]=\lim_{t\rightarrow 0}\frac{1}{t}(dx_t(Y)-Y).
+$$
 
 On the other hand, since  $X$  is left invariant,  $L_y\circ x_t=x_t\circ L_y$ , giving
 
-$$x_t(y)=x_t(L_y(e))=L_y(x_t(e))=yx_t(e)=R_{x_t(e)}(y).$$
+$$
+x_t(y)=x_t(L_y(e))=L_y(x_t(e))=yx_t(e)=R_{x_t(e)}(y).
+$$
 
 Therefore,  $dx_t=dR_{x_t(e)}$ , and
 
-$$[Y,X]=\lim_{t\rightarrow 0}\frac{1}{t}(dR_{x_t(e)}(Y)-Y)=\lim_{t\rightarrow 0}\frac{1}{t}(Ad(x_t^{-1}(e))Y-Y).$$
+$$
+[Y,X]=\lim_{t\rightarrow 0}\frac{1}{t}(dR_{x_t(e)}(Y)-Y)=\lim_{t\rightarrow 0}\frac{1}{t}(Ad(x_t^{-1}(e))Y-Y).
+$$
 
 Let us now return to the proof of (3). Let  $\langle,\rangle$  be a bi-invariant metric on a Lie group  $G$ . Then for any  $X,U,V\in\mathcal{G}$ ,
 
-$$\langle U,V\rangle=\langle dR_{x_t(e)}\circ dL_{x_t^{-1}(e)}U,dR_{x_t(e)}\circ dL_{x_t^{-1}(e)}V\rangle=\\=\langle dR_{x_t(e)}U,dR_{x_t(e)}V\rangle.$$
+$$
+\langle U,V\rangle=\langle dR_{x_t(e)}\circ dL_{x_t^{-1}(e)}U,dR_{x_t(e)}\circ dL_{x_t^{-1}(e)}V\rangle=\\=\langle dR_{x_t(e)}U,dR_{x_t(e)}V\rangle.
+$$
 
 Differentiating the expression above with respect to  $t$ , recalling that  $\langle,\rangle$  is bilinear, and setting  $t=0$  in the expression obtained, we conclude that
 
-$$0=\langle[U,X],V\rangle+\langle U,[V,X]\rangle,$$
+$$
+0=\langle[U,X],V\rangle+\langle U,[V,X]\rangle,
+$$
 
 which is the equation (3).
 
@@ -92,7 +104,9 @@ The important point about the relation above is that it characterizes the bi-inv
 
 2.7 EXAMPLE. *The product metric.* Let  $M_1$  and  $M_2$  be Riemannian manifolds and consider the cartesian product  $M_1 \times M_2$  with the product structure. Let  $\pi_1: M_1 \times M_2 \to M_1$  and  $\pi_2: M_1 \times M_2 \to M_2$  be the natural projections. Introduce on  $M_1 \times M_2$  a Riemannian metric as follows:
 
-$$\langle u, v \rangle_{(p,q)} = \langle d\pi_1 \cdot u, d\pi_1 \cdot v \rangle_p + \langle d\pi_2 \cdot u, d\pi_2 \cdot v \rangle_q,$$
+$$
+\langle u, v \rangle_{(p,q)} = \langle d\pi_1 \cdot u, d\pi_1 \cdot v \rangle_p + \langle d\pi_2 \cdot u, d\pi_2 \cdot v \rangle_q,
+$$
 
 for all  $(p,q) \in M_1 \times M_2$ ,  $u, v \in T_{(p,q)}(M_1 \times M_2)$ .
 
@@ -104,7 +118,7 @@ We are now going to show how a Riemannian metric can be used to calculate the le
 
 Observe that a parametrized curve can admit self-intersections as well as "corners" (Fig. 1).
 
-![Diagram illustrating a parametrized curve c on a manifold M. The curve c is shown on the manifold M, which is curved. The curve starts at a point on the interval I (parametrized by t) and proceeds along the curve. The interval I is shown on the left, with a vertical arrow indicating the direction of increasing t, labeled with the derivative d/dt. A horizontal arrow indicates the curve c. The curve c on M is shown with arrows indicating its direction of traversal. The curve exhibits self-intersections and corners.](ab488a6d7d5801f36752e3906ad1b3b5_img.jpg)
+![]()
 
 Diagram illustrating a parametrized curve c on a manifold M. The curve c is shown on the manifold M, which is curved. The curve starts at a point on the interval I (parametrized by t) and proceeds along the curve. The interval I is shown on the left, with a vertical arrow indicating the direction of increasing t, labeled with the derivative d/dt. A horizontal arrow indicates the curve c. The curve c on M is shown with arrows indicating its direction of traversal. The curve exhibits self-intersections and corners.
 
@@ -118,7 +132,9 @@ The vector field  $dc(\frac{d}{dt})$ , denoted by  $\frac{dc}{dt}$ , is called t
 
 The restriction of a curve  $c$  to a closed interval  $[a, b] \subset I$  is called a *segment*. If  $M$  is a Riemannian manifold, we define the length of a segment by
 
-$$\ell_a^b(c) = \int_a^b \left\langle \frac{dc}{dt}, \frac{dc}{dt} \right\rangle^{1/2} dt.$$
+$$
+\ell_a^b(c) = \int_a^b \left\langle \frac{dc}{dt}, \frac{dc}{dt} \right\rangle^{1/2} dt.
+$$
 
 Let us now prove a theorem on the existence of Riemannian metrics.
 
@@ -139,33 +155,45 @@ As usual we need some preliminary facts. Let  $p \in M$  and let  $x: U \subset 
 
 family of parametrizations consistent with the orientation of  $M$  (we say that such parametrizations are positive). Consider a positive orthonormal basis  $\{e_1, \dots, e_n\}$  of  $T_p M$  and write  $X_i(p) = \frac{\partial}{\partial x_i}(p)$  in the basis  $\{e_i\}$ :  $X_i(p) = \sum_{j} a_{ij} e_j$ . Then
 
-$$g_{ik}(p) = \langle X_i, X_k \rangle (p) = \sum_{j\ell} a_{ij} a_{k\ell} \langle e_j, e_\ell \rangle = \sum_j a_{ij} a_{kj}.$$
+$$
+g_{ik}(p) = \langle X_i, X_k \rangle (p) = \sum_{j\ell} a_{ij} a_{k\ell} \langle e_j, e_\ell \rangle = \sum_j a_{ij} a_{kj}.
+$$
 
 Since the volume  $\text{vol}(X_1(p), \dots, X_n(p))$  of the parallelepiped formed by the vectors  $X_1(p), \dots, X_n(p)$  in  $T_p M$  is equal to  $\text{vol}(e_1, \dots, e_n) = 1$  multiplied by the determinant of the matrix  $(a_{ij})$ , we obtain
 
-$$\text{vol}(X_1(p), \dots, X_n(p)) = \det(a_{ij}) = \sqrt{\det(g_{ij})}(p).$$
+$$
+\text{vol}(X_1(p), \dots, X_n(p)) = \det(a_{ij}) = \sqrt{\det(g_{ij})}(p).
+$$
 
 If  $y: V \subset \mathbb{R}^n \to M$  is another positive parametrization about  $p$ , with  $Y_i(p) = \frac{\partial}{\partial y_i}(p)$  and  $h_{ij}(p) = \langle Y_i, Y_j \rangle (p)$ , we obtain
 
-$$\begin{aligned} (4) \quad \sqrt{\det(g_{ij})}(p) &= \text{vol}(X_1(p), \dots, X_n(p)) \\ &= J \text{vol}(Y_1(p), \dots, Y_n(p)) = J \sqrt{\det(h_{ij})}(p), \end{aligned}$$
+$$
+\begin{aligned} (4) \quad \sqrt{\det(g_{ij})}(p) &= \text{vol}(X_1(p), \dots, X_n(p)) \\ &= J \text{vol}(Y_1(p), \dots, Y_n(p)) = J \sqrt{\det(h_{ij})}(p), \end{aligned}
+$$
 
 where  $J = \det(\frac{\partial x_i}{\partial y_j}) = \det(dy^{-1} \circ dx)(p) > 0$  is the determinant of the derivative of the change of coordinates.
 
 Now let  $R \subset M$  be a region (an open connected subset), whose closure is compact. We suppose that  $R$  is contained in a coordinate neighborhood  $x(U)$  with a positive parametrization  $x: U \to M$ , and that the boundary of  $x^{-1}(R) \subset U$  has measure zero in  $\mathbb{R}^n$  (observe that the notion of measure zero in  $\mathbb{R}^n$  is invariant by diffeomorphism). Let us define the *volume*  $\text{vol}(R)$  of  $R$  by the integral in  $\mathbb{R}^n$
 
-$$(5) \quad \text{vol}(R) = \int_{x^{-1}(R)} \sqrt{\det(g_{ij})} dx_1 \dots dx_n.$$
+$$
+(5) \quad \text{vol}(R) = \int_{x^{-1}(R)} \sqrt{\det(g_{ij})} dx_1 \dots dx_n.
+$$
 
 The expression above is well-defined. Indeed, if  $R$  is contained in another coordinate neighborhood  $y(V)$  with a positive parametrization  $y: V \subset \mathbb{R}^n \to M$ , we obtain from the change of
 
 variable theorem for multiple integrals, (using the same notation as in (4),
 
-$$\int_{\mathbf{x}^{-1}(R)} \sqrt{\det(g_{ij})} dx_1 \dots dx_n \\ = \int_{\mathbf{y}^{-1}(R)} \sqrt{\det h_{ij}} dy_1 \dots dy_n = \text{vol}(R),$$
+$$
+\int_{\mathbf{x}^{-1}(R)} \sqrt{\det(g_{ij})} dx_1 \dots dx_n \\ = \int_{\mathbf{y}^{-1}(R)} \sqrt{\det h_{ij}} dy_1 \dots dy_n = \text{vol}(R),
+$$
 
 which proves that the definition given by (5) does not depend on the choice of the coordinate system (here the hypothesis of the orientability of  $M$  enters by guaranteeing that  $\text{vol}(R)$  does not change sign).
 
 2.11 REMARK. The reader familiar with differential forms will note that equation (4) implies that the integrand in the formula for the volume in expression (5) is a positive differential form of degree  $n$ , which is usually called a *volume form* (or *volume element*)  $\nu$  on  $M$ . In order to define the volume of a compact region  $R$ , which is not contained in a coordinate neighborhood it is necessary to consider a partition of unity  $\{\varphi_i\}$  subordinate to a (finite) covering of  $R$  consisting of coordinate neighborhoods  $\mathbf{x}(U_i)$  and to take
 
-$$\text{vol}(R) = \sum_i \int_{\mathbf{x}_i^{-1}(R)} \varphi_i \nu.$$
+$$
+\text{vol}(R) = \sum_i \int_{\mathbf{x}_i^{-1}(R)} \varphi_i \nu.
+$$
 
 It follows immediately that the expression above does not depend on the choice of the partition of unity.
 

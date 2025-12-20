@@ -25,7 +25,9 @@ Let us indicate by  $\mathcal{X}(M)$  the set of all vector fields of class  $C^
 
 2.1 DEFINITION. An *affine connection*  $\nabla$  on a differentiable manifold  $M$  is a mapping
 
-$$\nabla: \mathcal{X}(M) \times \mathcal{X}(M) \to \mathcal{X}(M)$$
+$$
+\nabla: \mathcal{X}(M) \times \mathcal{X}(M) \to \mathcal{X}(M)
+$$
 
 which is denoted by  $(X, Y) \xrightarrow{\nabla} \nabla_X Y$  and which satisfies the following properties :
 
@@ -45,8 +47,12 @@ This definition is not as transparent as that of Riemannian structure. The follo
 
 2.3 REMARK. The last line of (c) makes sense, since  $\nabla_X Y(p)$  depends on the value of  $X(p)$  and the value  $Y$  along a curve, tangent to  $X$  at  $p$ . In effect, part (iii) of Definition 2.1 allows us to show that the notion of affine connection is actually a local notion (cf. Rem. 5.7 of Chap. 0). Choosing a system of coordinates  $(x_1, \dots, x_n)$  about  $p$  and writing
 
-$$X = \sum_i x_i X_i, \quad Y = \sum_j y_j X_j,$$
+$$
+X = \sum_i x_i X_i, \quad Y = \sum_j y_j X_j,
+$$
 
 where  $X_i = \frac{\partial}{\partial x_i}$ , we have
 
-$$\nabla_X Y = \sum_i x_i \nabla_{X_i} \left( \sum_j y_j X_j \right) = \sum_{ij} x_i y_j \nabla_{X_i} X_j + \sum_{ij} x_i X_i(y_j) X_j.$$
+$$
+\nabla_X Y = \sum_i x_i \nabla_{X_i} \left( \sum_j y_j X_j \right) = \sum_{ij} x_i y_j \nabla_{X_i} X_j + \sum_{ij} x_i X_i(y_j) X_j.
+$$

@@ -22,11 +22,15 @@ $\pi_2: M \times N \to N$ are differentiable. With this differentiable structure
 
 5. (_Embedding of $P^2(\mathbb{R})$ in $\mathbb{R}^4$_ ). Let $F: \mathbb{R}^3 \to \mathbb{R}^4$ be given by
 
-$$F(x, y, z) = (x^2 - y^2, xy, xz, yz), \quad (x, y, z) = p \in \mathbb{R}^3.$$
+$$
+F(x, y, z) = (x^2 - y^2, xy, xz, yz), \quad (x, y, z) = p \in \mathbb{R}^3.
+$$
 
 Let $S^2 \subset \mathbb{R}^3$ be the unit sphere with the origin $0 \in \mathbb{R}^3$ . Observe that the restriction $\varphi = F|_{S^2}$ is such that $\varphi(p) = \varphi(-p)$ , and consider the mapping $\tilde{\varphi}: P^2(\mathbb{R}) \to \mathbb{R}^4$ given by
 
-$$\tilde{\varphi}([p]) = \varphi(p), \quad [p] = \text{equiv. class of } p = \{p, -p\}.$$
+$$
+\tilde{\varphi}([p]) = \varphi(p), \quad [p] = \text{equiv. class of } p = \{p, -p\}.
+$$
 
 Prove that:
 
@@ -65,11 +69,15 @@ structure $(\mathbf{R}, \mathbf{x}_1)$ and $(\mathbf{R}, \mathbf{x}_2)$ are dist
 
 12. _(The orientable double covering)._ Let $M^n$ be a non-orientable differentiable manifold. For each $p \in M$ , consider the set $B$ of bases of $T_p M$ and say that two bases are equivalent if they are related by a matrix with positive determinant. This is an equivalence relation and separates $B$ into two disjoint sets. Let $\mathcal{O}_p$ be the quotient space of $B$ with respect to this equivalence relation. $O_p \in \mathcal{O}_p$ will be called an _orientation_ of $T_p M$ . Let $\overline{M}$ be the set
 
-$$\overline{M} = \{(p, O_p); p \in M, O_p \in \mathcal{O}_p\}.$$
+$$
+\overline{M} = \{(p, O_p); p \in M, O_p \in \mathcal{O}_p\}.
+$$
 
 Let $\{(U_\alpha, \mathbf{x}_\alpha)\}$ be a maximal differentiable structure on $M$ , and define $\overline{\mathbf{x}}_\alpha: U_\alpha \to \overline{M}$ by
 
-$$\overline{\mathbf{x}}_\alpha(u_1^\alpha, \dots, u_n^\alpha) = (\mathbf{x}_\alpha(u_1^\alpha, \dots, u_n^\alpha), [\frac{\partial}{\partial u_1^\alpha}, \dots, \frac{\partial}{\partial u_n^\alpha}]),$$
+$$
+\overline{\mathbf{x}}_\alpha(u_1^\alpha, \dots, u_n^\alpha) = (\mathbf{x}_\alpha(u_1^\alpha, \dots, u_n^\alpha), [\frac{\partial}{\partial u_1^\alpha}, \dots, \frac{\partial}{\partial u_n^\alpha}]),
+$$
 
 where $(u_1^\alpha, \dots, u_n^\alpha) \in U_\alpha$ and $[\frac{\partial}{\partial u_1^\alpha}, \dots, \frac{\partial}{\partial u_n^\alpha}]$ denotes the element of $\mathcal{O}_p$ determined by the basis $\{\frac{\partial}{\partial u_1^\alpha}, \dots, \frac{\partial}{\partial u_n^\alpha}\}$ . Prove that:
 

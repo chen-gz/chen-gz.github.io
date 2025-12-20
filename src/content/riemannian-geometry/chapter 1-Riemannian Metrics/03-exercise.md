@@ -8,7 +8,9 @@ a Riemannian metric on the real projective space  $P^n(\mathbf{R})$  such that t
 
 2. Introduce a Riemannian metric on the torus  $T^n$  in such a way that the natural projection  $\pi: \mathbf{R}^n \to T^n$  given by
 
-$$\pi(x_1, \dots, x_n) = (e^{ix_1}, \dots, e^{ix_n}), \quad (x_1, \dots, x_n) \in \mathbf{R}^n,$$
+$$
+\pi(x_1, \dots, x_n) = (e^{ix_1}, \dots, e^{ix_n}), \quad (x_1, \dots, x_n) \in \mathbf{R}^n,
+$$
 
 is a local isometry. Show that with this metric  $T^n$  is isometric to the flat torus.
 
@@ -22,7 +24,9 @@ is a local isometry. Show that with this metric  $T^n$  is isometric to the flat
 
 *Hint:* Observe that the first fundamental form can be written as:
 
-$$ds^2 = \frac{dx^2 + dy^2}{y^2} = -\frac{4dzd\bar{z}}{(z - \bar{z})^2}.$$
+$$
+ds^2 = \frac{dx^2 + dy^2}{y^2} = -\frac{4dzd\bar{z}}{(z - \bar{z})^2}.
+$$
 
 5. Prove that the isometries of  $S^n \subset \mathbf{R}^{n+1}$ , with the induced metric, are the restrictions to  $S^n$  of the linear orthogonal maps of  $\mathbf{R}^{n+1}$ .
 

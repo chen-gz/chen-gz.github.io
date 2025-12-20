@@ -42,11 +42,15 @@ For most local questions of geometry, it is the same to work with either immersi
 
 of coordinates at  $p$  and at  $\varphi(p)$ , respectively, and let us denote by  $(x_1, \dots, x_n)$  the coordinates of  $\mathbf{R}^n$  and by  $(y_1, \dots, y_m)$  the coordinates of  $\mathbf{R}^m$ . In these coordinates, the expression for  $\varphi$ , that is, the mapping  $\tilde{\varphi} = \mathbf{x}_2^{-1} \circ \varphi \circ \mathbf{x}_1$ , can be written
 
-$$\tilde{\varphi} = (y_1(x_1, \dots, x_n), \dots, y_m(x_1, \dots, x_n)).$$
+$$
+\tilde{\varphi} = (y_1(x_1, \dots, x_n), \dots, y_m(x_1, \dots, x_n)).
+$$
 
 Let  $q = \mathbf{x}_1^{-1}(p)$ . Since  $\varphi$  is an immersion, we can suppose, renumbering the coordinates for both  $\mathbf{R}^n$  and  $\mathbf{R}^m$ , if necessary, that
 
-$$\frac{\partial(y_1, \dots, y_n)}{\partial(x_1, \dots, x_n)}(q) \neq 0.$$
+$$
+\frac{\partial(y_1, \dots, y_n)}{\partial(x_1, \dots, x_n)}(q) \neq 0.
+$$
 
 To apply the inverse function theorem, we introduce the mapping  $\phi = U_1 \times \mathbf{R}^{m-n=k} \to \mathbf{R}^m$  given by
 
@@ -54,6 +58,8 @@ $$\begin{aligned}\phi(x_1, \dots, x_n, t_1, \dots, t_k) = \\ = (y_1(x_1, \dots, 
 
 where  $(t_1, \dots, t_k) \in \mathbf{R}^{m-n=k}$ . It is easy to verify that  $\phi$  restricted to  $U_1$  coincides with  $\tilde{\varphi}$  and that
 
-$$\det(d\phi_q) = \frac{\partial(y_1, \dots, y_n)}{\partial(x_1, \dots, x_n)}(q) \neq 0.$$
+$$
+\det(d\phi_q) = \frac{\partial(y_1, \dots, y_n)}{\partial(x_1, \dots, x_n)}(q) \neq 0.
+$$
 
 It follows from the inverse function theorem, that there exist neighborhoods  $W_1 \subset U_1 \times \mathbf{R}^k$  of  $q$  and  $W_2 \subset \mathbf{R}^m$  of  $\phi(q)$  such that the restriction  $\phi|_{W_1}$  is a diffeomorphism onto  $W_2$ . Let  $\tilde{V} = W_1 \cap U_1$ . Since  $\phi|_{\tilde{V}} = \tilde{\varphi}|_{\tilde{V}}$  and  $\mathbf{x}_i$  is a diffeomorphism, for  $i = 1, 2$ , we conclude that the restriction to  $V = \mathbf{x}_1(\tilde{V})$  of the mapping  $\phi = \mathbf{x}_2 \circ \tilde{\varphi} \circ \mathbf{x}_1^{-1}: V \to \varphi(V) \subset M_2$  is a diffeomorphism, hence an embedding.  $\square$

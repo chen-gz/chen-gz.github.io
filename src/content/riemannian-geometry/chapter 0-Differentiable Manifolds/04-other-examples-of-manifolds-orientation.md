@@ -7,7 +7,9 @@ title: Other examples of manifolds. Orientation
 
 Let $\{(U_\alpha, \mathbf{x}_\alpha)\}$ be a maximal differentiable structure on $M$ . Denote by $(x_1^\alpha, \dots, x_n^\alpha)$ the coordinates of $U_\alpha$ and by $\left\{\frac{\partial}{\partial x_1^\alpha}, \dots, \frac{\partial}{\partial x_n^\alpha}\right\}$ the associated bases to the tangent spaces of $\mathbf{x}_\alpha(U_\alpha)$ . For every $\alpha$ , define
 
-$$y_\alpha: U_\alpha \times \mathbf{R}^n \to TM,$$
+$$
+y_\alpha: U_\alpha \times \mathbf{R}^n \to TM,
+$$
 
 by
 
@@ -17,15 +19,21 @@ Geometrically, this means that we are taking as coordinates of a point $(p, v) \
 
 We are going to show that $\{(U_\alpha \times \mathbf{R}^n, y_\alpha)\}$ is a differentiable structure on $TM$ . Since $\bigcup_\alpha \mathbf{x}_\alpha(U_\alpha) = M$ and $(d\mathbf{x}_\alpha)_q(\mathbf{R}^n) = T_{\mathbf{x}_\alpha(q)}M$ , $q \in U_\alpha$ , we have that
 
-$$\bigcup_\alpha y_\alpha(U_\alpha \times \mathbf{R}^n) = TM,$$
+$$
+\bigcup_\alpha y_\alpha(U_\alpha \times \mathbf{R}^n) = TM,
+$$
 
 which verifies condition (1) of Definition 2.1. Now let
 
-$$(p, v) \in y_\alpha(U_\alpha \times \mathbf{R}^n) \cap y_\beta(U_\beta \times \mathbf{R}^n).$$
+$$
+(p, v) \in y_\alpha(U_\alpha \times \mathbf{R}^n) \cap y_\beta(U_\beta \times \mathbf{R}^n).
+$$
 
 Then
 
-$$(p, v) = (\mathbf{x}_\alpha(q_\alpha), d\mathbf{x}_\alpha(v_\alpha)) = (\mathbf{x}_\beta(q_\beta), d\mathbf{x}_\beta(v_\beta)),$$
+$$
+(p, v) = (\mathbf{x}_\alpha(q_\alpha), d\mathbf{x}_\alpha(v_\alpha)) = (\mathbf{x}_\beta(q_\beta), d\mathbf{x}_\beta(v_\beta)),
+$$
 
 where $q_\alpha \in U_\alpha$ , $q_\beta \in U_\beta$ , $v_\alpha, v_\beta \in \mathbf{R}^n$ . Therefore,
 
@@ -44,11 +52,15 @@ In a similar way as was done for surfaces in $\mathbf{R}^3$ (M. do Carmo [dC 2],
 
 First, we observe that $h$ is a homeomorphism, being a composition of homeomorphisms. Let $r \in y^{-1}(W)$ and put $q = h(r)$ . Let $(u_1, \dots, u_k) \in U$ and $(v_1, \dots, v_n) \in \mathbf{R}^n$ , and write $x$ in these coordinates as
 
-$$x(u_1, \dots, u_k) = (v_1(u_1, \dots, u_k), \dots, v_n(u_1, \dots, u_k)).$$
+$$
+x(u_1, \dots, u_k) = (v_1(u_1, \dots, u_k), \dots, v_n(u_1, \dots, u_k)).
+$$
 
 From condition (b), we can suppose that
 
-$$\frac{\partial(v_1, \dots, v_k)}{\partial(u_1, \dots, u_k)}(q) \neq 0.$$
+$$
+\frac{\partial(v_1, \dots, v_k)}{\partial(u_1, \dots, u_k)}(q) \neq 0.
+$$
 
 Extend $x$ to a mapping $F: U \times \mathbf{R}^{n-k} \to \mathbf{R}^n$ given by
 
@@ -56,7 +68,9 @@ $$\begin{aligned}F(u_1, \dots, u_k, t_{k+1}, \dots, t_n) \\&= (v_1(u_1, \dots, u
 
 where $(t_{k+1}, \dots, t_n) \in \mathbb{R}^{n-k}$ . It is clear that $F$ is differentiable and the restriction of $F$ to $U \times \{(0, \dots, 0)\}$ coincides with $x$ . By a simple calculation, we obtain that
 
-$$\det(dF_q) = \frac{\partial(v_1, \dots, v_k)}{\partial(u_1, \dots, u_k)}(q) \neq 0.$$
+$$
+\det(dF_q) = \frac{\partial(v_1, \dots, v_k)}{\partial(u_1, \dots, u_k)}(q) \neq 0.
+$$
 
 We are then able to apply the inverse function theorem, which guarantees the existence of a neighborhood $Q$ of $x(q)$ where $F^{-1}$ exists and is differentiable. By the continuity of $y$ , there exists a neighborhood $R \subset V$ of $r$ such that $y(R) \subset Q$ . Note that the restriction of $h$ to $R$ , $h | R = F^{-1} \circ y | R$ is a composition of differentiable mappings. Thus $h$ is differentiable at $r$ , hence in $y^{-1}(W)$ . A similar argument would show that $h^{-1}$ is differentiable as well, proving the assertion. $\square$
 
@@ -70,19 +84,27 @@ Now let $a \in F(U)$ be a regular value of $F$. We are going to show that the _i
 
 To prove the assertion we use, again, the inverse function theorem. Let $p \in F^{-1}(a)$ . Denote by $q = (y_1, \dots, y_m, x_1, \dots, x_k)$ an arbitrary point of $\mathbb{R}^{n=m+k}$ and by $F(q) = (f_1(q), \dots, f_m(q))$ its image by the mapping $F$ . Since $a$ is a regular value of $F$ , $dF_p$ is surjective. Therefore, we can suppose that
 
-$$\frac{\partial(f_1, \dots, f_m)}{\partial(y_1, \dots, y_m)}(p) \neq 0.$$
+$$
+\frac{\partial(f_1, \dots, f_m)}{\partial(y_1, \dots, y_m)}(p) \neq 0.
+$$
 
 Define a mapping $\varphi: U \subset \mathbb{R}^n \to \mathbb{R}^{n=m+k}$ by
 
-$$\varphi(y_1, \dots, y_m, x_1, \dots, x_k) = (f_1(q), \dots, f_m(q), x_1, \dots, x_k).$$
+$$
+\varphi(y_1, \dots, y_m, x_1, \dots, x_k) = (f_1(q), \dots, f_m(q), x_1, \dots, x_k).
+$$
 
 Then
 
-$$\det(d\varphi)_p = \frac{\partial(f_1, \dots, f_m)}{\partial(y_1, \dots, y_m)}(p) \neq 0.$$
+$$
+\det(d\varphi)_p = \frac{\partial(f_1, \dots, f_m)}{\partial(y_1, \dots, y_m)}(p) \neq 0.
+$$
 
 By the inverse function theorem, $\varphi$ is a diffeomorphism of a neighborhood $Q$ of $p$ onto a neighborhood $W$ of $\varphi(p)$ . Let $K^{m+k} \subset W \subset \mathbb{R}^{m+k}$ be a cube of center $\varphi(p)$ and put $V = \varphi^{-1}(K^{m+k}) \cap Q$ . Then $\varphi$ maps the neighborhood $V$ diffeomorphically onto $K^{m+k} = K^m \times K^k$ . Define a mapping $\mathbf{x}: K^k \to V$ by
 
-$$\mathbf{x}(x_1, \dots, x_k) = \varphi^{-1}(a_1, \dots, a_m, x_1, \dots, x_k),$$
+$$
+\mathbf{x}(x_1, \dots, x_k) = \varphi^{-1}(a_1, \dots, a_m, x_1, \dots, x_k),
+$$
 
 where $(a_1, \dots, a_m) = a$ . It is easy to check that $\varphi$ satisfies conditions (a) and (b) of the definition of regular surface given in Example 4.2. Since $p$ is arbitrary, $F^{-1}(a)$ is a regular surface in $\mathbb{R}^n$ , as asserted.
 
@@ -102,11 +124,15 @@ Now let $M_1$ and $M_2$ be differentiable manifolds and let $\varphi: M_1 \to M_
 
 **4.6 EXAMPLE.** The simple criterion of the previous example can be used to show that the sphere
 
-$$S^n = \left\{ (x_1, \dots, x_{n+1}) \in \mathbf{R}^{n+1}; \sum_{i=1}^{n+1} x_i^2 = 1 \right\} \subset \mathbf{R}^{n+1}$$
+$$
+S^n = \left\{ (x_1, \dots, x_{n+1}) \in \mathbf{R}^{n+1}; \sum_{i=1}^{n+1} x_i^2 = 1 \right\} \subset \mathbf{R}^{n+1}
+$$
 
 is orientable. Indeed, let $N = (0, \dots, 0, 1)$ be the north pole and $S = (0, \dots, 0, -1)$ the south pole of $S^n$ . Define a mapping $\pi_1: S^n - \{N\} \to \mathbf{R}^n$ (stereographic projection from the north pole) that takes $p = (x_1, \dots, x_{n+1})$ in $S^n - \{N\}$ into the intersection of the hyperplane $x_{n+1} = 0$ with the line that passes through $p$ and $N$ . It is easy to verify that (Fig. 9)
 
-$$\pi_1(x_1, \dots, x_{n+1}) = \left( \frac{x_1}{1 - x_{n+1}}, \dots, \frac{x_n}{1 - x_{n+1}} \right).$$
+$$
+\pi_1(x_1, \dots, x_{n+1}) = \left( \frac{x_1}{1 - x_{n+1}}, \dots, \frac{x_n}{1 - x_{n+1}} \right).
+$$
 
 The mapping $\pi_1$ is differentiable, injective and maps $S^n - \{N\}$ onto the hyperplane $x_{n+1} = 0$ . The stereographic projection $\pi_2: S^n - \{S\} \to \mathbf{R}^n$ from the south pole onto the hyperplane $x_{n+1} = 0$ has the same properties.
 
@@ -116,7 +142,9 @@ $$y_j = \frac{x_j}{1 - x_{n+1}} \leftrightarrow y'_j = \frac{x_j}{1 + x_{n+1}}, 
 
 is given by
 
-$$y'_j = \frac{y_j}{\sum_{i=1}^n y_i^2}$$
+$$
+y'_j = \frac{y_j}{\sum_{i=1}^n y_i^2}
+$$
 
 (here we use the fact that $\sum_{k=1}^{n+1} x_k^2 = 1$ ). Therefore, the family $\{(\mathbf{R}^n, \pi_1^{-1}), (\mathbf{R}^n, \pi_2^{-1})\}$ is a differentiable structure on $S^n$ . Observe that the intersection $\pi_1^{-1}(\mathbf{R}^n) \cap \pi_2^{-1}(\mathbf{R}^n) = S^n - \{N \cup S\}$ is connected, thus $S^n$ is orientable and the family given determines an orientation of $S^n$ .
 
@@ -132,7 +160,9 @@ We are now in a position to exhibit some other examples of differentiable manifo
 
 Taking into account this fact, we are going to introduce another differentiable structure on $P^n(\mathbb{R})$ (Cf. Example 2.4). For this, we initially introduce on $S^n \subset \mathbb{R}^{n+1}$ the structure of a regular surface, defining parametrizations
 
-$$\mathbf{x}_i^+: U_i \to S^n, \quad \mathbf{x}_i^-: U_i \to S^n, \quad i = 1, \dots, n+1,$$
+$$
+\mathbf{x}_i^+: U_i \to S^n, \quad \mathbf{x}_i^-: U_i \to S^n, \quad i = 1, \dots, n+1,
+$$
 
 in the following way:
 
@@ -144,7 +174,9 @@ $$\mathbf{x}_i^-(x_1, \dots, x_{i-1}, x_{i+1}, \dots, x_{n+1}) \\ = (x_1, \dots,
 
 where $D_i = \sqrt{1 - (x_1^2 + \dots + x_{i-1}^2 + x_{i+1}^2 + \dots + x_{n+1}^2)}$ . It is easy to verify that conditions (a) and (b) of the definition in Example 4.2 are satisfied. Therefore, the family
 
-$$\{(U_i, \mathbf{x}_i^+), (U_i, \mathbf{x}_i^-)\}, \quad i = 1, \dots, n+1$$
+$$
+\{(U_i, \mathbf{x}_i^+), (U_i, \mathbf{x}_i^-)\}, \quad i = 1, \dots, n+1
+$$
 
 is a differentiable structure on $S^n$ . Geometrically, this is equivalent to covering the sphere $S^n$ with coordinate neighborhoods that are hemi-spheres perpendicular to the axes $x_i$ and taking as coordinates on, for example, $\mathbf{x}_i^+(U_i)$ , the coordinates of the orthogonal projection of $\mathbf{x}_i^+(U_i)$ on the hyperplane $x_i = 0$ (Fig. 10).
 
@@ -152,11 +184,15 @@ is a differentiable structure on $S^n$ . Geometrically, this is equivalent to co
 
 Let $\pi: S^n \to P^n(\mathbb{R})$ be the canonical projection, that is, $\pi(p) = \{p, -p\}$ ; observe that $\pi(x_i^+(U_i)) = \pi(x_i^-(U_i))$. We are going to define a mapping $y_i: U_i \to P^n(\mathbb{R})$ by
 
-$$y_i = \pi \circ x_i^+.$$
+$$
+y_i = \pi \circ x_i^+.
+$$
 
 Since $\pi$ restricted to $x_i^+(U_i)$ is one-to-one, we have that
 
-$$y_i^{-1} \circ y_j = (\pi \circ x_i^+)^{-1} \circ (\pi \circ x_j^+) = (x_i^+)^{-1} \circ x_j^+,$$
+$$
+y_i^{-1} \circ y_j = (\pi \circ x_i^+)^{-1} \circ (\pi \circ x_j^+) = (x_i^+)^{-1} \circ x_j^+,
+$$
 
 which yields the differentiability of $y_i^{-1} \circ y_j$ , for all $i, j = 1, \dots, n+1$ . Thus the family $\{(U_i, y_i)\}$ is a differentiable structure for $P^n(\mathbb{R})$ .
 
@@ -183,7 +219,9 @@ When $G$ acts on $M$ , the action determines an equivalence relation $\sim$ on $
 
 $g \in G$ . Denote the quotient space of $M$ by this equivalence relation by $M/G$ . The mapping $\pi: M \to M/G$ , given by
 
-$$\pi(p) = \text{equiv. class of } p = Gp$$
+$$
+\pi(p) = \text{equiv. class of } p = Gp
+$$
 
 will be called the _projection_ of $M$ onto $M/G$ .
 
@@ -193,7 +231,9 @@ For each $p \in M$ choose a parametrization $\mathbf{x}: V \to M$ at $p$ so that
 
 For this, let $\pi_i$ be the restriction of $\pi$ to $x_i(V_i)$ , $i = 1, 2$ . Let $q \in y_1(V_1) \cap y_2(V_2)$ and let $r = \mathbf{x}_2^{-1} \circ \pi_2^{-1}(q)$ . Let $W \subset V_2$ be a neighborhood of $r$ such that $(\pi_2 \circ \mathbf{x}_2)(W) \subset y_1(V_1) \cap y_2(V_2)$ (Fig. 11). Then, the restriction to $W$ is given by
 
-$$y_1^{-1} \circ y_2 | W = \mathbf{x}_1^{-1} \circ \pi_1^{-1} \circ \pi_2 \circ \mathbf{x}_2.$$
+$$
+y_1^{-1} \circ y_2 | W = \mathbf{x}_1^{-1} \circ \pi_1^{-1} \circ \pi_2 \circ \mathbf{x}_2.
+$$
 
 Therefore, it is enough to show that $\pi_1^{-1} \circ \pi_2$ is differentiable at $p_2 = \pi_2^{-1}(q)$ . Let $p_1 = \pi_1^{-1} \circ \pi_2(p_2)$ . Then $p_1$ and $p_2$ are equivalent in $M$ , hence there is a $g \in G$ such that $gp_2 = p_1$ . It follows easily that the restriction $\pi_1^{-1} \circ \pi_2 | \mathbf{x}_2(W)$ coincides with the diffeomorphism $\varphi_g | \mathbf{x}_2(W)$ , which proves that $\pi_1^{-1} \circ \pi_2$ is differentiable at $p_2$ , as stated.
 
@@ -203,19 +243,27 @@ From the very way in which this differentiable structure is constructed, $\pi: M
 
 4.9 (a). Consider the group $G$ of “integral” translations of $\mathbb{R}^k$ where the action of $G$ on $\mathbb{R}^k$ is given by
 
-$$y_1^{-1} \circ y_2 | W = x_1^{-1} \circ \pi_1^{-1} \circ \pi_2 \circ x_2.$$
+$$
+y_1^{-1} \circ y_2 | W = x_1^{-1} \circ \pi_1^{-1} \circ \pi_2 \circ x_2.
+$$
 
 Diagram illustrating the relationship between coordinate charts $V_1$ and $V_2$ on $R^n$ , their images $x_1(V_1)$ and $x_2(V_2)$ on $M$ , and their images $y_1(V_1)$ and $y_2(V_2)$ on $M/G$ . The diagram shows the overlap region $x_2(V_2) \cap x_1(V_1)$ on $M$ and the corresponding overlap region $y_2(V_2) \cap y_1(V_1)$ on $M/G$ . The mapping $y_1^{-1} \circ y_2$ is defined on the overlap region $W$ of $y_1(V_1)$ and $y_2(V_2)$ on $M/G$ . The relationship between the coordinates is given by the equation above.
 
 ![image](./04-z_figure_11.png)
 
-$$G(x_1, \dots, x_k) = (x_1 + n_1, \dots, x_k + n_k), \quad n_1, \dots, n_k \in \mathbb{Z},$$
+$$
+G(x_1, \dots, x_k) = (x_1 + n_1, \dots, x_k + n_k), \quad n_1, \dots, n_k \in \mathbb{Z},
+$$
 
-$$(x_1, \dots, x_k) \in \mathbb{R}^k.$$
+$$
+(x_1, \dots, x_k) \in \mathbb{R}^k.
+$$
 
 It is easy to check that the mapping above defines an action of $G$ on $\mathbb{R}^k$ , which is properly discontinuous. The quotient space $\mathbb{R}^k/G$ , with the differentiable structure described in Example 4.8, is called the $k$ -torus $T^k$ . When $k=2$ , the 2-torus $T^2$ is diffeomorphic to the torus of revolution in $\mathbb{R}^3$ obtained as the inverse image of zero of the function $f: \mathbb{R}^3 \to \mathbb{R}$
 
-$$f(x, y, z) = z^2 + (\sqrt{x^2 + y^2} - a)^2 - r^2.$$
+$$
+f(x, y, z) = z^2 + (\sqrt{x^2 + y^2} - a)^2 - r^2.
+$$
 
 (Cf. M. do Carmo [dC 2], p. 62).
 

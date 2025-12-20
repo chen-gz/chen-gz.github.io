@@ -16,13 +16,17 @@ title: Other examples of manifolds. Orientation
 
 **2. 真不连续性 (Properly Discontinuous)**
 我们称该作用是**真不连续的** (properly discontinuous)，如果对于每一个 $p \in M$，都存在一个邻域 $U \subset M$，使得对于所有 $g \neq e$（$e$ 为单位元），都有：
-$$U \cap g(U) = \emptyset$$
+$$
+U \cap g(U) = \emptyset
+$$
 
 **3. 商空间与投影**
 当 $G$ 作用于 $M$ 时，该作用决定了 $M$ 上的一个**等价关系** $\sim$：$p_1 \sim p_2$ 当且仅当存在某个 $g \in G$ 使得 $p_2 = g p_1$。
 我们将 $M$ 关于此等价关系的**商空间**记为 $M/G$。
 定义映射 $\pi: M \rightarrow M/G$ 为：
-$$\pi(p) = p \text{ 的等价类} = Gp$$
+$$
+\pi(p) = p \text{ 的等价类} = Gp
+$$
 $\pi$ 被称为 $M$ 到 $M/G$ 的**投影** (projection)。
 
 **4. 微分结构的构造**

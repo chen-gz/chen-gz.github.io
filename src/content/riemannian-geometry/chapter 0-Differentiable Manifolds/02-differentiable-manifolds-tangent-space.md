@@ -32,19 +32,27 @@ $$
 
 The points of  $P^n(\mathbb{R})$  will be denoted by  $[x_1, \dots, x_{n+1}]$ . Observe that, if  $x_i \neq 0$ ,
 
-$$[x_1, \dots, x_{n+1}] = \left[ \frac{x_1}{x_i}, \dots, \frac{x_{i-1}}{x_i}, 1, \frac{x_{i+1}}{x_i}, \dots, \frac{x_{n+1}}{x_i} \right].$$
+$$
+[x_1, \dots, x_{n+1}] = \left[ \frac{x_1}{x_i}, \dots, \frac{x_{i-1}}{x_i}, 1, \frac{x_{i+1}}{x_i}, \dots, \frac{x_{n+1}}{x_i} \right].
+$$
 
 Define subsets  $V_1, \dots, V_{n+1}$ , of  $P^n(\mathbb{R})$ , by:
 
-$$V_i = \{[x_1, \dots, x_{n+1}] ; x_i \neq 0\}, \quad i = 1, \dots, n+1.$$
+$$
+V_i = \{[x_1, \dots, x_{n+1}] ; x_i \neq 0\}, \quad i = 1, \dots, n+1.
+$$
 
 Geometrically,  $V_i$  is the set of straight lines  $\mathbb{R}^{n+1}$  which pass through the origin and do not belong to the hyperplane  $x_i = 0$ . We are now going to show that we can take the  $V_i$ 's as coordinate neighborhoods, where the coordinates on  $V_i$  are
 
-$$y_1 = \frac{x_1}{x_i}, \dots, y_{i-1} = \frac{x_{i-1}}{x_i}, \quad y_i = \frac{x_{i+1}}{x_i}, \dots, y_n = \frac{x_{n+1}}{x_i}.$$
+$$
+y_1 = \frac{x_1}{x_i}, \dots, y_{i-1} = \frac{x_{i-1}}{x_i}, \quad y_i = \frac{x_{i+1}}{x_i}, \dots, y_n = \frac{x_{n+1}}{x_i}.
+$$
 
 For this, we will define mappings  $\mathbf{x}_i: \mathbb{R}^n \to V_i$  by
 
-$$\mathbf{x}_i(y_1, \dots, y_n) = [y_1, \dots, y_{i-1}, 1, y_i, \dots, y_n], \quad (y_1, \dots, y_n) \in \mathbb{R}^n,$$
+$$
+\mathbf{x}_i(y_1, \dots, y_n) = [y_1, \dots, y_{i-1}, 1, y_i, \dots, y_n], \quad (y_1, \dots, y_n) \in \mathbb{R}^n,
+$$
 
 and will show that the family  $\{(\mathbb{R}^n, \mathbf{x}_i)\}$  is a differentiable structure on  $P^n(\mathbb{R})$ .
 
@@ -52,7 +60,9 @@ Indeed, any mapping  $\mathbf{x}_i$  is clearly bijective while  $\bigcup \mathb
 
  $\mathbb{R}^n$  and that  $\mathbf{x}_j^{-1} \circ \mathbf{x}_i$ ,  $j = 1, \dots, n+1$ , is differentiable there. Now, if  $i > j$ , the points in  $\mathbf{x}_i^{-1}(V_i \cap V_j)$  are of the form:
 
-$$\{(y_1, \dots, y_n) \in \mathbb{R}^n; y_j \neq 0\}.$$
+$$
+\{(y_1, \dots, y_n) \in \mathbb{R}^n; y_j \neq 0\}.
+$$
 
 Therefore  $\mathbf{x}_i^{-1}(V_i \cap V_j)$  is an open set in  $\mathbb{R}^n$ , and supposing that  $i > j$  (the case  $i < j$  is similar),
 
@@ -62,7 +72,9 @@ which is clearly differentiable.
 
 In summary, the space of directions of  $\mathbb{R}^{n+1}$  (real projective space  $P^n(\mathbb{R})$ ) can be covered by  $n+1$  coordinate neighborhoods  $V_i$ , where the  $V_i$  are made up of those directions of  $\mathbb{R}^{n+1}$  that are not in the hyperplane  $x_i = 0$ ; in addition, in each  $V_i$  we have coordinates
 
-$$\left(\frac{x_1}{x_i}, \dots, \frac{x_{i-1}}{x_i}, \frac{x_{i+1}}{x_i}, \dots, \frac{x_{n+1}}{x_i}\right),$$
+$$
+\left(\frac{x_1}{x_i}, \dots, \frac{x_{i-1}}{x_i}, \frac{x_{i+1}}{x_i}, \dots, \frac{x_{n+1}}{x_i}\right),
+$$
 
 where  $(x_1, \dots, x_{n+1})$  are the coordinates of  $\mathbb{R}^{n+1}$ . It is customary, in the classical terminology, to call the coordinates of  $V_i$  "inhomogeneous coordinates" corresponding to the "homogeneous coordinates"  $(x_1, \dots, x_{n+1}) \in \mathbb{R}^{n+1}$ .
 
@@ -94,13 +106,17 @@ $$
 
 Then  $\alpha'(0) = (x'_1(0), \dots, x'_n(0)) = v \in \mathbf{R}^n$ . Now let  $f$  be a differentiable function defined in a neighborhood of  $p$ . We can restrict  $f$  to the curve  $\alpha$  and express the directional derivative with respect to the vector  $v \in \mathbf{R}^n$  as
 
-$$\left. \frac{d(f \circ \alpha)}{dt} \right|_{t=0} = \sum_{i=1}^{n} \left. \frac{\partial f}{\partial x_i} \right|_{t=0} \left. \frac{dx_i}{dt} \right|_{t=0} = \left( \sum_{i} x'_i(0) \frac{\partial}{\partial x_i} \right) f.$$
+$$
+\left. \frac{d(f \circ \alpha)}{dt} \right|_{t=0} = \sum_{i=1}^{n} \left. \frac{\partial f}{\partial x_i} \right|_{t=0} \left. \frac{dx_i}{dt} \right|_{t=0} = \left( \sum_{i} x'_i(0) \frac{\partial}{\partial x_i} \right) f.
+$$
 
 Therefore, the directional derivative with respect to  $v$  is an operator on differentiable functions that depends uniquely on  $v$ . This is the characteristic property that we are going to use to define tangent vectors on a manifold.
 
 **2.6 DEFINITION**. Let  $M$  be a differentiable manifold. A differentiable function  $\alpha: (-\varepsilon, \varepsilon) \to M$  is called a (differentiable) *curve* in  $M$ . Suppose that  $\alpha(0) = p \in M$ , and let  $\mathcal{D}$  be the set of functions on  $M$  that are differentiable at  $p$ . The *tangent vector to the curve*  $\alpha$  at  $t=0$  is a function  $\alpha'(0): \mathcal{D} \to \mathbf{R}$  given by
 
-$$\alpha'(0)f = \left. \frac{d(f \circ \alpha)}{dt} \right|_{t=0}, \quad f \in \mathcal{D}.$$
+$$
+\alpha'(0)f = \left. \frac{d(f \circ \alpha)}{dt} \right|_{t=0}, \quad f \in \mathcal{D}.
+$$
 
 A *tangent vector at  $p$*  is the tangent vector at  $t=0$  of some curve  $\alpha: (-\varepsilon, \varepsilon) \to M$  with  $\alpha(0) = p$ . The set of all tangent vectors to  $M$  at  $p$  will be indicated by  $T_p M$ .
 

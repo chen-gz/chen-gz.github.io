@@ -7,17 +7,21 @@ interface Props {
 
 const { headings } = Astro.props;
 
-const filteredHeadings = headings.filter(h => h.depth > 1);
+const filteredHeadings = headings.filter((h) => h.depth > 1);
 ---
 
-<nav class="toc">
-    <h2 class="text-lg font-bold mb-2">Table of Contents</h2>
+<nav class="toc text-gray-700 dark:text-gray-500">
+    <h2 class="text-lg font-bold mb-2 text-gray-800 dark:text-gray-400">Table of Contents</h2>
     <ul>
-        {filteredHeadings.map(heading => (
-            <li class={`depth-${heading.depth}`}>
-                <a href={`#${heading.slug}`}>{heading.text}</a>
-            </li>
-        ))}
+        {
+            filteredHeadings.map((heading) => (
+                <li class={`depth-${heading.depth}`}>
+                    <a href={`#${heading.slug}`} class="hover:underline">
+                        {heading.text}
+                    </a>
+                </li>
+            ))
+        }
     </ul>
 </nav>
 
@@ -31,10 +35,6 @@ const filteredHeadings = headings.filter(h => h.depth > 1);
     }
     .toc a {
         text-decoration: none;
-        color: inherit;
-    }
-    .toc a:hover {
-        text-decoration: underline;
     }
     .toc .depth-3 {
         padding-left: 1rem;

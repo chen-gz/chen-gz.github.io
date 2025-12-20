@@ -1,6 +1,7 @@
 ---
 import Layout from "./Layout.astro";
 import Sidebar from "../components/Sidebar.astro";
+import TableOfContents from "../components/TableOfContents.astro";
 import { CollectionEntry } from "astro:content";
 
 type AnyCollectionEntry = CollectionEntry<"blog" | "riemannian-geometry" | "codeforces">;
@@ -12,6 +13,7 @@ interface Props {
 }
 
 const { chapters, currentPage, collection } = Astro.props;
+const headings = await currentPage.render().then((data) => data.headings);
 ---
 
 <Layout>
@@ -27,40 +29,63 @@ const { chapters, currentPage, collection } = Astro.props;
     </button>
     <aside
         id="sidebar"
-        class="fixed w-64 bg-white dark:bg-gray-800 z-40 shadow-lg rounded-lg p-4 hidden max-h-96 overflow-y-auto"
+        class="fixed w-64 bg-white dark:bg-gray-800 z-40 shadow-lg rounded-lg p-4 hidden overflow-y-auto"
     >
         <Sidebar chapters={chapters} currentPage={currentPage} collection={collection} />
     </aside>
+
+    <button id="toc-toggle" class="fixed bottom-4 right-4 bg-gray-800 text-white p-2 rounded-full shadow-lg z-50">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+    </button>
+    <aside
+        id="toc-sidebar"
+        class="fixed w-64 bg-white dark:bg-gray-800 z-40 shadow-lg rounded-lg p-4 hidden overflow-y-auto"
+    >
+        <TableOfContents headings={headings} />
+    </aside>
+
     <script>
         const sidebar = document.getElementById("sidebar");
         const toggleButton = document.getElementById("sidebar-toggle");
+        const tocSidebar = document.getElementById("toc-sidebar");
+        const tocToggleButton = document.getElementById("toc-toggle");
 
-        const openMenu = () => {
-            const btnRect = toggleButton.getBoundingClientRect();
-            // Position the menu above the button
-            sidebar.style.left = `${btnRect.left}px`;
-            sidebar.style.bottom = `${window.innerHeight - btnRect.top}px`;
-            sidebar.classList.remove("hidden");
-        };
+        function setupMenu(toggleBtn, menu, position) {
+            const openMenu = () => {
+                const btnRect = toggleBtn.getBoundingClientRect();
+                if (position === "left") {
+                    menu.style.left = `${btnRect.left}px`;
+                } else {
+                    menu.style.right = `${window.innerWidth - btnRect.right}px`;
+                }
+                menu.style.bottom = `${window.innerHeight - btnRect.top}px`;
+                menu.classList.remove("hidden");
+            };
 
-        const closeMenu = () => {
-            sidebar.classList.add("hidden");
-        };
+            const closeMenu = () => {
+                menu.classList.add("hidden");
+            };
 
-        toggleButton.addEventListener("click", (e) => {
-            e.stopPropagation();
-            if (sidebar.classList.contains("hidden")) {
-                openMenu();
-            } else {
-                closeMenu();
-            }
-        });
+            toggleBtn.addEventListener("click", (e) => {
+                e.stopPropagation();
+                if (menu.classList.contains("hidden")) {
+                    openMenu();
+                } else {
+                    closeMenu();
+                }
+            });
 
-        document.addEventListener("click", (e) => {
-            if (!sidebar.contains(e.target) && !toggleButton.contains(e.target)) {
-                closeMenu();
-            }
-        });
+            document.addEventListener("click", (e) => {
+                if (!menu.contains(e.target) && !toggleBtn.contains(e.target)) {
+                    closeMenu();
+                }
+            });
+        }
+
+        setupMenu(toggleButton, sidebar, "left");
+        setupMenu(tocToggleButton, tocSidebar, "right");
     </script>
     <script>
         document.addEventListener("copy", (event) => {
@@ -69,26 +94,28 @@ const { chapters, currentPage, collection } = Astro.props;
 
             const range = selection.getRangeAt(0);
             const clonedSelection = range.cloneContents();
-            
+
             let copiedText = "";
 
             function traverse(node) {
                 if (node.nodeType === Node.TEXT_NODE) {
                     copiedText += node.textContent;
-                } else if (node.nodeType === Node.ELEMENT_NODE && (node.classList.contains('katex') || node.classList.contains('katex-display'))) {
+                } else if (
+                    node.nodeType === Node.ELEMENT_NODE &&
+                    (node.classList.contains("katex") || node.classList.contains("katex-display"))
+                ) {
                     const annotation = node.querySelector('annotation, annotation[encoding="application/x-tex"]');
                     if (annotation) {
                         let latexSource = annotation.textContent;
-                        if (node.classList.contains('katex-display')) {
+                        if (node.classList.contains("katex-display")) {
                             copiedText += `$$${latexSource}$$`;
                         } else {
                             copiedText += `$${latexSource}$`;
                         }
                     }
-                } else if (node.nodeType === Node.ELEMENT_NODE && node.closest('pre')) {
-                    copiedText += node.closest('pre').innerText;
-                }
-                else if (node.nodeType === Node.ELEMENT_NODE) {
+                } else if (node.nodeType === Node.ELEMENT_NODE && node.closest("pre")) {
+                    copiedText += node.closest("pre").innerText;
+                } else if (node.nodeType === Node.ELEMENT_NODE) {
                     node.childNodes.forEach(traverse);
                 }
             }

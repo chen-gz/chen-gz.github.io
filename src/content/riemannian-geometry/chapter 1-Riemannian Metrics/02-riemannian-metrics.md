@@ -2,7 +2,8 @@
 title: Riemannian Metrics
 ---
 
-**2.1 DEFINITION.** A _Riemannian metric_ (or _Riemannian structure_) on a differentiable manifold $M$ is a correspondence which associates to each point $p$ of $M$ an inner product $\langle \cdot, \cdot \rangle_p$ (that is, a symmetric, bilinear, positive-definite form) on the tangent space $T_p M$ , which varies differentiably in the following sense: If $\mathbf{x}: U \subset \mathbb{R}^n \to M$ is a system of coordinates around $p$ , with $\mathbf{x}(x_1, x_2, \dots, x_n) = q \in \mathbf{x}(U)$ and $\frac{\partial}{\partial x_i}(q) = d\mathbf{x}_q(0, \dots, 1, \dots, 0)$ , then $\langle \frac{\partial}{\partial x_i}(q), \frac{\partial}{\partial x_j}(q) \rangle_q = g_{ij}(x_1, \dots, x_n)$ is a differentiable function on $U$ .
+### 2.
+A _Riemannian metric_ (or _Riemannian structure_) on a differentiable manifold $M$ is a correspondence which associates to each point $p$ of $M$ an inner product $\langle \cdot, \cdot \rangle_p$ (that is, a symmetric, bilinear, positive-definite form) on the tangent space $T_p M$ , which varies differentiably in the following sense: If $\mathbf{x}: U \subset \mathbb{R}^n \to M$ is a system of coordinates around $p$ , with $\mathbf{x}(x_1, x_2, \dots, x_n) = q \in \mathbf{x}(U)$ and $\frac{\partial}{\partial x_i}(q) = d\mathbf{x}_q(0, \dots, 1, \dots, 0)$ , then $\langle \frac{\partial}{\partial x_i}(q), \frac{\partial}{\partial x_j}(q) \rangle_q = g_{ij}(x_1, \dots, x_n)$ is a differentiable function on $U$ .
 
 It is clear this definition does not depend on the choice of coordinate system.
 
@@ -12,27 +13,31 @@ It is usual to delete the index $p$ in the function $\langle \cdot, \cdot \rangl
 
 After introducing any type of mathematical structure, we must introduce a notion of when two objects are the same.
 
-**2.2 DEFINITION.** Let $M$ and $N$ be Riemannian manifolds. A diffeomorphism $f: M \to N$ (that is, $f$ is a differentiable bijection with a differentiable inverse) is called an _isometry_ if:
+###  2.2 DEFINITION
+Let $M$ and $N$ be Riemannian manifolds. A diffeomorphism $f: M \to N$ (that is, $f$ is a differentiable bijection with a differentiable inverse) is called an _isometry_ if:
 
 $$
 \quad \langle u, v \rangle_p = \langle df_p(u), df_p(v) \rangle_{f(p)}, \text{ for all } p \in M, u, v \in T_p M. \tag{1}
 $$
 
-**2.3 DEFINITION** Let $M$ and $N$ be Riemannian manifolds. A differentiable mapping $f: M \to N$ is a _local isometry_ at $p \in M$ if there is a neighborhood $U \subset M$ of $p$ such that $f: U \to f(U)$ is a diffeomorphism satisfying (1).
+### 2.3 DEFINITION
+Let $M$ and $N$ be Riemannian manifolds. A differentiable mapping $f: M \to N$ is a _local isometry_ at $p \in M$ if there is a neighborhood $U \subset M$ of $p$ such that $f: U \to f(U)$ is a diffeomorphism satisfying (1).
 
 It is common to say that a Riemannian manifold $M$ is _locally isometric_ to a Riemannian manifold $N$ if for every $p$ in $M$ there exists a neighborhood $U$ of $p$ in $M$ and a local isometry $f: U \to f(U) \subset N$ .
 
 What follows are some non-trivial examples of the notion of Riemannian manifold.
 
-**2.4 EXAMPLE** _The almost trivial example._ $M = \mathbb{R}^n$ with $\frac{\partial}{\partial x_i}$ identified with $e_i = (0, \dots, 1, \dots, 0)$ . The metric is given by $\langle e_i, e_j \rangle = \delta_{ij}$ . $\mathbb{R}^n$ is called _Euclidean space of dimension $n$_ and the Riemannian geometry of this space is metric Euclidean geometry.
+### 2.4 EXAMPLE
+_The almost trivial example._ $M = \mathbb{R}^n$ with $\frac{\partial}{\partial x_i}$ identified with $e_i = (0, \dots, 1, \dots, 0)$ . The metric is given by $\langle e_i, e_j \rangle = \delta_{ij}$ . $\mathbb{R}^n$ is called _Euclidean space of dimension $n$_ and the Riemannian geometry of this space is metric Euclidean geometry.
 
-**2.5 EXAMPLE** _Immersed manifolds._ Let $f: M^n \to N^{n+k}$ be an immersion, that is, $f$ is differentiable and $df_p: T_p M \to T_{f(p)} N$ is injective for all $p$ in $M$ . If $N$ has a Riemannian structure, $f$ induces a Riemannian structure on $M$ by defining $\langle u, v \rangle_p = \langle df_p(u), df_p(v) \rangle_{f(p)}$ , $u, v \in T_p M$ . Since $df_p$ is injective, $\langle, \rangle_p$ is positive definite. The other conditions of Definition 2.1 are easily verified. This metric on $M$ is then called the metric _induced_ by $f$ , and $f$ is an _isometric immersion_.
+### 2.5 EXAMPLE _Immersed manifolds._ Let $f: M^n \to N^{n+k}$ be an immersion, that is, $f$ is differentiable and $df_p: T_p M \to T_{f(p)} N$ is injective for all $p$ in $M$ . If $N$ has a Riemannian structure, $f$ induces a Riemannian structure on $M$ by defining $\langle u, v \rangle_p = \langle df_p(u), df_p(v) \rangle_{f(p)}$ , $u, v \in T_p M$ . Since $df_p$ is injective, $\langle, \rangle_p$ is positive definite. The other conditions of Definition 2.1 are easily verified. This metric on $M$ is then called the metric _induced_ by $f$ , and $f$ is an _isometric immersion_.
 
 A particularly important case occurs when we have a differentiable function $h: M^{n+k} \to N^k$ and $q \in N$ is a regular value of $h$ (that is, $dh_p: T_p M \to T_{h(p)} N$ is surjective for all $p \in h^{-1}(q)$ ). It is known then that $h^{-1}(q) \subset M$ is a submanifold of $M$ of dimension $n$ ; hence, we can put a Riemannian metric on it induced by the inclusion.
 
 For example, let $h: \mathbb{R}^n \to \mathbb{R}$ be given by $h(x_1, \dots, x_n) = \sum_{i=1}^n x_i^2 - 1$ . Then 0 is a regular value of $h$ and $h^{-1}(0) = \{x \in \mathbb{R}^n: x_1^2 + \dots + x_n^2 = 1\} = S^{n-1}$ is the _unit sphere_ of $\mathbb{R}^n$ . The metric induced from $\mathbb{R}^n$ on $S^{n-1}$ is called the _canonical metric_ of $S^{n-1}$ .
 
-**2.6 EXAMPLE** _Lie groups._ A _Lie group_ is a group $G$ with a differentiable structure such that the mapping $G \times G \to G$ given by $(x, y) \to xy^{-1}$ , $x, y \in G$ , is differentiable. It follows then that _translations from the left_ $L_x$ and _translations from the right_ $R_x$ given by: $L_x: G \to G$ , $L_x(y) = xy$ ; $R_x: G \to G$ , $R_x(y) = yx$ are diffeomorphisms.
+### 2.6 EXAMPLE
+_Lie groups._ A _Lie group_ is a group $G$ with a differentiable structure such that the mapping $G \times G \to G$ given by $(x, y) \to xy^{-1}$ , $x, y \in G$ , is differentiable. It follows then that _translations from the left_ $L_x$ and _translations from the right_ $R_x$ given by: $L_x: G \to G$ , $L_x(y) = xy$ ; $R_x: G \to G$ , $R_x(y) = yx$ are diffeomorphisms.
 
 We say that a Riemannian metric on $G$ is _left invariant_ if $\langle u, v \rangle_y = \langle d(L_x)_y u, d(L_x)_y v \rangle_{L_x(y)}$ for all $x, y \in G$ , $u, v \in T_y G$ , that is, if $L_x$ is an isometry. Analogously, we can define a _right invariant Riemannian metric_. A Riemannian metric on $G$ which is both right and left invariant is said to be _bi-invariant_.
 
@@ -102,7 +107,8 @@ which is the equation (3).
 
 The important point about the relation above is that it characterizes the bi-invariant metrics of  $G$ , in the following sense. If a positive bilinear form  $\langle,\rangle_e$  defined on  $\mathcal{G}$  satisfies the relation (3), then the Riemannian metric defined on  $G$  by (2) is bi-invariant. It is not difficult to prove this fact but we will not go into the proof here.
 
-2.7 EXAMPLE. *The product metric.* Let  $M_1$  and  $M_2$  be Riemannian manifolds and consider the cartesian product  $M_1 \times M_2$  with the product structure. Let  $\pi_1: M_1 \times M_2 \to M_1$  and  $\pi_2: M_1 \times M_2 \to M_2$  be the natural projections. Introduce on  $M_1 \times M_2$  a Riemannian metric as follows:
+### 2.7 EXAMPLE
+*The product metric.* Let  $M_1$  and  $M_2$  be Riemannian manifolds and consider the cartesian product  $M_1 \times M_2$  with the product structure. Let  $\pi_1: M_1 \times M_2 \to M_1$  and  $\pi_2: M_1 \times M_2 \to M_2$  be the natural projections. Introduce on  $M_1 \times M_2$  a Riemannian metric as follows:
 
 $$
 \langle u, v \rangle_{(p,q)} = \langle d\pi_1 \cdot u, d\pi_1 \cdot v \rangle_p + \langle d\pi_2 \cdot u, d\pi_2 \cdot v \rangle_q,
@@ -114,7 +120,8 @@ It is easy to verify that this is really a Riemannian metric on the product. For
 
 We are now going to show how a Riemannian metric can be used to calculate the lengths of curves.
 
-2.8 DEFINITION. A differentiable mapping  $c: I \to M$  of an open interval  $I \subset \mathbf{R}$  into a differentiable manifold  $M$  is called a (parametrized) *curve*.
+### 2.8 DEFINITION
+A differentiable mapping  $c: I \to M$  of an open interval  $I \subset \mathbf{R}$  into a differentiable manifold  $M$  is called a (parametrized) *curve*.
 
 Observe that a parametrized curve can admit self-intersections as well as "corners" (Fig. 1).
 
@@ -124,7 +131,7 @@ Diagram illustrating a parametrized curve c on a manifold M. The curve c is show
 
 Figure 1
 
-## 2.9 DEFINITION.
+### 2.9 DEFINITION
 
 A *vector field  $V$  along a curve  $c: I \to M$*  is a differentiable mapping that associates to every  $t \in I$  a tangent vector  $V(t) \in T_{c(t)}M$ . To say that  $V$  is *differentiable* means that for any differentiable function  $f$  on  $M$ , the function  $t \to V(t)f$  is a differentiable function on  $I$ .
 
@@ -138,11 +145,11 @@ $$
 
 Let us now prove a theorem on the existence of Riemannian metrics.
 
-## 2.10 PROPOSITION.
+### 2.10 PROPOSITION
 
 A *differentiable manifold  $M$  (Hausdorff with countable basis)* has a Riemannian metric.
 
-*Proof.* Let  $\{f_\alpha\}$  be a differentiable partition of unity on  $M$  subordinate to a covering  $\{V_\alpha\}$  of  $M$  by coordinate neighborhoods. This means (See Chap. 0, Sec. 5) that  $\{V_\alpha\}$  is a locally finite covering (i.e., any point of  $M$  has a neighborhood  $U$  such that  $U \cap V_\alpha \neq \emptyset$  at most for a finite number of indices) and  $\{f_\alpha\}$  is a family of differentiable functions on  $M$  satisfying:
+*Proof.* Let  $\{f_\alpha\}$  be a differentiable partition of unity on  $M$  subordinate to a covering  $\{V_\alpha\}$ of  $M$  by coordinate neighborhoods. This means (See Chap. 0, Sec. 5) that  $\{V_\alpha\}$  is a locally finite covering (i.e., any point of  $M$  has a neighborhood  $U$  such that  $U \cap V_\alpha \neq \emptyset$  at most for a finite number of indices) and  $\{f_\alpha\}$  is a family of differentiable functions on  $M$  satisfying:
 
 1. $f_\alpha \ge 0$ ,  $f_\alpha = 0$  on the complement of the closed set  $\overline{V_\alpha}$ .
 2. $\sum_\alpha f_\alpha(p) = 1$  for all  $p$  on  $M$ .
@@ -189,7 +196,8 @@ $$
 
 which proves that the definition given by (5) does not depend on the choice of the coordinate system (here the hypothesis of the orientability of  $M$  enters by guaranteeing that  $\text{vol}(R)$  does not change sign).
 
-2.11 REMARK. The reader familiar with differential forms will note that equation (4) implies that the integrand in the formula for the volume in expression (5) is a positive differential form of degree  $n$ , which is usually called a *volume form* (or *volume element*)  $\nu$  on  $M$ . In order to define the volume of a compact region  $R$ , which is not contained in a coordinate neighborhood it is necessary to consider a partition of unity  $\{\varphi_i\}$  subordinate to a (finite) covering of  $R$  consisting of coordinate neighborhoods  $\mathbf{x}(U_i)$  and to take
+### 2.11 REMARK
+The reader familiar with differential forms will note that equation (4) implies that the integrand in the formula for the volume in expression (5) is a positive differential form of degree  $n$ , which is usually called a *volume form* (or *volume element*)  $\nu$  on  $M$ . In order to define the volume of a compact region  $R$ , which is not contained in a coordinate neighborhood it is necessary to consider a partition of unity  $\{\varphi_i\}$  subordinate to a (finite) covering of  $R$  consisting of coordinate neighborhoods  $\mathbf{x}(U_i)$  and to take
 
 $$
 \text{vol}(R) = \sum_i \int_{\mathbf{x}_i^{-1}(R)} \varphi_i \nu.
@@ -197,4 +205,5 @@ $$
 
 It follows immediately that the expression above does not depend on the choice of the partition of unity.
 
-2.12 REMARK. It is clear that the existence of a globally defined positive differential form of degree  $n$  (volume element) leads to a notion of volume on a differentiable manifold. A Riemannian metric is only one of the ways through which a volume element can be obtained.
+### 2.12 REMARK
+It is clear that the existence of a globally defined positive differential form of degree  $n$  (volume element) leads to a notion of volume on a differentiable manifold. A Riemannian metric is only one of the ways through which a volume element can be obtained.

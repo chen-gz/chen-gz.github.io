@@ -1,0 +1,18 @@
+:root {
+    --theme-prose-body: #4c4f69;
+    --theme-prose-headings: #4c4f69;
+    --theme-prose-lead: #5c5f77;
+    --theme-prose-links: #1e66f5;
+    --theme-prose-bold: #5c5f77;
+    --theme-prose-counters: #6c6f85;
+    --theme-prose-bullets: #8c8fa1;
+    --theme-prose-hr: #ccd0da;
+    --theme-prose-quotes: #4c4f69;
+    --theme-prose-quote-borders: #ccd0da;
+    --theme-prose-captions: #6c6f85;
+    --theme-prose-code: #4c4f69;
+    --theme-prose-pre-code: #4c4f69;
+    --theme-prose-pre-bg: #e6e9ef;
+    --theme-prose-th-borders: #dce0e8;
+    --theme-prose-td-borders: #e6e9ef;
+}

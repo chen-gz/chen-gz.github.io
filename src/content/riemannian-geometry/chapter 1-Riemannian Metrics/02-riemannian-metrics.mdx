@@ -2,6 +2,9 @@
 title: Riemannian Metrics
 ---
 
+
+import figure1 from './figure1.png';
+
 ### 2.1 Definition _Riemannian Metric_
 
 A _Riemannian metric_ (or _Riemannian structure_) on a differentiable manifold $M$ is a correspondence which associates to each point $p$ of $M$ an inner product $\langle \cdot, \cdot \rangle_p$ (that is, a symmetric, bilinear, positive-definite form) on the tangent space $T_p M$ , which varies differentiably in the following sense: If $\mathbf{x}: U \subset \mathbb{R}^n \to M$ is a system of coordinates around $p$ , with $\mathbf{x}(x_1, x_2, \dots, x_n) = q \in \mathbf{x}(U)$ and $\frac{\partial}{\partial x_i}(q) = d\mathbf{x}_q(0, \dots, 1, \dots, 0)$ , then $\langle \frac{\partial}{\partial x_i}(q), \frac{\partial}{\partial x_j}(q) \rangle_q = g_{ij}(x_1, \dots, x_n)$ is a differentiable function on $U$ .
@@ -134,7 +137,7 @@ A differentiable mapping $c: I \to M$ of an open interval $I \subset \mathbf{R}$
 
 Observe that a parametrized curve can admit self-intersections as well as "corners" (Fig. 1).
 
-![Figure 1](figure1.png)
+<img src={figure1.src} alt="Figure 1" style="display: block; margin: 0 auto;" />
 
 ### 2.9 Definition
 

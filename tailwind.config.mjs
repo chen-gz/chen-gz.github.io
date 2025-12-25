@@ -55,7 +55,7 @@ export default {
               },
             },
             p: {
-              fontSize: "1.125rem",
+              fontSize: "1.25rem",
             },
           },
         },

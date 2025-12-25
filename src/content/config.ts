@@ -27,4 +27,33 @@ const codeforces = defineCollection({
   }),
 });
 
-export const collections = { blog, 'riemannian-geometry': riemannianGeometry, codeforces };
+const docs = defineCollection({
+  schema: z.object({
+    title: z.string().optional(),
+    type: z.string().optional(),
+  }),
+});
+
+const landau2 = defineCollection({
+  schema: z.object({
+    title: z.string().optional(),
+    type: z.string().optional(),
+  }),
+});
+
+const leetcode = defineCollection({
+  schema: z.object({
+    title: z.string().optional(),
+    type: z.string().optional(),
+  }),
+});
+
+const rudin2 = defineCollection({
+  schema: z.object({
+    title: z.string().optional(),
+    type: z.string().optional(),
+  }),
+});
+
+export const collections = { blog, 'riemannian-geometry': riemannianGeometry, codeforces, docs, landau2, leetcode, rudin2 };
+

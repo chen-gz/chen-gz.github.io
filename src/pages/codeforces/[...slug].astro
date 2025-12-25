@@ -40,7 +40,7 @@ const chapters = chaptersData.map((chapter) => {
     // The original logic tried to find a H1 in the markdown content body.
     // We can stick with that or just use frontmatter title.
     const titleMatch = chapter.body.match(/^# (.*)/m);
-    const titleFromContent = titleMatch ? titleMatch[1] : null;
+    const titleFromContent = titleMatch ? titleMatch[1] : undefined;
     return { ...chapter, data: { ...chapter.data, title: chapter.data.title || titleFromContent } };
 });
 ---

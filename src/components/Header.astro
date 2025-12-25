@@ -249,7 +249,10 @@
         });
 
         document.addEventListener("click", (event) => {
-            if (!searchContainer.contains(event.target) && !searchIcon.contains(event.target)) {
+            if (
+                !searchContainer.contains(event.target as Node) &&
+                !searchIcon.contains(event.target as Node)
+            ) {
                 searchContainer.classList.add("hidden");
             }
         });

@@ -1,7 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import PostLayout from '../../layouts/PostLayout.astro';
-import { CollectionEntry } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
@@ -20,10 +20,10 @@ const { Content } = await post.render();
 
 // Logic to find all chapters of the current post
 const allPosts = await getCollection('blog');
-const postSlug = post.slug.split('/')[0]; 
+const postSlug = post.slug.split('/')[0];
 const chapters = allPosts
   .filter((p) => p.slug.startsWith(postSlug))
-  .sort((a, b) => a.data.chapter - b.data.chapter);
+  .sort((a, b) => (a.data.chapter || 0) - (b.data.chapter || 0));
 ---
 
 <PostLayout chapters={chapters} currentPage={post} collection="blog">

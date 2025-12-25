@@ -32,7 +32,7 @@ const chaptersData = allPosts
 
 const chapters = chaptersData.map((chapter) => {
     const titleMatch = chapter.body.match(/^# (.*)/m);
-    const titleFromContent = titleMatch ? titleMatch[1] : null;
+    const titleFromContent = titleMatch ? titleMatch[1] : undefined;
     return { ...chapter, data: { ...chapter.data, title: chapter.data.title || titleFromContent } };
 });
 ---

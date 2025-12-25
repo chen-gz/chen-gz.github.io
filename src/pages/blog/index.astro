@@ -1,22 +1,25 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import { getCollection } from 'astro:content';
+import { getCollection, type CollectionEntry } from 'astro:content';
 
 const allPosts = await getCollection('blog');
 
 // Group chapters by post
-const posts = allPosts.reduce((acc, post) => {
-  const postSlug = post.slug.split('/')[0];
-  if (!acc[postSlug]) {
-    acc[postSlug] = [];
-  }
-  acc[postSlug].push(post);
-  return acc;
-}, {});
+const posts = allPosts.reduce(
+  (acc: Record<string, CollectionEntry<'blog'>[]>, post) => {
+    const postSlug = post.slug.split('/')[0];
+    if (!acc[postSlug]) {
+      acc[postSlug] = [];
+    }
+    acc[postSlug].push(post);
+    return acc;
+  },
+  {},
+);
 
 // Sort chapters within each post
 for (const postSlug in posts) {
-  posts[postSlug].sort((a, b) => a.data.chapter - b.data.chapter);
+  posts[postSlug].sort((a, b) => (a.data.chapter || 0) - (b.data.chapter || 0));
 }
 ---
 

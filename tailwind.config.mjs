@@ -6,7 +6,7 @@ export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
-      typography: (theme) => ({
+      typography: () => ({
         custom: {
           css: {
             "--tw-prose-body": "var(--theme-prose-body)",
@@ -34,7 +34,8 @@ export default {
             "--tw-prose-invert-bullets": "var(--theme-prose-bullets)",
             "--tw-prose-invert-hr": "var(--theme-prose-hr)",
             "--tw-prose-invert-quotes": "var(--theme-prose-quotes)",
-            "--tw-prose-invert-quote-borders": "var(--theme-prose-quote-borders)",
+            "--tw-prose-invert-quote-borders":
+              "var(--theme-prose-quote-borders)",
             "--tw-prose-invert-captions": "var(--theme-prose-captions)",
             "--tw-prose-invert-code": "var(--theme-prose-code)",
             "--tw-prose-invert-pre-code": "var(--theme-prose-pre-code)",

@@ -2,7 +2,7 @@
 import Layout from "./Layout.astro";
 import Sidebar from "../components/Sidebar.astro";
 import TableOfContents from "../components/TableOfContents.astro";
-import { CollectionEntry } from "astro:content";
+import type { CollectionEntry } from "astro:content";
 
 type AnyCollectionEntry = CollectionEntry<"blog" | "riemannian-geometry" | "codeforces">;
 
@@ -47,12 +47,16 @@ const headings = await currentPage.render().then((data) => data.headings);
     </aside>
 
     <script>
-        const sidebar = document.getElementById("sidebar");
-        const toggleButton = document.getElementById("sidebar-toggle");
-        const tocSidebar = document.getElementById("toc-sidebar");
-        const tocToggleButton = document.getElementById("toc-toggle");
+        const sidebar = document.getElementById("sidebar") as HTMLElement;
+        const toggleButton = document.getElementById("sidebar-toggle") as HTMLButtonElement;
+        const tocSidebar = document.getElementById("toc-sidebar") as HTMLElement;
+        const tocToggleButton = document.getElementById("toc-toggle") as HTMLButtonElement;
 
-        function setupMenu(toggleBtn, menu, position) {
+        function setupMenu(
+            toggleBtn: HTMLButtonElement,
+            menu: HTMLElement,
+            position: "left" | "right",
+        ) {
             const openMenu = () => {
                 const btnRect = toggleBtn.getBoundingClientRect();
                 if (position === "left") {
@@ -68,7 +72,7 @@ const headings = await currentPage.render().then((data) => data.headings);
                 menu.classList.add("hidden");
             };
 
-            toggleBtn.addEventListener("click", (e) => {
+            toggleBtn.addEventListener("click", (e: MouseEvent) => {
                 e.stopPropagation();
                 if (menu.classList.contains("hidden")) {
                     openMenu();
@@ -77,8 +81,11 @@ const headings = await currentPage.render().then((data) => data.headings);
                 }
             });
 
-            document.addEventListener("click", (e) => {
-                if (!menu.contains(e.target) && !toggleBtn.contains(e.target)) {
+            document.addEventListener("click", (e: MouseEvent) => {
+                if (
+                    !menu.contains(e.target as Node) &&
+                    !toggleBtn.contains(e.target as Node)
+                ) {
                     closeMenu();
                 }
             });
@@ -88,33 +95,39 @@ const headings = await currentPage.render().then((data) => data.headings);
         setupMenu(tocToggleButton, tocSidebar, "right");
     </script>
     <script>
-        document.addEventListener("copy", (event) => {
+        document.addEventListener("copy", (event: ClipboardEvent) => {
             const selection = document.getSelection();
-            if (selection.rangeCount === 0) return;
+            if (selection?.rangeCount === 0) return;
 
-            const range = selection.getRangeAt(0);
+            const range = selection!.getRangeAt(0);
             const clonedSelection = range.cloneContents();
 
             let copiedText = "";
 
-            function traverse(node) {
+            function traverse(node: Node) {
                 if (node.nodeType === Node.TEXT_NODE) {
                     copiedText += node.textContent;
                 } else if (
                     node.nodeType === Node.ELEMENT_NODE &&
-                    (node.classList.contains("katex") || node.classList.contains("katex-display"))
+                    ((node as Element).classList.contains("katex") ||
+                        (node as Element).classList.contains("katex-display"))
                 ) {
-                    const annotation = node.querySelector('annotation, annotation[encoding="application/x-tex"]');
+                    const annotation = (node as Element).querySelector(
+                        'annotation, annotation[encoding="application/x-tex"]',
+                    );
                     if (annotation) {
                         let latexSource = annotation.textContent;
-                        if (node.classList.contains("katex-display")) {
+                        if ((node as Element).classList.contains("katex-display")) {
                             copiedText += `$$${latexSource}$$`;
                         } else {
                             copiedText += `$${latexSource}$`;
                         }
                     }
-                } else if (node.nodeType === Node.ELEMENT_NODE && node.closest("pre")) {
-                    copiedText += node.closest("pre").innerText;
+                } else if (
+                    node.nodeType === Node.ELEMENT_NODE &&
+                    (node as Element).closest("pre")
+                ) {
+                    copiedText += (node as Element).closest("pre")!.innerText;
                 } else if (node.nodeType === Node.ELEMENT_NODE) {
                     node.childNodes.forEach(traverse);
                 }
@@ -124,7 +137,7 @@ const headings = await currentPage.render().then((data) => data.headings);
             container.appendChild(clonedSelection);
             traverse(container);
 
-            if (copiedText) {
+            if (copiedText && event.clipboardData) {
                 event.clipboardData.setData("text/plain", copiedText);
                 event.preventDefault();
             }

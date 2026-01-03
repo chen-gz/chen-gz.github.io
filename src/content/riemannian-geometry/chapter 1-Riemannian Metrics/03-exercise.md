@@ -1,5 +1,5 @@
 ---
-title: EXERCISES
+title: Exercises
 ---
 
 1. Prove that the antipodal mapping $A: S^n \to S^n$ given by $A(p) = -p$ is an isometry of $S^n$ . Use this fact to introduce

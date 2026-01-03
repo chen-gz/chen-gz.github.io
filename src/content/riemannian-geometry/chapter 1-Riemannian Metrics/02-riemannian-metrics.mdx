@@ -183,7 +183,8 @@ $$
 If $y: V \subset \mathbb{R}^n \to M$ is another positive parametrization about $p$ , with $Y_i(p) = \frac{\partial}{\partial y_i}(p)$ and $h_{ij}(p) = \langle Y_i, Y_j \rangle (p)$ , we obtain
 
 $$
-\begin{aligned} (4) \quad \sqrt{\det(g_{ij})}(p) &= \text{vol}(X_1(p), \dots, X_n(p)) \\ &= J \text{vol}(Y_1(p), \dots, Y_n(p)) = J \sqrt{\det(h_{ij})}(p), \end{aligned}
+\begin{aligned} \quad \sqrt{\det(g_{ij})}(p) &= \text{vol}(X_1(p), \dots, X_n(p)) \\ &= J \text{vol}(Y_1(p), \dots,
+Y_n(p)) = J \sqrt{\det(h_{ij})}(p), \end{aligned} \tag{4}
 $$
 
 where $J = \det(\frac{\partial x_i}{\partial y_j}) = \det(dy^{-1} \circ dx)(p) > 0$ is the determinant of the derivative of the change of coordinates.
@@ -191,7 +192,7 @@ where $J = \det(\frac{\partial x_i}{\partial y_j}) = \det(dy^{-1} \circ dx)(p) >
 Now let $R \subset M$ be a region (an open connected subset), whose closure is compact. We suppose that $R$ is contained in a coordinate neighborhood $x(U)$ with a positive parametrization $x: U \to M$ , and that the boundary of $x^{-1}(R) \subset U$ has measure zero in $\mathbb{R}^n$ (observe that the notion of measure zero in $\mathbb{R}^n$ is invariant by diffeomorphism). Let us define the _volume_ $\text{vol}(R)$ of $R$ by the integral in $\mathbb{R}^n$
 
 $$
-(5) \quad \text{vol}(R) = \int_{x^{-1}(R)} \sqrt{\det(g_{ij})} dx_1 \dots dx_n.
+\quad \text{vol}(R) = \int_{x^{-1}(R)} \sqrt{\det(g_{ij})} dx_1 \dots dx_n. \tag{5}
 $$
 
 The expression above is well-defined. Indeed, if $R$ is contained in another coordinate neighborhood $y(V)$ with a positive parametrization $y: V \subset \mathbb{R}^n \to M$ , we obtain from the change of

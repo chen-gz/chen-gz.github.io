@@ -13,8 +13,9 @@ $$ \nabla: \mathcal{X}(M) \times \mathcal{X}(M) \to \mathcal{X}(M) $$
 
 which is denoted by $(X, Y) \xrightarrow{\nabla} \nabla_X Y$ and which satisfies the following properties :
 
-1. $\nabla_{fX+gY} Z = f\nabla_X Z + g\nabla_Y Z$.  2. $\nabla_X(Y+Z) = \nabla_X Y + \nabla_X Z$.  3. $\nabla_X(fY) =
-f\nabla_X Y + X(f)Y$,
+1. $\nabla_{fX+gY} Z = f\nabla_X Z + g\nabla_Y Z$.  
+2. $\nabla_X(Y+Z) = \nabla_X Y + \nabla_X Z$.
+3. $\nabla_X(fY) = f\nabla_X Y + X(f)Y$,
 
 in which $X, Y, Z \in \mathcal{X}(M)$ and $f, g \in \mathcal{D}(M)$.
 
@@ -27,11 +28,12 @@ Let $M$ be a differentiable manifold with an affine connection $\nabla$. There e
 associates to a vector field $V$ along the differentiable curve $c: I \to M$ another vector field $\frac{DV}{dt}$ along
 $c$, called the covariant derivative of $V$ along $c$, such that:
 
-1. $\frac{D}{dt}(V+W) = \frac{DV}{dt} + \frac{DW}{dt}$.  2. $\frac{D}{dt}(fV) = \frac{df}{dt}V + f\frac{DV}{dt}$, where
-$W$ is a vector field along $c$ and $f$ is a differentiable function on $I$.  3. If $V$ is induced by a vector field $Y
-\in \mathcal{X}(M)$, i.e., $V(t) = Y(c(t))$, then $\frac{DV}{dt} = \nabla_{dc/dt} Y$.
+1. $\frac{D}{dt}(V+W) = \frac{DV}{dt} + \frac{DW}{dt}$.
+2. $\frac{D}{dt}(fV) = \frac{df}{dt}V + f\frac{DV}{dt}$, where $W$ is a vector field along $c$ and $f$ is a differentiable function on $I$.
+3. If $V$ is induced by a vector field $Y \in \mathcal{X}(M)$, i.e., $V(t) = Y(c(t))$, then $\frac{DV}{dt} = \nabla_{dc/dt} Y$.
 
-2.3 REMARK. The last line of (c) makes sense, since $\nabla_X Y(p)$ depends on the value of $X(p)$ and the value $Y$
+### 2.3 REMARK
+The last line of (c) makes sense, since $\nabla_X Y(p)$ depends on the value of $X(p)$ and the value $Y$
 along a curve, tangent to $X$ at $p$. In effect, part (iii) of Definition 2.1 allows us to show that the notion of
 affine connection is actually a local notion (cf. Rem. 5.7 of Chap. 0). Choosing a system of coordinates $(x_1, \dots,
 x_n)$ about $p$ and writing

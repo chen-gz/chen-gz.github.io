@@ -1,4 +1,4 @@
----
+--- 
 title: Affine Connections
 ---
 
@@ -36,16 +36,50 @@ $c$, called the covariant derivative of $V$ along $c$, such that:
 
 The last line of (c) makes sense, since $\nabla_X Y(p)$ depends on the value of $X(p)$ and the value $Y$
 along a curve, tangent to $X$ at $p$. In effect, part (iii) of Definition 2.1 allows us to show that the notion of
-affine connection is actually a local notion (cf. Rem. 5.7 of Chap. 0). Choosing a system of coordinates $(x_1, \dots,
-x_n)$ about $p$ and writing
+affine connection is actually a local notion (cf. Rem. 5.7 of Chap. 0). Choosing a system of coordinates $(x_1, \dots, x_n)$
+about $p$ and writing
 
-$$
-X = \sum_i x_i X_i, \quad Y = \sum_j y_j X_j,
+$$ 
+X = \sum_i x_i X_i, \quad Y = \sum_j y_j X_j, 
 $$
 
 where $X_i = \frac{\partial}{\partial x_i}$, we have
 
-$$
+$$ 
 \nabla_X Y = \sum_i x_i \nabla_{X_i} \left( \sum_j y_j X_j \right) = \sum_{ij} x_i y_j \nabla_{X_i} X_j + \sum_{ij}
-x_i X_i(y_j) X_j.
+ x_i X_i(y_j) X_j. 
 $$
+
+Setting $ \nabla_x X_j = \sum_k \Gamma_{ij}^k X_k $, we conclude that the $ \Gamma_{ij}^k $ are differentiable functions and that
+
+$$ 
+\nabla_X Y = \sum_k \left( \sum_{ij} x_{ij} y_{ij} \Gamma_{ij}^k + X(y_k) \right) X_k, 
+$$
+
+which proves that $ \nabla_X Y(p) $ depends on $ x_i(p), y_k(p) $ and the derivatives $ X(y_k)(p) $ of $ y_k $ by $ X $.
+
+### 2.4 Remark
+The proposition above shows that the choice of an affine connection on $ M $ leads to a bona fide (i.e. satisfying (a) and (b)) derivative of vector fields along curves. The notion of connection furnishes, therefore, a manner of differentiating vectors along curves; in particular, it will then be possible to speak of the acceleration of a curve in $M$.
+
+**Proof of Proposition 2.2.** Let us suppose initially that there exists a correspondence satisfying (a), (b) and (c). Let $ x: U \subset \mathbb{R}^n \to M $ be a system of coordinates with $ c(I) \cap x(U) \neq \emptyset $ and let $ (x_1(t), x_2(t), \ldots, x_n(t)) $ be the local expression of $ c(t), t \in I $. Let $ X_i = \frac{\partial}{\partial x_i} $. Then we can express the field $ V $ locally as $ V = \sum_j v^j X_j, j = 1, \ldots, n $, where $ v^j = v^j(t) $ and $ X_j = X_j(c(t)) $.
+
+By a) and b), we have
+
+$$ 
+\frac{DV}{dt} = \sum_j \frac{dv^j}{dt} X_j + \sum_j v^j \frac{DX_j}{dt}. 
+$$
+
+By c) and (i) of Definition 2.1,
+
+$$ 
+\frac{DX_j}{dt} = \nabla_{dc/dt} X_j = \nabla_{(\sum \frac{dx_i}{dt} X_i) X_j}
+ = \sum_i \frac{dx_i}{dt} \nabla_{X_i} X_j, \quad i, j = 1, \ldots, n.
+$$
+
+Therefore,
+
+$$ 
+\frac{DV}{dt} = \sum_j \frac{dv^j}{dt} X_j + \sum_{i,j} \frac{dx_i}{dt} v^j \nabla_{X_i} X_j. 
+$$
+
+The expression (1) shows us that if there is a correspondence satisfying the conditions of Proposition 2.2, then such a correspondence is unique.

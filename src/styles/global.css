@@ -53,9 +53,9 @@
 }
 
 /* Fix for KaTeX display math overflow */
-/*.katex-display {
+.katex-display {
   overflow-x: auto;
   overflow-y: hidden;
   text-align: center;
   margin: 1em 0;
-}*/
+}

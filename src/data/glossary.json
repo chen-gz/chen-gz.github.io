@@ -1,0 +1,18 @@
+[
+  {
+    "term": "Riemannian metric",
+    "definition": "A family of inner products on the tangent spaces of a manifold that varies smoothly from point to point."
+  },
+  {
+    "term": "smooth manifold",
+    "definition": "A topological manifold equipped with a smooth structure, allowing for the use of calculus."
+  },
+  {
+    "term": "differentiable manifold",
+    "definition": "A topological manifold equipped with a globally defined differential structure."
+  },
+  {
+    "term": "tangent space",
+    "definition": "A vector space that contains all possible directions in which one can tangentially pass through a point on a manifold."
+  }
+]

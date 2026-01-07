@@ -37,13 +37,115 @@ import "katex/dist/katex.min.css";
 
             window.localStorage.setItem("theme", theme);
         </script>
+        <style is:global>
+            /* Glossary Tooltip Styles */
+            .glossary-term {
+                border-bottom: 1px dotted #666;
+                cursor: help;
+                position: relative;
+                color: #2563eb; /* Blue-600 */
+                font-weight: 500;
+            }
+            .dark .glossary-term {
+                color: #60a5fa; /* Blue-400 */
+                border-bottom-color: #999;
+            }
+
+            #glossary-tooltip {
+                position: fixed;
+                z-index: 1000;
+                background-color: white;
+                color: #1f2937;
+                padding: 12px 16px;
+                border-radius: 8px;
+                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+                max-width: 300px;
+                font-size: 0.9rem;
+                line-height: 1.5;
+                pointer-events: none;
+                opacity: 0;
+                transition: opacity 0.2s, transform 0.2s;
+                transform: translateY(10px);
+                border: 1px solid #e5e7eb;
+            }
+            .dark #glossary-tooltip {
+                background-color: #1f2937;
+                color: #f3f4f6;
+                border-color: #374151;
+                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+            }
+            #glossary-tooltip.visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            #glossary-tooltip h4 {
+                margin: 0 0 4px 0;
+                font-weight: 700;
+                font-size: 1rem;
+            }
+        </style>
     </head>
     <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
         <Header />
         <main class="max-w-6xl mx-auto px-4">
             <slot />
         </main>
+        <div id="glossary-tooltip" aria-hidden="true"></div>
         <div class="pb-24"></div>
+
+        <script>
+            // Tooltip logic
+            document.addEventListener('DOMContentLoaded', () => {
+                const tooltip = document.getElementById('glossary-tooltip');
+                const terms = document.querySelectorAll('.glossary-term');
+
+                if (!tooltip) return;
+
+                terms.forEach(term => {
+                    term.addEventListener('mouseenter', (e) => {
+                        const target = e.target as HTMLElement;
+                        const definition = target.getAttribute('data-definition');
+                        const termText = target.getAttribute('data-term');
+
+                        if (definition) {
+                            tooltip.innerHTML = `<h4>${termText}</h4><p>${definition}</p>`;
+                            tooltip.classList.add('visible');
+                            updateTooltipPosition(e);
+                        }
+                    });
+
+                    term.addEventListener('mousemove', (e) => {
+                         updateTooltipPosition(e);
+                    });
+
+                    term.addEventListener('mouseleave', () => {
+                        tooltip.classList.remove('visible');
+                    });
+                });
+
+                function updateTooltipPosition(e: MouseEvent) {
+                    const offset = 15;
+                    let left = e.clientX + offset;
+                    let top = e.clientY + offset;
+
+                    // Boundary detection
+                    const tooltipRect = tooltip.getBoundingClientRect();
+                    const viewportWidth = window.innerWidth;
+                    const viewportHeight = window.innerHeight;
+
+                    if (left + tooltipRect.width > viewportWidth) {
+                        left = e.clientX - tooltipRect.width - offset;
+                    }
+
+                    if (top + tooltipRect.height > viewportHeight) {
+                        top = e.clientY - tooltipRect.height - offset;
+                    }
+
+                    tooltip.style.left = `${left}px`;
+                    tooltip.style.top = `${top}px`;
+                }
+            });
+        </script>
     </body>
 </html>
 

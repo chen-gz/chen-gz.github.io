@@ -41,10 +41,14 @@ import "katex/dist/katex.min.css";
             /* Glossary Tooltip Styles */
             .glossary-term {
                 border-bottom: 1px dotted #666;
-                cursor: help;
+                text-decoration: none;
                 position: relative;
                 color: #2563eb; /* Blue-600 */
                 font-weight: 500;
+            }
+            .glossary-term:hover {
+                text-decoration: underline;
+                cursor: pointer;
             }
             .dark .glossary-term {
                 color: #60a5fa; /* Blue-400 */

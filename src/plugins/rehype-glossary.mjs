@@ -18,11 +18,13 @@ export function rehypeGlossary(options = {}) {
   const termMap = new Map();
   const allForms = [];
 
-  const addTerm = (form, originalTerm, definition) => {
+  const slugify = (text) => text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+
+  const addTerm = (form, originalTerm, definition, url) => {
     if (!form || form.trim().length === 0) return;
     const lower = form.toLowerCase();
     if (!termMap.has(lower)) {
-        termMap.set(lower, { originalTerm, definition });
+        termMap.set(lower, { originalTerm, definition, url });
         allForms.push(form);
     }
   };
@@ -30,16 +32,13 @@ export function rehypeGlossary(options = {}) {
   glossary.forEach(entry => {
     const term = entry.term;
     const def = entry.definition;
+    const url = entry.url;
 
-    // Add singular
-    addTerm(term, term, def);
-
-    // Add plural
+    addTerm(term, term, def, url);
     const plural = pluralize(term);
-    addTerm(plural, term, def);
+    addTerm(plural, term, def, url);
   });
 
-  // Sort terms by length descending
   allForms.sort((a, b) => b.length - a.length);
 
   if (allForms.length === 0) {
@@ -51,16 +50,16 @@ export function rehypeGlossary(options = {}) {
 
   return (tree) => {
     visit(tree, 'text', (node, index, parent) => {
-      // Avoid existing wrapped terms or non-content tags
-      if (
-        parent.tagName === 'a' ||
-        parent.tagName === 'code' ||
-        parent.tagName === 'pre' ||
-        parent.tagName === 'script' ||
-        parent.tagName === 'style' ||
-        parent.tagName === 'abbr' ||
-        (parent.properties && parent.properties.className && Array.isArray(parent.properties.className) && parent.properties.className.includes('glossary-term'))
-      ) {
+      // Check if parent should be excluded
+      const isExcludedTag = ['a', 'code', 'pre', 'script', 'style', 'abbr'].includes(parent.tagName);
+      const parentClasses = (parent.properties && parent.properties.className && Array.isArray(parent.properties.className))
+                            ? parent.properties.className
+                            : [];
+
+      const isGlossaryTerm = parentClasses.includes('glossary-term');
+      const isMath = parentClasses.some(c => ['math', 'math-inline', 'math-display', 'katex'].includes(c));
+
+      if (isExcludedTag || isGlossaryTerm || isMath) {
         return;
       }
 
@@ -85,11 +84,15 @@ export function rehypeGlossary(options = {}) {
         const lookup = termMap.get(matchedText.toLowerCase());
         const definition = lookup ? lookup.definition : "";
         const originalTerm = lookup ? lookup.originalTerm : matchedText;
+        const customUrl = lookup ? lookup.url : null;
+
+        const href = customUrl || `/glossary#${slugify(originalTerm)}`;
 
         newNodes.push({
           type: 'element',
-          tagName: 'span',
+          tagName: 'a',
           properties: {
+            href: href,
             className: ['glossary-term'],
             'data-definition': definition,
             'data-term': originalTerm

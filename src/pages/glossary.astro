@@ -1,0 +1,28 @@
+---
+import Layout from "../layouts/Layout.astro";
+import glossaryData from "../data/glossary.json";
+
+// Helper to slugify terms matches logic in plugin
+const slugify = (text) => text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+
+const sortedGlossary = glossaryData.sort((a, b) => a.term.localeCompare(b.term));
+---
+
+<Layout>
+  <section class="prose dark:prose-invert max-w-none mx-auto py-12">
+    <h1 class="text-4xl font-bold mb-8">Glossary</h1>
+    <div class="space-y-8">
+      {sortedGlossary.map((entry) => (
+        <div id={slugify(entry.term)} class="glossary-entry scroll-mt-24">
+          <h2 class="text-2xl font-semibold mb-2 flex items-center gap-2">
+            {entry.term}
+            <a href={`#${slugify(entry.term)}`} class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 no-underline text-sm">#</a>
+          </h2>
+          <p class="text-lg text-gray-700 dark:text-gray-300">
+            {entry.definition}
+          </p>
+        </div>
+      ))}
+    </div>
+  </section>
+</Layout>

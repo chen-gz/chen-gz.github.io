@@ -19,7 +19,7 @@ export default defineConfig({
   },
   markdown: {
     remarkPlugins: [remarkMath],
-    rehypePlugins: [rehypeKatex, rehypeGlossary],
+    rehypePlugins: [rehypeGlossary, rehypeKatex],
   },
   vite: {
     plugins: [tailwindcss()],

@@ -1,0 +1,16 @@
+{
+  "packages": [
+    "nodejs@22",
+    "just@latest"
+  ],
+  "shell": {
+    "init_hook": [
+      "echo 'Welcome to your Devbox environment!'"
+    ],
+    "scripts": {
+      "dev":     "just run",
+      "build":   "just build",
+      "preview": "just preview"
+    }
+  }
+}

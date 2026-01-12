@@ -6,18 +6,20 @@ default:
     @echo "  just preview - Preview the built site"
     @echo "  just test    - Run checks and diagnostics"
 
+install:
+
 # Start the development server
-run:
+run: install
     npm run dev
 
 # Build the project
-build:
+build: install
     npm run build
 
 # Preview the built site
-preview:
+preview: install
     npm run preview
 
 # Run checks and diagnostics
-test:
+test: install
     npm run astro check
